@@ -1,0 +1,60 @@
+# Ignorar archivos generados por el sistema operativo y el editor
+*.pyc
+__pycache__/
+*.pyo
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos y directorios generados por Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py  # Ignora local_settings.py si lo utilizas para configuración local
+db.sqlite3         # Ignora la base de datos SQLite por defecto
+/media/
+/static_root/
+__init__.pyc
+celerybeat-schedule
+*.sqlite3
+*.db
+*.sqlite3-journal
+
+# Ignorar archivos de entorno virtual (por ejemplo, si estás usando virtualenv o venv)
+venv/
+env/
+
+# Ignorar archivos de configuración de IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Ignorar archivos generados durante la ejecución (ejemplos)
+*.pyc
+*.pyo
+*.db
+*.sqlite3
+*.log
+*.tmp
+*.bak
+*.swp
+*.~
+
+# Ignorar archivos de configuración específicos del usuario
+*.suo
+*.user
+*.sln.docstates
+
+# Ignorar archivos de registro y errores de Python
+*.log
+
+# Ignorar archivos generados por linters y formateadores (por ejemplo, flake8, black)
+.tox/
+.pytest_cache/
+mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
