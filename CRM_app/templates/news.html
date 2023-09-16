@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Noticias</h1>
+
+  <a href="{% url 'create_new' %}">Crear Nueva Noticia</a>
+
+  {%for new in news%}
+    <ul>
+        <li>
+
+            <h2>{{new.title}}</h1>
+
+            <p>{{new.description}}</p>
+                
+            <p>Fecha: {{new.date}}</p>
+
+            <form method="DELETE" action="{% url 'delete_new' new.id %}">
+                {% csrf_token %}
+                <button type="submit">Borrar</button>
+            </form>
+
+        </li>
+        
+        <br>
+        
+    </ul>
+
+  {%endfor%}
+
+{% endblock %}
+
