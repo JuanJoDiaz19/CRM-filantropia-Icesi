@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from django.contrib.auth import login 
+from django.contrib.auth import login,logout 
 from django.db import IntegrityError
 from .models import New
 from .forms import NewForm
@@ -40,6 +40,10 @@ def signup(request):
 def tasks(request):
     return render(request, 'tasks.html')
 
+def sing_out(request):
+    logout(request)
+    return redirect('home')
+    
 def news(request):
     news = New.objects.all()  # Obtener todas las instancias de New
     return render(request, 'news.html', {'news': news})
@@ -59,6 +63,4 @@ def delete_new(request, new_id):
     new = New.objects.get(id=new_id)
     new.delete()
     return redirect('news')
-
-
    
