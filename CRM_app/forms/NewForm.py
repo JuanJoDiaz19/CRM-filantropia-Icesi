@@ -1,5 +1,5 @@
 from django import forms
-from .models import New
+from CRM_app.models.New import New
 
 class NewForm(forms.ModelForm):
     class Meta:
@@ -8,4 +8,3 @@ class NewForm(forms.ModelForm):
         widgets = {
             'date': forms.DateInput(attrs={'type': 'date'})
         }
-

@@ -16,17 +16,24 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from CRM_app import views
+from CRM_app.views.home import Home
+from CRM_app.views.create_new import CreateNew
+from CRM_app.views.delete_new import DeleteNew
+from CRM_app.views.news import News
+from CRM_app.views.singin import Singin
+from CRM_app.views.sing_out import Singout
+from CRM_app.views.singup import Singup
+from CRM_app.views.tasks import Tasks
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name="home"),
-    path('signup/', views.signup, name="signup"),
-    path('signin/', views.signin, name="signin"),
-    path('tasks/', views.tasks, name="tasks"),
-    path('logout/', views.sing_out, name="logout"),
-    path('news/', views.news, name="news"),
-    path('create_new/', views.create_new, name='create_new'),
-    path('delete_new/<int:new_id>/', views.delete_new, name='delete_new'),
+    path('', Home.as_view(), name="home"),
+    path('signup/', Singup.as_view(), name="signup"),
+    path('signin/', Singin.as_view(), name="signin"),
+    path('tasks/', Tasks.as_view(), name="tasks"),
+    path('logout/', Singout.as_view(), name="logout"),
+    path('news/', News.as_view(), name="news"),
+    path('create_new/', CreateNew.as_view(), name='create_new'),
+    path('delete_new/<int:new_id>/', DeleteNew.as_view(), name='delete_new'),
 
 ]
