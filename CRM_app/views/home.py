@@ -7,4 +7,4 @@ from django.db import IntegrityError
 
 class Home(View):
     def get(self, request):
-        return render(request, 'home.html')
+        return render(request, 'login.html')
