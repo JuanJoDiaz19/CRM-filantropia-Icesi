@@ -20,3 +20,11 @@ Ayer empezamos el sprint y nos dividimos las tareas que va a hacer cada uno.
 Voy a empezar a desarrolar el sidebar, para ello tengo que investigar sobre interfaces gráficas.
 ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
 Tengo una limitación técnica, es decir, no estoy muy familiarizada con HTML y CSS, pero lo voy a estar solucionando a medida que vaya estudiandolos.
+
+### Juan Jose
+¿Qué hice ayer?
+Ayer empecé a hacer el html del login, y implemente la ruta de los archivos estaticos en django
+¿Qué haré hoy?.
+Voy a agregarle la funcionalidad a la pagina para que funcione el login 
+¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+Hay poco conocimiento de django, por lo que hay que buscar bastante documentacion, por ejemplo para linkear los archivos estaticos del proyecto y el desarrollo de formularios personalizados
