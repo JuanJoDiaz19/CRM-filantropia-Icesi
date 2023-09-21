@@ -30,6 +30,14 @@ Voy a agregarle la funcionalidad a la pagina para que funcione el login
 * ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
 Hay poco conocimiento de django, por lo que hay que buscar bastante documentacion, por ejemplo para linkear los archivos estaticos del proyecto y el desarrollo de formularios personalizados
 
+#### Barraza:
+* ¿Qué hice ayer?
+Hice la reestructuración del proyecto en cuanto a que las views ya no estarán en un archivo views.py, sino que estarán en una carpeta views (Class-Based Views), lo mismo se hizo con los models, separandolos en lugar de tenerlos en un solo archivo.
+* ¿Qué haré hoy?
+Empezaré a solucionar dudas sobre Django, HTML y CSS apoyandome en documentación.
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+Cuento con poca disponibilidad de tiempo para el desarrollo, sin embargo, se tratará de gestionar de una mejor manera.
+
 ### Septiembre 20 2023:
 
 #### Ana:
@@ -39,3 +47,11 @@ Continué trabajando en el desarrollo del sidebar y realizando investigación so
 Hoy, mi enfoque principal sigue siendo el desarrollo del sidebar. Estoy aplicando lo que he aprendido en mi investigación para avanzar.
 * ¿Hay algún obstáculo que me impida avanzar en mi trabajo?
 Sigo lidiando con mi falta de experiencia en HTML y CSS, lo que podría ralentizar mi progreso.
+
+#### Barraza:
+* ¿Qué hice ayer?
+Investigué sobre Django, en mayor parte sobre como manejar las HTTP requests.
+* ¿Qué haré hoy?
+Investigaré sobre CSS, ya que es donde tengo mayor falencia.
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+Poco conocimiento sobre CSS.
