@@ -7,24 +7,35 @@
 ### Septiembre 19 2023:
 
 #### Espinosa:
-¿Qué hice ayer?
+* ¿Qué hice ayer?
 Se empezo el sprint y se asignaron las tareas a cada miembro del grupo.
-¿Qué haré hoy?
+* ¿Qué haré hoy?
 Antes de empezar a desarrollar el trabajo, me dedico a entender primero cual es el problema que tengo que resolver y aprender a como solucionarlo de la mejor forma.
-¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
 Tengo que aprender a usar HTML, pero para eso voy a investigar y estudiarlo, ademas cuento con poco tiempo, lo cual tambien me limita a realizarlo de forma lenta.
+
 #### Ana:
-¿Qué hice ayer?
+* ¿Qué hice ayer?
 Ayer empezamos el sprint y nos dividimos las tareas que va a hacer cada uno.
-¿Qué haré hoy?
+* ¿Qué haré hoy?
 Voy a empezar a desarrolar el sidebar, para ello tengo que investigar sobre interfaces gráficas.
-¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
 Tengo una limitación técnica, es decir, no estoy muy familiarizada con HTML y CSS, pero lo voy a estar solucionando a medida que vaya estudiandolos.
 
-### Juan Jose
-¿Qué hice ayer?
+#### Juan Jose
+* ¿Qué hice ayer?
 Ayer empecé a hacer el html del login, y implemente la ruta de los archivos estaticos en django
-¿Qué haré hoy?.
+* ¿Qué haré hoy?.
 Voy a agregarle la funcionalidad a la pagina para que funcione el login 
-¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
 Hay poco conocimiento de django, por lo que hay que buscar bastante documentacion, por ejemplo para linkear los archivos estaticos del proyecto y el desarrollo de formularios personalizados
+
+### Septiembre 20 2023:
+
+#### Ana:
+* ¿Qué hice ayer?
+Continué trabajando en el desarrollo del sidebar y realizando investigación sobre interfaces gráficas.
+* ¿Qué haré hoy?
+Hoy, mi enfoque principal sigue siendo el desarrollo del sidebar. Estoy aplicando lo que he aprendido en mi investigación para avanzar.
+* ¿Hay algún obstáculo que me impida avanzar en mi trabajo?
+Sigo lidiando con mi falta de experiencia en HTML y CSS, lo que podría ralentizar mi progreso.
