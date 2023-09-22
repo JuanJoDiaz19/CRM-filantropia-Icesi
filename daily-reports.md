@@ -55,3 +55,11 @@ Investigué sobre Django, en mayor parte sobre como manejar las HTTP requests.
 Investigaré sobre CSS, ya que es donde tengo mayor falencia.
 * ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
 Poco conocimiento sobre CSS.
+
+#### Espinosa
+* ¿Qué hice ayer?
+Investigue un poco sobre HTML.
+* ¿Qué haré hoy?
+Complementare un poco mas la investigacion del dia de ayer.
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+Poca disponibilidad de tiempo debido a parciales.
