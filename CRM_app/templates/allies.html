@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Página de Ejemplo</title>
+    <title>Example Page</title>
     <style>
-        /* Estilos para los botones blancos con borde gris */
-        .boton-enlace {
+        .button-link {
             text-decoration: none;
             padding: 10px;
             display: block;
@@ -12,38 +11,35 @@
             border: 1px solid gray;
             color: black;
             text-align: center;
-            margin: 5px 0; /* Espacio entre botones */
+            margin: 5px 0; /* Space between buttons */
             cursor: pointer;
         }
 
-        /* Estilos para reducir el espacio vertical entre el botón "Agregar" y el botón "Buscar" */
-        .contenedor-botones {
+        /* Styles to reduce vertical space between "Add" and "Search" buttons */
+        .button-container {
             text-align: center;
             padding: 20px;
             position: absolute;
             right: 300px;
             display: flex;
-            
         }
 
-        .superior {
-    
+        .header {
             background-color: #0C1DAC; 
             height: 100px;
         }
 
-        .superior img{
+        .header img{
             height: 100px;
         }
 
-        .contenedor-botones button {
-            margin-bottom: 0.1px; /* Ajusta el margen inferior del botón Agregar y el botón Buscar */
+        .button-container button {
+            margin-bottom: 0.1px; /* Adjusts the bottom margin of "Add" and "Search" buttons */
             background-color: #0C1DAC;
             color: white;
-         
         }
 
-        .contenedor-botones input{
+        .button-container input{
             width: 500px;
             flex: 1;
         }
@@ -56,64 +52,112 @@
             cursor: pointer;
         }
 
-        .label-con-imagen {
+        .image-with-label {
             display: flex;
-            align-items: center; /* Alinea verticalmente el contenido */
+            align-items: center; /* Vertically align content */
             border: 1px solid #ccc;
             width:500px;
-            
         }
 
-        .allies-points{
+        .allies-section {
             right: 200px;
         }
 
-        .label-con-imagen img {
-            margin-right: 10px; /* Espacio entre la imagen y el texto del label */
-            max-width: 100px; /* Ajusta el ancho máximo de la imagen */
+        .image-with-label img {
+            margin-right: 10px;
+            max-width: 100px;
         }
+
+        .allies-container {
+            max-width: 300px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ccc; 
+        }
+
+        .allies-card {
+            border: 1px solid #ccc;
+            margin: 5px;
+            text-align: center;
+            background-color: white;
+            width: 100%;
+            display: flex;
+            flex-direction: row; 
+        }
+
+        .allies-card img {
+            max-width: 100%;
+            height: 100px;
+            width: 100px;
+        }
+
+        .allies-info {
+            padding: 5px;
+            text-align: left;
+            flex-grow: 1;
+        }
+
 
     </style>
 </head>
 <body>
-    <div class="superior">
-       <img src="https://media.discordapp.net/attachments/874289027979817022/1155309940894863450/image.png">
-        
-       </img>
+    <div class="header">
+        <img src="https://media.discordapp.net/attachments/874289027979817022/1155309940894863450/image.png"></img>
     </div>
 
-    <div style="display: flex;">
-        <div style="flex: 0.5; text-align: center; padding: 20px;">
-            <img src="imagen_de_usuario.jpg" alt="Usuario" style="max-width: 100px;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2017/11/10/05/48/user-2935527_1280.png" alt="Usuario" style="max-width: 100px;">
             <p>Nombre de Usuario</p>
             <div>
-                <a href="#" class="boton-enlace">Botón 1</a>
-                <a href="#" class="boton-enlace">Botón 2</a>
-                <a href="#" class="boton-enlace">Botón 3</a>
-                <a href="#" class="boton-enlace">Botón 4</a>
-                <a href="#" class="boton-enlace">Botón 5</a>
-                <a href="#" class="boton-enlace">Botón 6</a>
+                <a href="#" class="button-link">Button 1</a>
+                <a href="#" class="button-link">Button 2</a>
+                <a href="#" class="button-link">Button 3</a>
+                <a href="#" class="button-link">Button 4</a>
+                <a href="#" class="button-link">Button 5</a>
+                <a href="#" class="button-link">Button 6</a>
             </div>
         </div>
-        <div style="flex: 4.5; text-align: center; padding: 20px; ">
-            <div style="margin-left: 470px; ">
-                <button style="background-color: #0C1DAC; color: white;">Agregar</button>
+ 
+        <div style="flex: 4;">
+            <div class="button-container">
+                <form method="get" action="{% url 'allies' %}">
+                    <input type="text" name="q" placeholder="Buscar por nombre" value="{{ request.GET.q }}">
+                    <select name="estado">
+                        <option value="" {% if not request.GET.estado %}selected{% endif %}>Todos</option>
+                        <option value="activo" {% if request.GET.estado == 'activo' %}selected{% endif %}>Activo</option>
+                        <option value="inactivo" {% if request.GET.estado == 'inactivo' %}selected{% endif %}>Inactivo</option>
+                    </select>
+                    <select name="tipo">
+                        <option value="" {% if not request.GET.tipo %}selected{% endif %}>Todos</option>
+                        {% for allie_type in allie_types %}
+                            <option value="{{ allie_type.id }}" {% if request.GET.tipo == allie_type.id %}selected{% endif %}>
+                                {{ allie_type.name }}
+                            </option>
+                        {% endfor %}
+                    </select>                    
+                    <button type="submit">Buscar</button>
+                </form>                
             </div>
-            <div class="contenedor-botones">
-                <input type="text" placeholder="Buscar">
-                <button class="dropbtn">Opciones ▼</button>
-                <button>Buscar</button>
-
-            </div>
-            <div class="allies-points" style="padding: 80px;">
-                <label class="label-con-imagen">
-                    <img src="imagen.jpg" alt="Imagen">
-                    Texto del Label
-                </label>
-            </div>
-            
         </div>
     </div>
-    
+
+    <div class="allies-container">
+        {% for allie in allies %}
+            <div class="allies-card">
+                <img src="{{ allie.image_link }}" alt="{{ allie.name }}">
+                <div class="allies-info">
+                    <p>{{ allie.name }}</p>
+                    <p style="color: rgba(0, 0, 0, 0.5); font-size: 12px;">{{ allie.area }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
 </body>
 </html>
