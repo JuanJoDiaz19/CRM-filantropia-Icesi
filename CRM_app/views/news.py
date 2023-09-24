@@ -4,7 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login,logout, authenticate
 from django.contrib.auth.models import User
 from django.db import IntegrityError
-from CRM_app.models.New import New
+from CRM_app.models import New
 
 class News(View):
     def get(self, request):

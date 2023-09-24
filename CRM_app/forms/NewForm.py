@@ -1,5 +1,5 @@
 from django import forms
-from CRM_app.models.New import New
+from CRM_app.models import New
 
 class NewForm(forms.ModelForm):
     class Meta:
