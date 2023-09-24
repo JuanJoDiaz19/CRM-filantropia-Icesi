@@ -39,8 +39,8 @@ p {
     color: white;
     height: 100%;
     background-color: var(--backgroud-color);
-    padding-right: 7rem;
-    padding-left: 7rem;
+    padding-right: 9rem;
+    padding-left: 9rem;
     font-size: 1.8rem;
     border-radius: 2rem 0 0 2rem;
 }   
