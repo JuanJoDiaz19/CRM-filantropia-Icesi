@@ -24,6 +24,7 @@ from CRM_app.views.singin import Singin
 from CRM_app.views.sing_out import Singout
 from CRM_app.views.singup import Singup
 from CRM_app.views.tasks import Tasks
+from CRM_app.views.allie_view import allies
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -35,5 +36,6 @@ urlpatterns = [
     path('news/', News.as_view(), name="news"),
     path('create_new/', CreateNew.as_view(), name='create_new'),
     path('delete_new/<int:new_id>/', DeleteNew.as_view(), name='delete_new'),
+    path('allies/', allies.as_view(), name='allie_view'),
 
 ]

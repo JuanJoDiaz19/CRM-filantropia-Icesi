@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página de Ejemplo</title>
+    <style>
+        /* Estilos para los botones blancos con borde gris */
+        .boton-enlace {
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            background-color: white;
+            border: 1px solid gray;
+            color: black;
+            text-align: center;
+            margin: 5px 0; /* Espacio entre botones */
+            cursor: pointer;
+        }
+
+        /* Estilos para reducir el espacio vertical entre el botón "Agregar" y el botón "Buscar" */
+        .contenedor-botones {
+            text-align: center;
+            padding: 20px;
+            position: absolute;
+            right: 300px;
+            display: flex;
+            
+        }
+
+        .superior {
+    
+            background-color: #0C1DAC; 
+            height: 100px;
+        }
+
+        .superior img{
+            height: 100px;
+        }
+
+        .contenedor-botones button {
+            margin-bottom: 0.1px; /* Ajusta el margen inferior del botón Agregar y el botón Buscar */
+            background-color: #0C1DAC;
+            color: white;
+         
+        }
+
+        .contenedor-botones input{
+            width: 500px;
+            flex: 1;
+        }
+
+        .dropbtn {
+            background-color: #0C1DAC;
+            color: white;
+            padding: 5px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .label-con-imagen {
+            display: flex;
+            align-items: center; /* Alinea verticalmente el contenido */
+            border: 1px solid #ccc;
+            width:500px;
+            
+        }
+
+        .allies-points{
+            right: 200px;
+        }
+
+        .label-con-imagen img {
+            margin-right: 10px; /* Espacio entre la imagen y el texto del label */
+            max-width: 100px; /* Ajusta el ancho máximo de la imagen */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="superior">
+       <img src="https://media.discordapp.net/attachments/874289027979817022/1155309940894863450/image.png">
+        
+       </img>
+    </div>
+
+    <div style="display: flex;">
+        <div style="flex: 0.5; text-align: center; padding: 20px;">
+            <img src="imagen_de_usuario.jpg" alt="Usuario" style="max-width: 100px;">
+            <p>Nombre de Usuario</p>
+            <div>
+                <a href="#" class="boton-enlace">Botón 1</a>
+                <a href="#" class="boton-enlace">Botón 2</a>
+                <a href="#" class="boton-enlace">Botón 3</a>
+                <a href="#" class="boton-enlace">Botón 4</a>
+                <a href="#" class="boton-enlace">Botón 5</a>
+                <a href="#" class="boton-enlace">Botón 6</a>
+            </div>
+        </div>
+        <div style="flex: 4.5; text-align: center; padding: 20px; ">
+            <div style="margin-left: 470px; ">
+                <button style="background-color: #0C1DAC; color: white;">Agregar</button>
+            </div>
+            <div class="contenedor-botones">
+                <input type="text" placeholder="Buscar">
+                <button class="dropbtn">Opciones ▼</button>
+                <button>Buscar</button>
+
+            </div>
+            <div class="allies-points" style="padding: 80px;">
+                <label class="label-con-imagen">
+                    <img src="imagen.jpg" alt="Imagen">
+                    Texto del Label
+                </label>
+            </div>
+            
+        </div>
+    </div>
+    
+</body>
+</html>
