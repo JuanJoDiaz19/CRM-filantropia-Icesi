@@ -26,6 +26,11 @@ from CRM_app.views.sing_out import Singout
 from CRM_app.views.singup import Singup
 from CRM_app.views.tasks import Tasks
 from CRM_app.views.allies import Allies
+from CRM_app.views.calendar import Calendar
+from CRM_app.views.reports import Reports
+from CRM_app.views.investigations import Investigations
+from CRM_app.views.config import Config
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -33,6 +38,11 @@ urlpatterns = [
     path('signup/', Singup.as_view(), name="signup"),
     path('signin/', Singin.as_view(), name="signin"),
     path('tasks/', Tasks.as_view(), name="tasks"),
+    path('home/', Home.as_view(), name="home"),
+    path('calendar/', Calendar.as_view(), name="calendar"),
+    path('reports/', Reports.as_view(), name="reports"),
+    path('investigations/', Investigations.as_view(), name="investigations"),
+    path('config/', Config.as_view(), name="config"),
     path('logout/', Singout.as_view(), name="logout"),
     path('news/', News.as_view(), name="news"),
     path('create_new/', CreateNew.as_view(), name='create_new'),

@@ -5,6 +5,6 @@ from django.contrib.auth import login,logout, authenticate
 from django.contrib.auth.models import User
 from django.db import IntegrityError
 
-class Home(View):
+class Calendar(View):
     def get(self, request):
-        return render(request, 'home.html')
+        return render(request, 'calendar.html')
