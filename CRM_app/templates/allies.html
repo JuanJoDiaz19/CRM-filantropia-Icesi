@@ -1,163 +1,47 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Example Page</title>
-    <style>
-        .button-link {
-            text-decoration: none;
-            padding: 10px;
-            display: block;
-            background-color: white;
-            border: 1px solid gray;
-            color: black;
-            text-align: center;
-            margin: 5px 0; /* Space between buttons */
-            cursor: pointer;
-        }
+{% extends 'base.html' %}
+{% load static %}
 
-        /* Styles to reduce vertical space between "Add" and "Search" buttons */
-        .button-container {
-            text-align: center;
-            padding: 20px;
-            position: absolute;
-            right: 300px;
-            display: flex;
-        }
+{% block main_content %}
 
-        .header {
-            background-color: #0C1DAC; 
-            height: 100px;
-        }
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <div style="flex: 4;">
+      <div class="button-container">
+          <form method="get" action="{% url 'allies' %}">
+              <input type="text" name="q" placeholder="Buscar por nombre" value="{{ request.GET.q }}">
+              <select name="estado">
+                  <option value="" {% if not request.GET.estado %}selected{% endif %}>Todos</option>
+                  <option value="activo" {% if request.GET.estado == 'activo' %}selected{% endif %}>Activo</option>
+                  <option value="inactivo" {% if request.GET.estado == 'inactivo' %}selected{% endif %}>Inactivo</option>
+              </select>
+              <select name="tipo">
+                  <option value="" {% if not request.GET.tipo %}selected{% endif %}>Todos</option>
+                  {% for allie_type in allie_types %}
+                      <option value="{{ allie_type.id }}" {% if request.GET.tipo == allie_type.id %}selected{% endif %}>
+                          {{ allie_type.name }}
+                      </option>
+                  {% endfor %}
+              </select>                    
+              <button type="submit">Buscar</button>
+          </form>                
+      </div>
+  </div>
+</div>
 
-        .header img{
-            height: 100px;
-        }
-
-        .button-container button {
-            margin-bottom: 0.1px; /* Adjusts the bottom margin of "Add" and "Search" buttons */
-            background-color: #0C1DAC;
-            color: white;
-        }
-
-        .button-container input{
-            width: 500px;
-            flex: 1;
-        }
-
-        .dropbtn {
-            background-color: #0C1DAC;
-            color: white;
-            padding: 5px 15px;
-            border: none;
-            cursor: pointer;
-        }
-
-        .image-with-label {
-            display: flex;
-            align-items: center; /* Vertically align content */
-            border: 1px solid #ccc;
-            width:500px;
-        }
-
-        .allies-section {
-            right: 200px;
-        }
-
-        .image-with-label img {
-            margin-right: 10px;
-            max-width: 100px;
-        }
-
-        .allies-container {
-            max-width: 300px;
-            margin: auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            max-height: 300px;
-            overflow-y: auto;
-            border: 1px solid #ccc; 
-        }
-
-        .allies-card {
-            border: 1px solid #ccc;
-            margin: 5px;
-            text-align: center;
-            background-color: white;
-            width: 100%;
-            display: flex;
-            flex-direction: row; 
-        }
-
-        .allies-card img {
-            max-width: 100%;
-            height: 100px;
-            width: 100px;
-        }
-
-        .allies-info {
-            padding: 5px;
-            text-align: left;
-            flex-grow: 1;
-        }
+<div class="allies-container">
+  {% for allie in allies %}
+  <div class="allies-card">
+    <img src="{{ allie.image_link }}" alt="{{ allie.name }}">
+      <div class="allies-info">
+        <p>{{ allie.name }}</p>
+        <p style="color: rgba(0, 0, 0, 0.5); font-size: 12px;">{{ allie.area }}</p>
+      </div>
+   </div>
+  {% endfor %}
+</div>
 
 
-    </style>
-</head>
-<body>
-    <div class="header">
-        <img src="https://media.discordapp.net/attachments/874289027979817022/1155309940894863450/image.png"></img>
-    </div>
+{% endblock %}
 
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-
-        <div>
-            <img src="https://cdn.pixabay.com/photo/2017/11/10/05/48/user-2935527_1280.png" alt="Usuario" style="max-width: 100px;">
-            <p>{{user.username}}</p>
-            <div>
-                <a href="#" class="button-link">Button 1</a>
-                <a href="#" class="button-link">Button 2</a>
-                <a href="#" class="button-link">Button 3</a>
-                <a href="#" class="button-link">Button 4</a>
-                <a href="#" class="button-link">Button 5</a>
-                <a href="#" class="button-link">Button 6</a>
-            </div>
-        </div>
- 
-        <div style="flex: 4;">
-            <div class="button-container">
-                <form method="get" action="{% url 'allies' %}">
-                    <input type="text" name="q" placeholder="Buscar por nombre" value="{{ request.GET.q }}">
-                    <select name="estado">
-                        <option value="" {% if not request.GET.estado %}selected{% endif %}>Todos</option>
-                        <option value="activo" {% if request.GET.estado == 'activo' %}selected{% endif %}>Activo</option>
-                        <option value="inactivo" {% if request.GET.estado == 'inactivo' %}selected{% endif %}>Inactivo</option>
-                    </select>
-                    <select name="tipo">
-                        <option value="" {% if not request.GET.tipo %}selected{% endif %}>Todos</option>
-                        {% for allie_type in allie_types %}
-                            <option value="{{ allie_type.id }}" {% if request.GET.tipo == allie_type.id %}selected{% endif %}>
-                                {{ allie_type.name }}
-                            </option>
-                        {% endfor %}
-                    </select>                    
-                    <button type="submit">Buscar</button>
-                </form>                
-            </div>
-        </div>
-    </div>
-
-    <div class="allies-container">
-        {% for allie in allies %}
-            <div class="allies-card">
-                <img src="{{ allie.image_link }}" alt="{{ allie.name }}">
-                <div class="allies-info">
-                    <p>{{ allie.name }}</p>
-                    <p style="color: rgba(0, 0, 0, 0.5); font-size: 12px;">{{ allie.area }}</p>
-                </div>
-            </div>
-        {% endfor %}
-    </div>
-
-</body>
-</html>
+{% block pagina_actual_aliados %}
+<div class="current-page"></div>
+{% endblock %}

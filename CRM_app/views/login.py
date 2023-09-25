@@ -20,5 +20,5 @@ class LogIn(View):
             })
         else:
             login(request, user)
-            return redirect('tasks')
+            return redirect('home')
     
