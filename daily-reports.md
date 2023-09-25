@@ -73,3 +73,15 @@ Terminare de hacer la funcionalidad para que funcione el login de la pagina
 * ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
 Toca investigar bastante sobre como funciona django y toma bastante tiempo
 
+
+### Septiembre 25 2023
+
+#### Juan Jose Diaz
+* ¿Qué hice ayer?
+Termine de hacer el login de la aplicacion con las funciones que tiene django con los usuarios
+* ¿Qué haré hoy?
+Agregare los estilos de la pagina de la busqueda y filtrado de aliados, asi mismo empezare a hacer la pagina de la vista de una aliado
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+Depronto puede ser la forma en que obtengo los datos del backend para la pagina
+
+
