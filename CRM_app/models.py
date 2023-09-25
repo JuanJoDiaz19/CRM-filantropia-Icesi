@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.base_user import AbstractBaseUser
 
 class New(models.Model):
     title = models.CharField(max_length=50)
@@ -23,5 +24,12 @@ class Allie(models.Model):
     active = models.BooleanField(default=True)
     image_link = models.CharField(max_length=200)
 
+    def __str__(self):
+        return self.name
+    
+
+class User(AbstractBaseUser):
+    naame= models.CharField(max_length=50)
+         
     def __str__(self):
         return self.name
