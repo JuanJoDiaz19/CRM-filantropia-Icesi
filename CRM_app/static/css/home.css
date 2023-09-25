@@ -12,6 +12,7 @@
   overflow-y: hidden;
   width: 230px;
   align-items: start;
+  height: 100vh;
   max-height: 100%;
 }
 .custom-topbar {
