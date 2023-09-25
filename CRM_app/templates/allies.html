@@ -3,40 +3,42 @@
 
 {% block main_content %}
 
-<div style="flex: 4;">
-    <div class="button-container">
-        <form method="get" action="{% url 'allies' %}">
-            <input type="text" name="q" placeholder="Buscar por nombre" value="{{ request.GET.q }}">
-            <select name="estado">
-                <option value="" {% if not request.GET.estado %}selected{% endif %}>Todos</option>
-                <option value="activo" {% if request.GET.estado == 'activo' %}selected{% endif %}>Activo</option>
-                <option value="inactivo" {% if request.GET.estado == 'inactivo' %}selected{% endif %}>Inactivo</option>
-            </select>
-            <select name="tipo">
-                <option value="" {% if not request.GET.tipo %}selected{% endif %}>Todos</option>
-                {% for allie_type in allie_types %}
-                    <option value="{{ allie_type.id }}" {% if request.GET.tipo == allie_type.id %}selected{% endif %}>
-                        {{ allie_type.name }}
-                    </option>
-                {% endfor %}
-            </select>                    
-            <button type="submit">Buscar</button>
-        </form>                
-    </div>
-</div>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <div style="flex: 4;">
+      <div class="button-container">
+          <form method="get" action="{% url 'allies' %}">
+              <input type="text" name="q" placeholder="Buscar por nombre" value="{{ request.GET.q }}">
+              <select name="estado">
+                  <option value="" {% if not request.GET.estado %}selected{% endif %}>Todos</option>
+                  <option value="activo" {% if request.GET.estado == 'activo' %}selected{% endif %}>Activo</option>
+                  <option value="inactivo" {% if request.GET.estado == 'inactivo' %}selected{% endif %}>Inactivo</option>
+              </select>
+              <select name="tipo">
+                  <option value="" {% if not request.GET.tipo %}selected{% endif %}>Todos</option>
+                  {% for allie_type in allie_types %}
+                      <option value="{{ allie_type.id }}" {% if request.GET.tipo == allie_type.id %}selected{% endif %}>
+                          {{ allie_type.name }}
+                      </option>
+                  {% endfor %}
+              </select>                    
+              <button type="submit">Buscar</button>
+          </form>                
+      </div>
+  </div>
 </div>
 
 <div class="allies-container">
-{% for allie in allies %}
-    <div class="allies-card">
-        <img src="{{ allie.image_link }}" alt="{{ allie.name }}">
-        <div class="allies-info">
-            <p>{{ allie.name }}</p>
-            <p style="color: rgba(0, 0, 0, 0.5); font-size: 12px;">{{ allie.area }}</p>
-        </div>
-    </div>
-{% endfor %}
+  {% for allie in allies %}
+  <div class="allies-card">
+    <img src="{{ allie.image_link }}" alt="{{ allie.name }}">
+      <div class="allies-info">
+        <p>{{ allie.name }}</p>
+        <p style="color: rgba(0, 0, 0, 0.5); font-size: 12px;">{{ allie.area }}</p>
+      </div>
+   </div>
+  {% endfor %}
 </div>
+
 
 {% endblock %}
 
