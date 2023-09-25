@@ -1,47 +1,54 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block header_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/allies.css' %}">
+{% endblock %}
+
 {% block main_content %}
 
-<div style="display: flex; justify-content: space-between; align-items: center;">
-  <div style="flex: 4;">
-      <div class="button-container">
-          <form method="get" action="{% url 'allies' %}">
-              <input type="text" name="q" placeholder="Buscar por nombre" value="{{ request.GET.q }}">
-              <select name="estado">
-                  <option value="" {% if not request.GET.estado %}selected{% endif %}>Todos</option>
-                  <option value="activo" {% if request.GET.estado == 'activo' %}selected{% endif %}>Activo</option>
-                  <option value="inactivo" {% if request.GET.estado == 'inactivo' %}selected{% endif %}>Inactivo</option>
-              </select>
-              <select name="tipo">
-                  <option value="" {% if not request.GET.tipo %}selected{% endif %}>Todos</option>
-                  {% for allie_type in allie_types %}
-                      <option value="{{ allie_type.id }}" {% if request.GET.tipo == allie_type.id %}selected{% endif %}>
-                          {{ allie_type.name }}
-                      </option>
-                  {% endfor %}
-              </select>                    
-              <button type="submit">Buscar</button>
-          </form>                
-      </div>
-  </div>
-</div>
+<section class="main-content-allies">
+    <div class="main-content__header">
+        <h1><b>Aliados ICESI</b></h1>
+        <a href="#">
+            <img src="{% static 'img/icons/add-icon.png' %}" alt="">
+        </a>
+    </div>
+    <form method="get" action="{% url 'allies' %}" class="button-container">
+        <input class="search-field search-text-field" type="text" name="q" placeholder="Buscar por nombre" value="{{ request.GET.q }}">
+        <select class="search-field search-option-field" name="estado">
+            <option value="" {% if not request.GET.estado %}selected{% endif %}>Todos</option>
+            <option value="activo" {% if request.GET.estado == 'activo' %}selected{% endif %}>Activo</option>
+            <option value="inactivo" {% if request.GET.estado == 'inactivo' %}selected{% endif %}>Inactivo</option>
+        </select>
+        <select class="search-field search-option-field" name="tipo">
+            <option value="" {% if not request.GET.tipo %}selected{% endif %}>Todos</option>
+            {% for allie_type in allie_types %}
+                <option value="{{ allie_type.id }}" {% if request.GET.tipo == allie_type.id %}selected{% endif %}>
+                    {{ allie_type.name }}
+                </option>
+            {% endfor %}
+        </select>                    
+        <button class="buton-search-field" type="submit"><b>Buscar</b></button>
+    </form>   
 
-<div class="allies-container">
-  {% for allie in allies %}
-  <div class="allies-card">
-    <img src="{{ allie.image_link }}" alt="{{ allie.name }}">
-      <div class="allies-info">
-        <p>{{ allie.name }}</p>
-        <p style="color: rgba(0, 0, 0, 0.5); font-size: 12px;">{{ allie.area }}</p>
-      </div>
-   </div>
-  {% endfor %}
-</div>
-
+    <div class="allies-container">
+    {% for allie in allies %}
+        <div class="allies-card">
+            <div class="allies-card-image-container">
+                <img src="{{ allie.image_link }}" alt="{{ allie.name }}">
+            </div>
+            <div class="allies-info">
+                <p class="allie-name">{{ allie.name }}</p>
+                <p class="allie-area">{{ allie.area }}</p>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</section>
 
 {% endblock %}
 
 {% block pagina_actual_aliados %}
 <div class="current-page"></div>
-{% endblock %}
+{% endblock %}  
