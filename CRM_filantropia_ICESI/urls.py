@@ -33,6 +33,7 @@ urlpatterns = [
     path('signup/', Singup.as_view(), name="signup"),
     path('signin/', Singin.as_view(), name="signin"),
     path('tasks/', Tasks.as_view(), name="tasks"),
+    path('home/', Home.as_view(), name="home"),
     path('logout/', Singout.as_view(), name="logout"),
     path('news/', News.as_view(), name="news"),
     path('create_new/', CreateNew.as_view(), name='create_new'),

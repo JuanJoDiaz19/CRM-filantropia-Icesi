@@ -1,8 +1,101 @@
-{% extends 'base.html'%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Mulish' rel='stylesheet'>
+</head>
+<body>
+<div>
+  <!-- Top Bar -->
+  <nav id="topbar" class="custom-topbar topbar">
 
+    <a class="navbar-brand" href="#">
+      <img class="topbar-image" src="{% static 'img/home/logo.png' %}" alt="Logo" width="150" height="70" class="d-inline-block align-text-top">
+    </a>
 
-{% block content %}
+  </nav>
+      
+  <nav id="sidebar" class="custom-sidebar sidebar" >
 
-<h1>Home</h1>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et explicabo quasi necessitatibus iusto assumenda ullam deserunt autem quo, iste unde, odio porro velit nam aperiam id sint recusandae adipisci sapiente.</p>
-{% endblock %}
+    <!-- Información de usuario -->
+    <div class="user-info">
+      <div class="centered-content d-flex flex-column align-items-center">
+        <img src="{% static 'img/home/profile.png' %}" alt="Profile Image">
+        <p class="user-name">Usuario</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- Opciones -->
+    <ul class="nav nav-pills flex-column ">
+      <li class="nav-item" style="margin-top: 7px;">
+        <a href="#" class="nav-link link-dark">
+          <img class="sidebar-image" src="{% static 'img/home/home.png' %}" alt="inicio" width="16" height="16">
+          Página Inicio
+        </a>
+        <div class="current-page"></div>
+      </li>
+
+      <li class="nav-item">
+        <a href="#" class="nav-link link-dark">
+          <img class="sidebar-image" src="{% static 'img/home/users.png' %}" alt="aliados" width="16" height="16">
+          Aliados
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="#" class="nav-link link-dark">
+          <img class="sidebar-image" src="{% static 'img/home/calendar.png' %}" alt="calendario" width="16" height="16">
+          Calendario
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="#" class="nav-link link-dark">
+          <img class="sidebar-image" src="{% static 'img/home/reports.png' %}" alt="reportes" width="16" height="16">
+          Reportes
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="#" class="nav-link link-dark">
+          <img class="sidebar-image" src="{% static 'img/home/brain.png' %}" alt="investigaciones" width="16" height="16">
+          Investigación
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="#" class="nav-link link-dark">
+          <img class="sidebar-image" src="{% static 'img/home/settings.png' %}" alt="configuracion" width="16" height="16">
+          Configuración
+        </a>
+      </li>
+    </ul>
+
+    <hr>
+
+  </nav>
+</div>
+
+<div class="container">
+  <img src="test.png" alt="{% static 'img/home/test.png' %}" style="height:1000px; width:1000px;">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
+  
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
