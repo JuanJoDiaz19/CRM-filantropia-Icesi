@@ -19,6 +19,7 @@ from django.urls import path
 from CRM_app.views.home import Home
 from CRM_app.views.create_new import CreateNew
 from CRM_app.views.delete_new import DeleteNew
+from CRM_app.views.login import LogIn
 from CRM_app.views.news import News
 from CRM_app.views.singin import Singin
 from CRM_app.views.sing_out import Singout
@@ -28,7 +29,7 @@ from CRM_app.views.allies import Allies
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', Home.as_view(), name="home"),
+    path('', LogIn.as_view(), name="login"),
     path('signup/', Singup.as_view(), name="signup"),
     path('signin/', Singin.as_view(), name="signin"),
     path('tasks/', Tasks.as_view(), name="tasks"),

@@ -6,22 +6,18 @@ from django.contrib.auth.models import User
 from django.db import IntegrityError
 from django.contrib import messages
 
-class Singin(View):
+
+class LogIn(View):
     def get(self, request):
-        return render(request, 'signin.html', {
-        'form' : AuthenticationForm
-    })
+        return render(request, 'login.html')
     
     def post(self, request):
-        print(request)
-        username = request.POST['username']
-        password = request.POST['password']
-        user = authenticate(request, username = username, password = password)
+        user = authenticate(request, username=request.POST['username'], password=request.POST['password'])
         if user is None:
-            messages.success(request, ("There was an error login i, try again"))
-            redirect('singin')
+            return render(request, 'login.html', {
+                'message': 'El usuario o la contraseña son erroneos'
+            })
         else:
-            login(request, user) 
+            login(request, user)
             return redirect('tasks')
-    
     
