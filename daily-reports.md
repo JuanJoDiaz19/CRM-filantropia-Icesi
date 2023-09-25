@@ -63,3 +63,13 @@ Investigue un poco sobre HTML.
 Complementare un poco mas la investigacion del dia de ayer.
 * ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
 Poca disponibilidad de tiempo debido a parciales.
+
+#### Juan Jose Diaz: 
+
+* ¿Qué hice ayer?
+Investigue sobre la forma de autenticarse en django y como crear los formularios
+* ¿Qué haré hoy?
+Terminare de hacer la funcionalidad para que funcione el login de la pagina
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+Toca investigar bastante sobre como funciona django y toma bastante tiempo
+
