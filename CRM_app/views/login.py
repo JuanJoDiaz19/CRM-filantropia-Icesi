@@ -4,21 +4,18 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login,logout, authenticate
 from django.contrib.auth.models import User
 from django.db import IntegrityError
+from django.contrib import messages
 
 
 class LogIn(View):
     def get(self, request):
-        return render(request, 'login.html', {
-        'form' : AuthenticationForm
-    })
+        return render(request, 'login.html')
     
     def post(self, request):
-        print(request)
         user = authenticate(request, username=request.POST['username'], password=request.POST['password'])
         if user is None:
-            return render(request, 'signin.html', {
-            'form' : AuthenticationForm, 
-            'error': 'Username or Password is incorrect'
+            return render(request, 'login.html', {
+                'message': 'El usuario o la contraseña son erroneos'
             })
         else:
             login(request, user)

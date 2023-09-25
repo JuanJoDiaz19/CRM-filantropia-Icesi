@@ -85,7 +85,7 @@ p {
     color: white;
 }
 
-.login-section #exampleInputPassword1 {
+.login-section .password-login {
     margin-bottom: 3rem;
 }
 
@@ -96,6 +96,21 @@ p {
     height: 5rem;
     border-radius: 0.5rem;
     /* box-shadow: var(--secondary-color) inset 0 0 5px ; */
+}
+
+.alert {
+    display: flex;
+    margin: 2rem 0 2rem 0 ;
+    height: 5rem;
+    background-color: #13247B;
+    align-items: center;
+    justify-content: center;
+}
+
+.alert p {
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
 }
 
 
