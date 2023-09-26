@@ -93,4 +93,12 @@ Empezaré a ver como añadirle funcionalidad a la parte de agregar aliado.
 * ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
 Por ahora, sigo con falencias de CSS, pero me estoy desempeñando más en backend.
 
+#### Ana
+* ¿Qué hice ayer?
+Terminé de hacer las barras de opciones para todas las vistas, y puse una base de cada vista que necesitamos para que mis compañeros trabajen mientras
+* ¿Qué haré hoy?
+Empezaré la vista de agregar aliados
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+Todavia no se como guardar los datos a la base de datos por la parte del back, y en el front todavia no se como agregar imagenes ni dado un boton desplegar n tarjetas de información del aliado
+
 
