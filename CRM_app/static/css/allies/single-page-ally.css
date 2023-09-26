@@ -133,6 +133,8 @@ h2 {
     border-radius: 20px;
     padding: 2rem 3rem 2rem 3rem;
     display: flex;
+    
+    box-shadow: 0px 5px 3px #70707076;
 }
 
 .personal_info {
