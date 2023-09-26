@@ -127,3 +127,12 @@ Empece la pagina de agregar aliado
 Terminare el front de la pagina de agregar aliado
 * ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
 Por ahora solo la falta de tiempo por la carga academica
+
+#### Espinosa
+* ¿Qué hice ayer?
+  Termine la parte del frontend de la vista de noticias.
+* ¿Qué haré hoy?
+  Vi que hay compañeros que estan hablando de que bootstrap les esta ayudando a mejorar la eficiencia del trabajo, entonces voy a investigar sobre eso.
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+Por ahora no, de pronto puedo ver si hay partes por mejorar en la vista de noticias.
+
