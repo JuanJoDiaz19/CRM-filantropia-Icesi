@@ -101,4 +101,12 @@ Empezaré la vista de agregar aliados
 * ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
 Todavia no se como guardar los datos a la base de datos por la parte del back, y en el front todavia no se como agregar imagenes ni dado un boton desplegar n tarjetas de información del aliado
 
+#### Espinosa
+* ¿Qué hice ayer?
+Le dedique todo el dia a la investigacion y aprendizaje de html y css, de la cual pude avanzar en la pantalla de noticias.
+* ¿Qué haré hoy?
+Terminar la pantalla de noticias ya que quedaron unas dudas que van dirigidas a mis compañeros
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+Todavia me hace falta un poco mas de conocimiento para el diseño web, pero poco a poco se va mejorando.
+
 
