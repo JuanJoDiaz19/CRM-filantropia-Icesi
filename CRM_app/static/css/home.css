@@ -36,12 +36,14 @@
   margin-bottom: 10px; 
   margin-top: 30px;
 }
+
 .user-name {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   font-size: 20px; 
   opacity: 0.85;
   font-weight: 700;
 }
+
 li.nav-item {
   position: relative; 
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
@@ -50,6 +52,7 @@ li.nav-item {
   opacity: 0.85;
   font-weight: 620;
 }
+
 li.nav-item a.nav-link {
   position: relative; 
   padding-right: 30px; 
@@ -68,12 +71,14 @@ li.nav-item:hover {
   right: 0; 
   border-radius: 5px 0px 0px 5px;
 }
+
 .sidebar-image{
   opacity: 0.85;
   transform: translateY(-15%);
   margin-right: 15px; 
   margin-left: 15px; 
 }
+
 .topbar-image {
   margin-left: 20px;
 }
@@ -81,8 +86,7 @@ li.nav-item:hover {
 .main_content { 
   padding-top: 120px;
   padding-left: 265px;
-  color: #0159A1;
-  
+  color: #0159A1;  
 }
 
 
