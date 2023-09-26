@@ -110,6 +110,9 @@ Terminar la pantalla de noticias ya que quedaron unas dudas que van dirigidas a 
 Todavia me hace falta un poco mas de conocimiento para el diseño web, pero poco a poco se va mejorando.
 
 ### Septiembre 26 2023
+
+#### Juan Jose Diaz
+
 * ¿Qué hice ayer?
 Termine de hacer el html y css de la pagina de un aliado, falta que los demas le agregen la funcionalidad a la pagina
 * ¿Qué haré hoy?
