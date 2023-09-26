@@ -1,3 +1,12 @@
+:root {
+  --primary-color: #3969FC; 
+--secondary-color: #13247B; 
+  --backgroud-color: #0159A1;
+  --terciary-color: #D4D4D4;
+--font-color: #707070; 
+--font: 1.6rem; 
+--titles: 3rem;
+}
 
 * {
   font-family: 'Mulish', sans-serif;
@@ -5,50 +14,70 @@
   margin: 0;
   padding: 0;
 }
+
+html {
+  font-size: 100%;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+* {
+  font-family: 'Mulish', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .sidebar {
   position: fixed;
-  padding-top: 110px;
+  padding-top: 7rem;
   background-color: #F6F6F6;
   overflow-y: hidden;
-  width: 230px;
+  width: 15rem;
   align-items: start;
   height: 100vh;
   max-height: 100%;
 }
+
 .custom-topbar {
   position: fixed;
   background-color: #0159A1;
   color: white;
-  margin-left: auto; 
-  margin-right: 10px; 
+  margin-left: auto;  
   width: 100%;
   z-index: 1;
-  padding: 10px;
+  padding: 0.8rem;
 }
+
 .centered-content img {
-  width: 105px;
-  height: 105px; 
+  width: 6.5rem;
+  height: 6.5rem; 
   border-radius: 50%; 
-  margin-bottom: 10px; 
-  margin-top: 30px;
+  margin-bottom: 0.7rem; 
+  margin-top: 1.5rem;
 }
+
 .user-name {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  font-size: 20px; 
+  font-size: 1.3rem; 
   opacity: 0.85;
   font-weight: 700;
 }
+
 li.nav-item {
   position: relative; 
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-  margin-bottom: 15px; 
-  font-size: 16px; 
+  margin-bottom: 1rem; 
+  font-size: 1rem; 
   opacity: 0.85;
   font-weight: 620;
 }
+
 li.nav-item a.nav-link {
   position: relative; 
-  padding-right: 30px; 
+  padding-right: 2rem; 
 }
 
 li.nav-item:hover {
@@ -56,7 +85,7 @@ li.nav-item:hover {
 }
 
 .current-page {
-  width: 15px;
+  width: 1rem;
   height: 100%; 
   background-color: #0159A1;
   position: absolute;
@@ -64,21 +93,22 @@ li.nav-item:hover {
   right: 0; 
   border-radius: 5px 0px 0px 5px;
 }
+
 .sidebar-image{
   opacity: 0.85;
   transform: translateY(-15%);
-  margin-right: 15px; 
-  margin-left: 15px; 
+  margin-right: 1rem; 
+  margin-left: 1rem; 
 }
+
 .topbar-image {
-  margin-left: 20px;
+  margin-left: 1.2rem;
 }
 
 .main_content { 
-  padding-top: 120px;
-  padding-left: 265px;
-  color: #0159A1;
-  
+  padding-top: 7.5rem;
+  padding-left: 16.5rem;
+  color: #0159A1;  
 }
 
 
