@@ -119,3 +119,11 @@ Termine de hacer el html y css de la pagina de un aliado, falta que los demas le
 Empezare a hacer el diseño de la pagina de las donaciones de un aliado 
 * ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
 Hasta el momento no he tenido dificultades, lo que depronto hace falta es mas tiempo pero intento aprovecharlo lo mas que puedo
+
+#### Ana
+* ¿Qué hice ayer?
+Empece la pagina de agregar aliado
+* ¿Qué haré hoy?
+Terminare el front de la pagina de agregar aliado
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+Por ahora solo la falta de tiempo por la carga academica
