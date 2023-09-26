@@ -84,4 +84,13 @@ Agregare los estilos de la pagina de la busqueda y filtrado de aliados, asi mism
 * ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
 Depronto puede ser la forma en que obtengo los datos del backend para la pagina
 
+#### Barraza
+
+* ¿Qué hice ayer?
+Termine de hacer la busqueda de los aliados segun lo que esté escrito en el cuadro de busqueda y el filtrado dependiendo si está activo o inactivo y de los tipos de aliado existentes.
+* ¿Qué haré hoy?
+Empezaré a ver como añadirle funcionalidad a la parte de agregar aliado.
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+Por ahora, sigo con falencias de CSS, pero me estoy desempeñando más en backend.
+
 
