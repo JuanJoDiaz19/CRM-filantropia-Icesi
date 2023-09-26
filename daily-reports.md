@@ -109,4 +109,10 @@ Terminar la pantalla de noticias ya que quedaron unas dudas que van dirigidas a 
 * ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
 Todavia me hace falta un poco mas de conocimiento para el diseño web, pero poco a poco se va mejorando.
 
-
+### Septiembre 26 2023
+* ¿Qué hice ayer?
+Termine de hacer el html y css de la pagina de un aliado, falta que los demas le agregen la funcionalidad a la pagina
+* ¿Qué haré hoy?
+Empezare a hacer el diseño de la pagina de las donaciones de un aliado 
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+Hasta el momento no he tenido dificultades, lo que depronto hace falta es mas tiempo pero intento aprovecharlo lo mas que puedo
