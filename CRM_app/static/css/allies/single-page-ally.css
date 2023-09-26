@@ -1,0 +1,154 @@
+:root {
+    --primary-color: #3969FC; 
+	--secondary-color: #13247B; 
+    --backgroud-color: #0159A1;
+    --terciary-color: #D4D4D4;
+	--font-color: #707070; 
+	--font: 1.6rem; 
+	--titles: 3rem;
+}
+
+* {
+    font-family: 'Mulish', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+.main-content-ally {
+    padding: 5rem 15rem 5rem  15rem ;
+}
+
+.main-section-header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+}
+
+.main-info-ally-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.image-container-ally img {
+    width: 11rem;
+    height: 11rem;
+    border: solid#707070 5px;
+    border-radius: 500px;
+}
+
+.image-container-ally {
+    margin-right: 5rem;
+}
+
+
+.main-name-ally {
+    font-weight: 700;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.main-ally-description {
+    margin-bottom: 0.5rem;
+}
+
+.inactive-user {
+    color: red;
+}
+
+.main-section-icons-container img {
+    width: 3rem;
+    height: 3rem;
+    margin-left: 2rem;
+}
+
+.main-section-icons-container {
+    display: flex;
+}
+
+.nav-section-ally {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+
+.nav-option-ally {
+    text-decoration: none;
+    height: 25rem;
+    width: 25rem;
+    border-radius: 25px;
+    margin-bottom: 5rem;
+    border: #D4D4D4 solid 3px;
+    box-shadow: 0px 5px 3px #70707076;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-option-ally h3 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.nav-option-ally__see-more {
+    width: 12rem;
+    height: 3.5rem;
+    color: white;
+    background-color: #0159A1;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.nav-option-ally img {
+    width: 7rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.asociated-contact {
+    border: #D4D4D4 solid 3px;
+    border-radius: 20px;
+    padding: 2rem 3rem 2rem 3rem;
+    display: flex;
+}
+
+.personal_info {
+    margin-right: 8rem;
+    font-weight: 600;
+}
+
+.personal_info p {
+    font-size: 1.8rem;
+}
+
+.asociated-contact-emails  p {
+    color:#0159A1;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+
