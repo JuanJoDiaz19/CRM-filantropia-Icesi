@@ -17,7 +17,7 @@
         </div>
         <div class="main-info-ally-container">
             <h1 class="main-name-ally">{{allies.name}}</h1>
-            <h4 class="main-ally-description">Compañia de tecnologia</h4>
+            <h4 class="main-ally-description">{{allies.area}}</h4>
             <h4 class="main-ally-description inactive-user">Donante inactivo</h4>
         </div>
 
@@ -25,11 +25,10 @@
             <a href="#">
                 <img src="{% static 'img/icons/edit-icon.png' %}" alt="">
             </a>
-            <img src="{% static 'img/icons/edit-icon.png' %}" alt="">
         </div>
     </div>
 
-    <p>{{allies.area}}</p>
+    <p class="ally-description">{{allies.description}}</p>
 
     <nav class="nav-section-ally">
         <a class="nav-option-ally" href="#">
@@ -79,7 +78,6 @@
     <h2>Contactos Asociados:</h2>
     {% for contact in contact_info %}
     <div class="asociated-contact">
-    
         <div class="personal_info">
             <p>{{contact.name}}</p>
             <p>{{contact.phone_number}}</p>
@@ -88,9 +86,11 @@
             <p>{{contact.email}}</p>
             <p>{{contact.aux_email}}</p>
         </div>
-    
     </div>
     {%  endfor  %}
 </section>
-
 {% endblock %}
+
+{% block pagina_actual_aliados %}
+<div class="current-page"></div>
+{% endblock %}  
