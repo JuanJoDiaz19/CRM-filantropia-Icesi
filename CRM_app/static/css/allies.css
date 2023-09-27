@@ -8,6 +8,12 @@
 	--titles: 3rem;
 }
 
+a {
+    text-decoration: none;
+    background-color: transparent;
+    color: var(--font-color);
+}
+
 .main-content-allies {
     padding: 3rem 13rem 3rem 13rem;
 }
