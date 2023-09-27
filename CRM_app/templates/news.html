@@ -1,136 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Example Page</title>
-    <style>
-        .welcome-container {
-          position: absolute;
-            height: 200px;
-            left: 400px;
-            bottom: 300px; 
-            background-image: url('https://cdn.discordapp.com/attachments/761384576022478879/1155615588962537572/image.png');
-            background-size: cover;
-            background-position: center;
-            margin: 20px; 
-            border-radius: 20px; 
+{% extends 'base.html' %}
+{% load static %}
 
-        }
+{% block header_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/news.css' %}">
+{% endblock %}
 
-        .contenedor {
-          display: grid;
-          grid-auto-rows: auto; /* Las filas se ajustarán automáticamente en función del contenido */
-          width: 800px; /* Ancho del contenedor */
-          margin: 100px auto; /* Centrar el contenedor */
-          background-color: #EDEDED; /* Borde del contenedor */
-          padding: 30px; /* Espacio interno del contenedor */
-          border-radius: 20px; 
-          max-height: 300px;
-          overflow-y: auto;
-        }
+{% block main_content %}
 
-        .rectangulo {
-            width: 100%; /* Ancho del rectángulo al 100% del contenedor */
-            height: 150px; /* Altura inicial del rectángulo */
-            background-color: #3498db; /* Color de fondo del rectángulo */
-            margin-bottom: 10px; /* Espacio entre rectángulos */
-            border-radius: 20px; 
-        }
-
-        .palante-text {
-            position: relative;
-            bottom: 0;
-            left: 0px;
-            padding: 70px; 
-            color: white;
-        }
-
-        .welcome-text {
-            position: absolute;
-            bottom: 550px;
-            left: 400px;
-             
-            color: rgb(0, 0, 0);
-        }
-
-
-        .news-text {
-            position: absolute;
-            bottom: 250px;
-            left: 400px;
-             
-            color: rgb(0, 0, 0);
-        }
-
-
-
-        .button-link {
-            text-decoration: none;
-            padding: 10px;
-            display: block;
-            background-color: white;
-            border: 1px solid gray;
-            color: black;
-            text-align: center;
-            margin: 5px 0; /* Space between buttons */
-            cursor: pointer;
-        }
-
-        /* Styles to reduce vertical space between "Add" and "Search" buttons */
-        .button-container {
-            text-align: center;
-            padding: 20px;
-            position: absolute;
-            right: 300px;
-            display: flex;
-        }
-
-        .header {
-            background-color: #0C1DAC; 
-            height: 100px;
-        }
-
-        .header img{
-            height: 100px;
-        }
-    </style>
-</head>
 <body>
-    <div class="header">
-        <img src="https://media.discordapp.net/attachments/874289027979817022/1155309940894863450/image.png"></img>
-    </div>
-
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-
-        <div>
-            <img src="https://cdn.pixabay.com/photo/2017/11/10/05/48/user-2935527_1280.png" alt="Usuario" style="max-width: 100px;">
-            <p>Nombre de Usuario</p>
-            <div>
-                <a href="#" class="button-link">Button 1</a>
-                <a href="#" class="button-link">Button 2</a>
-                <a href="#" class="button-link">Button 3</a>
-                <a href="#" class="button-link">Button 4</a>
-                <a href="#" class="button-link">Button 5</a>
-                <a href="#" class="button-link">Button 6</a>
-            </div>
-        </div>
+<div>
+  <h1 class="welcome-text">Bienvenido, usuario Filantropía</h1>
  
-        <div>
-          <p class="welcome-text">Bienvenido, usuario Filantropía</p>
-          <p class="news-text">Noticias del sistema</p> 
-          <div class="welcome-container">  
-            <p class="palante-text"></p>Vamos pa' lante</p>
-            
-
-            <div class="contenedor">
-              <div class="rectangulo"></div>
-              <div class="rectangulo"></div>
-              <div class="rectangulo"></div>
-              <div class="rectangulo"></div>
-              <div class="rectangulo"></div>
+  <div class="welcome-container">
+    <img src="{% static 'img/news/welcome.png' %}" alt="welcome" width="900px" height="200px" class="image-borders">  
+ 
+    <h2 class="palante-text" class="text-overlay"></p>Vamos pa' lante</h2>
+  </div>
+</div>  
+<h2 class="news-text">Noticias del sistema</h2>
+<div class="contenedor">
+    {%for new in news%}
+        <div class="rectangulo">
+          <div>
+            <img src="{% static 'img/news/bell.png' %}" alt="bell" class="left-image">
+            <label class="left-text" style="color: black;">{{new.date}}</label>
+          </div>
+          <div>
+            <h2 class="container-text" style="color: black;">{{new.title}}</h2>
+            <div class="news-description">
+              <label class="news-description" style="color: black;">{{new.description}}</label>
             </div>
-    </div>
+          </div>
+        </div>
+    {%endfor%}
+</div>
 
-        
-
-</body>
-</html>
+{% endblock %}
