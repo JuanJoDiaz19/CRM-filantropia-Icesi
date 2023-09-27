@@ -1,0 +1,114 @@
+.welcome-container {
+    position: relative;
+    height: 100px;
+    width: 900px;
+    top: 80px;
+    left: 110px;
+    background-size: cover;
+    background-position: center;
+    margin: 20px; 
+    border-radius: 20px; 
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%; /* Coloca el texto en el centro verticalmente */
+    left: 50%; /* Coloca el texto en el centro horizontalmente */
+    transform: translate(-50%, -50%); /* Centra el texto completamente */
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo semitransparente para el texto */
+    padding: 10px; /* Espacio alrededor del texto */
+    text-align: center; /* Alinea el texto al centro */
+  }
+
+.contenedor {
+    position: absolute;
+    display: grid;
+    grid-auto-rows: auto; 
+    width: 800px; 
+    margin: 100px auto; 
+    top: 400px;
+    left: 450px;
+    background-color: #EDEDED;
+    padding: 20px;
+    border-radius: 20px; 
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.rectangulo {
+    width: 100%; 
+    height: 150px; 
+    background-color: white;  
+    border-radius: 20px; 
+    margin-bottom: 15px;
+    max-width: 760px;
+    box-shadow: 0px 3px 5px  rgba(0, 0, 0, 0.5),
+                0px 0px 5px  rgba(0, 0, 0, 0.5);
+}
+
+
+
+.palante-text {
+    position: absolute;
+    padding: 70px;
+    top: 50px;
+    left: -30px;
+    color: rgb(78, 74, 74);
+}
+
+.welcome-text {
+    position: absolute;
+    bottom: 550px;
+    left: 400px;
+    
+    color: #434343;
+}
+
+
+.news-text {
+    position: absolute;
+    text-align: left;
+    bottom: 250px;
+    left: 400px;
+    
+    color: #374BAE;
+}
+
+.news-description {
+    position: relative;
+    margin-left: 15px;
+    bottom: 10px;
+    column-count: 1;
+    max-width: 700px;
+    max-height: 200px;
+    text-overflow: ellipsis;
+    color: #434343;
+}
+
+.container-text {
+    position: relative;
+    bottom: 20px;
+    left: 15px;
+    column-count: 1;
+    color: #434343;
+}
+
+.left-image {
+    float: left; /* Coloca la imagen a la izquierda */
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.image-borders {
+    border-radius: 20px;
+    box-shadow: 0px 5px 5px  rgba(0, 0, 0, 0.5),
+                0px 0px 5px  rgba(0, 0, 0, 0.5);
+}
+
+.left-text {
+    position: relative;
+    z-index: 1;
+    top: 120px;
+    right: 100px;
+}
