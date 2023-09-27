@@ -141,7 +141,7 @@ Por ahora no, de pronto puedo ver si hay partes por mejorar en la vista de notic
   Termine de hacer las funcionalidades necesarias para la vista de aliados y ademas empece la vista de un aliado de acuerdo de al que se entre
 * ¿Qué hare hoy?
   Terminare la vista de un aliado especifico y empezare a terminar toda la base datos para que el equipo la pueda usar en las historias que vienen.
-*¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
   De momento ningun obstaculo significativo mas que aprender cosas que no sabia como modelar bases de datos.
 
 #### Barraza
@@ -149,6 +149,6 @@ Por ahora no, de pronto puedo ver si hay partes por mejorar en la vista de notic
   Empecé a investigar más sobre los forms de Django.
 * ¿Qué hare hoy?
   Investigaré sobre como manejar las relaciones entre diferentes entidades de la db, incluyendo las tablas pivote.
-*¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
   Por ahora no presenté ningun obstaculo en específico.
 
