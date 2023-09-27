@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block style_sheet %}
+{% block header_links %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/add_allie.css' %}">
 {% endblock %}
 
-{% block main_content %}
 
+{% block main_content %}
 
 <div class="top_arrow_tittle">
   <a href="/allies">
@@ -14,10 +14,6 @@
   </a>
   <p class="top_tittle">Agregar aliado</p>
 </div>
-
-
-
-
 
 <p class="content_tittle">Información aliado</p>
 <div class="card">

@@ -44,11 +44,11 @@ urlpatterns = [
     path('reports/', Reports.as_view(), name="reports"),
     path('investigations/', Investigations.as_view(), name="investigations"),
     path('config/', Config.as_view(), name="config"),
-    path('add_allie/', Add_allie    .as_view(), name="add_allie"),
+    path('allies/add_ally/', Add_allie.as_view(), name="add_allie"),
     path('logout/', Singout.as_view(), name="logout"),
     path('news/', News.as_view(), name="news"),
     path('create_new/', CreateNew.as_view(), name='create_new'),
     path('delete_new/<int:new_id>/', DeleteNew.as_view(), name='delete_new'),
     path('allies/', Allies.as_view(), name='allies'),
-    path('ally/<int:allie_id>/', Ally.as_view(), name="ally"),
+    path('allies/<int:allie_id>/', Ally.as_view(), name="ally"),
 ]
