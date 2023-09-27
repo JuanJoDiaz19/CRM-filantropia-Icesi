@@ -48,5 +48,5 @@ urlpatterns = [
     path('create_new/', CreateNew.as_view(), name='create_new'),
     path('delete_new/<int:new_id>/', DeleteNew.as_view(), name='delete_new'),
     path('allies/', Allies.as_view(), name='allies'),
-    path('ally/', Ally.as_view(), name="ally"),
+    path('ally/<int:allie_id>/', Ally.as_view(), name="ally"),
 ]

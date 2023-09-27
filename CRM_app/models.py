@@ -33,3 +33,14 @@ class User(AbstractBaseUser):
          
     def __str__(self):
         return self.name
+
+class ContactInfo(models.Model):
+    id = models.CharField(max_length=20, primary_key=True)
+    allie = models.ForeignKey(Allie, on_delete=models.CASCADE)
+    email = models.CharField(max_length=30)
+    phone_number = models.CharField(max_length=20)
+    aux_email = models.CharField(max_length=30)
+    name = models.CharField(max_length=20)
+    
+    def __str__(self):
+        return self.name
