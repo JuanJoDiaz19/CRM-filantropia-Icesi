@@ -116,7 +116,7 @@ Todavia me hace falta un poco mas de conocimiento para el diseño web, pero poco
 * ¿Qué hice ayer?
 Termine de hacer el html y css de la pagina de un aliado, falta que los demas le agregen la funcionalidad a la pagina
 * ¿Qué haré hoy?
-Empezare a hacer el diseño de la pagina de las donaciones de un aliado 
+Revisaré que no hayan errores en la version final de la pagina de un aliado despues de haberlo hecha funcional con la base de datos
 * ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
 Hasta el momento no he tenido dificultades, lo que depronto hace falta es mas tiempo pero intento aprovecharlo lo mas que puedo
 
@@ -152,3 +152,11 @@ Por ahora no, de pronto puedo ver si hay partes por mejorar en la vista de notic
 * ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
   Por ahora no presenté ningun obstaculo en específico.
 
+### Septiembre 27 2023
+
+* ¿Qué hice ayer?
+  Termine de hacer unas correcciones de la pagina de un aliado
+* ¿Qué hare hoy?
+  Empezare a hacer el diseño html de la pagina de las donaciones
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+  Hasta el momento el unico obstaculo es el tiempo. 
