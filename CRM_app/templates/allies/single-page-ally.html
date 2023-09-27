@@ -13,10 +13,10 @@
 
     <div class="main-section-header">
         <div class="image-container-ally">
-            <img src="https://pbs.twimg.com/profile_images/903005583623675904/u4h4ELJQ_400x400.jpg" alt="Perficient logo">
+            <img src="{{allies.image_link}}" alt="Perficient logo">
         </div>
         <div class="main-info-ally-container">
-            <h1 class="main-name-ally">Perficient, Inc</h1>
+            <h1 class="main-name-ally">{{allies.name}}</h1>
             <h4 class="main-ally-description">Compañia de tecnologia</h4>
             <h4 class="main-ally-description inactive-user">Donante inactivo</h4>
         </div>
@@ -29,9 +29,7 @@
         </div>
     </div>
 
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint ex aperiam voluptas eum explicabo corrupti iste repudiandae, a molestias veritatis architecto, ratione eos voluptate reprehenderit? Nam sequi esse delectus temporibus.
-    Fugiat, vitae modi aliquam eos magni facere inventore hic blanditiis expedita! Eaque quibusdam hic perferendis, eveniet laudantium impedit quas corporis excepturi, atque, eligendi quis debitis! Beatae aspernatur nesciunt tenetur reprehenderit.
-    Voluptates ipsum fugit voluptatum nesciunt distinctio fugiat. Distinctio qui soluta praesentium fuga, consequatur tempora sunt est quo voluptatibus repudiandae sequi dolorum nemo minima ad ipsum natus. </p>
+    <p>{{allies.area}}</p>
 
     <nav class="nav-section-ally">
         <a class="nav-option-ally" href="#">
@@ -79,16 +77,20 @@
     </nav>
     
     <h2>Contactos Asociados:</h2>
+    {% for contact in contact_info %}
     <div class="asociated-contact">
+    
         <div class="personal_info">
-            <p>Santiago Barraza</p>
-            <p>1.105.360.600</p>
+            <p>{{contact.name}}</p>
+            <p>{{contact.phone_number}}</p>
         </div>
         <div class="asociated-contact-emails">
-            <p>barrazabranch@gmail.com</p>
-            <p>barrazalover@u.icesi.edu.co</p>
+            <p>{{contact.email}}</p>
+            <p>{{contact.aux_email}}</p>
         </div>
+    
     </div>
+    {%  endfor  %}
 </section>
 
 {% endblock %}
