@@ -144,7 +144,7 @@ Por ahora no, de pronto puedo ver si hay partes por mejorar en la vista de notic
 *¿Hay algún obstáculo que me impide avanzar en mi trabajo?
   De momento ningun obstaculo significativo mas que aprender cosas que no sabia como modelar bases de datos.
 
-#### Mateo Silva
+#### Barraza
 * ¿Qué hice ayer?
   Empecé a investigar más sobre los forms de Django.
 * ¿Qué hare hoy?
