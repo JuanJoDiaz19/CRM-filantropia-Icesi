@@ -15,7 +15,9 @@ a {
 }
 
 .main-content-allies {
-    padding: 3rem 13rem 3rem 13rem;
+    margin-right: 13%; 
+    margin-left: 13%;
+    margin-top: 3rem;
 }
 
 .button-container {
