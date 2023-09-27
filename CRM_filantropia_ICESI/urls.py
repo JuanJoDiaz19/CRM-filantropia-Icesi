@@ -30,8 +30,8 @@ from CRM_app.views.calendar import Calendar
 from CRM_app.views.reports import Reports
 from CRM_app.views.investigations import Investigations
 from CRM_app.views.config import Config
+from CRM_app.views.ally import Ally
 from CRM_app.views.add_allie import Add_allie
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -50,4 +50,5 @@ urlpatterns = [
     path('create_new/', CreateNew.as_view(), name='create_new'),
     path('delete_new/<int:new_id>/', DeleteNew.as_view(), name='delete_new'),
     path('allies/', Allies.as_view(), name='allies'),
+    path('ally/<int:allie_id>/', Ally.as_view(), name="ally"),
 ]
