@@ -159,4 +159,13 @@ Por ahora no, de pronto puedo ver si hay partes por mejorar en la vista de notic
 * ¿Qué hare hoy?
   Empezare a hacer el diseño html de la pagina de las donaciones
 * ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
-  Hasta el momento el unico obstaculo es el tiempo. 
+  Hasta el momento el unico obstaculo es el tiempo.
+
+### Mateo Silva
+
+* ¿Que hice ayer?
+  Ayer termine la vista de una aliado junto con sus contactos y ademas termine de plantear toda la base de datos
+* ¿Que hice hoy?
+  Hoy planee como poder hacer la vista de los practicantes y como agregarlos a la base de datos
+* ¿Hay algun obstáculo que me impide avanzar en mi trabajo?
+  No me impio avanzar pero plantear la base de datos con nuestro propio usuario podria complicarse.
