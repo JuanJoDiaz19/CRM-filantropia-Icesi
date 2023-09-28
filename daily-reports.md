@@ -154,6 +154,8 @@ Por ahora no, de pronto puedo ver si hay partes por mejorar en la vista de notic
 
 ### Septiembre 27 2023
 
+#### Juan Jose Diaz
+
 * ¿Qué hice ayer?
   Termine de hacer unas correcciones de la pagina de un aliado
 * ¿Qué hare hoy?
@@ -178,4 +180,13 @@ Por ahora no, de pronto puedo ver si hay partes por mejorar en la vista de notic
   Hoy estoy trabajando en la funcionalidad del agregar aliado.
 * ¿Hay algun obstáculo que me impide avanzar en mi trabajo?
   Aún no descubro como subir la imagen y que esta quede en la nube para luego usar el link en nuestro aliado.
+
+### Septiembre 28 2023
+
+* ¿Que hice ayer?
+Empece a hacer la pagina de las donaciones de un aliado
+* ¿Que hice hoy?
+Segui trabajando en la pagina de las doncaiones de una aliado
+* ¿Hay algun obstáculo que me impide avanzar en mi trabajo?
+No hay obstaculos por el momento
 
