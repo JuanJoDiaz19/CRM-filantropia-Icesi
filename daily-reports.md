@@ -161,7 +161,7 @@ Por ahora no, de pronto puedo ver si hay partes por mejorar en la vista de notic
 * ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
   Hasta el momento el unico obstaculo es el tiempo.
 
-### Mateo Silva
+#### Mateo Silva
 
 * ¿Que hice ayer?
   Ayer termine la vista de una aliado junto con sus contactos y ademas termine de plantear toda la base de datos
@@ -169,3 +169,13 @@ Por ahora no, de pronto puedo ver si hay partes por mejorar en la vista de notic
   Hoy planee como poder hacer la vista de los practicantes y como agregarlos a la base de datos
 * ¿Hay algun obstáculo que me impide avanzar en mi trabajo?
   No me impio avanzar pero plantear la base de datos con nuestro propio usuario podria complicarse.
+
+#### Santiago Barraza
+
+* ¿Que hice ayer?
+  Ayer investigué más sobre como ingresar correctamente objetos en la base de datos para Django, ya que Django no pone constraints, el desarrollador es el que debe asegurar la integridad de los datos.
+* ¿Que hice hoy?
+  Hoy estoy trabajando en la funcionalidad del agregar aliado.
+* ¿Hay algun obstáculo que me impide avanzar en mi trabajo?
+  Aún no descubro como subir la imagen y que esta quede en la nube para luego usar el link en nuestro aliado.
+
