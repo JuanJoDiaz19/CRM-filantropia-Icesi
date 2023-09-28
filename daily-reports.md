@@ -183,6 +183,8 @@ Por ahora no, de pronto puedo ver si hay partes por mejorar en la vista de notic
 
 ### Septiembre 28 2023
 
+#### Juan Jose Diaz
+
 * ¿Que hice ayer?
 Empece a hacer la pagina de las donaciones de un aliado
 * ¿Que hice hoy?
