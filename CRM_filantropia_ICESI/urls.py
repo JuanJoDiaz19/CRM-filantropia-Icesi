@@ -31,7 +31,7 @@ from CRM_app.views.reports import Reports
 from CRM_app.views.investigations import Investigations
 from CRM_app.views.config import Config
 from CRM_app.views.ally import Ally
-from CRM_app.views.add_allie import Add_allie
+from CRM_app.views.add_allie import AddAllie
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -44,7 +44,7 @@ urlpatterns = [
     path('reports/', Reports.as_view(), name="reports"),
     path('investigations/', Investigations.as_view(), name="investigations"),
     path('config/', Config.as_view(), name="config"),
-    path('allies/add_ally/', Add_allie.as_view(), name="add_allie"),
+    path('allies/add_ally/', AddAllie.as_view(), name="add_allie"),
     path('logout/', Singout.as_view(), name="logout"),
     path('news/', News.as_view(), name="news"),
     path('create_new/', CreateNew.as_view(), name='create_new'),

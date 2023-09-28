@@ -15,111 +15,122 @@
   <p class="top_tittle">Agregar aliado</p>
 </div>
 
-<p class="content_tittle">Información aliado</p>
-<div class="card">
-  <div class="container">
-    <div class="column column-left-top">
+<form method="post" action="{% url 'add_allie' %}" enctype="multipart/form-data">
 
-      <div>
-        <label class="content_text">Nombre</label>
-        <br>
-        <input type="text" class="form_text" id="hombre" placeholder="Nombre">
-        <br>
+  {% csrf_token %}
+
+  <p class="content_tittle">Información aliado</p>
+  <div class="card">
+    <div class="container">
+      <div class="column column-left-top">
+
+        <div>
+          <label class="content_text">Nombre</label>
+          <br>
+          <input type="text" class="form_text" name="allie_name" placeholder="Nombre">
+          <br>
+        </div>
+        
+        <div class="form">
+          <label class="content_text">Tipo de Persona</label>
+          <div class="opciones-tipo-persona">
+            <label class="sub_content_text">
+              <input type="radio" name="allie_type" value="juridica"> Jurídica
+            </label>
+            <label class="sub_content_text">
+              <input type="radio" name="allie_type" value="natural"> Natural
+            </label>
+          </div>
+        </div>
+
+        <div class="form">
+          <label class="content_text">Documento de identificación</label>
+          <br>
+          <input type="text" class="form_text" name="allie_document_id" oninput="autoExpand(this)" placeholder="NIT o C.C">
+          <br>
+        </div>
+
+        <div class="form">
+          <label class="content_text">Area de aliado</label>
+          <br>
+          <input type="text" class="form_text" name="allie_area" placeholder="Area">
+          <br>
+        </div>
       </div>
+
+      <div class="column column-right-top">
+        <div class="imagenes-columna">
+            <div class="area-carga">
+                <input type="file" id="image" accept="image/*" name="image" style="display:none;">
+                <img class="add_image" src="{% static 'img/add_allie/add_image.png' %}" alt="add_image">
+                <label for="image" class="content_text" style="cursor: pointer;">Agregar foto de perfil</label>
+            </div>
+        </div>
+      </div>
+    
       
-      <div class="form">
-        <label class="content_text">Tipo de Persona</label>
-        <div class="opciones-tipo-persona">
-          <label class="sub_content_text">
-            <input type="radio" name="tipoPersona" value="juridica"> Jurídica
-          </label>
-          <label class="sub_content_text">
-            <input type="radio" name="tipoPersona" value="natural"> Natural
-          </label>
-        </div>
-      </div>
 
-      <div class="form">
-        <label class="content_text">Documento de identificación</label>
+      
+
+      <div class="row">
+        <label class="content_text">Descripcion del colaborador</label>
         <br>
-        <input type="text" class="form_text" id="expanding-input" oninput="autoExpand(this)" placeholder="NIT o C.C">
+        <textarea class="form_text" name="allie_description" oninput="autoExpand(this)" placeholder="Descripción"></textarea>
         <br>
       </div>
-
-      <div class="form">
-        <label class="content_text">Area de aliado</label>
-        <br>
-        <input type="text" class="form_text" id="area" placeholder="Area">
-        <br>
-      </div>
-    </div>
-
-    <div class="column column-right-top">
-      <div class="imagenes-columna">
-        <div class="area-carga">
-          <img class="add_image" src="{% static 'img/add_allie/add_image.png' %}" alt="add_image">
-          <label class="content_text" >Agregar foto de perfil</label>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <label class="content_text">Descripcion del colaborador</label>
-      <br>
-      <textarea class="form_text" id="expanding-input" oninput="autoExpand(this)" placeholder="Descripción"></textarea>
-      <br>
-    </div>
-  </div> 
-</div>
+    </div> 
+  </div>
   
 
-<p class="content_tittle">Información de contacto aliado</p>
-<div class="card">
-<div class="container">
-  <div class="column column-left-bottom">
+  <p class="content_tittle">Información de contacto aliado</p>
+  <div class="card">
+    <div class="container">
+      <div class="column column-left-bottom">
 
-    <div class="">
-      <label class="content_text">Nombre</label>
-      <br>
-      <input type="text" class="form_text" id="documentos" placeholder="Nombre completo">
-      <br>
-    </div>
-    
-      <div class="form">
-        <label class="content_text">Documento de identificación</label>
-        <br>
-        <input type="text" class="form_text" id="documentos" placeholder="NIT o C.C">
-        <br>
-      </div>
-    </div>
-
-
-  <div class="column column-right-bottom">
-
-    <div class="">
-          <label class="content_text">Teléfono celular</label>
+        <div class="">
+          <label class="content_text">Nombre</label>
           <br>
-          <input type="text" class="form_text" id="documentos" placeholder="Celular">
+          <input type="text" class="form_text" name="documentos" placeholder="Nombre completo">
+          <br>
+        </div>
+        
+          <div class="form">
+            <label class="content_text">Documento de identificación</label>
+            <br>
+            <input type="text" class="form_text" name="documentos" placeholder="NIT o C.C">
+            <br>
+          </div>
+        </div>
+
+
+      <div class="column column-right-bottom">
+
+        <div class="">
+              <label class="content_text">Teléfono celular</label>
+              <br>
+              <input type="text" class="form_text" name="documentos" placeholder="Celular">
+              <br>
+            </div>
+
+        <div class="form">
+          <label class="content_text">Correo electrónico</label>
+          <br>
+          <input type="text" class="form_text" name="documentos" placeholder="Correo">
           <br>
         </div>
 
-    <div class="form">
-      <label class="content_text">Correo electrónico</label>
-      <br>
-      <input type="text" class="form_text" id="documentos" placeholder="Correo">
-      <br>
-    </div>
-
+      </div>
+      <div class="row-bottom">
+        
+      </div>
+    </div> 
   </div>
-  <div class="row-bottom">
-    
-  </div>
-</div> 
-</div>
 
-<div class="container">
-<button class="button-style"> Agregar aliado</button>
-</div>
+  <div class="container">
+    <button class="button-style" type="submit"> Agregar aliado</button>
+  </div>
+
+</form>
 
 <script>
   function autoExpand(input) {
