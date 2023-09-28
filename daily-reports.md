@@ -192,3 +192,12 @@ Segui trabajando en la pagina de las doncaiones de una aliado
 * ¿Hay algun obstáculo que me impide avanzar en mi trabajo?
 No hay obstaculos por el momento
 
+#### Espinosa
+
+* ¿Que hice ayer?
+Hice unas correcciones en el html de la vista de noticias, ya que estaba mal organizado. 
+* ¿Que hice hoy?
+Mejore un poco la vista de noticias y estoy investigando como realizar las pruebas para nuestro proyecto
+* ¿Hay algun obstáculo que me impide avanzar en mi trabajo?
+Por ahora lo único es que también hay tareas para otras materias, entonces me queda poco tiempo para avanzar. 
+
