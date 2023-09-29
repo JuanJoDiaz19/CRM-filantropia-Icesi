@@ -235,6 +235,15 @@ Agregué la función de añadir varios contactos
 Empezaré la vista de agregar practicante
 * ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
 Por ahora no hay inconvenientes técnicos, solo tengo falta de disposición de tiempo
+
+#### Juan Jose Diaz 
+
+* ¿Qué hice ayer?
+Termine de hacer la pagina de donaciones de un aliado
+* ¿Qué haré hoy?
+Voy a mirar la integracion de la parte funcional de la pagina con el html
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+Ningun obstaculo
   
   
 
