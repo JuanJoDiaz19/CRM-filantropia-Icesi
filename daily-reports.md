@@ -199,5 +199,17 @@ Hice unas correcciones en el html de la vista de noticias, ya que estaba mal org
 * ¿Que hice hoy?
 Mejore un poco la vista de noticias y estoy investigando como realizar las pruebas para nuestro proyecto
 * ¿Hay algun obstáculo que me impide avanzar en mi trabajo?
-Por ahora lo único es que también hay tareas para otras materias, entonces me queda poco tiempo para avanzar. 
+Por ahora lo único es que también hay tareas para otras materias, entonces me queda poco tiempo para avanzar.
+
+#### Mateo Silva
+
+* ¿Que hice ayer?
+  Hice la planeacion completa de la pagina de practicantes.
+* ¿Que hice hoy?
+  El dia de hoy no pude avanzar en general, pero empeze con las donaciones.
+* ¿Hay algun obstáculo que me impide avanzar en mi trabajo?
+  No hay nada tecnico que me haya impedido avanzar, pero el tiempo juega malas pasadas
+  
+  
+
 
