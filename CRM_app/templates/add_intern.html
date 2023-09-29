@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/add_allie.css' %}">
+{% endblock %}
+
+{% block main_content %}
+
+<div class="top_arrow_tittle" style="margin-top: 1.875rem; margin-left: 1.875rem;">
+  <a href="/interns">
+    <img class="arrow_image" src="{% static 'img/add_allie/arrow.png' %}" alt="arrow">
+  </a>
+  <p class="top_tittle">Agregar interno</p>
+</div>
+
+<form method="post" action="{% url 'add_allie' %}" enctype="multipart/form-data">
+
+  {% csrf_token %}
+
+<p class="content_tittle">Información interno</p>
+<div class="card-informacion">
+  <div class="container">
+    <div class="column column-left-top">
+
+      <div>
+        <label class="content_text">Nombre</label>
+        <br>
+        <input type="text" class="form_text" name="nombre" placeholder="Nombre">
+        <br>
+      </div>
+
+<div class="form">
+        <label class="content_text">Sexo</label>
+        <div class="opciones-sexo">
+          <label class="sub_content_text">
+            <input type="radio" name="sex" value="juridica"> Masculino
+          </label>
+          <label class="sub_content_text">
+            <input type="radio" name="sex" value="natural"> Femenino
+          </label>
+        </div>
+      </div>
+
+<div class="form">
+          <label class="content_text">Documento de identificación</label>
+          <br>
+          <input type="text" class="form_text" name="allie_document_id" oninput="autoExpand(this)" placeholder="NIT o C.C">
+          <br>
+        </div>
+
+<div class="form">
+          <label class="content_text">Pregrado</label>
+          <br>
+          <input type="text" class="form_text" name="allie_area" placeholder="Carrera">
+          <br>
+        </div>
+      </div>
+
+ <div class="column column-right-top">
+
+
+    <div class="imageContainer">
+      <div>
+        <input type="file" id="image" accept="image/*" name="image" style="display:none;">
+        <img class="add_image" src="{% static 'img/add_allie/add_image.png' %}" alt="add_image">
+        <label for="image" class="content_text" style="cursor: pointer;">Agregar foto de perfil</label>
+      </div>
+    </div>
+
+
+</div>
+
+  <div class="row">
+      <label class="content_text">Cargo del puesto</label>
+      <br>
+      <textarea class="form_text" name="allie_description" id="expanding-input" oninput="autoExpand(this)" placeholder="Descripción"></textarea>
+      <br>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <button class="button-style">Agregar interno</button>
+</div>
+
+<script>
+  <!-- Lector de imagenes -->
+  const imageContainer = document.querySelector(".imageContainer");
+  const imageInput = document.getElementById("customFileInput");
+  const customFileButton = document.getElementById("customFileButton");
+  const loading_text = document.getElementById("loading-text");
+  const add_image = document.getElementById("add-image");
+  const add_image_text = document.getElementById("add-image-text");
+
+  imageInput.addEventListener("change", function () {
+      const file = this.files[0];
+      if (file) {
+          add_image.style.display = "none"; 
+          add_image_text.style.display = "none"; 
+          loading_text.style.display = "inline"; 
+          const reader = new FileReader();
+
+          reader.onload = function (e) {
+              const imageUrl = e.target.result;
+              imageContainer.style.backgroundImage = url(${imageUrl});
+              loading_text.style.display = "none"; 
+              add_image.style.display = "none"; 
+              add_image_text.style.display = "none"; 
+          };
+
+          reader.readAsDataURL(file);
+      } else {
+          
+          imageContainer.style.backgroundImage = "";
+          loading_text.style.display = "none"; 
+      }
+  });
+  customFileButton.addEventListener("click", function () {
+      imageInput.click();
+  });
+  
+  <!-- Input expandible -->
+  function autoExpand(input) {
+    input.style.height = 'auto';
+    input.style.height = (input.scrollHeight) + 'px';
+}
+  window.addEventListener('load', function () {
+    autoExpand(document.getElementById('expanding-input'));
+  });
+</script>
+{% endblock %}
+
+{% block pagina_actual_aliados %}
+<div class="current-page"></div>
+{% endblock %}
