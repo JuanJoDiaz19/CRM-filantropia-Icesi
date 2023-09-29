@@ -181,6 +181,14 @@ Por ahora no, de pronto puedo ver si hay partes por mejorar en la vista de notic
 * ¿Hay algun obstáculo que me impide avanzar en mi trabajo?
   Aún no descubro como subir la imagen y que esta quede en la nube para luego usar el link en nuestro aliado.
 
+  #### Ana
+* ¿Qué hice ayer?
+Termine los campos de la pagina de agregar aliado
+* ¿Qué haré hoy?
+Añadiré la funcionalidad de añadir imagen
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+Esa funcionalidad he visto que se implementa con javascript y no tengo experiencia previa con ese lenguaje
+
 ### Septiembre 28 2023
 
 #### Juan Jose Diaz
@@ -209,6 +217,24 @@ Por ahora lo único es que también hay tareas para otras materias, entonces me 
   El dia de hoy no pude avanzar en general, pero empeze con las donaciones.
 * ¿Hay algun obstáculo que me impide avanzar en mi trabajo?
   No hay nada tecnico que me haya impedido avanzar, pero el tiempo juega malas pasadas
+
+#### Ana
+* ¿Qué hice ayer?
+Agregué la funcionalidad de añadir imagen
+* ¿Qué haré hoy?
+Agregaré la función de añadir varios contactos
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+Mi casa no tiene luz ni energia entonces no creo que pueda avanzar mucho hoy
+
+  ### Septiembre 29 2023
+
+#### Ana
+* ¿Qué hice ayer?
+Agregué la función de añadir varios contactos
+* ¿Qué haré hoy?
+Empezaré la vista de agregar practicante
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+Por ahora no hay inconvenientes técnicos, solo tengo falta de disposición de tiempo
   
   
 
