@@ -1,32 +1,38 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{% block content %}
-  <h1>Noticias</h1>
-
-  <a href="{% url 'create_new' %}">Crear Nueva Noticia</a>
-
-  {%for new in news%}
-    <ul>
-        <li>
-
-            <h2>{{new.title}}</h1>
-
-            <p>{{new.description}}</p>
-                
-            <p>Fecha: {{new.date}}</p>
-
-            <form method="DELETE" action="{% url 'delete_new' new.id %}">
-                {% csrf_token %}
-                <button type="submit">Borrar</button>
-            </form>
-
-        </li>
-        
-        <br>
-        
-    </ul>
-
-  {%endfor%}
-
+{% block header_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/news.css' %}">
 {% endblock %}
 
+{% block main_content %}
+
+<body>
+<div>
+  <h1 class="welcome-text">Bienvenido, usuario Filantropía</h1>
+ 
+  <div class="welcome-container">
+    <img src="{% static 'img/news/welcome.png' %}" alt="welcome" width="900px" height="200px" class="image-borders">  
+ 
+    <h2 class="palante-text" class="text-overlay"></p>Vamos pa' lante</h2>
+  </div>
+</div>  
+<h2 class="news-text">Noticias del sistema</h2>
+<div class="contenedor">
+    {%for new in news%}
+        <div class="rectangulo">
+          <div>
+            <img src="{% static 'img/news/bell.png' %}" alt="bell" class="left-image">
+            <label class="left-text" style="color: black;">{{new.date}}</label>
+          </div>
+          <div>
+            <h2 class="container-text" style="color: black;">{{new.title}}</h2>
+            <div class="news-description">
+              <label class="news-description" style="color: black;">{{new.description}}</label>
+            </div>
+          </div>
+        </div>
+    {%endfor%}
+</div>
+
+{% endblock %}

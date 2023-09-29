@@ -8,24 +8,16 @@
 	--titles: 3rem;
 }
 
-* {
-    font-family: 'Mulish', sans-serif;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+a {
+    text-decoration: none;
+    background-color: transparent;
+    color: var(--font-color);
 }
-
-html {
-    font-size: 100%;
-}
-
-p {
-    font-size: 1.6rem;
-}
-
 
 .main-content-allies {
-    padding: 3rem 13rem 3rem 13rem;
+    margin-right: 13%; 
+    margin-left: 13%;
+    margin-top: 3rem;
 }
 
 .button-container {
