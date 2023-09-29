@@ -7,6 +7,12 @@
 
 {% block main_content %}
 
+{% if error_message %}
+  <div class="alert alert-danger">
+    {{ error_message }}
+  </div>
+{% endif %}
+
 <div class="top_arrow_tittle" style="margin-top: 1.875rem; margin-left: 1.875rem;">
   <a href="/allies">
     <img class="arrow_image" src="{% static 'img/add_allie/arrow.png' %}" alt="arrow">
@@ -138,7 +144,6 @@
 
 
 <script>
-  <!-- Eliminacion -->>
   function eliminarCard(button) {
     // Obtener el elemento de la tarjeta padre y eliminarlo
     const card = button.parentNode.parentNode;
@@ -214,7 +219,6 @@ function agregarCard() {
 }
 
 
-  <!-- Lector de imagenes -->
   const imageContainer = document.querySelector(".imageContainer");
   const imageInput = document.getElementById("customFileInput");
   const customFileButton = document.getElementById("customFileButton");
@@ -232,7 +236,7 @@ function agregarCard() {
 
           reader.onload = function (e) {
               const imageUrl = e.target.result;
-              imageContainer.style.backgroundImage = url(${imageUrl});
+              imageContainer.style.backgroundImage = url({imageUrl});
               loading_text.style.display = "none"; 
               add_image.style.display = "none"; 
               add_image_text.style.display = "none"; 
@@ -249,7 +253,6 @@ function agregarCard() {
       imageInput.click();
   });
   
-  <!-- Input expandible -->
   function autoExpand(input) {
     input.style.height = 'auto';
     input.style.height = (input.scrollHeight) + 'px';

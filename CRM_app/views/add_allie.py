@@ -28,29 +28,35 @@ class AddAllie(View):
         area = request.POST.get('allie_area', False)
         description = request.POST.get('allie_description', False) 
         allie_type_string = request.POST.get('allie_type', False) 
-        image = request.FILES['image']
+        image = request.FILES.get('image', None)
 
-        blob = bucket.blob(f'allie_images/{image.name}')
-        blob.upload_from_file(image, content_type=image.content_type)
+        if name and document_id and area and allie_type_string and image:
+            if allie_type_string == "juridica" or allie_type_string == "natural":
+                blob = bucket.blob(f'allie_images/{image.name}')
+                blob.upload_from_file(image, content_type=image.content_type)
 
-        expiration = datetime.timedelta(days=1)
-        token = blob.generate_signed_url(expiration=expiration, version='v4')
+                expiration = datetime.timedelta(days=1)
+                token = blob.generate_signed_url(expiration=expiration, version='v4')
 
-        allie_index = 0
+                allie_index = 0
 
-        if allie_type_string == "juridica":
-            allie_index = 1
-        elif allie_type_string == "natural":
-            allie_index = 2
-        
-        allie_type = Allie_Type.objects.get(id=allie_index)
-        
-        Allie.objects.create(
-            allie_type_id=allie_type,
-            name=name,
-            area=area,
-            description=description,
-            image_link=token
-        )
+                if allie_type_string == "juridica":
+                    allie_index = 1
+                elif allie_type_string == "natural":
+                    allie_index = 2
+                
+                allie_type = Allie_Type.objects.get(id=allie_index)
+                
+                Allie.objects.create(
+                    allie_type_id=allie_type,
+                    name=name,
+                    area=area,
+                    description=description,
+                    image_link=token
+                )
 
-        return redirect('allies')
+                return redirect('allies')
+            else:
+                return render(request, 'add_allie.html', {'error_message': "Datos invalidos"})
+        else:
+            return render(request, 'add_allie.html', {'error_message': "Proporcione todos los datos"})
