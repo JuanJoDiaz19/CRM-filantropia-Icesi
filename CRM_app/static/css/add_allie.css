@@ -79,12 +79,18 @@
 }
 
 
-.imagenes-columna {
+
+.imageContainer {
+  text-align: center;
   display: flex;
+  width: 260px;
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   justify-content: center;
   align-items: center;
-  height: 260px;
-  width: 260px;
+  position: relative;
   padding: 20px;
   background-color: #f0f0f0;
   border-radius: 80px;
@@ -187,7 +193,7 @@ textarea {
 .row-bottom{
   order: 3;
 }
-  .imagenes-columna {
+  .imageContainer {
     margin-bottom: 30px;
   }
 }
@@ -210,4 +216,30 @@ textarea {
   width: 100%;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
   font-weight: 620;
+}
+
+
+
+#customFileInput {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+#customFileButton {
+  display: inline-block;
+  background-color: transparent;
+  color: transparent;
+  cursor: pointer;
+}
+
+#loading-text {
+  display: none;
+  color: #434343;
+  font-weight: bold;
+  margin-left: 10px;
 }
