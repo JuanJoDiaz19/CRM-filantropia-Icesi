@@ -11,25 +11,12 @@
 <section class="main-content-allies">
     <div class="main-content__header">
         <h1><b>Practicantes</b></h1>
-        <a href="add_interny/">
-            <img src="{% static 'img/icons/add-icon.png' %}" alt="">
+        <a href="add_intern/">
+            <img style="opacity: 0.8" src="{% static 'img/icons/add-icon.png' %}" alt="">
         </a>
     </div>
     <form method="get" action="{% url 'interns' %}" class="button-container">
-        <input class="search-field search-text-field" type="text" name="q" placeholder="Buscar por nombre" value="{{ request.GET.q }}">
-        <select class="search-field search-option-field" name="estado">
-            <option value="" {% if not request.GET.estado %}selected{% endif %}>Todos</option>
-            <option value="activo" {% if request.GET.estado == 'activo' %}selected{% endif %}>Activo</option>
-            <option value="inactivo" {% if request.GET.estado == 'inactivo' %}selected{% endif %}>Inactivo</option>
-        </select>
-        <select class="search-field search-option-field" name="tipo">
-            <option value="" {% if not request.GET.tipo %}selected{% endif %}>Todos</option>
-            {% for allie_type in allie_types %}
-                <option value="{{ allie_type.id }}" {% if request.GET.tipo == allie_type.id %}selected{% endif %}>
-                    {{ allie_type.name }}
-                </option>
-            {% endfor %}
-        </select>                    
+        <input class="search-field search-text-field" type="text" name="q" placeholder="Buscar por nombre" value="{{ request.GET.q }}">                   
         <button class="buton-search-field" type="submit"><b>Buscar</b></button>
     </form>   
 
