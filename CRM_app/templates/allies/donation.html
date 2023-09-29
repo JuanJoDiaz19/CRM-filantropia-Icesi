@@ -11,8 +11,8 @@
 <section class="main-ally-donation">
     <div class="main-header-donation">
         <div class="main-header-donation__ally-info">
-            <img src="https://pbs.twimg.com/profile_images/903005583623675904/u4h4ELJQ_400x400.jpg" alt="">
-            <h2>Perficient, Inc</h2>
+            <img src="{{allies.image_link}}" alt="">
+            <h2>{{allies.name}}</h2>
         </div>
         <div class="main-header-donation__add-donation">
             <img src="{% static 'img/icons/add-icon.png' %}" alt="">
@@ -20,7 +20,16 @@
     </div>
     <div class="main-donation-summary">
         <div class="main-donation-summary__total-money">
-            <h2 class="main-donation-summary__total-money__number" >$38.000.000</h2>
+            <h2 class="main-donation-summary__total-money__number" >$
+                <span id="numero-formateado"> </span>
+            </h2>
+            <script>
+                var total = {{ total|default:"0" }};
+                var numeroFormateado = total.toLocaleString(); // Formatea el número con puntos de separación de miles
+            
+                // Actualiza el contenido del elemento con el número formateado
+                document.getElementById("numero-formateado").textContent = numeroFormateado;
+            </script>
             <div class="main-donation-sumary__total-money__text">Dinero total donado</div>
         </div>
         <div class="main-donation-summary__type-donant">
@@ -32,6 +41,18 @@
     <div class="history-donations">
         <h2>Historial de donaciones:</h2>
         <div class="history-donations__element-container">
+            {% for don in donation %}
+            <div class="history-donations__element">
+                <div class="history-donations_element-summary">
+                    <h5>{{don.date}}</h5>
+                    <p>${{don.amount}}</p>
+                </div>
+                <div class="history-donations_element-description">
+                    <p>{{don.name}}</p>
+                </div>
+            </div>
+            {% endfor %}
+            <!--
             <div class="history-donations__element">
                 <div class="history-donations_element-summary">
                     <h5>Septiembre 9 2023</h5>
@@ -104,15 +125,7 @@
                     <p>Beca semestral Pro-Woman in tech</p>
                 </div>
             </div>
-            <div class="history-donations__element">
-                <div class="history-donations_element-summary">
-                    <h5>Septiembre 9 2023</h5>
-                    <p>$8'400.000</p>
-                </div>
-                <div class="history-donations_element-description">
-                    <p>Beca semestral Pro-Woman in tech</p>
-                </div>
-            </div>
+            -->
         </div>
     </div>
 </section>
