@@ -23,11 +23,11 @@ class AddAllie(View):
 
     @method_decorator(login_required) 
     def post(self, request):
-        name = request.POST.get('allie_name')
-        document_id = request.POST.get('allie_document_id')
-        area = request.POST.get('allie_area')
-        description = request.POST.get('allie_description') 
-        allie_type_string = request.POST.get('allie_type') 
+        name = request.POST.get('allie_name', False)
+        document_id = request.POST.get('allie_document_id', False)
+        area = request.POST.get('allie_area', False)
+        description = request.POST.get('allie_description', False) 
+        allie_type_string = request.POST.get('allie_type', False) 
         image = request.FILES['image']
 
         blob = bucket.blob(f'allie_images/{image.name}')

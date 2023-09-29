@@ -7,8 +7,6 @@
 .top_arrow_tittle {
   display: flex;
   align-items: center;
-  margin-top: 1.875rem;
-  margin-left: 1.875rem;
 }
 
 .top_tittle {
@@ -52,7 +50,7 @@
   width: 80%;
 }
 
-.card {
+.card-informacion, .card-contacto{
   margin-bottom: 2rem;
   display: flex;
   margin-left: 6.5rem;
@@ -72,7 +70,7 @@
   flex: 1;
 }
 .add_image {
-  margin-top: 20px;
+  margin-top: 40px;
   width: 75px;
   height: 75px;
   margin-bottom: 15px;
@@ -125,7 +123,21 @@ textarea {
   padding-bottom: 40px;
 }
 .row-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
+}
+.row-temp {
+  width: 100%;
+  display: flex;
+}
+.boton-imagen {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
 }
 
 .column {
@@ -189,9 +201,13 @@ textarea {
 }
 .column-left-bottom {
   order: 2; 
+  padding-bottom: 0;
 }
 .row-bottom{
-  order: 3;
+  order: 1;
+}
+.row-temp{
+  order: 4;
 }
   .imageContainer {
     margin-bottom: 30px;
@@ -210,9 +226,9 @@ textarea {
   background-color: #0159A1;
   color: white;
   border: solid var(--font-color) 1px;
-  padding: 0.4rem;
+  padding: 0.6rem;
   border-radius: 0.5rem;
-  font-size: 15px;
+  font-size: 17px;
   width: 100%;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
   font-weight: 620;
@@ -242,4 +258,32 @@ textarea {
   color: #434343;
   font-weight: bold;
   margin-left: 10px;
+}
+
+.inner-title {
+  font-size: 19px;
+  margin-left: 2rem;
+}
+
+.add-button-informacion {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  background-color: #0159A1;
+  color: white;
+  border: solid var(--font-color) 1px;
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 5rem;
+  font-size: 23px;
+  padding-bottom: 5px;
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
+  font-weight: 620;
+  justify-content: center;
+  text-align: center;
+}
+.information-row {
+    margin: 0;
+  padding: 20px;
+  width: 100%;
+  padding-bottom: 40px; 
 }
