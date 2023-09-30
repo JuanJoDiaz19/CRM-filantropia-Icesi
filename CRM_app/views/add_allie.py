@@ -32,6 +32,10 @@ class AddAllie(View):
 
         if name and document_id and area and allie_type_string and image:
             if allie_type_string == "juridica" or allie_type_string == "natural":
+
+                if Allie.objects.filter(id=document_id).exists():
+                    return render(request, 'add_allie.html', {'error_message': "Ya existe un aliado con este documento"})
+
                 blob = bucket.blob(f'allie_images/{image.name}')
                 blob.upload_from_file(image, content_type=image.content_type)
 
@@ -47,6 +51,7 @@ class AddAllie(View):
                 allie_type = Allie_Type.objects.get(id=allie_index)
                 
                 Allie.objects.create(
+                    id = document_id,
                     allie_type_id=allie_type,
                     name=name,
                     area=area,
