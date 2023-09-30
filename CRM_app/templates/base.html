@@ -15,12 +15,12 @@
   <nav id="topbar" class="custom-topbar topbar">
 
     <a class="navbar-brand" href="#">
-      <img class="topbar-image" src="{% static 'img/home/logo.png' %}" alt="Logo" width="150" height="70" class="d-inline-block align-text-top">
+      <img class="topbar-image" id="logo-image" src="{% static 'img/home/logo.png' %}" alt="Logo" width="150" height="70" class="d-inline-block align-text-top">
     </a>
 
   </nav>
       
-  <nav id="sidebar" class="custom-sidebar sidebar" >
+  <nav id="sidebar" class="custom-sidebar sidebar sidebar-hidden" >
 
     <!-- Información de usuario -->
     <div class="user-info">
@@ -91,7 +91,22 @@
 <div class="main_content">
   {% block main_content %}{% endblock %}
 </div>
+<script>
+  const logoImage = document.getElementById('logo-image');
 
+  // Agrega un evento para cambiar la imagen cuando el ancho de la pantalla sea menor de 800px
+  window.addEventListener('resize', () => {
+    if (window.innerWidth <= 800) {
+      // Cambia la fuente de la imagen a 'logo2.png'
+      logoImage.src = "{% static 'img/home/logo2.png' %}";
+    } else {
+      // Si la pantalla es más grande, vuelve a la imagen original
+      logoImage.src = "{% static 'img/home/logo.png' %}";
+    }
+  });
+  window.addEventListener('load', changeLogo);
+  window.addEventListener('resize', changeLogo);
+<script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
