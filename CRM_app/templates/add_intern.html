@@ -14,74 +14,76 @@
   <p class="top_tittle">Agregar interno</p>
 </div>
 
-<form method="post" action="{% url 'add_allie' %}" enctype="multipart/form-data">
+<form method="POST" enctype="multipart/form-data">
 
-  {% csrf_token %}
+    {% csrf_token %}
 
-<p class="content_tittle">Información interno</p>
-<div class="card-informacion">
-  <div class="container">
-    <div class="column column-left-top">
+  <p class="content_tittle">Información interno</p>
+  <div class="card-informacion">
+    <div class="container">
+      <div class="column column-left-top">
 
-      <div>
-        <label class="content_text">Nombre</label>
+        <div>
+          <label class="content_text">Nombre</label>
+          <br>
+          <input type="text" class="form_text" name="nombre" placeholder="Nombre">
+          <br>
+        </div>
+
+  <div class="form">
+          <label class="content_text">Sexo</label>
+          <div class="opciones-sexo">
+            <label class="sub_content_text">
+              <input type="radio" name="sex" value="1"> Masculino
+            </label>
+            <label class="sub_content_text">
+              <input type="radio" name="sex" value="2"> Femenino
+            </label>
+          </div>
+        </div>
+
+  <div class="form">
+            <label class="content_text">Documento de identificación</label>
+            <br>
+            <input type="text" class="form_text" name="allie_document_id" oninput="autoExpand(this)" placeholder="NIT o C.C">
+            <br>
+          </div>
+
+  <div class="form">
+            <label class="content_text">Pregrado</label>
+            <br>
+            <input type="text" class="form_text" name="allie_area" placeholder="Carrera">
+            <br>
+          </div>
+        </div>
+
+  <div class="column column-right-top">
+
+
+      <div class="imageContainer">
+        <div>
+          <input type="file" id="image" accept="image/*" name="image" style="display:none;">
+          <img class="add_image" src="{% static 'img/add_allie/add_image.png' %}" alt="add_image">
+          <label for="image" class="content_text" style="cursor: pointer;">Agregar foto de perfil</label>
+        </div>
+      </div>
+
+
+  </div>
+
+    <div class="row">
+        <label class="content_text">Cargo del puesto</label>
         <br>
-        <input type="text" class="form_text" name="nombre" placeholder="Nombre">
+        <textarea class="form_text" name="allie_description" id="expanding-input" oninput="autoExpand(this)" placeholder="Descripción"></textarea>
         <br>
       </div>
-
-<div class="form">
-        <label class="content_text">Sexo</label>
-        <div class="opciones-sexo">
-          <label class="sub_content_text">
-            <input type="radio" name="sex" value="juridica"> Masculino
-          </label>
-          <label class="sub_content_text">
-            <input type="radio" name="sex" value="natural"> Femenino
-          </label>
-        </div>
-      </div>
-
-<div class="form">
-          <label class="content_text">Documento de identificación</label>
-          <br>
-          <input type="text" class="form_text" name="allie_document_id" oninput="autoExpand(this)" placeholder="NIT o C.C">
-          <br>
-        </div>
-
-<div class="form">
-          <label class="content_text">Pregrado</label>
-          <br>
-          <input type="text" class="form_text" name="allie_area" placeholder="Carrera">
-          <br>
-        </div>
-      </div>
-
- <div class="column column-right-top">
-
-
-    <div class="imageContainer">
-      <div>
-        <input type="file" id="image" accept="image/*" name="image" style="display:none;">
-        <img class="add_image" src="{% static 'img/add_allie/add_image.png' %}" alt="add_image">
-        <label for="image" class="content_text" style="cursor: pointer;">Agregar foto de perfil</label>
-      </div>
-    </div>
-
-
-</div>
-
-  <div class="row">
-      <label class="content_text">Cargo del puesto</label>
-      <br>
-      <textarea class="form_text" name="allie_description" id="expanding-input" oninput="autoExpand(this)" placeholder="Descripción"></textarea>
-      <br>
     </div>
   </div>
-</div>
-<div class="container">
-  <button class="button-style">Agregar interno</button>
-</div>
+  <div class="container">
+    <button class="button-style">Agregar interno</button>
+  </div>
+
+</form>
 
 <script>
   <!-- Lector de imagenes -->

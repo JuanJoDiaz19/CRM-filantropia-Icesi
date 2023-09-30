@@ -46,12 +46,12 @@ urlpatterns = [
     path('investigations/', Investigations.as_view(), name="investigations"),
     path('config/', Config.as_view(), name="config"),
     path('allies/add_ally/', Add_allie.as_view(), name="add_allie"),
-    path('interns/add_intern/', Add_intern.as_view(), name="add_intern"),
+    path('interns/add_intern/<int:allie__id>/', Add_intern.as_view(), name="add_intern"),
     path('logout/', Singout.as_view(), name="logout"),
     path('news/', News.as_view(), name="news"),
     path('create_new/', CreateNew.as_view(), name='create_new'),
     path('delete_new/<int:new_id>/', DeleteNew.as_view(), name='delete_new'),
     path('allies/', Allies.as_view(), name='allies'),
     path('allies/<int:allie_id>/', Ally.as_view(), name="ally"),
-    
+
 ]
