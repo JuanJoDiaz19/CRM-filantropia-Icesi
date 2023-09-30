@@ -13,6 +13,7 @@
   </div>
 {% endif %}
 
+
 <div class="top_arrow_tittle" style="margin-top: 1.875rem; margin-left: 1.875rem;">
   <a href="/allies">
     <img class="arrow_image" src="{% static 'img/add_allie/arrow.png' %}" alt="arrow">
@@ -85,7 +86,6 @@
 
 <div class="top_arrow_tittle">
   <p class="content_tittle">Información de contacto aliado</p>
-  <button class="add-button-informacion">+</button>
 </div>
 
 <div id="cards-container">
@@ -102,14 +102,14 @@
         <div>
           <label class="content_text">Nombre</label>
           <br>
-          <input type="text" class="form_text" id="documentos" placeholder="Nombre completo">
+          <input type="text" name="contact_name" class="form_text" id="documentos" placeholder="Nombre completo">
           <br>
         </div>
 
         <div class="form">
           <label class="content_text">Documento de identificación</label>
           <br>
-          <input type="text" class="form_text" id="documentos" placeholder="NIT o C.C">
+          <input type="text" name="contact_document_id" class="form_text" id="documentos" placeholder="NIT o C.C">
           <br>
         </div>
       </div>
@@ -121,14 +121,21 @@
         <div>
           <label class="content_text">Teléfono celular</label>
           <br>
-          <input type="text" class="form_text" id="documentos" placeholder="Celular">
+          <input type="text" name="contact_phone" class="form_text" id="documentos" placeholder="Celular">
           <br>
         </div>
 
         <div class="form">
           <label class="content_text">Correo electrónico</label>
           <br>
-          <input type="text" class="form_text" id="documentos" placeholder="Correo">
+          <input type="text" name="contact_email" class="form_text" id="documentos" placeholder="Correo">
+          <br>
+        </div>
+
+        <div class="form">
+          <label class="content_text">Correo electrónico Auxiliar</label>
+          <br>
+          <input type="text" name="contact_aux_email" class="form_text" id="documentos" placeholder="Correo">
           <br>
         </div>
 
