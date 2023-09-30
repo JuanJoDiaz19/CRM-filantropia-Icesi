@@ -33,6 +33,7 @@ from CRM_app.views.config import Config
 from CRM_app.views.ally import Ally
 from CRM_app.views.add_allie import Add_allie
 from CRM_app.views.add_intern import Add_intern
+from CRM_app.views.interns import Interns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -52,6 +53,7 @@ urlpatterns = [
     path('create_new/', CreateNew.as_view(), name='create_new'),
     path('delete_new/<int:new_id>/', DeleteNew.as_view(), name='delete_new'),
     path('allies/', Allies.as_view(), name='allies'),
+    path('interns/', Interns.as_view(), name='interns'),
     path('allies/<int:allie_id>/', Ally.as_view(), name="ally"),
 
 ]
