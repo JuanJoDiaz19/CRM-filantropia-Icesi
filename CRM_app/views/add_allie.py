@@ -35,8 +35,7 @@ class AddAllie(View):
                 blob = bucket.blob(f'allie_images/{image.name}')
                 blob.upload_from_file(image, content_type=image.content_type)
 
-                expiration = datetime.timedelta(days=1)
-                token = blob.generate_signed_url(expiration=expiration, version='v4')
+                image_link = blob.public_url
 
                 allie_index = 0
 
@@ -52,7 +51,7 @@ class AddAllie(View):
                     name=name,
                     area=area,
                     description=description,
-                    image_link=token
+                    image_link=image_link
                 )
 
                 return redirect('allies')
