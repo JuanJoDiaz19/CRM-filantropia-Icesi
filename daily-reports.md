@@ -244,6 +244,16 @@ Termine de hacer la pagina de donaciones de un aliado
 Voy a mirar la integracion de la parte funcional de la pagina con el html
 * ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
 Ningun obstaculo
+
+#### Barraza
+
+* ¿Qué hice ayer?
+Termine de hacer la funcionalidad básica de agregar un aliado, sin la parte de agregar contactos aún.
+* ¿Qué haré hoy?
+Mejorare el manejo de excepciones de la página de agregar aliado,teniendo en cuenta lo que pasa cuando ciertos datos no son proprcionados.
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+A otras personas les llega un mensaje de timeout cuando tratan de crear el aliado con la imagen subida a firebase.
+  
   
   
 
