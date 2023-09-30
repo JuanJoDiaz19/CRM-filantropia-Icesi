@@ -253,6 +253,16 @@ Termine de hacer la funcionalidad básica de agregar un aliado, sin la parte de 
 Mejorare el manejo de excepciones de la página de agregar aliado,teniendo en cuenta lo que pasa cuando ciertos datos no son proprcionados.
 * ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
 A otras personas les llega un mensaje de timeout cuando tratan de crear el aliado con la imagen subida a firebase.
+
+  ### Septiembre 30 2023
+
+### Espinosa
+* ¿Qué hice ayer?
+Realice una pequeña investigacion sobre el testing.
+* ¿Qué haré hoy?
+Avanzare en el testeo del proyecto.
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+No hay obstaculos por ahora.
   
   
   
