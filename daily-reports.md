@@ -290,6 +290,14 @@ No hay obstaculos por ahora.
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   De momento nada, todo sigue avanzando bien
 
+  #### Espinosa
+* ¿Que hice ayer?
+Sabado de descanso
+* ¿Que haré hoy?
+Hare la vista de creacion de reuniones y probablemente la de eventos ya que son muy parecidas
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+Mas responsabilidades aparte de esta.
+
   
   
 
