@@ -280,6 +280,16 @@ No hay obstaculos por ahora.
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   De momento nada, todo esta avanzando bien
 
+### Octubre 1 2023
+
+#### Ana
+* ¿Que hice ayer?
+  Ayer hice que el option bar funcione para todos los posibles tamaños de pantalla
+* ¿Que haré hoy?
+  Arreglaré la visualizacion de imagenes en la agregacion de aliados y practicantes, y agregare la agregacion de varios contactos para un aliado
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  De momento nada, todo sigue avanzando bien
+
   
   
 
