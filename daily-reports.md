@@ -226,7 +226,7 @@ Agregaré la función de añadir varios contactos
 * ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
 Mi casa no tiene luz ni energia entonces no creo que pueda avanzar mucho hoy
 
-  ### Septiembre 29 2023
+### Septiembre 29 2023
 
 #### Ana
 * ¿Qué hice ayer?
@@ -254,15 +254,23 @@ Mejorare el manejo de excepciones de la página de agregar aliado,teniendo en cu
 * ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
 A otras personas les llega un mensaje de timeout cuando tratan de crear el aliado con la imagen subida a firebase.
 
-  ### Septiembre 30 2023
+### Septiembre 30 2023
 
-### Espinosa
+#### Espinosa
 * ¿Qué hice ayer?
 Realice una pequeña investigacion sobre el testing.
 * ¿Qué haré hoy?
 Avanzare en el testeo del proyecto.
 * ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
 No hay obstaculos por ahora.
+
+#### Mateo Silva
+* ¿Que hice ayer?
+  Ayer avance en la vista de los practicantes de un aliado.
+* ¿Que hice hoy?
+  Hoy termine la vista de los practicantes y termine el agregado de aliados.
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  de momento todo bien, no hay nada que me impida avanzar.
   
   
   
