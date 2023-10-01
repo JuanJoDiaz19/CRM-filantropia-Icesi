@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/allies/ally-donation.css' %}">
+{% endblock %}
+
+
+{% block main_content %}
+
+<section class="main-ally-donation">
+    <div class="main-header-donation">
+        <div class="main-header-donation__ally-info">
+            <img src="{{allies.image_link}}" alt="">
+            <h2>{{allies.name}}</h2>
+        </div>
+        <div class="main-header-donation__add-donation">
+            <img src="{% static 'img/icons/add-icon.png' %}" alt="">
+        </div>
+    </div>
+    <div class="main-donation-summary">
+        <div class="main-donation-summary__total-money">
+            <h2 class="main-donation-summary__total-money__number" >$
+                <span id="numero-formateado"> </span>
+            </h2>
+            <script>
+                var total = {{ total|default:"0" }};
+                var numeroFormateado = total.toLocaleString(); // Formatea el número con puntos de separación de miles
+            
+                // Actualiza el contenido del elemento con el número formateado
+                document.getElementById("numero-formateado").textContent = numeroFormateado;
+            </script>
+            <div class="main-donation-sumary__total-money__text">Dinero total donado</div>
+        </div>
+        <div class="main-donation-summary__type-donant">
+            <h3 class="main-donation-summary__type-donant__letter">A</h3>
+            <div class="main-donation-summary__type-donant__text">Donante tipo</div>
+        </div>
+    </div>
+    
+    <div class="history-donations">
+        <h2>Historial de donaciones:</h2>
+        <div class="history-donations__element-container">
+            {% for don in donation %}
+            <div class="history-donations__element">
+                <div class="history-donations_element-summary">
+                    <h5>{{don.date}}</h5>
+                    <p>${{don.amount}}</p>
+                </div>
+                <div class="history-donations_element-description">
+                    <p>{{don.name}}</p>
+                </div>
+            </div>
+            {% endfor %}
+            <!--
+            <div class="history-donations__element">
+                <div class="history-donations_element-summary">
+                    <h5>Septiembre 9 2023</h5>
+                    <p>$8'400.000</p>
+                </div>
+                <div class="history-donations_element-description">
+                    <p>Beca semestral Pro-Woman in tech</p>
+                </div>
+            </div>
+            <div class="history-donations__element">
+                <div class="history-donations_element-summary">
+                    <h5>Septiembre 9 2023</h5>
+                    <p>$8'400.000</p>
+                </div>
+                <div class="history-donations_element-description">
+                    <p>Beca semestral Pro-Woman in tech</p>
+                </div>
+            </div>
+            <div class="history-donations__element">
+                <div class="history-donations_element-summary">
+                    <h5>Septiembre 9 2023</h5>
+                    <p>$8'400.000</p>
+                </div>
+                <div class="history-donations_element-description">
+                    <p>Beca semestral Pro-Woman in tech</p>
+                </div>
+            </div>
+            <div class="history-donations__element">
+                <div class="history-donations_element-summary">
+                    <h5>Septiembre 9 2023</h5>
+                    <p>$8'400.000</p>
+                </div>
+                <div class="history-donations_element-description">
+                    <p>Beca semestral Pro-Woman in tech</p>
+                </div>
+            </div>
+            <div class="history-donations__element">
+                <div class="history-donations_element-summary">
+                    <h5>Septiembre 9 2023</h5>
+                    <p>$8'400.000</p>
+                </div>
+                <div class="history-donations_element-description">
+                    <p>Beca semestral Pro-Woman in tech</p>
+                </div>
+            </div>
+            <div class="history-donations__element">
+                <div class="history-donations_element-summary">
+                    <h5>Septiembre 9 2023</h5>
+                    <p>$8'400.000</p>
+                </div>
+                <div class="history-donations_element-description">
+                    <p>Beca semestral Pro-Woman in tech</p>
+                </div>
+            </div>
+            <div class="history-donations__element">
+                <div class="history-donations_element-summary">
+                    <h5>Septiembre 9 2023</h5>
+                    <p>$8'400.000</p>
+                </div>
+                <div class="history-donations_element-description">
+                    <p>Beca semestral Pro-Woman in tech</p>
+                </div>
+            </div>
+            <div class="history-donations__element">
+                <div class="history-donations_element-summary">
+                    <h5>Septiembre 9 2023</h5>
+                    <p>$8'400.000</p>
+                </div>
+                <div class="history-donations_element-description">
+                    <p>Beca semestral Pro-Woman in tech</p>
+                </div>
+            </div>
+            -->
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block pagina_actual_aliados %}
+
+<div class="current-page"></div>
+
+{% endblock %}  

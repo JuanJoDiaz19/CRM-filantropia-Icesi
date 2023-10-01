@@ -34,6 +34,7 @@ from CRM_app.views.ally import Ally
 from CRM_app.views.add_allie import Add_allie
 from CRM_app.views.add_intern import Add_intern
 from CRM_app.views.interns import Interns
+from CRM_app.views.donation import donation_
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -55,5 +56,6 @@ urlpatterns = [
     path('allies/', Allies.as_view(), name='allies'),
     path('interns/<int:allie__id>', Interns.as_view(), name='interns'),
     path('allies/<int:allie_id>/', Ally.as_view(), name="ally"),
+    path('donations/<int:allie__id>', donation_.as_view(), name="donation"),
 
 ]
