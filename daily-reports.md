@@ -271,7 +271,15 @@ No hay obstaculos por ahora.
   Hoy termine la vista de los practicantes y termine el agregado de aliados.
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   de momento todo bien, no hay nada que me impida avanzar.
-  
+
+#### Ana
+* ¿Que hice ayer?
+  Ayer hice la pagina de vista de practicantes y agregar practicante
+* ¿Que haré hoy?
+  Haré que el option bar funcione para todos los posibles tamaños de pantalla
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  De momento nada, todo esta avanzando bien
+
   
   
 
