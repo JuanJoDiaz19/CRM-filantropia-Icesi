@@ -155,10 +155,11 @@ class Career(models.Model):
     name= models.CharField(max_length=50)
     
 class Practicing(models.Model):
-    id= models.AutoField(primary_key=True)
+    id= models.CharField(max_length=20, primary_key=True)
     allie_id= models.ForeignKey(Allie,on_delete=models.CASCADE)
     name= models.CharField(max_length=20)
     position= models.CharField(max_length=20)
+    image_link = models.CharField(max_length=200, null=True)
     career_id= models.ForeignKey(Career,on_delete=models.CASCADE)
     gender_id= models.ForeignKey(Gender, on_delete=models.CASCADE)
     
