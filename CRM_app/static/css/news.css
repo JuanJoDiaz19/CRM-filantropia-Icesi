@@ -2,10 +2,8 @@
     position: relative;
     height: 100px;
     width: 900px;
-    top: 80px;
+    top: 50px;
     left: 110px;
-    background-size: cover;
-    background-position: center;
     margin: 20px; 
     border-radius: 20px; 
 }
@@ -21,13 +19,14 @@
   }
 
 .contenedor {
-    position: absolute;
+    position: relative;
     display: grid;
     grid-auto-rows: auto; 
-    width: 800px; 
-    margin: 100px auto; 
-    top: 400px;
-    left: 450px;
+    width: 800px;  
+    margin-top: 200px;
+    margin-left: 170px;
+    top: 0px;
+    right: 0px;
     background-color: #EDEDED;
     padding: 20px;
     border-radius: 20px; 
@@ -58,19 +57,20 @@
 }
 
 .welcome-text {
-    position: absolute;
-    bottom: 550px;
-    left: 400px;
+    position: relative;
+    top: 30px;
+    left: 20px;
     
     color: #434343;
 }
 
 
 .news-text {
-    position: absolute;
+    position: relative;
     text-align: left;
-    bottom: 250px;
-    left: 400px;
+    margin-left: 170px;
+    top: 170px;
+    max-width: 300px;
     
     color: #374BAE;
 }

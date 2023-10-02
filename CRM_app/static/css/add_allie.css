@@ -57,11 +57,37 @@
   flex-wrap: wrap;
   width: 100%;
 }
+
 .area-carga {
   text-align: center;
   border-radius: 80px;
   flex: 1;
 }
+
+.add_image {
+  margin-top: 40px;
+  width: 75px;
+  height: 75px;
+  margin-bottom: 15px;
+}
+
+.imageContainer {
+  text-align: center;
+  display: flex;
+  width: 260px;
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 80px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
 .form_text {
   border: solid var(--font-color) 1px;
   padding: 0.4rem;
@@ -70,18 +96,18 @@
   font-size: 15px;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
+
 textarea {
   width: 100%;
   min-height: 40px; 
   resize: none; 
 }
+
 .boton_agregar {
   font-size: 200%;
   width: 50px;
   height: 50px; 
 }
-
-
 
 .row {
   margin: 0;
@@ -94,6 +120,19 @@ textarea {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+}
+
+.row-temp {
+  width: 100%;
+  display: flex;
+}
+
+.boton-imagen {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
 }
 .row-temp {
   width: 100%;
@@ -173,9 +212,11 @@ textarea {
 .row-bottom{
   order: 1;
 }
+  
 .row-temp{
   order: 4;
 }
+
   .imageContainer {
     margin-bottom: 30px;
   }
@@ -201,6 +242,30 @@ textarea {
   font-weight: 620;
 }
 
+#customFileInput {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+#customFileButton {
+  display: inline-block;
+  background-color: transparent;
+  color: transparent;
+  cursor: pointer;
+}
+
+#loading-text {
+  display: none;
+  color: #434343;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
 .inner-title {
   font-size: 19px;
   margin-left: 2rem;
@@ -222,12 +287,14 @@ textarea {
   justify-content: center;
   text-align: center;
 }
+
 .information-row {
     margin: 0;
   padding: 20px;
   width: 100%;
   padding-bottom: 40px; 
 }
+
 .imageContainer {
   text-align: center;
   display: flex;
@@ -244,30 +311,35 @@ textarea {
   border-radius: 80px;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
+
 .add_image {
   margin-top: 20px;
   width: 75px;
   height: 75px;
   margin-bottom: 15px;
 }
+
 .content_text {
   margin-bottom: 0.4375rem;
   margin-left: 0.625rem;
   color: #434343;
   font-size: 1.0625rem;
 }
+
 #loading-text {
   display: none;
   color: #434343;
   font-weight: bold;
   margin-left: 10px;
 }    
+
 #customFileButton {
   display: inline-block;
   background-color: transparent;
   color: transparent;
   cursor: pointer;
 }
+
 #customFileInput {
   opacity: 0;
   position: absolute;

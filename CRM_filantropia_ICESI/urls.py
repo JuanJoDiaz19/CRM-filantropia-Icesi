@@ -31,8 +31,12 @@ from CRM_app.views.reports import Reports
 from CRM_app.views.investigations import Investigations
 from CRM_app.views.config import Config
 from CRM_app.views.ally import Ally
-from CRM_app.views.add_allie import AddAllie
 from CRM_app.views.add_contact import AddContact
+from CRM_app.views.add_allie import Add_allie
+from CRM_app.views.add_intern import Add_intern
+from CRM_app.views.interns import Interns
+from CRM_app.views.donation import donation_
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -45,12 +49,15 @@ urlpatterns = [
     path('reports/', Reports.as_view(), name="reports"),
     path('investigations/', Investigations.as_view(), name="investigations"),
     path('config/', Config.as_view(), name="config"),
-    path('allies/add_ally/', AddAllie.as_view(), name="add_allie"),
+    path('allies/add_ally/', Add_allie.as_view(), name="add_allie"),
+    path('interns/add_intern/<int:allie__id>/', Add_intern.as_view(), name="add_intern"),
     path('logout/', Singout.as_view(), name="logout"),
     path('news/', News.as_view(), name="news"),
     path('create_new/', CreateNew.as_view(), name='create_new'),
     path('delete_new/<int:new_id>/', DeleteNew.as_view(), name='delete_new'),
     path('allies/', Allies.as_view(), name='allies'),
+    path('interns/<int:allie__id>', Interns.as_view(), name='interns'),
     path('allies/<int:allie_id>/', Ally.as_view(), name="ally"),
     path('add_contact/<int:allie_id>/', AddContact.as_view(), name='add_contact'),
+    path('donations/<int:allie__id>', donation_.as_view(), name="donation"),
 ]
