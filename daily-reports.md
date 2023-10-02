@@ -280,6 +280,14 @@ No hay obstaculos por ahora.
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   De momento nada, todo esta avanzando bien
 
+#### Barraza
+* ¿Que hice ayer?
+  Hice ajustes en la agregación de aliado.
+* ¿Que haré hoy?
+  Arreglaré lo de la imagen con el firebase.
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  De momento nada, todo esta avanzando bien
+
 ### Octubre 1 2023
 
 #### Ana
@@ -288,7 +296,7 @@ No hay obstaculos por ahora.
 * ¿Que haré hoy?
   Arreglaré la visualizacion de imagenes en la agregacion de aliados y practicantes, y agregare la agregacion de varios contactos para un aliado
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
-  De momento nada, todo sigue avanzando bien
+  Por ahora nada, todo sigue avanzando bien
 
   #### Espinosa
 * ¿Que hice ayer?
