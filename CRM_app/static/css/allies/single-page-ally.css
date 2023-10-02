@@ -17,7 +17,9 @@
 }
 
 .main-content-ally {
-    padding: 3rem 9.5rem 3rem  9.5rem ;
+    width: 80%;
+    margin: auto;
+    padding-top: 3rem ;
 }
 
 .main-section-header {
