@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/allies.css' %}">
+{% endblock %}
+
+
+
+{% block main_content %}
+
+<section class="main-content-allies">
+    <div class="main-content__header">
+        <h1><b>Practicantes</b></h1>
+        <a href="/interns/add_intern/{{ally}}">
+            <img style="opacity: 0.8" src="{% static 'img/icons/add-icon.png' %}" alt="">
+        </a>
+    </div>
+    <form method="get" class="button-container">
+        <input class="search-field search-text-field" type="text" name="q" placeholder="Buscar por nombre" value="{{ request.GET.q }}">                   
+        <button class="buton-search-field" type="submit"><b>Buscar</b></button>
+    </form>   
+
+    <div class="allies-container">
+    {% for p in practice %}
+        <a class="allies-card" href="{{p.id}}/">
+            <div class="allies-card-image-container">
+                <img  src="{{ p.image_link }}" alt="{{ p.name }}">
+            </div>
+            <div class="allies-info">
+                <p class="allie-name">{{ p.name }}</p>
+                <p class="allie-area">{{ p.position }}</p>
+            </div>
+        </a>
+    {% endfor %}
+    </div>
+</section>
+
+{% endblock %}
+
+{% block pagina_actual_aliados %}
+<div class="current-page"></div>
+{% endblock %}  

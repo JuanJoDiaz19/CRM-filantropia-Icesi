@@ -41,6 +41,7 @@ p {
   transform: translateX(-100%);
   transition: transform 0.3s ease;
 }
+
 .custom-topbar {
   position: fixed;
   background-color: #0159A1;
@@ -53,6 +54,7 @@ p {
   height: 6.5625rem;
   padding-top: 1rem;
 }
+
 .centered-content img {
   width: 6.5625rem;
   height: 6.5625rem;
@@ -60,12 +62,14 @@ p {
   margin-bottom: 0.625rem;
   margin-top: 1.875rem;
 }
+
 .user-name {
   text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
   font-size: 1.25rem;
   opacity: 0.85;
   font-weight: 700;
 }
+
 li.nav-item {
   position: relative;
   box-shadow: 0px 0.125rem 0.3125rem rgba(0, 0, 0, 0.2);
@@ -74,6 +78,7 @@ li.nav-item {
   opacity: 0.85;
   font-weight: 620;
 }
+
 li.nav-item a.nav-link {
   position: relative;
   padding-right: 1.875rem;
@@ -92,12 +97,14 @@ li.nav-item:hover {
   right: 0;
   border-radius: 0.3125rem 0px 0px 0.3125rem;
 }
+
 .sidebar-image {
   opacity: 0.85;
   transform: translateY(-0.1rem);
   margin-right: 0.9375rem;
   margin-left: 0.9375rem;
 }
+
 .topbar-image {
   margin-left: 1.25rem;
 }
@@ -107,6 +114,7 @@ li.nav-item:hover {
   padding-left: 16.5625rem;
   padding-right: 2.1875rem;
   color: #0159A1;
+  margin-left: 1.2rem;
 }
 
 .sidebar-open {

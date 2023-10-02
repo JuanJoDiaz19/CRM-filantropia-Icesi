@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/allies/single-page-ally.css' %}">
+{% endblock %}
+
+
+{% block main_content %}
+
+
+<section class="main-content-ally">
+
+    <div class="main-section-header">
+        <div class="image-container-ally">
+            <img src="{{allies.image_link}}" alt="Perficient logo">
+        </div>
+        <div class="main-info-ally-container">
+            <h1 class="main-name-ally">{{allies.name}}</h1>
+            <h4 class="main-ally-description">{{allies.area}}</h4>
+            <h4 class="main-ally-description inactive-user">Donante inactivo</h4>
+        </div>
+
+        <div class="main-section-icons-container">    
+            <a href="#">
+                <img src="{% static 'img/icons/edit-icon.png' %}" alt="">
+            </a>
+        </div>
+    </div>
+
+    <p class="ally-description">{{allies.description}}</p>
+
+    <nav class="nav-section-ally">
+        <a class="nav-option-ally" href="/interns/{{allies.id}}">
+            <h3>Practicantes</h3>
+            <img src="{% static 'img/icons/interns.png' %}" alt="">
+            <div class="nav-option-ally__see-more">
+                Ver mas
+            </div>
+        </a>
+        <a class="nav-option-ally" href="#">
+            <h3>Proyectos de investigacion</h3>
+            <img src="{% static 'img/icons/investigation-projects.png' %}" alt="">
+            <div class="nav-option-ally__see-more">
+                Ver mas
+            </div>
+        </a>
+        <a class="nav-option-ally" href="#">
+            <h3>Reuniones</h3>
+            <img src="{% static 'img/icons/meetings.png' %}" alt="">
+            <div class="nav-option-ally__see-more">
+                Ver mas
+            </div>
+        </a>
+        <a class="nav-option-ally" href="/donations/{{allies.id}}">
+            <h3>Donaciones</h3>
+            <img src="{% static 'img/icons/donations.png' %}" alt="">
+            <div class="nav-option-ally__see-more">
+                Ver mas
+            </div>
+        </a>
+        <a class="nav-option-ally" href="#">
+            <h3>Eventos</h3>
+            <img src="{% static 'img/icons/events.png' %}" alt="">
+            <div class="nav-option-ally__see-more">
+                Ver mas
+            </div>
+        </a>
+        <a class="nav-option-ally" href="#">
+            <h3>Reportes</h3>
+            <img src="{% static 'img/icons/report.png' %}" alt="">
+            <div class="nav-option-ally__see-more">
+                Ver mas
+            </div>
+        </a>
+    </nav>
+    
+    <h2>Contactos Asociados:</h2>
+    {% for contact in contact_info %}
+    <div class="asociated-contact">
+        <div class="personal_info">
+            <p>{{contact.name}}</p>
+            <p>{{contact.phone_number}}</p>
+        </div>
+        <div class="asociated-contact-emails">
+            <p>{{contact.email}}</p>
+            <p>{{contact.aux_email}}</p>
+        </div>
+    </div>
+    {%  endfor  %}
+</section>
+{% endblock %}
+
+{% block pagina_actual_aliados %}
+<div class="current-page"></div>
+{% endblock %}  

@@ -10,3 +10,4 @@ sqlparse==0.4.3
 stripe==5.4.0
 tzdata==2023.3
 urllib3==2.0.2
+firebase_admin==6.2.0

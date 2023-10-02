@@ -12,6 +12,7 @@ class LogIn(View):
         return render(request, 'login.html')
     
     def post(self, request):
+        print(request.POST)
         user = authenticate(request, username=request.POST['username'], password=request.POST['password'])
         if user is None:
             return render(request, 'login.html', {
