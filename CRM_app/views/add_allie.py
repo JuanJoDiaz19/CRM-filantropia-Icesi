@@ -16,7 +16,7 @@ if not firebase_admin._apps:
 
 bucket = storage.bucket()
 
-class AddAllie(View):
+class Add_allie(View):
     @method_decorator(login_required) 
     def get(self, request):
         return render(request, 'add_allie.html')
