@@ -7,32 +7,26 @@
 
 {% block main_content %}
 
-<body>
-<div>
+<div class="main-content-home-page">    
   <h1 class="welcome-text">Bienvenido, usuario Filantropía</h1>
- 
   <div class="welcome-container">
-    <img src="{% static 'img/news/welcome.png' %}" alt="welcome" width="900px" height="200px" class="image-borders">  
- 
+    <img src="{% static 'img/news/welcome.png' %}" alt="welcome" class="image-borders">  
     <h2 class="palante-text" class="text-overlay"></p>Vamos pa' lante</h2>
-  </div>
-</div>  
-<h2 class="news-text">Noticias del sistema</h2>
-<div class="contenedor">
-    {%for new in news%}
-        <div class="rectangulo">
-          <div>
-            <img src="{% static 'img/news/bell.png' %}" alt="bell" class="left-image">
-            <label class="left-text" style="color: black;">{{new.date}}</label>
-          </div>
-          <div>
-            <h2 class="container-text" style="color: black;">{{new.title}}</h2>
-            <div class="news-description">
-              <label class="news-description" style="color: black;">{{new.description}}</label>
+  </div> 
+  <h2 class="news-text">Noticias del sistema</h2>
+  <div class="contenedor">
+      {%for new in news%}
+          <div class="rectangulo">
+            <div class="rectangulo__imagen_contenedor">
+              <img src="{% static 'img/news/bell.png' %}" alt="bell" class="left-image">
+              <p class="date-text">{{new.date}}</p>
+            </div>
+            <div class="rectangulo__imagen_contenedor-texto">
+              <h5 class="container-text">{{new.title}}</h5>
+              <p class="news-description">{{new.description}}</p>
             </div>
           </div>
-        </div>
-    {%endfor%}
+      {%endfor%}
+  </div>
 </div>
-
 {% endblock %}
