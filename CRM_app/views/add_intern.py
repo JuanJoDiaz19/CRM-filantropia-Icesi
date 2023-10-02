@@ -11,14 +11,7 @@ from django.shortcuts import get_object_or_404
 
 import datetime
 import os
-import firebase_admin 
-from firebase_admin import credentials, storage
-
-if not firebase_admin._apps:
-    cred = credentials.Certificate('crm-app-filantropia-icesi-firebase-adminsdk-6isgm-16b172ef8f.json') 
-    default_app = firebase_admin.initialize_app(cred, {'storageBucket': 'crm-app-filantropia-icesi.appspot.com'})
-    
-bucket = storage.bucket()
+import base64
 
 class Add_intern(View):
     @method_decorator(login_required)
@@ -42,11 +35,8 @@ class Add_intern(View):
             
             if Practicing.objects.filter(id=intern_id).exists():
                 return render(request, 'add_intern.html', {'error_message': "Ya existe un practicante con este documento"})
-            
-            blob = bucket.blob(f'practicing_images/{image.name}')
-            blob.upload_from_file(image, content_type=image.content_type)
 
-            allie_image_link = blob.public_url
+            allie_image_link = base64.b64encode(image.read()).decode('utf-8')
 
             
             Practicing.objects.create(
