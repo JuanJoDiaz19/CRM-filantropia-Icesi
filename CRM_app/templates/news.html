@@ -8,10 +8,9 @@
 {% block main_content %}
 
 <div class="main-content-home-page">    
-  <h1 class="welcome-text">Bienvenido, usuario Filantropía</h1>
-  <div class="welcome-container">
-    <img src="{% static 'img/news/welcome.png' %}" alt="welcome" class="image-borders">  
-    <h2 class="palante-text" class="text-overlay"></p>Vamos pa' lante</h2>
+  <h1 class="welcome-text">Bienvenido, Usuario Filantropía</h1>
+  <div class="welcome-container" style="background-image: url({% static 'img/news/welcome.png' %});">
+    <p class="palante-text">Vamos pa' lante</p>   
   </div> 
   <h2 class="news-text">Noticias del sistema</h2>
   <div class="contenedor">
@@ -30,3 +29,8 @@
   </div>
 </div>
 {% endblock %}
+
+{% block pagina_actual_inicio %}
+<div class="current-page"></div>
+{% endblock %}
+
