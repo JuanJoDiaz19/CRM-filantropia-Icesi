@@ -36,6 +36,7 @@ from CRM_app.views.add_allie import Add_allie
 from CRM_app.views.add_intern import Add_intern
 from CRM_app.views.interns import Interns
 from CRM_app.views.donation import donation_
+from CRM_app.views.create_meeting import create_meeting
 
 
 urlpatterns = [
@@ -60,4 +61,5 @@ urlpatterns = [
     path('allies/<int:allie_id>/', Ally.as_view(), name="ally"),
     path('add_contact/<int:allie_id>/', AddContact.as_view(), name='add_contact'),
     path('donations/<int:allie__id>', donation_.as_view(), name="donation"),
+    path('create_meeting/', create_meeting.as_view(), name="create_meeting"),
 ]
