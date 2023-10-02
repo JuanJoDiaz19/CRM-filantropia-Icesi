@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/create_meeting.css' %}">
+{% endblock %}
+
+
+{% block main_content %}
+
+<div class="top_arrow_tittle">
+  <a href="/allies">
+    <img class="arrow_image" src="{% static 'img/add_allie/arrow.png' %}" alt="arrow">
+  </a>
+  <p class="top_tittle">Crear reunión</p>
+  <div class="button-container">
+    <button class="small-button">Crear</button>
+</div>
+</div>
+
+<div class="card">
+  <div class="container">
+    <div class="column column-left-top">
+
+      <div>
+        <label class="content_text">Nombre</label>
+        <br>
+        <input type="text" class="form_text" id="hombre" placeholder="Nombre de la reunión">
+        <br>
+      </div>
+      <br>
+      <div class="dropdown">
+        <button class="dropbtn">Categoría</button>
+        <div class="dropdown-content">
+            <a href="#">Opción 1</a>
+            <a href="#">Opción 2</a>
+            <a href="#">Opción 3</a>
+        </div>
+    </div>
+
+      <div class="form">
+        <label class="content_text">Objetivo</label>
+        <br>
+        <textarea type="text" class="form_text" id="Objetivo" placeholder="Objetivo"></textarea>
+        <br>
+      </div>
+      
+      <div class="form">
+        <label class="content_text">Descripción</label>
+        <br>
+        <textarea type="text" class="form_text" id="Descripción" placeholder="Descripción"></textarea>
+        <br>
+      </div>
+    </div>
+    </div>
+    <br>
+  </div> 
+</div>
+
+{% endblock %}
+
