@@ -308,13 +308,21 @@ Mas responsabilidades aparte de esta.
 
 #### Mateo Silva
 * ¿Que hice ayer?
-Avance en la planeación del spring de la siguiente semana
+Avance en la planeación del sprint de la siguiente semana
 * ¿Que haré hoy?
 No avance mucho hoy.
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
 de momento nada
 
-  
-  
+### Octubre 2 2023
+
+#### Espinosa
+* ¿Que hice ayer?
+  Hasta ahora creo que termine la vista de creacion de reuniones, pero todavia puede estar sujeta a cambios
+* ¿Que haré hoy?
+  Avanzar en la vista de creacion de eventos.
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  Por ahora no se presenta nada.
+
 
 
