@@ -298,13 +298,21 @@ No hay obstaculos por ahora.
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   Por ahora nada, todo sigue avanzando bien
 
-  #### Espinosa
+#### Espinosa
 * ¿Que hice ayer?
 Sabado de descanso
 * ¿Que haré hoy?
 Hare la vista de creacion de reuniones y probablemente la de eventos ya que son muy parecidas
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
 Mas responsabilidades aparte de esta.
+
+#### Mateo Silva
+* ¿Que hice ayer?
+Avance en la planeación del spring de la siguiente semana
+* ¿Que haré hoy?
+No avance mucho hoy.
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+de momento nada
 
   
   
