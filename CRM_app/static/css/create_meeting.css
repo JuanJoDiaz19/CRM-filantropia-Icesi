@@ -35,17 +35,6 @@
     font-size: 1.0625rem;
   }
   
-  .sub_content_text {
-    margin-left: 0.625rem;
-    color: #434343;
-    font-size: 1.0625rem;
-  }
-  
-  .input::placeholder {
-    margin-left: 6.25rem;
-    color: #434343;
-    font-size: 0.75rem;
-  }
   
   .content {
     margin-top: 1.875rem;
@@ -88,16 +77,6 @@
     resize: none; 
   }
   
-  .row {
-    margin: 0;
-    padding: 20px;
-    width: 100%;
-    padding-bottom: 40px;
-  }
-  .row-bottom {
-    width: 100%;
-  }
-  
   .column {
     box-sizing: border-box;
     padding: 20px;
@@ -114,15 +93,7 @@
   .column-left-top {
     width: 70%;
   }
-  .column-right-bottom{
-    width: 50%;
-    padding-bottom: 30px;
-  }
-  .column-left-bottom {
-    width: 50%;
-    padding-bottom: 30px;
-  }
-  /* Estilos para pantallas grandes (1024px o más) */
+  
   @media (min-width: 1024px) {
     .column-left-top {
         order: 1; 
@@ -142,7 +113,6 @@
     }
   }
   
-  /* Estilos para pantallas medianas (768px a 1023px) */
   @media (max-width: 1023px) {
     .column-left-top {
       order: 1; 
@@ -239,24 +209,24 @@
     }
 }
 
-/* Estilos para el botón "Crear" */
+
 .small-button {
-    padding: 6px 12px; /* Ajustar el padding para hacerlo más pequeño */
-    font-size: 12px; /* Reducir el tamaño de fuente */
-    background-color: #0159A1; /* Cambiar el color de fondo a azul */
-    color: white; /* Cambiar el color del texto a blanco */
-    border: none; /* Eliminar el borde */
-    border-radius: 10px; /* Agregar bordes curvos */
+    padding: 6px 12px;
+    font-size: 12px;
+    background-color: #0159A1; 
+    color: white; 
+    border: none;
+    border-radius: 10px;
     cursor: pointer;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
     font-size: 14px;
 }
-/* Estilos para el contenedor del botón "Crear" */
+
 .button-container {
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Alinea el contenido a la derecha */
-    flex: 1; /* Utiliza todo el espacio disponible */
-    padding-right: 3rem; /* Agrega un espacio a la derecha */
+    justify-content: flex-end; 
+    flex: 1;
+    padding-right: 3rem;
     margin-right: 60px;    
 }
