@@ -336,11 +336,19 @@ de momento nada
 
 #### Juan Jose Diaz
 * ¿Que hice ayer?
-Termine de hacer las correcciones de los conflictos que habia al hacer los merges a la rama dev
+  Termine de hacer las correcciones de los conflictos que habia al hacer los merges a la rama dev
 * ¿Que haré hoy?
-Empezare a corregir los estilos de la pagina de noticias que va a pasar a ser la de home
+  Empezare a corregir los estilos de la pagina de noticias que va a pasar a ser la de home
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
-El unico obstaculo que tengo es el tiempo
+  El unico obstaculo que tengo es el tiempo
+
+#### Barraza
+* ¿Que hice ayer?
+  No realicé mayor avance.
+* ¿Que haré hoy?
+  Corregiré lo de la imagen, ya no será en firebase almacenando el link, solo un atributo en base64 que se decodifica después.
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  No hay mayor obstáculo ahora mismo.
 
 
 
