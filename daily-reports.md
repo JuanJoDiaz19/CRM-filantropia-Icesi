@@ -288,6 +288,15 @@ No hay obstaculos por ahora.
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   De momento nada, todo esta avanzando bien
 
+#### Juan Jose Diaz
+* ¿Que hice ayer?
+  Empece a mirar los cambios que se hicieron al hacer merge de las ramas pendientes
+* ¿Que haré hoy?
+  Resolver los conflictos de las ramas que mis compañeros estan buscando mergear con la dev
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  Hasta el momento solamente hace falta tiempo para seguir trabajando
+
+
 ### Octubre 1 2023
 
 #### Ana
@@ -323,6 +332,15 @@ de momento nada
   Avanzar en la vista de creacion de eventos.
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   Por ahora no se presenta nada.
+
+
+#### Juan Jose Diaz
+* ¿Que hice ayer?
+Termine de hacer las correcciones de los conflictos que habia al hacer los merges a la rama dev
+* ¿Que haré hoy?
+Empezare a corregir los estilos de la pagina de noticias que va a pasar a ser la de home
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+El unico obstaculo que tengo es el tiempo
 
 
 
