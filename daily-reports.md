@@ -350,5 +350,13 @@ de momento nada
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   No hay mayor obstáculo ahora mismo.
 
+### Octubre 3 2023
 
+#### Espinosa
+* ¿Que hice ayer?
+  Empece la vista de creacion de eventos
+* ¿Que haré hoy?
+  Terminar la vista de creacion de eventos
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  Se me presentaron otras obligaciones, entonces no estoy seguro si puedo acabar la vista de creacion de evenntos hoy.
 
