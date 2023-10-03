@@ -360,3 +360,10 @@ de momento nada
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   Se me presentaron otras obligaciones, entonces no estoy seguro si puedo acabar la vista de creacion de evenntos hoy.
 
+#### Mateo Silva
+* ¿Que hice ayer?
+  Empece a hacer el plan de pruebas de la aplicación
+* ¿Que hare hoy?
+  Hoy no podre avanzar
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  Debido a que estoy trabajando en el back de la aplicacion, no se ha podido avanzar en el front y estoy al dia con el back, por lo tanto no puedo avanzar.
