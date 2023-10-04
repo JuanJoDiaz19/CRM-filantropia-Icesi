@@ -367,3 +367,13 @@ de momento nada
   Hoy no podre avanzar
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   Debido a que estoy trabajando en el back de la aplicacion, no se ha podido avanzar en el front y estoy al dia con el back, por lo tanto no puedo avanzar.
+
+### Octubre 4 2023
+
+#### Espinosa
+* ¿Que hice ayer?
+  Avance un poco la vista de creacion de eventos, aunque no fue mucho
+* ¿Que haré hoy?
+  Terminar la vista de creacion de eventos
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  Tengo que prepararme para pruebas academicas de otras asignaturas.
