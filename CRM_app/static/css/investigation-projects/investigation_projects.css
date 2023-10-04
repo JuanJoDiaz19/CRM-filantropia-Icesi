@@ -1,0 +1,36 @@
+.investigation-header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+}
+
+.investigation-header__container-title {
+    display: flex;
+    width: 85%;
+}
+
+.investigation-header__container-title h1 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+
+.left-arrow-investigation {
+    width: 12.5%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2rem;
+}
+
+.left-arrow-investigation img {
+    height: 2rem;
+}
+
+.investigation-header__add-icon {
+    margin-right: 10%;
+}
+
+.investigation-header__add-icon img {
+    width: 3rem;
+}

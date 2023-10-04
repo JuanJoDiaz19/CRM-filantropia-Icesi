@@ -5,6 +5,6 @@ from django.contrib.auth import login,logout, authenticate
 from django.contrib.auth.models import User
 from django.db import IntegrityError
 
-class Investigations(View):
+class InvestigationsProjects(View):
     def get(self, request):
-        return render(request, 'investigation.html')
+        return render(request, 'investigation_projects.html')
