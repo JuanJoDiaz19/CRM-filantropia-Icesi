@@ -352,6 +352,15 @@ de momento nada
 
 ### Octubre 3 2023
 
+
+#### Juan Jose Diaz
+* ¿Que hice ayer?
+Termine de hacer los cambios de la pagina de noticias
+* ¿Que haré hoy?
+Empezare a realizar la pagina de agregar una donacion
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+Hay otros compromisos con otras materias que no me han podido avanzar con lo esperado
+
 #### Espinosa
 * ¿Que hice ayer?
   Empece la vista de creacion de eventos
@@ -377,3 +386,11 @@ de momento nada
   Terminar la vista de creacion de eventos
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   Tengo que prepararme para pruebas academicas de otras asignaturas.
+
+#### Juan Jose Diaz
+* ¿Que hice ayer?
+Termine de hacer la pagina de agregar las donaciones
+* ¿Que haré hoy?
+Empezaré a realizar la pagina de los proyectos de investigacion
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+El tiempo que le tengo que dedicar a otras materias
