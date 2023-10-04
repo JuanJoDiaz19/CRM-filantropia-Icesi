@@ -124,7 +124,6 @@ class Donation(models.Model):
     amount= models.IntegerField()
     donation_type_id= models.ForeignKey(Donation_Type,on_delete=models.CASCADE)
     allie_id= models.ForeignKey(Allie,on_delete=models.CASCADE)
-    name=models.CharField(max_length=20)
     description= models.CharField(max_length=20,null=True)
     def __str__(self):
         return self.name

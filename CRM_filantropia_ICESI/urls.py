@@ -63,5 +63,5 @@ urlpatterns = [
     path('add_contact/<int:allie_id>/', AddContact.as_view(), name='add_contact'),
     path('donations/<int:allie__id>', donation_.as_view(), name="donation"),
     path('create_meeting/', create_meeting.as_view(), name="create_meeting"),
-    path('allies/<int:allie_id>/add-donation/', AddDonation.as_view(), name="add_donation"),
+    path('allies/<int:allie__id>/add-donation/', AddDonation.as_view(), name="add_donation"),
 ]

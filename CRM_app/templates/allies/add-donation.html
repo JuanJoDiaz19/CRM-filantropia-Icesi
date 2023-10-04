@@ -8,8 +8,14 @@
 
 {% block main_content %}
 
+{% if error_message %}
+  <div class="alert alert-danger">
+    {{ error_message }}
+  </div>
+{% endif %}
+
 <div class="top_arrow_tittle" style="margin-top: 1.875rem; margin-left: 1.875rem;">
-    <a href="/interns/{{ally}}">
+    <a href="/donations/{{ally.id}}">
       <img class="arrow_image" src="{% static 'img/add_allie/arrow.png' %}" alt="arrow">
     </a>
     <h1 class="top_tittle">Agregar Donacion</h1>
