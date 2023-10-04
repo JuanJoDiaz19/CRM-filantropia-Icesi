@@ -1,0 +1,84 @@
+@media (max-width: 1024px) {
+    
+    .container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .form__container-left-elements {
+        width: 90% !important;
+    }
+
+    .form__container-right-elements {
+        width: 90% !important;
+    }
+
+}
+  
+
+form {
+    margin-top: 3rem;
+}
+
+.main-container-form {
+    width: 80%;
+    margin: auto;
+}
+
+.container {
+    margin-bottom: 1rem;
+    display: flex;
+    box-shadow: 0 0.25rem 0.5rem -0.125rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.9375rem;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.form__container-left-elements {
+    width: 50%;
+    margin: 1rem;
+}
+
+.form__container-right-elements {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 1rem;
+}
+
+.button-style-add-donation {
+    width: 100%;
+    margin-bottom: 2rem;
+    background-color: #0159A1;
+    color: white;
+    border: solid var(--font-color) 1px;
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+    font-size: 17px;
+    width: 100%;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    font-weight: 620;
+    margin-top: 1em;
+}
+
+.content_text {
+    font-size: 1.2rem;
+    margin-left: 0;
+}
+
+.form_text {
+    font-weight: 600;
+}
+
+.form_ammount {
+    margin-bottom: 2rem;
+}
+
+.form_description {
+    height: 10rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
