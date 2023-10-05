@@ -394,3 +394,11 @@ Termine de hacer la pagina de agregar las donaciones
 Empezaré a realizar la pagina de los proyectos de investigacion
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
 El tiempo que le tengo que dedicar a otras materias
+
+#### Mateo Silva
+* ¿Que hice ayer?
+  ayer no avanze en el proyecto.
+* ¿Que hare hoy?
+  avanzare en las funcionalidades de las donaciones.
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  En este punto donde el semestre empieza a exigir mas, el ritmo hace que no pueda avanzar mucho.
