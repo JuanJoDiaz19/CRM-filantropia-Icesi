@@ -412,3 +412,10 @@ El tiempo que le tengo que dedicar a otras materias
   Empezaré con la vista de los eventos a los que un aliado está asociado 
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   Solo el tiempo.
+#### Mateo Silva
+* ¿Que hice ayer?
+  Termine las funcionalidades necesarias para la donación.
+* ¿Que hare hoy?
+  Hara algunas correciones en nuestro modelo debido a que hay ciertas consideraciones necesarias.
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  El tiempo es muy limitado para avanzar.
