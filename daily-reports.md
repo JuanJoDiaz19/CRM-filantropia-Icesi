@@ -402,3 +402,13 @@ El tiempo que le tengo que dedicar a otras materias
   avanzare en las funcionalidades de las donaciones.
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   En este punto donde el semestre empieza a exigir mas, el ritmo hace que no pueda avanzar mucho.
+
+### Octubre 5 2023
+
+#### Santiago Barraza
+* ¿Que hice ayer?
+  No realicé avance en el proyecto.
+* ¿Que hare hoy?
+  Empezaré con la vista de los eventos a los que un aliado está asociado 
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  Solo el tiempo.
