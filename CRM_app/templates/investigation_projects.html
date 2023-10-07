@@ -24,32 +24,16 @@
 
 <section class="main-content-allies">    
     <form method="get" action="{% url 'allies' %}" class="button-container">
-        <input class="search-field search-text-field" type="text" name="q" placeholder="Buscar por nombre" value="{{ request.GET.q }}">
-        <select class="search-field search-option-field" name="estado">
-            <option value="" {% if not request.GET.estado %}selected{% endif %}>Todos</option>
-            <option value="activo" {% if request.GET.estado == 'activo' %}selected{% endif %}>Activo</option>
-            <option value="inactivo" {% if request.GET.estado == 'inactivo' %}selected{% endif %}>Inactivo</option>
-        </select>
-        <select class="search-field search-option-field" name="tipo">
-            <option value="" {% if not request.GET.tipo %}selected{% endif %}>Todos</option>
-            {% for allie_type in allie_types %}
-                <option value="{{ allie_type.id }}" {% if request.GET.tipo == allie_type.id %}selected{% endif %}>
-                    {{ allie_type.name }}
-                </option>
-            {% endfor %}
-        </select>                    
+        <input class="search-field search-text-field" type="text" name="q" placeholder="Buscar por nombre" value="{{ request.GET.q }}">              
         <button class="buton-search-field" type="submit"><b>Buscar</b></button>
     </form>   
 
     <div class="allies-container">
-    {% for allie in allies %}
-        <a class="allies-card" href="{{allie.id}}/">
-            <div class="allies-card-image-container">
-                <img  src="data:image/jpeg;base64,{{ allie.image_link }}" alt="{{ allie.name }}">
-            </div>
+    {% for investigation_project in investigation_projects %}
+        <a class="allies-card" href="{{investigation_project.id}}/">
             <div class="allies-info">
-                <p class="allie-name">{{ allie.name }}</p>
-                <p class="allie-area">{{ allie.area }}</p>
+                <p class="allie-name">{{ investigation_project.name }}</p>
+                <p class="allie-area">{{ investigation_project.description }}</p>
             </div>
         </a>
     {% endfor %}

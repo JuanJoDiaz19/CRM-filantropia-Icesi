@@ -24,7 +24,7 @@
 }
 
 .left-arrow-investigation img {
-    height: 2rem;
+    height: 1.5rem;
 }
 
 .investigation-header__add-icon {
@@ -33,4 +33,26 @@
 
 .investigation-header__add-icon img {
     width: 3rem;
+}
+
+.button-container {
+    justify-content: space-between;
+}
+
+.search-field {
+    margin-right: 3rem;
+    width: 100%;
+}
+
+.allies-card {
+    padding-left: 1.5rem;
+}
+
+
+.allies-card a {
+    font-size: 1.6rem;
+}
+
+.allies-container {
+    max-height: 55vh;
 }
