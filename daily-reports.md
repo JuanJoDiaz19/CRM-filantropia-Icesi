@@ -419,3 +419,24 @@ El tiempo que le tengo que dedicar a otras materias
   Hara algunas correciones en nuestro modelo debido a que hay ciertas consideraciones necesarias.
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   El tiempo es muy limitado para avanzar.
+
+
+### Octubre 6 2023
+
+#### Espinosa
+* ¿Que hice ayer?
+  No hice nada, estuve repasando para una prueba
+* ¿Que haré hoy?
+  No hare nada, ya que todo el dia voy a estar enfocado en repasar y realizar una prueba
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  La prueba
+
+### Octubre 7 2023
+
+#### Espinosa
+* ¿Que hice ayer?
+  No hice nada, estuve haciendo una prueba
+* ¿Que haré hoy?
+  Adelantare un poco la vista de creacion de eventos
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  tengo que repasar para una sustentacion y tengo varios trabajos acumulados
