@@ -458,3 +458,11 @@ El tiempo que le tengo que dedicar a otras materias
   Estudiare un poco sobre sesiones para aplicarlo a mi proyecto.
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   El tiempo es limitado.
+
+#### Santiago Barraza
+* ¿Que hice ayer?
+  Ayer no avance en el proyecto
+* ¿Que hare hoy?
+  Haré el backend de la página en la que aparecen todos los proyectos de investigación
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  El tiempo es limitado.
