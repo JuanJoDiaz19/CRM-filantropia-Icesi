@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views import View
-from CRM_app.models import Allie_Type, Allie, ContactInfo
+from CRM_app.models import Allie_Type, Allie, ContactInfo, Area
 from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
 
@@ -11,7 +11,9 @@ import base64
 class Add_allie(View):
     @method_decorator(login_required) 
     def get(self, request):
-        return render(request, 'add_allie.html')
+        areas = Area.objects.all() 
+        areas = [{'id': str(area.id), 'name': area.area_description} for area in areas]
+        return render(request, 'add_allie.html',{'areas': areas})
 
     @method_decorator(login_required) 
     def post(self, request):
@@ -51,7 +53,7 @@ class Add_allie(View):
                     id = allie_document_id,
                     allie_type_id=allie_type,
                     name=allie_name,
-                    area=allie_area,
+                    area_id=Area.objects.get(id=allie_area),
                     description=allie_description,
                     image_link=allie_image_link
                 )

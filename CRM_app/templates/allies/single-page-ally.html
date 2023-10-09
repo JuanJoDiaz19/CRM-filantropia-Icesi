@@ -6,8 +6,14 @@
 {% endblock %}
 
 
+
 {% block main_content %}
 
+{% if error_message %}
+  <div class="alert alert-danger">
+    {{ error_message }}
+  </div>
+{% endif %}
 
 <section class="main-content-ally">
 
@@ -17,23 +23,23 @@
         </div>
         <div class="main-info-ally-container">
             <h1 class="main-name-ally">{{allies.name}}</h1>
-            <h4 class="main-ally-description">{{allies.area}}</h4>
+            <h4 class="main-ally-description">{{allies.area_id}}</h4>
             <h4 class="main-ally-description inactive-user">Donante inactivo</h4>
         </div>
 
         <div class="main-section-icons-container">    
-            <a href="#">
-                <img src="{% static 'img/icons/edit-icon.png' %}" alt="">
+            <a href="/edit_ally/{{allies.id}}/">
+                <img class="edit-image-opacity" src="{% static 'img/icons/edit-icon.png' %}" alt="">
             </a>
         </div>
     </div>
-
-    <p class="ally-description">{{allies.description}}</p>
-
+    <div class="ally-description">
+        <p>{{allies.description}}</p>
+    </div>
     <nav class="nav-section-ally">
         <a class="nav-option-ally" href="/interns/{{allies.id}}">
             <h3>Practicantes</h3>
-            <img src="{% static 'img/icons/interns.png' %}" alt="">
+            <img  src="{% static 'img/icons/interns.png' %}" alt="">
             <div class="nav-option-ally__see-more">
                 Ver mas
             </div>
@@ -54,7 +60,7 @@
         </a>
         <a class="nav-option-ally" href="/donations/{{allies.id}}">
             <h3>Donaciones</h3>
-            <img src="{% static 'img/icons/donations.png' %}" alt="">
+            <img class="image-opacity" src="{% static 'img/icons/donations.png' %}" alt="">
             <div class="nav-option-ally__see-more">
                 Ver mas
             </div>
@@ -68,7 +74,7 @@
         </a>
         <a class="nav-option-ally" href="#">
             <h3>Reportes</h3>
-            <img src="{% static 'img/icons/report.png' %}" alt="">
+            <img class="image-opacity" src="{% static 'img/icons/report.png' %}" alt="">
             <div class="nav-option-ally__see-more">
                 Ver mas
             </div>
@@ -78,17 +84,103 @@
     <h2>Contactos Asociados:</h2>
     {% for contact in contact_info %}
     <div class="asociated-contact">
-        <div class="personal_info">
-            <p>{{contact.name}}</p>
-            <p>{{contact.phone_number}}</p>
+        <div class="row-bottom">
+        <p class="content_tittle inner-title">Contacto</p>
+        <a href="/edit_contact/{{allies.id}}/{{contact.id}}">
+          <img  src="{% static 'img/icons/edit-icon.png' %}" alt="arrow"style="padding-left: 35px; padding-right: 10px; padding-bottom: 15px; opacity: 0.7; width:75px;">
+        </a>
         </div>
-        <div class="asociated-contact-emails">
+      
+        <div class="personal_info column  column-left-bottom">
+            <div class="form">
+            <h6>Nombre:</h6>
+            <p>{{contact.name}}</p>
+            <h6>Documento:</h6>
+            <p>{{contact.id}}</p>
+            <h6>Numero telefonico:</h6>
+            <p>{{contact.phone_number}}</p>
+            </div>
+        </div>
+        
+        <div class="asociated-contact-emails column  column-right-bottom">
+            <div class="form">
+            <h6>Correo:</h6>
             <p>{{contact.email}}</p>
+            <h6>Correo Auxiliar:</h6>
             <p>{{contact.aux_email}}</p>
+            </div>
         </div>
     </div>
     {%  endfor  %}
+    
+    <form method="post" action="{% url 'add_contact' allie_id=allies.id %}" enctype="multipart/form-data">
+
+        {% csrf_token %}
+
+    <div class="asociated-contact">
+        <div class="container" style="margin-bottom:30px">
+          <div class="row-bottom">
+            <p class="content_tittle inner-title">Contacto</p>
+          </div>
+    
+          <div class="column column-left-bottom">
+
+            <div>
+              <label class="content_text">Nombre</label>
+              <br>
+              <input type="text" name="contact_name" class="form_text" id="documentos" placeholder="Nombre completo">
+              <br>
+            </div>
+    
+            <div class="form">
+              <label class="content_text">Documento de identificación</label>
+              <br>
+              <input type="number" name="contact_document_id" class="form_text" id="documentos" placeholder="NIT o C.C">
+              <br>
+            </div>
+
+          
+            <div class="form">
+                <label class="content_text">Teléfono celular</label>
+                <br>
+                <input type="number" name="contact_phone" class="form_text" id="documentos" placeholder="Celular">
+                <br>
+              </div>
+
+        </div>
+
+          <div class="row-temp">
+              
+          </div>
+          <div class="column column-right-bottom">
+    
+            
+    
+            <div>
+              <label class="content_text">Correo electrónico</label>
+              <br>
+              <input type="email" name="contact_email" class="form_text" id="documentos" placeholder="Correo">
+              <br>
+            </div>
+
+            <div class="form">
+                <label class="content_text">Correo electrónico Auxiliar</label>
+                <br>
+                <input type="email" name="contact_aux_email" class="form_text" id="documentos" placeholder="Correo">
+                <br>
+              </div>
+    
+    
+        </div>
+      </div>
+    </div>
+  
+      <div class="container">
+        <button class="button-style">Agregar nuevo contacto</button>
+      </div>
+
 </section>
+
 {% endblock %}
 
 {% block pagina_actual_aliados %}
