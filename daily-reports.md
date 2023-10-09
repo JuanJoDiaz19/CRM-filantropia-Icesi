@@ -350,6 +350,14 @@ de momento nada
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   No hay mayor obstáculo ahora mismo.
 
+  #### Ana
+* ¿Que hice ayer?
+  Ayer agregue la visualizacion de imagenes de agregar aliado
+* ¿Que haré hoy?
+  Hoy agregare la visualizacion de imagenes de practicantes
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  La carga academica no me permite dedicarle mucho tiempo al proyecto.
+
 ### Octubre 3 2023
 
 
@@ -376,6 +384,14 @@ Hay otros compromisos con otras materias que no me han podido avanzar con lo esp
   Hoy no podre avanzar
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   Debido a que estoy trabajando en el back de la aplicacion, no se ha podido avanzar en el front y estoy al dia con el back, por lo tanto no puedo avanzar.
+
+#### Ana
+* ¿Que hice ayer?
+  Ayer agregue la visualizacion de imagenes de practicantes
+* ¿Que haré hoy?
+  Hoy empezare el front y el back de añadir contacto
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  La carga acadedima no me permite dedicarle mucho tiempo al proyecto.
 
 ### Octubre 4 2023
 
@@ -420,6 +436,14 @@ El tiempo que le tengo que dedicar a otras materias
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   El tiempo es muy limitado para avanzar.
 
+#### Ana
+* ¿Que hice ayer?
+  Ayer empece con el front de añadir contacto
+* ¿Que haré hoy?
+  Hoy empezare con el back de añadir contacto
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  La carga acadedima no me permite dedicarle mucho tiempo al proyecto y tengo que aprender sobre el manejo de las bases de datos.
+
 
 ### Octubre 6 2023
 
@@ -449,6 +473,14 @@ El tiempo que le tengo que dedicar a otras materias
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   tengo que repasar para una sustentacion y tengo varios trabajos acumulados
 
+#### Ana
+* ¿Que hice ayer?
+  Ayer empece con el back de añadir contacto, y adelante un poco del front
+* ¿Que haré hoy?
+  Hoy empezare con la feature de editar contacto y aliado
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  He estado enferma y no le he podido dedicar mucho tiempo al proyecto.
+
 ### Octubre 8 2023
 
 #### Mateo Silva
@@ -459,6 +491,14 @@ El tiempo que le tengo que dedicar a otras materias
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   El tiempo es limitado.
 
+#### Ana
+* ¿Que hice ayer?
+  Ayer empece con el feature de editar contacto y aliado
+* ¿Que haré hoy?
+  Hoy terminaré con el feature de editar contacto y aliado
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  Tengo muchos compromisos familiares y no he tenido la mejor salud, lo que me limitan mi tiempo disponible
+
 #### Santiago Barraza
 * ¿Que hice ayer?
   Ayer no avance en el proyecto
@@ -466,3 +506,14 @@ El tiempo que le tengo que dedicar a otras materias
   Haré el backend de la página en la que aparecen todos los proyectos de investigación
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   El tiempo es limitado.
+
+### Octubre 9 2023
+
+#### Ana
+* ¿Que hice ayer?
+  Ayer termine con el feature de editar contacto y aliado
+* ¿Que haré hoy?
+  Hoy empezare la visualizacion de calendario
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  La carga academica limita mi tiempo
+
