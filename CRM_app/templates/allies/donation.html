@@ -11,12 +11,14 @@
 <section class="main-ally-donation">
     <div class="main-header-donation">
         <div class="main-header-donation__ally-info">
-            <img src="{{allies.image_link}}" alt="">
+            <img  src="data:image/jpeg;base64,{{ allies.image_link }}" alt="{{ allies.name }}">
             <h2>{{allies.name}}</h2>
         </div>
-        <div class="main-header-donation__add-donation">
-            <img src="{% static 'img/icons/add-icon.png' %}" alt="">
-        </div>
+        <a href="/allies/{{allies.id}}/add-donation/">
+            <div class="main-header-donation__add-donation">              
+                <img src="{% static 'img/icons/add-icon.png' %}" alt="">
+            </div>
+        </a>
     </div>
     <div class="main-donation-summary">
         <div class="main-donation-summary__total-money">
@@ -25,9 +27,9 @@
             </h2>
             <script>
                 var total = {{ total|default:"0" }};
-                var numeroFormateado = total.toLocaleString(); // Formatea el número con puntos de separación de miles
+                var numeroFormateado = total.toLocaleString(); 
             
-                // Actualiza el contenido del elemento con el número formateado
+                
                 document.getElementById("numero-formateado").textContent = numeroFormateado;
             </script>
             <div class="main-donation-sumary__total-money__text">Dinero total donado</div>
@@ -48,7 +50,7 @@
                     <p>${{don.amount}}</p>
                 </div>
                 <div class="history-donations_element-description">
-                    <p>{{don.name}}</p>
+                    <p>{{don.description}}</p>
                 </div>
             </div>
             {% endfor %}

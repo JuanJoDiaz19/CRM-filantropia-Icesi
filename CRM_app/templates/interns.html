@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block header_links %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/allies.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/allies/interns.css' %}">
 {% endblock %}
 
 
@@ -25,7 +25,7 @@
     {% for p in practice %}
         <a class="allies-card" href="{{p.id}}/">
             <div class="allies-card-image-container">
-                <img  src="{{ p.image_link }}" alt="{{ p.name }}">
+                <img  src="data:image/jpeg;base64,{{ p.image_link }}" alt="{{ p.name }}">
             </div>
             <div class="allies-info">
                 <p class="allie-name">{{ p.name }}</p>

@@ -6,15 +6,7 @@ from django.contrib.auth.decorators import login_required
 
 import datetime
 import os
-import firebase_admin
-from firebase_admin import credentials, storage
-
-if not firebase_admin._apps:
-    cred = credentials.Certificate('crm-app-filantropia-icesi-firebase-adminsdk-6isgm-16b172ef8f.json') 
-    default_app = firebase_admin.initialize_app(cred, {'storageBucket': 'crm-app-filantropia-icesi.appspot.com'})
-
-
-bucket = storage.bucket()
+import base64
 
 class Add_allie(View):
     @method_decorator(login_required) 
@@ -44,10 +36,7 @@ class Add_allie(View):
                 if Allie.objects.filter(id=allie_document_id).exists():
                     return render(request, 'add_allie.html', {'error_message': "Ya existe un aliado con este documento"})
             
-                blob = bucket.blob(f'allie_images/{allie_image.name}')
-                blob.upload_from_file(allie_image, content_type=allie_image.content_type)
-
-                allie_image_link = blob.public_url
+                allie_image_link = base64.b64encode(allie_image.read()).decode('utf-8')
 
                 allie_index = 0
 

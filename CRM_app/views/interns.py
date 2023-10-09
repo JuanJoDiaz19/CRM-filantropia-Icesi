@@ -7,7 +7,6 @@ from django.db import IntegrityError
 from CRM_app.models import Practicing
 from django.db.models import Q
 
-
 class Interns(View):
     def get(self, request, allie__id):
         

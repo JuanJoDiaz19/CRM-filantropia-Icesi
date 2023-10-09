@@ -105,7 +105,8 @@
     margin-bottom: 2rem;
     border-radius: 1.5rem;
     padding: 1rem;
-    border: #707070 solid 1px;
+    border: #d2d2d2 solid 1px;
+    box-shadow: 0 0.25rem 0.5rem -0.125rem rgba(0, 0, 0, 0.2);
 }
 
 .history-donations__element h5 {

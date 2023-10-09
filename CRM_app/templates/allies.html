@@ -38,7 +38,7 @@
     {% for allie in allies %}
         <a class="allies-card" href="{{allie.id}}/">
             <div class="allies-card-image-container">
-                <img  src="{{ allie.image_link }}" alt="{{ allie.name }}">
+                <img  src="data:image/jpeg;base64,{{ allie.image_link }}" alt="{{ allie.name }}">
             </div>
             <div class="allies-info">
                 <p class="allie-name">{{ allie.name }}</p>
@@ -46,6 +46,7 @@
             </div>
         </a>
     {% endfor %}
+    
     </div>
 </section>
 
