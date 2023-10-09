@@ -450,6 +450,8 @@ El tiempo que le tengo que dedicar a otras materias
   tengo que repasar para una sustentacion y tengo varios trabajos acumulados
 
 ### Octubre 8 2023
+
+#### Mateo Silva
 * ¿Que hice ayer?
   Ayer no avance en el proyecto
 * ¿Que hare hoy?
