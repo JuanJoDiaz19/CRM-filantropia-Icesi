@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/allies.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/investigation-projects/investigation_projects.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/investigation-projects/single_page_investigation_projects.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/allies/ally-donation.css' %}">
+{% endblock %}
+
+
+{% block main_content %}
+
+<div class="investigation-header">
+    <div class="investigation-header__container-title">
+        <a class="left-arrow-investigation" href="/interns/{{ally}}">
+            <img class="arrow_image" src="{% static 'img/add_allie/arrow.png' %}" alt="arrow">
+        </a>
+        <h1>La Intenligencia Artificial en la Medicina</h1>
+    </div>
+    <div class="investigation-header__add-icon investigation-header__state-active" href="add_ally/">
+        <div class="investigation-header__state">
+            <p>Activo</p>
+        </div>
+    </div>
+</div>
+
+<section class="main-content-allies">    
+    <div class="investigation-dates">
+        <div class="investigation-dates__start">
+            <h5>Fecha de inicio:</h5>
+            <p>Marzo 19 2004</p>
+        </div>
+        <div class="investigation-dates__end">
+            <h5>Fecha de finalizacion:</h5>
+            <p>Abril 19 2025</p>
+        </div>
+    </div>
+
+    <div class="investigation-description">
+        <h3>Descripcion:</h3> 
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique elit id ipsum vulputate, id vulputate arcu bibendum. </p>
+    </div>
+
+    <div class="investigation-allies">
+        <h3>Aliados involucrados:</h3>
+        <div class="investigation-allies__container-alllies">
+            <div class="investigation-allies-card">
+                <img class="investigation-allies-card__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzAj1j5jnfzsyr9co7k7dzLuP2P7U7vO0qnQ&usqp=CAU">
+                <h5>Perficient, Inc</h5>
+            </div>
+            <div class="investigation-allies-card">
+                <img class="investigation-allies-card__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzAj1j5jnfzsyr9co7k7dzLuP2P7U7vO0qnQ&usqp=CAU">
+                <h5>Perficient, Inc</h5>
+            </div>
+            <div class="investigation-allies-card">
+                <img class="investigation-allies-card__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzAj1j5jnfzsyr9co7k7dzLuP2P7U7vO0qnQ&usqp=CAU">
+                <h5>Perficient, Inc</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="investigation-publications">
+        <h3>Publicaciones:</h3>
+        <div class="history-donations__element-container">
+            <div class="history-donations__element">
+                <div class="history-donations_element-summary">
+                    <h5>IA en los examanes del alzhemimer</h5>
+                    <p>http://dx.doi.org/10.1093/ajae/aaq063</p>
+                </div>
+                <div class="history-donations_element-description">
+                    <p>Marzo 19 2004</p>
+                </div>
+            </div>
+            <div class="history-donations__element">
+                <div class="history-donations_element-summary">
+                    <h5>IA en los examanes del alzhemimer</h5>
+                    <p>http://dx.doi.org/10.1093/ajae/aaq063</p>
+                </div>
+                <div class="history-donations_element-description">
+                    <p>Marzo 19 2004</p>
+                </div>
+            </div>
+            <div class="history-donations__element">
+                <div class="history-donations_element-summary">
+                    <h5>IA en los examanes del alzhemimer</h5>
+                    <p>http://dx.doi.org/10.1093/ajae/aaq063</p>
+                </div>
+                <div class="history-donations_element-description">
+                    <p>Marzo 19 2004</p>
+                </div>
+            </div>
+            <div class="history-donations__element">
+                <div class="history-donations_element-summary">
+                    <h5>IA en los examanes del alzhemimer</h5>
+                    <p>http://dx.doi.org/10.1093/ajae/aaq063</p>
+                </div>
+                <div class="history-donations_element-description">
+                    <p>Marzo 19 2004</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block pagina_actual_investigacion %}
+
+<div class="current-page"></div>
+
+{% endblock %}  
