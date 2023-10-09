@@ -430,6 +430,14 @@ El tiempo que le tengo que dedicar a otras materias
   No hare nada, ya que todo el dia voy a estar enfocado en repasar y realizar una prueba
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   La prueba
+  
+#### Mateo Silva
+* ¿Que hice ayer?
+  Avanze en la planeacion de proyectos
+* ¿Que hare hoy?
+  No avanzare mucho debido a otras obligaciones.
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  Demasiadas ocupaciones en la semana.
 
 ### Octubre 7 2023
 
@@ -440,3 +448,11 @@ El tiempo que le tengo que dedicar a otras materias
   Adelantare un poco la vista de creacion de eventos
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   tengo que repasar para una sustentacion y tengo varios trabajos acumulados
+
+### Octubre 8 2023
+* ¿Que hice ayer?
+  Ayer no avance en el proyecto
+* ¿Que hare hoy?
+  Estudiare un poco sobre sesiones para aplicarlo a mi proyecto.
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  El tiempo es limitado.
