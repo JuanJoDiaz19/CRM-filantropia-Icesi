@@ -517,3 +517,21 @@ El tiempo que le tengo que dedicar a otras materias
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   La carga academica limita mi tiempo
 
+  #### Espinosa
+* ¿Que hice ayer?
+  Termine la vista de creacion de eventos
+* ¿Que haré hoy?
+  Voy a preguntarle a mi equipo si estan de acuerdo con las vistas de creacion de eventos y reuniones
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  Probablemente estudiar para la sustentacion me quite la mayor parte del tiempo
+
+### Octubre 10 2023
+
+#### Espinosa
+* ¿Que hice ayer?
+  Estuve corrigiendo unos detalles de las vistas de creacion de evento y reunion
+* ¿Que haré hoy?
+  Me voy a dedicar a estudiar para una sustentacion importante
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  Probablemente estudiar para la sustentacion me quite la mayor parte del tiempo
+
