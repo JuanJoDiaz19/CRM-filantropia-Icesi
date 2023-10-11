@@ -542,4 +542,13 @@ El tiempo que le tengo que dedicar a otras materias
   Hare el back de la vista de proyectos
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   En este momento tengo un bloqueo intelectual porque trabajare con tablas pivotes lo cual no habia hecho.
+### Octubre 11 2023
+
+#### Mateo Silva
+* ¿Que hice ayer?
+  Termine el back de la vista de proyectos.
+* ¿Que hare hoy?
+  corregire filtrado de proyectos de investigación.
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  Solo el tiempo me limita para mis actividades.
 
