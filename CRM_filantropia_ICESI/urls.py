@@ -67,6 +67,6 @@ urlpatterns = [
     path('create_meeting/', create_meeting.as_view(), name="create_meeting"),
     path('create_event/', create_event.as_view(), name="create_event"),
     path('allies/<int:allie__id>/add-donation/', AddDonation.as_view(), name="add_donation"),
-    path('investigation_test/', InvestigationProject.as_view(), name="single_page_investigation_projects"),
+    path('investigation/<int:project__id>', InvestigationProject.as_view(), name="single_page_investigation_projects"),
 ]
     

@@ -30,7 +30,7 @@
 
     <div class="allies-container">
     {% for investigation_project in investigation_projects %}
-        <a class="allies-card" href="{{investigation_project.id}}/">
+        <a class="allies-card" href="/investigation/{{investigation_project.id}}">
             <div class="allies-info">
                 <p class="allie-name">{{ investigation_project.name }}</p>
                 <p class="allie-area">{{ investigation_project.description }}</p>
