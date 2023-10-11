@@ -535,3 +535,11 @@ El tiempo que le tengo que dedicar a otras materias
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   Probablemente estudiar para la sustentacion me quite la mayor parte del tiempo
 
+#### Mateo Silva
+* ¿Que hice ayer?
+  Estuve haciendo todo lo relacionado con la vista de proyectos de investigación.
+* ¿Que hare hoy?
+  Hare el back de la vista de proyectos
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  En este momento tengo un bloqueo intelectual porque trabajare con tablas pivotes lo cual no habia hecho.
+
