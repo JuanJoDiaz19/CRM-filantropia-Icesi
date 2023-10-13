@@ -571,3 +571,11 @@ El tiempo que le tengo que dedicar a otras materias
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   La carga academica limita mi tiempo
 
+  #### Espinosa
+* ¿Que hice ayer?
+  No pude hacer nada, estuve repasando para una sustentacion 
+* ¿Que haré hoy?
+  Hoy haré la sustentacion, luego de esto ya quedo libre para avanzar en el proyecto
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  Ahora mismo no. 
+
