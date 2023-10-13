@@ -542,6 +542,8 @@ El tiempo que le tengo que dedicar a otras materias
   Hare el back de la vista de proyectos
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   En este momento tengo un bloqueo intelectual porque trabajare con tablas pivotes lo cual no habia hecho.
+
+  
 ### Octubre 11 2023
 
 #### Mateo Silva
@@ -551,4 +553,21 @@ El tiempo que le tengo que dedicar a otras materias
   corregire filtrado de proyectos de investigación.
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   Solo el tiempo me limita para mis actividades.
+
+    #### Ana
+* ¿Que hice ayer?
+  Ayer no pude adelantar mucho sobre la visualizacion de calendario
+* ¿Que haré hoy?
+  Investigare sobre como podemos realizar la vista que planteamos en el MockUp
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  La carga academica limita mi tiempo
+
+  ### Octubre 12 2023
+  #### Ana
+* ¿Que hice ayer?
+  Ayer investigue sobre la visualizacion de calendario
+* ¿Que haré hoy?
+  Hoy empezare con el front de la vista de calendario
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  La carga academica limita mi tiempo
 
