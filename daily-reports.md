@@ -605,5 +605,14 @@ El tiempo que le tengo que dedicar a otras materias
  Hoy hare unos arreglos en las ramas de edicion
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   Hoy no tengo mucho problema, tengo disposicion de tiempo
+
+  #### Espinosa
+* ¿Que hice ayer?
+  Avance no mucho en unas correcciones porque tenia dolor de cabeza
+* ¿Que haré hoy?
+  Hare PR de las correcciones que estoy realizando
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  No hay obstaculos.
+
   
 
