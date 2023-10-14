@@ -562,7 +562,7 @@ El tiempo que le tengo que dedicar a otras materias
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   La carga academica limita mi tiempo
 
-  ### Octubre 12 2023
+### Octubre 12 2023
   #### Ana
 * ¿Que hice ayer?
   Ayer investigue sobre la visualizacion de calendario
@@ -578,6 +578,24 @@ El tiempo que le tengo que dedicar a otras materias
   Hoy haré la sustentacion, luego de esto ya quedo libre para avanzar en el proyecto
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   Ahora mismo no.
+  
+  #### Mateo Silva
+  *¿Que hice ayer?
+  Trabajé en el filtrado de aliados.
+  * ¿Que haré hoy?
+  Para el dia de hoy seguire trabajando en lo mismo.
+  * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  En este momento, el tiempo no me alcanza para avanzar mucho.
+
+  ### Octubre 13 2023
+
+  #### Mateo Silva
+ *¿Que hice ayer?
+  Trabajé en el filtrado de aliados.
+  * ¿Que haré hoy?
+  Hoy termine el filtrado de aliados y agregue funcionalidad para poder ver los alidos con los proyectos.
+  * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  Esta semana especialmente esta bastante complicada.
 
     ### Octubre 14 2023
   #### Ana
