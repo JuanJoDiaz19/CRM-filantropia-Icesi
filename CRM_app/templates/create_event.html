@@ -14,9 +14,6 @@
     <img class="arrow_image" src="{% static 'img/create_event/arrow.png' %}" alt="arrow">
   </a>
   <p class="top_tittle">Crear evento</p>
-  <div class="button-container">
-    <button class="small-button">Crear</button>
-</div>
 </div>
 
 <p class="content_tittle"></p>
@@ -43,6 +40,8 @@
         <br>
       </div>
 
+      <br>
+      <label class="content_text">Seleccione los aliados involucrados</label>
 <div class="form">
     <div class="dropdown">
         <button class="dropbtn">Aliados involucrados</button>
@@ -52,18 +51,18 @@
             {%endfor%}
         </div>
     </div>
-
-      </div>
-
+</div>
+      <br>
+      <label class="content_text">Seleccione la categoría</label>
 <div class="form">
-    <div class="dropdown">
-        <button class="dropbtn">Categoría</button>
-        <div class="dropdown-content">
-            <a href="#">Florecimiento</a>
-            <a href="#">Organizacional</a>
-        </div>
+  <div class="dropdown">
+    <button class="dropbtn">Categoría</button>
+    <div class="dropdown-content">
+        <a href="#">Florecimiento</a>
+        <a href="#">Organizacional</a>
     </div>
-        </div>
+  </div>
+</div>
         
 
 <div class="form">
@@ -82,6 +81,12 @@
     </div>
   </div>
 </div>
+
+<a href="/calendar">
+  <div class="container">
+    <button class="button-style">Crear reunión</button>
+  </div>
+  </a>
 
 
 

@@ -13,9 +13,6 @@
     <img class="arrow_image" src="{% static 'img/create_meeting/arrow.png' %}" alt="arrow">
   </a>
   <p class="top_tittle">Crear reunión</p>
-  <div class="button-container">
-    <button class="small-button">Crear</button>
-</div>
 </div>
 
 <div class="card">
@@ -28,6 +25,8 @@
         <input type="text" class="form_text" id="hombre" placeholder="Nombre de la reunión">
         <br>
       </div>
+      <br>
+      <label class="content_text">Selecciona una categoría</label>
       <br>
       <div class="dropdown">
         <button class="dropbtn">Categoría</button>
@@ -55,12 +54,19 @@
 
       <label class="content_text">Seleccione una fecha y hora:</label>
       <br>
-      <input type="datetime-local" id="fecha-hora" name="fecha-hora">
+      <div class="form__container-right-elements">
+        <input type="date" name="fecha" class="form_text form_date">
+        <br>
+    </div>
     </div>
     </div>
     <br>
   </div> 
 </div>
-
+<a href="/calendar">
+<div class="container">
+  <button class="button-style2">Crear reunión</button>
+</div>
+</a>
 {% endblock %}
 

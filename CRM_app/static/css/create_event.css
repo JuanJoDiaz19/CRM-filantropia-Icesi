@@ -1,20 +1,34 @@
 .dropbtn {
-    top: 30%;
-    background-color: #0159A1;
-    color: white;
-    padding: 8px;
-    font-size: 14px;
-    border: none;
-    cursor: pointer;
-    border-radius: 10px; 
-    width: 120px; 
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  top: 30%;
+  background-color: #0159A1;
+  color: white;
+  padding: 8px 20px; /* Added padding to accommodate the arrow */
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  position: relative; /* Added position relative for the arrow positioning */
+}
+
+.dropbtn::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 5px 0;
+  border-color: white transparent transparent transparent;
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjust the right property to position the arrow */
+  transform: translateY(-50%);
 }
 
 .dropdown {
     position: relative;
     display: inline-block;
-    width: 50%;
+    width: 100%;
 }
 
 .dropdown-content {
@@ -25,6 +39,17 @@
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 10px;
+}
+
+
+.dropdown-left {
+  width: 45%;
+  margin-right: 50px; 
+}
+
+.dropdown-right {
+  width: 45%; 
+  margin-left: 50px;
 }
 
 .dropdown-content a {
@@ -279,6 +304,7 @@
   .form {
     margin-top: 20px;
     flex-direction: column;
+    width: 100%;
   }
   
   .button-style {
@@ -418,10 +444,29 @@
 }
 
 .button-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end; 
-    flex: 1;
-    padding-right: 3rem;
-    margin-right: 60px;    
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; 
+  flex: 1;
+  padding-right: 3rem;
+  margin-right: 60px;    
+}
+
+.form_text {
+font-weight: 600;
+}
+
+.button-style2 {
+  margin-right: 5.8%;
+  margin-left: 25%;
+  margin-bottom: 2.5rem;
+  background-color: #0159A1;
+  color: white;
+  border: solid var(--font-color) 1px;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  font-size: 17px;
+  width: 100%;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  font-weight: 620;
 }
