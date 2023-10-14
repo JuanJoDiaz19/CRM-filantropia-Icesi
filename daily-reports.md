@@ -577,5 +577,15 @@ El tiempo que le tengo que dedicar a otras materias
 * ¿Que haré hoy?
   Hoy haré la sustentacion, luego de esto ya quedo libre para avanzar en el proyecto
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
-  Ahora mismo no. 
+  Ahora mismo no.
+
+    ### Octubre 14 2023
+  #### Ana
+* ¿Que hice ayer?
+  No pude hacer mucho, tuve parciales
+* ¿Que haré hoy?
+ Hoy hare unos arreglos en las ramas de edicion
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  Hoy no tengo mucho problema, tengo disposicion de tiempo
+  
 
