@@ -24,15 +24,7 @@
 
 <section class="main-content-allies">    
     <form method="get" action="{% url 'investigations' %}" class="button-container">
-        <input class="search-field search-text-field" type="text" name="q" placeholder="Buscar por nombre" value="{{ request.GET.q }}">  
-        <select class="search-field search-option-field" name="tipo">
-            <option value="" {% if not request.GET.tipo %}selected{% endif %}>Todos</option>
-            {% for ally in allies %}
-                <option value="{{ ally.id }}" {% if request.GET.tipo == ally.id %}selected{% endif %}>
-                    {{ ally.name }}
-                </option>
-            {% endfor %}
-        </select>            
+        <input class="search-field search-text-field" type="text" name="q" placeholder="Buscar por nombre" value="{{ request.GET.q }}">       
         <button class="buton-search-field" type="submit"><b>Buscar</b></button>
     </form>   
 
