@@ -139,6 +139,7 @@ class Meeting_type(models.Model):
 class Meeting(models.Model):
     id=models.AutoField(primary_key=True)
     allie_id= models.ForeignKey(Allie,on_delete=models.CASCADE)
+    meeting_type_id= models.ForeignKey(Meeting_type, on_delete=models.CASCADE)
     date= models.DateField()
     title= models.CharField(max_length=20)
     description=models.CharField(max_length=200, null= True)
