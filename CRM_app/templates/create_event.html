@@ -8,90 +8,98 @@
 {% block main_content %}
 
 
-
+<form method="POST" enctype="multipart/form-data">
 <div class="top_arrow_tittle">
-  <a href="/calendar">
-    <img class="arrow_image" src="{% static 'img/create_event/arrow.png' %}" alt="arrow">
-  </a>
-  <p class="top_tittle">Crear evento</p>
-</div>
+  
 
-<p class="content_tittle"></p>
-<div class="card-informacion">
-  <div class="container">
-    <div class="column-right-top">
-      <div class="imageContainer">
-        <input type="file" id="customFileInput" id="image" accept="image/*" name="image">
-          <div>
-            <img id="add-image" class="add_image" src="{% static 'img/create_event/add_image.png' %}" alt="add_image">
-            <label id="add-image-text" class="content_text" >Agregar imagen del evento</label>
-      
-            <label for="customFileInput" id="customFileButton">Seleccionar archivo</label>
-            <span id="loading-text">Cargando imagen...</span>
-          </div>
-        </div>
-    </div>
-    <div class="column column-left-top">
+      {% csrf_token %}
 
-      <div>
-        <label class="content_text">Nombre</label>
-        <br>
-        <input type="text" class="form_text" name="allie_name" placeholder="Nombre del evento">
-        <br>
-      </div>
-
-      <br>
-      <label class="content_text">Seleccione los aliados involucrados</label>
-<div class="form">
-    <div class="dropdown">
-        <button class="dropbtn">Aliados involucrados</button>
-        <div class="dropdown-content">
-            {%for ally in alies%}
-            <a href="#">{{ally.name}}</a>
-            {%endfor%}
-        </div>
-    </div>
-</div>
-      <br>
-      <label class="content_text">Seleccione la categoría</label>
-<div class="form">
-  <div class="dropdown">
-    <button class="dropbtn">Categoría</button>
-    <div class="dropdown-content">
-        <a href="#">Florecimiento</a>
-        <a href="#">Organizacional</a>
-    </div>
+    <a href="/calendar">
+      <img class="arrow_image" src="{% static 'img/create_event/arrow.png' %}" alt="arrow">
+    </a>
+    <p class="top_tittle">Crear evento</p>
   </div>
-</div>
+
+  <p class="content_tittle"></p>
+  <div class="card-informacion">
+    <div class="container">
+      <div class="column column-right-top">
+        <div class="imageContainer">
+          <input type="file" id="customFileInput" id="image" accept="image/*" name="image">
+            <div>
+              <img id="add-image" class="add_image" src="{% static 'img/create_event/add_image.png' %}" alt="add_image">
+              <label id="add-image-text" class="content_text" >Agregar imagen del evento</label>
         
-
-<div class="form">
-    <label class="content_text">Objetivo</label>
-    <br>
-    <textarea type="text" class="form_text" name="allie_area" placeholder="Objetivo del evento"></textarea>
-    <br>
-  </div>
-</div>
-
-  <div class="row">
-      <label class="content_text">Descripción</label>
-      <br>
-      <textarea class="form_text" name="Objective" id="expanding-input" oninput="autoExpand(this)" placeholder="Descripción del evento"></textarea>
-      <br>
-    </div>
-    <div class="row">
-      <label class="content_text">Seleccione una fecha y hora:</label>
-        <input type="date" name="fecha" class="form_text form_date">
+              <label for="customFileInput" id="customFileButton">Seleccionar archivo</label>
+              <span id="loading-text">Cargando imagen...</span>
+            </div>
+          </div>
       </div>
-    </div>
-    </div>
+      <div class="column column-left-top">
 
-<a href="/calendar">
-  <div class="container">
-    <button class="button-style">Crear reunión</button>
+        <div>
+          <label class="content_text">Nombre</label>
+          <br>
+          <input type="text" class="form_text" name="allie_name" placeholder="Nombre del evento">
+          <br>
+        </div>
+
+        <br>
+        <label class="content_text">Seleccione los aliados involucrados</label>
+  <div class="form">
+      <div class="dropdown">
+        <input class="dropbtn" type="text" id="categoria"  placeholder="Aliados involucrados" readonly>
+        <div class="dropdown-content">
+          <select class="search-field search-option-field" name="allie">
+            {% for ally in allies%}
+            <option value="{{ally.id}}">{{ally.name}}</option>
+            {% endfor %}
+          </select>
+      </div>
   </div>
-  </a>
+        <br>
+        <br>
+        <label class="content_text">Seleccione la categoría</label>
+  <div class="form">
+    <div class="dropdown">
+      <input class="dropbtn" type="text" id="categoria"  placeholder="Categoria" readonly>
+        <div class="dropdown-content">
+          <select class="search-field search-option-field" name="categoria">
+            {% for types in event_type%}
+            <option value="{{types.id}}">{{types.name}}</option>
+            {% endfor %}
+          </select>
+    </div>
+  </div>
+          
 
+  <div class="form">
+      <label class="content_text">Objetivo</label>
+      <br>
+      <textarea type="text" class="form_text" name="allie_area" placeholder="Objetivo del evento"></textarea>
+      <br>
+    </div>
+  </div>
 
+    <div class="form">
+        <label class="content_text">Descripción</label>
+        <br>
+        <textarea class="form_text" name="Objective" id="expanding-input" oninput="autoExpand(this)" placeholder="Descripción del evento"></textarea>
+        <br>
+      </div>
+      <div class="form">
+        <label class="content_text">Seleccione una fecha y hora:</label>
+          <input type="date" name="fecha" class="form_text form_date">
+        </div>
+    </div>
+  </div>
+
+  
+    <div class="column-right-top container2">
+      <a href="/calendar" class="container2">
+      <button class="button-style">Crear evento</button>
+      </a>
+    </div>
+</form>
 
 {% endblock %}
