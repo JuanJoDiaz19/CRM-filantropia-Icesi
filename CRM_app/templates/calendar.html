@@ -1,24 +1,68 @@
 {% extends 'base.html' %}
+
 {% load static %}
 
-{% block main_content %}
-  <p> Calendario </p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
+{% block header_links %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/calendar.css' %}">
+  <script src="{% static 'fullcalendar/core/index.global.js' %}"></script>
+  <script src="{% static 'fullcalendar/daygrid/index.global.js' %}"></script>
 {% endblock %}
 
-{% block pagina_actual_calendario %}
-<div class="current-page"></div>
+{% block main_content %}
+<div class="box">
+<div id="calendar"></div>
+    <div id="event-info" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"></h5>
+                </div>
+                <div class="modal-body">
+                    <p>Fecha: <span id="event-date"></span></p>
+                    <p>Descripción: <span id="event-description"></span></p>
+                    <p>Objetivo: <span id="event-objective"></span></p>
+                    <p>Aliados: <span id="event-allies"></span></p>
+                    <p>Tipo: <span id="event-type"></span></p>
+                </div>            
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var eventInfoEl = document.getElementById('event-info');
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            events: JSON.parse('{{ events_data|escapejs }}'),
+            eventRender: function(info) {
+                if (info.event.extendedProps.allies) {
+                    info.el.querySelector('.fc-title').innerHTML += "<br>" + info.event.extendedProps.allies;
+                }
+            },
+            eventClick: function(info) {
+                var eventInfoEl = document.getElementById('event-info');
+                var modalTitle = eventInfoEl.querySelector('.modal-title');
+                var eventDate = eventInfoEl.querySelector('#event-date');
+                var eventAllies = eventInfoEl.querySelector('#event-allies');
+                var eventDescription = eventInfoEl.querySelector('#event-description');
+                var eventObjective = eventInfoEl.querySelector('#event-objective');
+                var eventType = eventInfoEl.querySelector('#event-type');
+
+                modalTitle.textContent = info.event.title;
+                eventDate.textContent = info.event.start.toLocaleDateString();
+                eventAllies.textContent = info.event.extendedProps.allies;
+                eventDescription.textContent = info.event.extendedProps.description;
+                eventObjective.textContent = info.event.extendedProps.objective;
+                eventType.textContent = info.event.extendedProps.event_type;
+
+                var eventInfoModal = new bootstrap.Modal(eventInfoEl);
+                eventInfoModal.show();
+            }
+        });
+
+        calendar.render();
+    });
+</script>
 {% endblock %}

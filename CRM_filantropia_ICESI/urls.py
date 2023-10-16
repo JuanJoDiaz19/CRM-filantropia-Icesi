@@ -39,8 +39,10 @@ from CRM_app.views.donation import donation_
 from CRM_app.views.create_meeting import create_meeting
 from CRM_app.views.create_event import create_event
 from CRM_app.views.add_donation import AddDonation
+from CRM_app.views.calendar import Calendar
 from CRM_app.views.single_page_investigation_project import InvestigationProject
 from CRM_app.views.single_ally_investigation import InvestigationsProjectsAlly
+
 
 
 urlpatterns = [
