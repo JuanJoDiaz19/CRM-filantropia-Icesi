@@ -42,22 +42,27 @@
         <p>{{project.description}} </p>
     </div>
 
-    {%for p in projects%}
+    
     <div class="investigation-allies">
         <h3>Aliados involucrados:</h3>
         <div class="investigation-allies__container-alllies">
+        {%for p in projects%}
+
             <div class="investigation-allies-card">
                 <img class="investigation-allies-card__img" src="data:image/jpeg;base64,{{p.allie.image_link}}">
                 <h5>{{p.allie.name}}</h5>
             </div>
+            {% endfor %}
         </div>
+        
     </div>
-    {% endfor %}
+    
 
     <div class="investigation-publications">
         <h3>Publicaciones:</h3>
-        {% for p in publications %}
+        
         <div class="history-donations__element-container">
+            {% for p in publications %}
             <div class="history-donations__element">
                 <div class="history-donations_element-summary">
                     <h5>{{p.name}}</h5>
@@ -67,8 +72,9 @@
                     <p>{{p.date}}</p>
                 </div>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
+        
     </div>
 </section>
 
