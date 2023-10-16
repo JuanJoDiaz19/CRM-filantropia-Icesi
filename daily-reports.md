@@ -614,5 +614,14 @@ El tiempo que le tengo que dedicar a otras materias
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   No hay obstaculos.
 
+### Octubre 15 2023
+
+#### Mateo Silva
+*¿Que hice ayer?
+Ayer no tuve avances significativos en el proyecto.
+*¿Qué haré hoy?
+Empezare las funcionalidades de agregar tanto reunion como evento.
+** ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  No hay obstaculos en este momento.
   
 
