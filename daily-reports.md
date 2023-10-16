@@ -639,6 +639,12 @@ Ayer hice unos pequeños arreglos a unas vistas
 Realizar pequeños arreglos que ocurran para hoy y realizar los test que me corresponden
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
 No hay.
-  
-  
+
+#### Ana
+* ¿Que hice ayer?
+Ayer hice unos arreglos en las ramas de edición
+* ¿Qué haré hoy?
+Hoy realizare los test que me corresponden
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+Tengo unos compromisos familiares los cuales no me permiten tener mucho tiempo disponible
 
