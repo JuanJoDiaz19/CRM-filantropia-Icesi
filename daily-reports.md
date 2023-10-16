@@ -623,5 +623,14 @@ Ayer no tuve avances significativos en el proyecto.
 Empezare las funcionalidades de agregar tanto reunion como evento.
 ** ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   No hay obstaculos en este momento.
+
+#### Santiago Barraza
+*¿Que hice ayer?
+Ayer no tuve avances significativos en el proyecto.
+*¿Qué haré hoy?
+Empezare las funcionalidades de la vista de calendario para eventos y reuniones
+** ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+  No hay obstaculos en este momento.
+  
   
 
