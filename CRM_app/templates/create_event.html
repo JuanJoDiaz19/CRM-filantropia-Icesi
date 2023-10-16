@@ -10,6 +10,10 @@
 
 
 <div class="top_arrow_tittle">
+  <form method="POST" enctype="multipart/form-data">
+
+    {% csrf_token %}
+
   <a href="/calendar">
     <img class="arrow_image" src="{% static 'img/create_event/arrow.png' %}" alt="arrow">
   </a>
@@ -44,23 +48,26 @@
       <label class="content_text">Seleccione los aliados involucrados</label>
 <div class="form">
     <div class="dropdown">
-        <button class="dropbtn">Aliados involucrados</button>
-        <div class="dropdown-content">
-            {%for ally in alies%}
-            <a href="#">{{ally.name}}</a>
-            {%endfor%}
-        </div>
+      <input class="dropbtn" type="text" id="categoria"  placeholder="Aliados involucrados" readonly>
+      <div class="dropdown-content">
+        <select class="search-field search-option-field" name="allie">
+          {% for ally in allies%}
+          <option value="{{ally.id}}">{{ally.name}}</option>
+          {% endfor %}
+        </select>
     </div>
 </div>
       <br>
       <label class="content_text">Seleccione la categoría</label>
 <div class="form">
   <div class="dropdown">
-    <button class="dropbtn">Categoría</button>
-    <div class="dropdown-content">
-        <a href="#">Florecimiento</a>
-        <a href="#">Organizacional</a>
-    </div>
+    <input class="dropbtn" type="text" id="categoria"  placeholder="Categoria" readonly>
+      <div class="dropdown-content">
+        <select class="search-field search-option-field" name="categoria">
+          {% for types in event_type%}
+          <option value="{{types.id}}">{{types.name}}</option>
+          {% endfor %}
+        </select>
   </div>
 </div>
         
@@ -83,15 +90,14 @@
       <label class="content_text">Seleccione una fecha y hora:</label>
         <input type="date" name="fecha" class="form_text form_date">
       </div>
-    </div>
-    </div>
+  </div>
+</div>
 
 <a href="/calendar">
   <div class="container">
     <button class="button-style">Crear reunión</button>
   </div>
   </a>
-
-
+</form>
 
 {% endblock %}
