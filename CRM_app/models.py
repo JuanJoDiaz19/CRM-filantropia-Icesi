@@ -81,7 +81,7 @@ class Investigation_Project(models.Model):
     description= models.CharField(max_length=200)
     active= models.TextField(max_length=1)
     start_date= models.DateField()
-    finish_date= models.DateField()
+    finish_date= models.DateField(null=True)
     
     def __str__(self):
         return self.name
@@ -92,6 +92,7 @@ class Publication(models.Model):
     investigation_project_id= models.ForeignKey(Investigation_Project,on_delete=models.CASCADE)
     doi= models.CharField(max_length=50)
     name= models.CharField(max_length=50)
+    date= models.DateField(null=True)
     
     def __str__(self):
         return self.name
@@ -138,6 +139,7 @@ class Meeting_type(models.Model):
 class Meeting(models.Model):
     id=models.AutoField(primary_key=True)
     allie_id= models.ForeignKey(Allie,on_delete=models.CASCADE)
+    meeting_type_id= models.ForeignKey(Meeting_type, on_delete=models.CASCADE)
     date= models.DateField()
     title= models.CharField(max_length=20)
     description=models.CharField(max_length=200, null= True)
