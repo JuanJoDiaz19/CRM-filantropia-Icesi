@@ -631,6 +631,14 @@ Ayer no tuve avances significativos en el proyecto.
 Empezare las funcionalidades de la vista de calendario para eventos y reuniones
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   No hay obstaculos en este momento.
+
+#### Espinosa
+* ¿Que hice ayer?
+Ayer hice unos pequeños arreglos a unas vistas
+* ¿Qué haré hoy?
+Realizar pequeños arreglos que ocurran para hoy y realizar los test que me corresponden
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+No hay.
   
   
 
