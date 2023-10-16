@@ -1,0 +1,108 @@
+* {
+    color: #434343;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+.main-content-investigation-projects {
+    width: 90%;
+    margin: auto;
+}
+
+.investigation-header__state-active {
+    display: flex;
+    justify-content: center;
+}
+
+.top_header_investigation_project {
+    display: flex;
+    justify-content: space-between;
+}
+
+.investigation-header__state-active {
+    display: flex;
+    align-items: center;
+}
+
+.investigation-header__state-active p {
+    padding: 0;
+    margin: 0;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.investigation-header__state {
+    padding: 0.3rem 0.8rem 0.3rem 0.8rem;
+    background-color: #6eed98b3;
+    border-radius: 20px;
+    border: #5cdd87 solid 3px;
+}
+
+.investigation-dates { 
+    display: flex;
+    align-items: flex-start;
+    color: #434343; 
+    font-size: 0.8rem;
+}
+
+.investigation-dates h5 { 
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.investigation-dates__start {
+    margin-right: 2rem;
+}
+
+.investigation-description  {
+    margin-top: 1rem;
+}
+
+
+.investigation-description h3 {
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+
+.investigation-allies h3 {
+    font-size: 1.7rem;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.investigation-allies__container-alllies {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.investigation-allies-card {
+    display: flex;
+    align-items: center;
+    border-radius: 45px;
+    border: #d2d2d2 solid 1px;
+    box-shadow: 0 0.25rem 0.5rem -0.125rem rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem ;
+}
+
+.investigation-allies-card h5 {
+    padding: 0;
+    margin: 0;
+}
+
+.investigation-allies-card__img {
+    width: 3rem;
+    margin-right: 1rem;
+    border-radius: 500px;
+    border: solid rgb(165, 165, 165) 2px;
+}
+
+.history-donations_element-summary p {
+    word-wrap: break-word;
+}

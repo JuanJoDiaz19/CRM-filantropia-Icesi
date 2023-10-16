@@ -10,6 +10,7 @@
 
 <form method="POST" enctype="multipart/form-data">
 <div class="top_arrow_tittle">
+
   
 
       {% csrf_token %}
@@ -19,6 +20,7 @@
     </a>
     <p class="top_tittle">Crear evento</p>
   </div>
+
 
   <p class="content_tittle"></p>
   <div class="card-informacion">
@@ -62,6 +64,7 @@
         <label class="content_text">Seleccione la categoría</label>
   <div class="form">
     <div class="dropdown">
+
       <input class="dropbtn" type="text" id="categoria"  placeholder="Categoria" readonly>
         <div class="dropdown-content">
           <select class="search-field search-option-field" name="categoria">
@@ -70,6 +73,7 @@
             {% endfor %}
           </select>
     </div>
+
   </div>
           
 
@@ -87,6 +91,7 @@
         <textarea class="form_text" name="Objective" id="expanding-input" oninput="autoExpand(this)" placeholder="Descripción del evento"></textarea>
         <br>
       </div>
+
       <div class="form">
         <label class="content_text">Seleccione una fecha y hora:</label>
           <input type="date" name="fecha" class="form_text form_date">
@@ -100,6 +105,7 @@
       <button class="button-style">Crear evento</button>
       </a>
     </div>
+
 </form>
 
 {% endblock %}

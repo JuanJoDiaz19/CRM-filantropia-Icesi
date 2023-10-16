@@ -28,7 +28,7 @@ from CRM_app.views.tasks import Tasks
 from CRM_app.views.allies import Allies
 from CRM_app.views.calendar import Calendar
 from CRM_app.views.reports import Reports
-from CRM_app.views.investigations import Investigations
+from CRM_app.views.investigations_projects import InvestigationsProjects
 from CRM_app.views.config import Config
 from CRM_app.views.ally import Ally
 from CRM_app.views.add_contact import AddContact
@@ -39,6 +39,10 @@ from CRM_app.views.donation import donation_
 from CRM_app.views.create_meeting import create_meeting
 from CRM_app.views.create_event import create_event
 from CRM_app.views.add_donation import AddDonation
+from CRM_app.views.calendar import Calendar
+from CRM_app.views.single_page_investigation_project import InvestigationProject
+from CRM_app.views.single_ally_investigation import InvestigationsProjectsAlly
+
 
 
 urlpatterns = [
@@ -48,9 +52,9 @@ urlpatterns = [
     path('signin/', Singin.as_view(), name="signin"),
     path('tasks/', Tasks.as_view(), name="tasks"),
     path('home/', News.as_view(), name="home"),
-    path('calendar/', Calendar.as_view(), name="calendar"),
+    path('calendar/<str:allie_id>', Calendar.as_view(), name="calendar"),
     path('reports/', Reports.as_view(), name="reports"),
-    path('investigations/', Investigations.as_view(), name="investigations"),
+    path('investigations/', InvestigationsProjects.as_view(), name="investigations"),
     path('config/', Config.as_view(), name="config"),
     path('allies/add_ally/', Add_allie.as_view(), name="add_allie"),
     path('interns/add_intern/<int:allie__id>/', Add_intern.as_view(), name="add_intern"),
@@ -66,4 +70,7 @@ urlpatterns = [
     path('create_meeting/', create_meeting.as_view(), name="create_meeting"),
     path('create_event/', create_event.as_view(), name="create_event"),
     path('allies/<int:allie__id>/add-donation/', AddDonation.as_view(), name="add_donation"),
+    path('investigation/<int:project__id>', InvestigationProject.as_view(), name="single_page_investigation_projects"),
+    path("allies/investigation/<int:allie__id>", InvestigationsProjectsAlly.as_view(), name="single-page-ally-investigation"),
 ]
+    
