@@ -617,19 +617,19 @@ El tiempo que le tengo que dedicar a otras materias
 ### Octubre 15 2023
 
 #### Mateo Silva
-*¿Que hice ayer?
+* ¿Que hice ayer?
 Ayer no tuve avances significativos en el proyecto.
-*¿Qué haré hoy?
+* ¿Qué haré hoy?
 Empezare las funcionalidades de agregar tanto reunion como evento.
-** ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   No hay obstaculos en este momento.
 
 #### Santiago Barraza
-*¿Que hice ayer?
+* ¿Que hice ayer?
 Ayer no tuve avances significativos en el proyecto.
-*¿Qué haré hoy?
+* ¿Qué haré hoy?
 Empezare las funcionalidades de la vista de calendario para eventos y reuniones
-** ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   No hay obstaculos en este momento.
   
   
