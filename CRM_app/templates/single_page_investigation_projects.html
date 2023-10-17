@@ -43,12 +43,14 @@
         
         <div class="investigation-allies__container-alllies">
             {%for p in projects%}
+
             <div class="investigation-allies-card">
                 <img class="investigation-allies-card__img" src="data:image/jpeg;base64,{{p.allie.image_link}}">
                 <h5>{{p.allie.name}}</h5>
             </div>
             {% endfor %}
         </div>
+        
     </div>
     
 

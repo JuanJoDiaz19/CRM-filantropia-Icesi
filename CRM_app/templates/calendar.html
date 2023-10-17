@@ -6,6 +6,7 @@
   <link rel="stylesheet" type="text/css" href="{% static 'css/calendar.css' %}">
   <script src="{% static 'fullcalendar/core/index.global.js' %}"></script>
   <script src="{% static 'fullcalendar/daygrid/index.global.js' %}"></script>
+  <script src="{% static 'js/es.js' %}"></script>
 {% endblock %}
 
 {% block main_content %}
@@ -33,9 +34,10 @@
     document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
         var eventInfoEl = document.getElementById('event-info');
-
+    
         var calendar = new FullCalendar.Calendar(calendarEl, {
-            events: JSON.parse('{{ events_data|escapejs }}'),
+            events: JSON.parse('{{events_data|escapejs }}'),
+            locale: 'es',
             eventRender: function(info) {
                 if (info.event.extendedProps.allies) {
                     info.el.querySelector('.fc-title').innerHTML += "<br>" + info.event.extendedProps.allies;
@@ -49,20 +51,21 @@
                 var eventDescription = eventInfoEl.querySelector('#event-description');
                 var eventObjective = eventInfoEl.querySelector('#event-objective');
                 var eventType = eventInfoEl.querySelector('#event-type');
-
+    
                 modalTitle.textContent = info.event.title;
                 eventDate.textContent = info.event.start.toLocaleDateString();
                 eventAllies.textContent = info.event.extendedProps.allies;
                 eventDescription.textContent = info.event.extendedProps.description;
                 eventObjective.textContent = info.event.extendedProps.objective;
                 eventType.textContent = info.event.extendedProps.event_type;
-
+    
                 var eventInfoModal = new bootstrap.Modal(eventInfoEl);
                 eventInfoModal.show();
-            }
+            },
+            eventColor: 'color'  // Asignar colores de acuerdo al campo 'color'
         });
-
+    
         calendar.render();
     });
-</script>
+</script>    
 {% endblock %}
