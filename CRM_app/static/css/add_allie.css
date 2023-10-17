@@ -366,3 +366,8 @@ textarea {
   transition: color 0.3s;
 }
 
+
+.button-style-delete:hover{
+  background-color: rgb(218, 46, 46);
+  color: rgb(255, 255, 255);
+}

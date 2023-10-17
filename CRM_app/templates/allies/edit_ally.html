@@ -41,7 +41,7 @@
         <label class="content_text">Area del aliado</label>
           <br>
       <select class="form_text" name="allie_area">
-        <option  value="{{allies.area_id}}" {% if not request.GET.tipo %}selected{% endif %}>{{allies.area_id}}</option>
+        <option  value="{{allies.area_id.id}}" {% if not request.GET.tipo %}selected{% endif %}>{{allies.area_id}}</option>
         {% for area in areas %}
             <option value="{{ area.id }}" {% if request.GET.tipo == area.id %}selected{% endif %}>
                 {{ area.name }}

@@ -16,7 +16,10 @@ import base64
 class Add_intern(View):
     @method_decorator(login_required)
     def get(self, request, allie__id):
-        return render(request, 'add_intern.html', {'ally': allie__id})
+        careers = Career.objects.all() 
+        careers = [{'id': str(career.id), 'name': career.name} for career in careers]
+        
+        return render(request, 'add_intern.html', {'ally': allie__id,'careers': careers})
     
     @method_decorator(login_required)
     def post(self, request, allie__id):
@@ -49,7 +52,7 @@ class Add_intern(View):
                 image_link=allie_image_link,
             )
             
-            return redirect('/allies')
+            return redirect(f'/interns/{allie__id}')
         else:
             return render(request,'add_intern.html',{'error_message': "Proporcione todos los datos"})
     
