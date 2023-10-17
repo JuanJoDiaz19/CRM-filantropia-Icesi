@@ -16,7 +16,7 @@
 {% endif %}
 
 <div class="top_arrow_tittle" style="margin-top: 1.875rem; margin-left: 1.875rem;">
-  <a href="/interns/{{ally}}">
+  <a href="/investigations">
     <img class="arrow_image" src="{% static 'img/add_allie/arrow.png' %}" alt="arrow">
   </a>
   <h2 class="top_tittle">Agregar Proyecto de Investigacion</h2>
@@ -35,17 +35,17 @@
           <input type="text" class="form_text" name="titulo" placeholder="Titulo">
           <br>
         </div>
-
+            
             <div class="form">
                 <label class="content_text">Aliados involucrados</label>
                 <br>
+                
                 <select name="allies" class="form_text" id="allies" multiple>
-                    <option value="1">Perficient</option>
-                    <option value="2">Tecnoquimicas</option>
-                    <option value="3">Globant</option>
-                    <option value="4">Mayaguez</option>
-                    <option value="5">Carvajal</option>
+                  {% for ally in allies %}
+                    <option value="{{ally.id}}">{{ally.name}}</option>
+                  {%endfor%}
                 </select>
+                
                 <br>
             </div>
             <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>

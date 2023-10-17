@@ -73,6 +73,6 @@ urlpatterns = [
     path('allies/<int:allie__id>/add-donation/', AddDonation.as_view(), name="add_donation"),
     path('investigation/<int:project__id>', InvestigationProject.as_view(), name="single_page_investigation_projects"),
     path("allies/investigation/<int:allie__id>", InvestigationsProjectsAlly.as_view(), name="single-page-ally-investigation"),
-    path("add_investigation_project", AddInvestigationProject.as_view(), name="add_investigation_project"),
+    path("add_investigation_project/", AddInvestigationProject.as_view(), name="add_investigation_project"),
 ]
     
