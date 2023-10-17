@@ -14,7 +14,7 @@
 {% endif %}
 
 
-<div class="top_arrow_tittle" style="margin-top: 1.875rem; margin-left: 1.875rem;"
+<div class="top_arrow_tittle" style="margin-top: 1.875rem; margin-left: 1.875rem;">
   <a href="/allies">
     <img class="arrow_image" src="{% static 'img/add_allie/arrow.png' %}" alt="arrow">
   </a>
@@ -33,7 +33,7 @@
       <div>
         <label class="content_text">Nombre</label>
         <br>
-        <input type="text" class="form_text" name="allie_name" placeholder="Nombre">
+        <input type="text" class="form_text" name="allie_name" placeholder="Nombre" value="{{allie_name }}">
         <br>
       </div>
 
@@ -52,22 +52,28 @@
 <div class="form">
           <label class="content_text">Documento de identificación</label>
           <br>
-          <input type="text" class="form_text" name="allie_document_id" oninput="autoExpand(this)" placeholder="NIT o C.C">
+          <input type="number" class="form_text" name="allie_document_id" oninput="autoExpand(this)" placeholder="NIT o C.C" value="{{allie_document_id }}">
           <br>
         </div>
 
-<div class="form">
+        <div class="form">
           <label class="content_text">Area del aliado</label>
-          <br>
-          <input type="text" class="form_text" name="allie_area" placeholder="Area">
-          <br>
-        </div>
-      </div>
+            <br>
+            <select class="form_text" name="allie_area">
+              {% for area in areas %}
+                <option value="{{ area.id }}" {% if allie_area == area.id %}selected{% endif %}>
+                  {{ area.name }}
+                </option>
+              {% endfor %}
+            </select>            
+        </div>   
+
+    </div> 
 
  <div class="column column-right-top">
 
   <div class="imageContainer">
-  <input type="file" id="customFileInput" id="image" accept="image/*" name="image">
+  <input type="file" id="customFileInput" id="image" accept="image/*" name="image" onchange="loadImage(this)">
     <div>
       <img id="add-image" class="add_image" src="{% static 'img/add_allie/add_image.png' %}" alt="add_image">
       <label id="add-image-text" class="content_text" >Agregar foto de perfil</label>
@@ -82,7 +88,7 @@
   <div class="row">
       <label class="content_text">Descripcion del colaborador</label>
       <br>
-      <textarea class="form_text" name="allie_description" id="expanding-input" oninput="autoExpand(this)" placeholder="Descripción"></textarea>
+      <textarea class="form_text" name="allie_description" value="{{allie_description}}" id="expanding-input" oninput="autoExpand(this)" placeholder="Descripción"></textarea>
       <br>
     </div>
   </div>
@@ -101,45 +107,45 @@
       </div>
 
       
-      <div class="column column-left-bottom">
+      <div class="column column-right-bottom">
 
         <div>
           <label class="content_text">Nombre</label>
           <br>
-          <input type="text" name="contact_name" class="form_text" id="documentos" placeholder="Nombre completo">
+          <input type="text" name="contact_name" value="{{contact_name}}" class="form_text" id="documentos" placeholder="Nombre completo">
           <br>
         </div>
 
         <div class="form">
           <label class="content_text">Documento de identificación</label>
           <br>
-          <input type="text" name="contact_document_id" class="form_text" id="documentos" placeholder="NIT o C.C">
+          <input type="number" name="contact_document_id" value="{{contact_document_id}}" class="form_text" id="documentos" placeholder="NIT o C.C">
+          <br>
+        </div>
+
+        <div class="form">
+          <label class="content_text">Teléfono celular</label>
+          <br>
+          <input type="number" name="contact_phone" value="{{contact_phone}}" class="form_text" id="documentos" placeholder="Celular">
           <br>
         </div>
       </div>
       <div class="row-temp">
           
       </div>
-      <div class="column column-right-bottom">
-
-        <div>
-          <label class="content_text">Teléfono celular</label>
-          <br>
-          <input type="text" name="contact_phone" class="form_text" id="documentos" placeholder="Celular">
-          <br>
-        </div>
+      <div class="column column-left-bottom">
 
         <div class="form">
           <label class="content_text">Correo electrónico</label>
           <br>
-          <input type="text" name="contact_email" class="form_text" id="documentos" placeholder="Correo">
+          <input type="email" name="contact_email" value="{{contact_email}}" class="form_text" id="documentos" placeholder="Correo">
           <br>
         </div>
 
         <div class="form">
           <label class="content_text">Correo electrónico Auxiliar</label>
           <br>
-          <input type="text" name="contact_aux_email" class="form_text" id="documentos" placeholder="Correo">
+          <input type="email" name="contact_aux_email" value="{{contact_aux_email}}" class="form_text" id="documentos" placeholder="Correo">
           <br>
         </div>
 
@@ -155,12 +161,22 @@
 
 
 <script>
+
 const imageContainer = document.querySelector(".imageContainer");
 const imageInput = document.getElementById("customFileInput");
 const customFileButton = document.getElementById("customFileButton");
 const loading_text = document.getElementById("loading-text");
 const add_image = document.getElementById("add-image");
 const add_image_text = document.getElementById("add-image-text");
+
+if ("{{allie_image}}" !== ""){
+const imageUrl = "data:image/jpeg;base64,{{ allie_image }}";
+add_image.style.display = "none";
+add_image_text.style.display = "none";
+loading_text.style.display = "none";
+imageContainer.style.backgroundImage = 'url(' + imageUrl + ')';
+localStorage.setItem("{{image}}", imageUrl);
+}
 
 imageInput.addEventListener("change", function () {
     const file = this.files[0];
@@ -193,6 +209,26 @@ function autoExpand(input) {
 }
 window.addEventListener('load', function () {
     autoExpand(document.getElementById('expanding-input'));
+});
+function loadImage(input) {
+  // Obtener el elemento de la imagen
+  const previewImage = document.getElementById('previewImage');
+  const imagePreviewDiv = document.getElementById('imagePreviewDiv');
+
+  // Establecer el atributo src de la imagen y el atributo alt
+  previewImage.setAttribute('src', imageLink);
+  previewImage.setAttribute('alt', 'Image Preview');
+
+  // Mostrar el div de vista previa de la imagen
+  imagePreviewDiv.style.display = 'block';
+}
+
+window.addEventListener('DOMContentLoaded', (event) => {
+  // URL de la imagen (reemplaza con tu valor real)
+  const imageUrl = "data:image/jpeg;base64,{{ allie_image }}";
+
+  // Llamar a la función loadImage con la URL de la imagen
+  loadImage(null, imageUrl);
 });
 </script>
 {% endblock %}

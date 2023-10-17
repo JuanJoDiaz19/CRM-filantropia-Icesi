@@ -18,6 +18,7 @@ class Allies(View):
             allies = Allie.objects.filter(active=False)
         else:
             allies = Allie.objects.all()
+            
 
         if query != "":
             allies = allies.filter(Q(name__istartswith=query))

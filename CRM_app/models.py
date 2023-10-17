@@ -16,11 +16,19 @@ class Allie_Type(models.Model):
     def __str__(self):
         return self.name
     
+class Area(models.Model):
+    id = models.AutoField(primary_key=True)
+    area_description = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.area_description
+    
+    
 class Allie(models.Model):
     id = models.AutoField(primary_key=True)
     allie_type_id = models.ForeignKey(Allie_Type, on_delete=models.CASCADE)
+    area_id = models.ForeignKey(Area, on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
-    area = models.CharField(max_length=50)
     active = models.BooleanField(default=True)
     image_link = models.CharField(max_length=200)
     description= models.CharField(max_length=500, null=True)
@@ -108,7 +116,7 @@ class AllieProject(models.Model):
         unique_together = (('allie', 'investigation_project'),)
     
     def __str__(self):
-        return self.name
+        return self.allie.name
 
 
 class Donation_Type(models.Model):
@@ -155,6 +163,9 @@ class Gender(models.Model):
 class Career(models.Model):
     id=models.AutoField(primary_key=True)
     name= models.CharField(max_length=50)
+    
+    def __str__(self):
+        return self.id
     
 class Practicing(models.Model):
     id= models.CharField(max_length=20, primary_key=True)

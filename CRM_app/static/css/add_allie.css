@@ -65,7 +65,7 @@
 }
 
 .add_image {
-  margin-top: 40px;
+  
   width: 75px;
   height: 75px;
   margin-bottom: 15px;
@@ -95,6 +95,7 @@
   width: 100%;
   font-size: 15px;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  
 }
 
 textarea {
@@ -316,7 +317,6 @@ textarea {
   margin-top: 20px;
   width: 75px;
   height: 75px;
-  margin-bottom: 15px;
 }
 
 .content_text {
@@ -348,4 +348,26 @@ textarea {
   width: 100%;
   height: 100%;
   cursor: pointer;
+}
+.button-style-delete{
+  margin-left: 6.5rem;
+  margin-bottom: 2.5rem;
+  border-width: 2px;
+  border-color: #e1e1e1;
+  color: rgb(143, 143, 143);
+  background-color: #e4e4e4;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  font-size: 17px;
+  width: 50%;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  font-weight: 620;
+  transition: background-color 0.3s;
+  transition: color 0.3s;
+}
+
+
+.button-style-delete:hover{
+  background-color: rgb(218, 46, 46);
+  color: rgb(255, 255, 255);
 }

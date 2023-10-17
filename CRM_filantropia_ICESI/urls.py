@@ -43,6 +43,10 @@ from CRM_app.views.calendar import Calendar
 from CRM_app.views.single_page_investigation_project import InvestigationProject
 from CRM_app.views.single_ally_investigation import InvestigationsProjectsAlly
 from CRM_app.views.add_investigation_project import AddInvestigationProject
+from CRM_app.views.edit_ally import EditAlly
+from CRM_app.views.edit_contact import EditContact
+from CRM_app.views.edit_intern import EditIntern
+from CRM_app.views.edit_investigation_project import EditInvestigationProject
 
 
 
@@ -74,5 +78,9 @@ urlpatterns = [
     path('investigation/<int:project__id>/', InvestigationProject.as_view(), name="single_page_investigation_projects"),
     path("allies/investigation/<int:allie__id>", InvestigationsProjectsAlly.as_view(), name="single-page-ally-investigation"),
     path("add_investigation_project/", AddInvestigationProject.as_view(), name="add_investigation_project"),
+    path('edit_ally/<int:allie_id>/', EditAlly.as_view(), name='edit_ally'),
+    path('edit_contact/<int:allie_id>/<int:contact_info_id>/', EditContact.as_view(), name='edit_contact'),
+    path('edit_intern/<int:allie_id>/<int:intern_id>/', EditIntern.as_view(), name='edit_intern'),
+    path('edit_investigation_project/<int:project__id>/', EditInvestigationProject.as_view(), name='edit_investigation_project'),
 ]
     
