@@ -1,9 +1,6 @@
 from django.test import TestCase
-from CRM_app.models import Event, Event_Type, EventAllie
+from CRM_app.models import Event, Event_Type
 from django.shortcuts import get_object_or_404
-import datetime
-import os
-import base64
 
 class ProductModelEvent(TestCase):
     def test_creation_event(self):

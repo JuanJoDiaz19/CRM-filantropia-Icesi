@@ -20,8 +20,4 @@ class Interns(View):
         if query!="":
             practicing= practicing.filter(Q(name__istartswith=query))
             
-            
-        
-        
-        
         return render(request, 'interns.html', {'practice':practicing, 'ally':allie__id})
