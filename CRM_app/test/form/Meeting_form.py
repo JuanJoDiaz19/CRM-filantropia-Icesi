@@ -21,7 +21,6 @@ class FormsTestCase(TestCase):
             'date': '2023-10-15',
             'title': 'Sembremos'
         }
-
         form = meet_form.create_meeting_form(data=data)
 
         self.assertTrue(form.is_valid())
