@@ -18,11 +18,6 @@
         </a>
         <h1>{{project.name}}</h1>
     </div>
-    <div class="investigation-header__add-icon investigation-header__state-active" href="add_ally/">
-        <div class="investigation-header__state">
-            <p>Activo</p>
-        </div>
-    </div>
 </div>
 
 <section class="main-content-allies">    
@@ -45,8 +40,9 @@
     
     <div class="investigation-allies">
         <h3>Aliados involucrados:</h3>
+        
         <div class="investigation-allies__container-alllies">
-        {%for p in projects%}
+            {%for p in projects%}
 
             <div class="investigation-allies-card">
                 <img class="investigation-allies-card__img" src="data:image/jpeg;base64,{{p.allie.image_link}}">
@@ -60,7 +56,6 @@
 
     <div class="investigation-publications">
         <h3>Publicaciones:</h3>
-        
         <div class="history-donations__element-container">
             {% for p in publications %}
             <div class="history-donations__element">

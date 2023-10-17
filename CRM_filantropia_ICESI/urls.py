@@ -42,6 +42,7 @@ from CRM_app.views.add_donation import AddDonation
 from CRM_app.views.calendar import Calendar
 from CRM_app.views.single_page_investigation_project import InvestigationProject
 from CRM_app.views.single_ally_investigation import InvestigationsProjectsAlly
+from CRM_app.views.add_investigation_project import AddInvestigationProject
 
 
 
@@ -72,5 +73,6 @@ urlpatterns = [
     path('allies/<int:allie__id>/add-donation/', AddDonation.as_view(), name="add_donation"),
     path('investigation/<int:project__id>/', InvestigationProject.as_view(), name="single_page_investigation_projects"),
     path("allies/investigation/<int:allie__id>", InvestigationsProjectsAlly.as_view(), name="single-page-ally-investigation"),
+    path("add_investigation_project/", AddInvestigationProject.as_view(), name="add_investigation_project"),
 ]
     
