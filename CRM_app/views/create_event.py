@@ -25,11 +25,11 @@ class create_event(View):
     def post(self, request):
         
         event_image= request.FILES.get('image', None)
-        event_name= request.POST.get('allie_name', False)
-        event_allie= request.POST.get('allie', False)
+        event_name= request.POST.get('nombre', False)
+        event_allie= request.POST.get('countries', False)
         event_type= request.POST.get('categoria', False)
         event_objective= request.POST.get('allie_area', False)
-        event_description= request.POST.get('Objective', False)
+        event_description= request.POST.get('allie_description', False)
         event_fecha= request.POST.get('fecha',False)
         
         event_type_instance= get_object_or_404(Event_Type,id=event_type)
