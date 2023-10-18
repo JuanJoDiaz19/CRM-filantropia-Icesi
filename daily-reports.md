@@ -323,6 +323,15 @@ No avance mucho hoy.
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
 de momento nada
 
+#### Juan Jose
+* ¿Qué hice ayer?
+Termine de hacer lo que me habia propuesto
+* ¿Qué haré hoy?.
+No creo que pueda avanzar mucho porque tengo otros trabajos pendientes
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+Me hace falta tiempo para poder trabajar en el projecto
+
+
 ### Octubre 2 2023
 
 #### Espinosa
@@ -444,6 +453,13 @@ El tiempo que le tengo que dedicar a otras materias
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   La carga acadedima no me permite dedicarle mucho tiempo al proyecto y tengo que aprender sobre el manejo de las bases de datos.
 
+#### Juan Jose
+* ¿Qué hice ayer?
+No pude avanzar mucho 
+* ¿Qué haré hoy?.
+Empezare a mirar que correciones le puedo a hacer al proyecto
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+Necesito mas tiempo
 
 ### Octubre 6 2023
 
@@ -462,6 +478,15 @@ El tiempo que le tengo que dedicar a otras materias
   No avanzare mucho debido a otras obligaciones.
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   Demasiadas ocupaciones en la semana.
+
+  
+#### Juan Jose
+* ¿Qué hice ayer?
+Termine de revisar las posibles correcciones que se le pueden hacer al proyecto 
+* ¿Qué haré hoy?.
+Empezare a investigar como puedo hacer los tests de algunas de las fucionalidades del proyecto
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+Me hacen falta conociemientos de testing en python/django
 
 ### Octubre 7 2023
 
@@ -525,6 +550,15 @@ El tiempo que le tengo que dedicar a otras materias
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   Probablemente estudiar para la sustentacion me quite la mayor parte del tiempo
 
+  
+#### Juan Jose
+* ¿Qué hice ayer?
+Descance porque era fin de semana
+* ¿Qué haré hoy?.
+Empezare a realizar la pantalla de los proyectos de investigacion
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+Me hace falta tiempo y motivacion para seguir con la universidad
+
 ### Octubre 10 2023
 
 #### Espinosa
@@ -543,6 +577,14 @@ El tiempo que le tengo que dedicar a otras materias
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   En este momento tengo un bloqueo intelectual porque trabajare con tablas pivotes lo cual no habia hecho.
 
+
+#### Juan Jose
+* ¿Qué hice ayer?
+Segui trabajando en el diseño de la pantalla de los proyectos de investigacion
+* ¿Qué haré hoy?.
+Continuare trabajando en el diseño de la pagina de proyectos de investigacion
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+Me hace falta tiempo
   
 ### Octubre 11 2023
 
@@ -561,6 +603,14 @@ El tiempo que le tengo que dedicar a otras materias
   Investigare sobre como podemos realizar la vista que planteamos en el MockUp
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   La carga academica limita mi tiempo
+
+#### Juan Jose
+* ¿Qué hice ayer?
+Termine de hacer el diseño de los proyectos de investigacion
+* ¿Qué haré hoy?.
+Hare el diseño en figma de los proyectos de investigacion
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+Me hace falta tiempo
 
 ### Octubre 12 2023
   #### Ana
@@ -587,6 +637,14 @@ El tiempo que le tengo que dedicar a otras materias
   * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   En este momento, el tiempo no me alcanza para avanzar mucho.
 
+#### Juan Jose
+* ¿Qué hice ayer?
+Termine de hacer el diseño de la pagina de investigacion
+* ¿Qué haré hoy?.
+Empezare a hacer el html y css de la pagina que estaba diseñando en figma
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+Me hace falta tiempo
+
   ### Octubre 13 2023
 
   #### Mateo Silva
@@ -597,7 +655,16 @@ El tiempo que le tengo que dedicar a otras materias
   * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
   Esta semana especialmente esta bastante complicada.
 
-    ### Octubre 14 2023
+
+#### Juan Jose
+* ¿Qué hice ayer?
+Termine de hacer el html y css
+* ¿Qué haré hoy?.
+No creo que pueda hacer mucho porque hoy tengo la jornada de resolucion de problemas de Matematicas aplicadas y la celebracion de los 40 años de la facultad
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+Me hace falta tiempo y motivacion
+
+### Octubre 14 2023
   #### Ana
 * ¿Que hice ayer?
   No pude hacer mucho, tuve parciales
@@ -648,6 +715,27 @@ Hoy realizare los test que me corresponden
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
 Tengo unos compromisos familiares los cuales no me permiten tener mucho tiempo disponible
 
+### Octubre 16 2023
+
+#### Juan Jose
+* ¿Qué hice ayer?
+Desarrolle el html y css de la pagina de un Proyecto de investigacion singular
+* ¿Qué haré hoy?.
+Voy a hacer la pagina de agregar un proyecto de investigacion 
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+Me hace falta tiempo
+
+### Octubre 17 2023
+
+#### Juan Jose
+* ¿Qué hice ayer?
+Termine de hacer el html y css de la pagina para agregar un proyecto de investigacion
+* ¿Qué haré hoy?.
+Arreglare unos estilos de los inputs de los menus para agregar eventos
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+Me hace falta tiempo 
+
+
 ### Octubre 18 2023
 
 #### Ana
@@ -657,3 +745,12 @@ Ayer empezamos el sprint y decidimos las responsabilidades de cada uno
 Hoy realizare unos fixes en el proyecto
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
 Tengo sueño y no tengo tiempo
+
+
+#### Juan Jose
+* ¿Qué hice ayer?
+Termine de hacer los arreglos de los estilos de la pagina de agregar los eventos
+* ¿Qué haré hoy?.
+Hare pequeños arreglos a las vistas del calendario 
+* ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
+Me arden los ojos y tengo mucho sueño
