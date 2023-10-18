@@ -648,3 +648,12 @@ Hoy realizare los test que me corresponden
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
 Tengo unos compromisos familiares los cuales no me permiten tener mucho tiempo disponible
 
+### Octubre 18 2023
+
+#### Ana
+* ¿Que hice ayer?
+Ayer empezamos el sprint y decidimos las responsabilidades de cada uno
+* ¿Qué haré hoy?
+Hoy realizare unos fixes en el proyecto
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+Tengo sueño y no tengo tiempo
