@@ -23,7 +23,7 @@
 
     <div class="allies-container">
     {% for p in practice %}
-        <a class="allies-card" href="/edit_intern/{{ally}}/{{p.id}}/">
+        <div class="allies-card" href="/edit_intern/{{ally}}/{{p.id}}/">
             <div class="allies-card-image-container">
                 <img  src="data:image/jpeg;base64,{{ p.image_link }}" alt="{{ p.name }}">
             </div>
@@ -31,7 +31,7 @@
                 <p class="allie-name">{{ p.name }}</p>
                 <p class="allie-area">{{ p.position }}</p>
             </div>
-        </a>
+        </div>
     {% endfor %}
     </div>
 </section>

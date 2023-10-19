@@ -1,5 +1,73 @@
-.box {
+.main_content_calendar {
     width: 70%;
+    margin: auto;
+}
+
+.navigation-buttons-calendar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.add_occurence_calendar {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: #0159A1;
+    color: white;
+    padding: 0.2rem 0.7rem 0.2rem 0.7rem;
+    border-radius: 20px;
+    height: auto;
+    width: auto;
+    font-size: 0.7rem;
+}
+
+.add_occurence_calendar p {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    color: #434343;
+    font-weight: 700;
+    padding-top: 2rem;
+    font-size: 2rem;
+}
+
+.fc-dayGridMonth-view  a {
+    color: #707070 !important;
+    text-decoration: none;
+}
+
+.fc-toolbar-title  { 
+    color: #13247B;
+    font-weight: 600;
+}
+
+.fc-toolbar-title:first-letter  { 
+    text-transform: capitalize;
+}
+
+.calendar-container {
+    width: 100%;
     height: 50%;
-    margin-left: 14%;
+    margin:auto
+}
+
+.header_calendar_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    padding-top: 1rem;
+}
+
+.header_calendar_container img {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 1rem;
+}
+
+.add-event {
+    margin-bottom: 0.8rem;
 }
