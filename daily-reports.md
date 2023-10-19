@@ -754,3 +754,11 @@ Termine de hacer los arreglos de los estilos de la pagina de agregar los eventos
 Hare pequeños arreglos a las vistas del calendario 
 * ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
 Me arden los ojos y tengo mucho sueño
+
+#### Mateo Silva
+* ¿Qué hice ayer?
+  Ayer fue la finalización del sprint, por lo tanto me dedique a revisar todas las funcionalidades.
+* ¿Qué haré hoy?
+  Empezare a arreglar parte del registro de eventos.
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+  Personalmente esta semana hay muy poco tiempo, pero intentare avanzar con las tareas de la semana.
