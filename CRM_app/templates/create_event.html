@@ -2,7 +2,6 @@
 {% load static %}
 
 {% block header_links %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/add_allie.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'css/create_event.css'%}">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
 <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
@@ -17,8 +16,8 @@
 {% endif %}
 
 <div class="top_arrow_tittle" style="margin-top: 1.875rem; margin-left: 1.875rem;">
-  <a href="/interns/{{ally}}">
-    <img class="arrow_image" src="{% static 'img/add_allie/arrow.png' %}" alt="arrow">
+  <a href="/calendar/all">
+    <img class="arrow_image" src="{% static 'img/create_event/arrow.png' %}" alt="arrow">
   </a>
   <p class="top_tittle">Agregar Evento</p>
 </div>
