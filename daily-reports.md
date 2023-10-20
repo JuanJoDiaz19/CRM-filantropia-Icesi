@@ -762,3 +762,13 @@ Me arden los ojos y tengo mucho sueño
   Empezare a arreglar parte del registro de eventos.
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
   Personalmente esta semana hay muy poco tiempo, pero intentare avanzar con las tareas de la semana.
+
+### Octubre 20 2023
+
+#### Espinosa
+* ¿Qué hice ayer?
+  Ayer no avance en el proyecto ya que mi jornada fue muy larga y no me quedo tiempo
+* ¿Qué haré hoy?
+  Trabajare en la rama fix_first_sprint para arreglar unos problemitas
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+  Ultimamente he tenido poco tiempo.
