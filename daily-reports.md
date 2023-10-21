@@ -766,11 +766,11 @@ Me arden los ojos y tengo mucho sueño
 ### Octubre 19 2023
 
 #### Mateo Silva
-*¿Qué hice ayer?
+* ¿Qué hice ayer?
 Trabaje acerca de correcciones sobre eventos.
-*¿Qué haré hoy?
+* ¿Qué haré hoy?
 Hoy no poder avanzar mucho en el proyecto
-*¿Hay algún obstáculo que me impide avanzar en el proyecto?
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Como siempre, el tiempo es un gran impedimento.
 
 ### Octubre 20 2023
@@ -784,9 +784,9 @@ Como siempre, el tiempo es un gran impedimento.
   Ultimamente he tenido poco tiempo.
 
 #### Mateo Silva
-*¿Qué hice ayer?
+* ¿Qué hice ayer?
 No avance en el proyecto.
-*¿Qué haré hoy?
+* ¿Qué haré hoy?
 Empezare pruebas de los objetivos ya cumplidos de esta semana en el spring.
-*¿Hay algún obstáculo que me impide avanzar en el proyecto?
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Solo el tiempo me detiene.
