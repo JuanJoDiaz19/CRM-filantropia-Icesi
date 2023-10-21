@@ -763,6 +763,16 @@ Me arden los ojos y tengo mucho sueño
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
   Personalmente esta semana hay muy poco tiempo, pero intentare avanzar con las tareas de la semana.
 
+### Octubre 19 2023
+
+#### Mateo Silva
+*¿Qué hice ayer?
+Trabaje acerca de correcciones sobre eventos.
+*¿Qué haré hoy?
+Hoy no poder avanzar mucho en el proyecto
+*¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Como siempre, el tiempo es un gran impedimento.
+
 ### Octubre 20 2023
 
 #### Espinosa
@@ -772,3 +782,11 @@ Me arden los ojos y tengo mucho sueño
   Trabajare en la rama fix_first_sprint para arreglar unos problemitas
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
   Ultimamente he tenido poco tiempo.
+
+#### Mateo Silva
+*¿Qué hice ayer?
+No avance en el proyecto.
+*¿Qué haré hoy?
+Empezare pruebas de los objetivos ya cumplidos de esta semana en el spring.
+*¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Solo el tiempo me detiene.
