@@ -800,3 +800,11 @@ Hice las pruebas necesarias para el Spring de esta semana.
 Este dia no podre hacer nada debido a ciertas obligaciones.
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 El tiempo sin duda alguna es algo que nos detiene.
+
+### Octubre 22 2023
+* ¿Qué hice ayer?
+Ayer no avance en el proyecto
+* ¿Qué hare hoy?
+Voy a hacer hacer unas correcciones necesarias en el registro de proyectos de investigación.
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+De momento no hay alguna dificultad tecnica que me impida avanzar.
