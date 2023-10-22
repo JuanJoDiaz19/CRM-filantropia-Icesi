@@ -790,3 +790,11 @@ No avance en el proyecto.
 Empezare pruebas de los objetivos ya cumplidos de esta semana en el spring.
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Solo el tiempo me detiene.
+
+### Octubre 21 2023
+* ¿Qué hice ayer?
+Hice las pruebas necesarias para el Spring de esta semana.
+* ¿Qué haré hoy?
+Este dia no podre hacer nada debido a ciertas obligaciones.
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+El tiempo sin duda alguna es algo que nos detiene.
