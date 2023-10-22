@@ -802,6 +802,8 @@ Este dia no podre hacer nada debido a ciertas obligaciones.
 El tiempo sin duda alguna es algo que nos detiene.
 
 ### Octubre 22 2023
+
+#### Mateo Silva
 * ¿Qué hice ayer?
 Ayer no avance en el proyecto
 * ¿Qué hare hoy?
