@@ -26,12 +26,16 @@ class create_event(View):
         
         event_image= request.FILES.get('image', None)
         event_name= request.POST.get('nombre', False)
-        event_allie= request.POST.get('countries', False)
+        event_allie= request.POST.getlist('countries[]', False)
         event_type= request.POST.get('categoria', False)
         event_objective= request.POST.get('allie_area', False)
         event_description= request.POST.get('allie_description', False)
         event_fecha= request.POST.get('fecha',False)
         
+        #print(event_allie, '\n')
+       
+        #for i in event_allie:
+            #print(i)
         event_type_instance= get_object_or_404(Event_Type,id=event_type)
         event_image_link=base64.b64encode(event_image.read()).decode('utf-8')
         
@@ -44,11 +48,15 @@ class create_event(View):
                 image_link= event_image_link,
             )
         
-        ally= get_object_or_404(Allie,id=event_allie)
+        ally=[]
+        for i in event_allie: 
+            allyget= get_object_or_404(Allie,id=i)
+            ally.append(allyget)
         
-        EventAllie.objects.create(
-            event= event_create,
-            allie= ally,
-        )
+        for all in ally:
+            EventAllie.objects.create(
+                event= event_create,
+                allie= all,
+            )
         
         return redirect('/allies')
