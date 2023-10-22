@@ -42,7 +42,7 @@
         <div class="form">
           <label class="content_text">Aliados involucrados</label>
           <div class="opciones-sexo">
-            <select name="countries" id="countries" multiple>
+            <select name="countries[]" id="countries" multiple>
               {% for ally in allies%}
               <option value="{{ally.id}}">{{ally.name}}</option>
               {% endfor %}
