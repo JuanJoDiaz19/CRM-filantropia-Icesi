@@ -21,7 +21,7 @@ class donation_(View):
         
         total=0
         
-        donation= sorted(donation_unsorted, key=lambda x: x.date)
+        donation= sorted(donation_unsorted, key=lambda x: x.date, reverse=True)
         
         for i in donation_unsorted:
             total+=i.amount
