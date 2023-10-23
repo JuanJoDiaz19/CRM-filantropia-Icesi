@@ -41,7 +41,7 @@
                 <label class="content_text">Aliados involucrados</label>
                 <br>
                 
-                <select name="allies" class="form_text" id="allies" multiple>
+                <select name="allies[]" class="form_text" id="allies" multiple>
                   {% for ally in allies %}
                     <option value="{{ally.id}}">{{ally.name}}</option>
                   {%endfor%}
