@@ -10,9 +10,9 @@ class donation_(View):
     def get(self, request, allie__id):
         
         try:
-            donation= Donation.objects.filter(allie_id= allie__id)
+            donation_unsorted= Donation.objects.filter(allie_id= allie__id)
         except Donation.DoesNotExist:
-            donation= []
+            onation_unsorted= []
             
         try:
             ally = Allie.objects.get(id=allie__id)
@@ -21,7 +21,9 @@ class donation_(View):
         
         total=0
         
-        for i in donation:
+        donation= sorted(donation_unsorted, key=lambda x: x.date)
+        
+        for i in donation_unsorted:
             total+=i.amount
             
         return render(request, 'allies/donation.html',{'donation':donation, 'allies': ally, 'total':total})
