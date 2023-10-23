@@ -91,6 +91,7 @@ h1 {
     background-color: #f2f2f2;
     width: 100%;
     display: flex;
+    justify-content: space-between;
     border: solid #F7F7F7 2px;
     border-radius: 20px;
     padding: 0.5rem;
@@ -119,6 +120,23 @@ h1 {
     color: #9F9F9F;
 }
 
+.allies-main-information-container {
+    display: flex;
+}
 
+.allie-state {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.5em;
+}
 
+.allie-active {
+    color: #13a744;
+    font-weight: 600;
+}
 
+.allie-inactive {
+    color: #ff3737;
+    font-weight: 600;
+}
