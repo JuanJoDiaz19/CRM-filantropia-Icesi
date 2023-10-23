@@ -68,7 +68,8 @@ form {
 }
 
 .form_text {
-    font-weight: 600;
+    font-weight: 500;
+    color: rgb(99, 99, 99);
 }
 
 .form_ammount {
