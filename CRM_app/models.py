@@ -177,3 +177,4 @@ class Practicing(models.Model):
     gender_id= models.ForeignKey(Gender, on_delete=models.CASCADE)
     
     
+    

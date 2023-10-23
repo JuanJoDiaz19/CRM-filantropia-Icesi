@@ -13,7 +13,7 @@
     <div class="main-content__header">
         <h1><b>Practicantes</b></h1>
         <a href="/interns/add_intern/{{ally}}">
-            <img style="opacity: 0.8" src="{% static 'img/icons/add-icon.png' %}" alt="">
+            <img style="opacity: 0.75" src="{% static 'img/icons/add-icon.png' %}" alt="">
         </a>
     </div>
     <form method="get" class="button-container">
@@ -24,13 +24,21 @@
     <div class="allies-container">
     {% for p in practice %}
         <a class="allies-card" href="/edit_intern/{{ally}}/{{p.id}}/">
-            <div class="allies-card-image-container">
+           
+            <div>
+            <div class="column allies-card-image-container">
                 <img  src="data:image/jpeg;base64,{{ p.image_link }}" alt="{{ p.name }}">
             </div>
-            <div class="allies-info">
+            <div class="column column-left-bottom allies-info" style="display: inline-block;">
                 <p class="allie-name">{{ p.name }}</p>
                 <p class="allie-area">{{ p.position }}</p>
             </div>
+        </div>
+            
+            <img src="{% static 'img/icons/edit-icon.png' %}" alt="arrow" style="opacity: 0.7; margin-top:22px;height: 30px; width:30px; border-radius:0; ">
+           
+            
+
         </a>
     {% endfor %}
     </div>
