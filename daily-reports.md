@@ -810,3 +810,13 @@ Ayer no avance en el proyecto
 Voy a hacer hacer unas correcciones necesarias en el registro de proyectos de investigación.
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 De momento no hay alguna dificultad tecnica que me impida avanzar.
+
+### Octubre 23 2023
+
+#### Mateo Silva
+* ¿Qué hice ayer?
+Termine correcciones en el registro de proyectos de investigación
+* ¿Qué hare hoy?
+Empezare correcciones hechas en el spring review
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Como la semana esta comenzando, entonces no hay problema.
