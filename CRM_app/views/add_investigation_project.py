@@ -15,20 +15,10 @@ class AddInvestigationProject(View):
     
     def post(self, request):
         project_title= request.POST.get('titulo', False)
-        project_allies= request.POST['allies']
+        project_allies= request.POST.getlist('allies[]', False)
         project_date= request.POST.get('fecha',False)
         project_description= request.POST.get('descripcion',False)
         
-        projects_allies = [ally.strip() for ally in project_allies.split(',')]
-        
-        projects_allies_instances=[]
-        
-        print(project_allies)
-        
-        for prj in projects_allies:
-            
-            pr=get_object_or_404(Allie, id=prj)
-            projects_allies_instances.append(pr)
         
         project = Investigation_Project.objects.create(
             name=project_title,
@@ -37,10 +27,13 @@ class AddInvestigationProject(View):
             start_date=project_date,
         )
         
-        for ally in projects_allies_instances:
+        for prj in project_allies:
+            pr=get_object_or_404(Allie, id=prj)
             AllieProject.objects.create(
                 investigation_project= project,
-                allie= ally
+                allie= pr
             )
+        
+            
             
         return redirect('/investigations')
