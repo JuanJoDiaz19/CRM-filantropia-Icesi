@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/add_allie.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/allies/add_donation.css' %}">
+{% endblock %}
+
+{% block main_content %}
+
+{% if error_message %}
+  <div class="alert alert-danger">
+    {{ error_message }}
+  </div>
+{% endif %}
+
+<div class="top_arrow_tittle" style="margin-top: 1.875rem; margin-left: 1.875rem;">
+    <a href="/investigation/{{project.id}}">
+      <img class="arrow_image" src="{% static 'img/add_allie/arrow.png' %}" alt="arrow">
+    </a>
+    <h1 class="top_tittle">Agregar publicación</h1>
+</div>
+
+<div class="main-container-form">
+
+    <form method="POST" enctype="multipart/form-data">
+
+        {% csrf_token %}
+
+        <div class="container">
+            <div class="form__container-left-elements">
+                <label class="content_text">Nombre publicación</label>
+                <br>
+                <input type="text" class="form_text form_ammount" name="nombre" placeholder="Nombre">
+                <br>
+
+                <label class="content_text">Descripcion del DOI</label>
+                <br>
+                <textarea  class="form_text" name="descripcion" cols="30" rows="8" placeholder="Descripcion"></textarea>
+                <br>
+            </div>
+
+            <div class="form__container-right-elements">
+                <label class="content_text">Fecha de la publicación</label>
+                <br>
+                <input type="date" name="fecha" class="form_text form_date">
+                <br>
+            </div>
+
+        </div>
+      
+        <button class="button-style-add-donation">Agregar publicación</button>
+    
+    </form>
+
+</div>
+
+
+
+{% endblock %}
+
+{% block pagina_actual_investigacion %}
+<div class="current-page"></div>
+{% endblock %}
