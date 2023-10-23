@@ -48,7 +48,7 @@ class AddDonation(View):
                 allie_id= allie_instance,
                 description= donation_description,
             )
-            return redirect('/allies')
+            return redirect(f'/donations/{allie__id}')
         else:
             try:
                 ally = Allie.objects.get(id=allie__id)
