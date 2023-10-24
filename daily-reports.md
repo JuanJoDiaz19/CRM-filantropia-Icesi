@@ -820,3 +820,11 @@ Termine correcciones en el registro de proyectos de investigación
 Empezare correcciones hechas en el spring review
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Como la semana esta comenzando, entonces no hay problema.
+
+#### Espinosa
+* ¿Qué hice ayer?
+No hice ningun avance relevante, solo pequeñas correcciones
+* ¿Qué hare hoy?
+Revisar que se puede mejorar despues de presentar el proyecto despues del primer sprint.
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Hay muchas obligaciones acumuladas.
