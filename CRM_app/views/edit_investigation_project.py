@@ -16,7 +16,7 @@ class EditInvestigationProject(View):
         except Investigation_Project.DoesNotExist:
             project = None
 
-        selected_allies=AllieProject.objects.get(investigation_project=project__id)
+        selected_allies=AllieProject.objects.filter(investigation_project=project__id)
         
         allies= Allie.objects.all()
         formatted_start_date = project.start_date.strftime('%Y-%m-%d')
@@ -29,6 +29,8 @@ class EditInvestigationProject(View):
             project = Investigation_Project.objects.get(id=project__id)
         except Investigation_Project.DoesNotExist:
             project = None
+        
+    
             
         if request.method == 'POST':
             if 'delete' in request.POST:
@@ -39,11 +41,17 @@ class EditInvestigationProject(View):
             elif 'edit' in request.POST:
                 
                 project.name= request.POST.get('titulo', False)
-                #project_allies= request.POST['allies']
+                project_new_allies= request.POST.getlist('allies[]', False)
                 project.start_date= request.POST.get('fecha',False)
                 project.description= request.POST.get('descripcion',False)
-                        
                 project.save()
+                
+                for new in project_new_allies:
+                    pr=get_object_or_404(Allie, id=new)
+                    AllieProject.objects.create(
+                        investigation_project= project,
+                        allie= pr
+                    )
                 
                 
                 #for ally in projects_allies_instances:
