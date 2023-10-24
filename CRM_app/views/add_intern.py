@@ -18,8 +18,12 @@ class Add_intern(View):
     def get(self, request, allie__id):
         careers = Career.objects.all() 
         careers = [{'id': str(career.id), 'name': career.name} for career in careers]
+        try: 
+            ally= Allie.objects.get(id=allie__id)
+        except Allie.DoesNotExist:
+            ally=[]
         
-        return render(request, 'add_intern.html', {'ally': allie__id,'careers': careers})
+        return render(request, 'add_intern.html', {'ally': ally,'careers': careers})
     
     @method_decorator(login_required)
     def post(self, request, allie__id):

@@ -57,9 +57,19 @@ a {
 
 }
 
-h1 {
+.main-content__header h1{
     color: #434343;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem; 
+}
+
+.bread-crum h1{
+    color: #9B9B9B;
+    font-size: 1rem;
+}
+
+.bread-crum {
+    display: flex;
+    word-spacing: 0.01rem;
 }
 
 .main-content__header {

@@ -13,8 +13,19 @@
   </div>
 {% endif %}
 
+
+
+  
+<div class="bread-crum">
+  <a href="/allies/{{ally.id}}"><h1><b>{{ally.name}} &nbsp;</b></h1></a>
+  <h1><b>> &nbsp;</b></h1>
+  <a href="/interns/{{ally.id}}"><h1><b>Practicantes &nbsp;</b></h1></a>
+  <h1><b>> &nbsp;</b></h1>
+  <h1><b>añadir internos </b></h1>
+</div>
+
 <div class="top_arrow_tittle" style="margin-top: 1.875rem; margin-left: 1.875rem;">
-  <a href="/interns/{{ally}}">
+  <a href="/interns/{{ally.id}}">
     <img class="arrow_image" src="{% static 'img/add_allie/arrow.png' %}" alt="arrow">
   </a>
   <p class="top_tittle">Agregar interno</p>

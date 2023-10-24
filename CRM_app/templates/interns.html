@@ -10,9 +10,14 @@
 {% block main_content %}
 
 <section class="main-content-allies">
-    <div class="main-content__header">
+    <div class="bread-crum">
+        <a href="/allies/{{ally.id}}"><h1><b>{{ally.name}} &nbsp;</b></h1></a>
+        <h1><b>> &nbsp;</b></h1>
         <h1><b>Practicantes</b></h1>
-        <a href="/interns/add_intern/{{ally}}">
+    </div>  
+    <div class="main-content__header">
+        <h1><b> Practicantes</b></h1>
+        <a href="/interns/add_intern/{{ally.id}}">
             <img style="opacity: 0.75" src="{% static 'img/icons/add-icon.png' %}" alt="">
         </a>
     </div>
