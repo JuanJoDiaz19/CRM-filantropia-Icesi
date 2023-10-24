@@ -24,7 +24,12 @@
         <div class="main-info-ally-container">
             <h1 class="main-name-ally">{{allies.name}}</h1>
             <h4 class="main-ally-description">{{allies.area_id}}</h4>
-            <h4 class="main-ally-description inactive-user">Donante inactivo</h4>
+
+            {% if allies.active == 1 %}
+            <p class="main-ally-description active-user">Alliado activo</p>
+            {% else %}
+            <p class="main-ally-description inactive-user">Aliado inactivo</p>
+            {% endif %} 
         </div>
 
         <div class="main-section-icons-container">    

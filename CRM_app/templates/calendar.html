@@ -4,27 +4,42 @@
 
 {% block header_links %}
   <link rel="stylesheet" type="text/css" href="{% static 'css/calendar.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'fullcalendar/lib/main.css' %}">
   <script src="{% static 'fullcalendar/core/index.global.js' %}"></script>
   <script src="{% static 'fullcalendar/daygrid/index.global.js' %}"></script>
-  <script src="{% static 'js/es.js' %}"></script>
 {% endblock %}
 
 {% block main_content %}
-<div class="box">
-<div id="calendar"></div>
-    <div id="event-info" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title"></h5>
+<div class="main_content_calendar">
+<div class="header_calendar_container">
+    <h1 class="calendar-title" >Calendario de Eventos y Reuniones </h1>
+    <nav class="navigation-buttons-calendar">
+        <a class="add_occurence_calendar add-event" href="create_event/">
+            <img src="{% static 'img/icons/add-icon-white.png' %}" alt="">
+            <p>Crear evento</p>
+        </a>
+        <a class="add_occurence_calendar" href="create_meeting/">
+            <img src="{% static 'img/icons/add-icon-white.png' %}" alt="">
+            <p>Crear reunion</p>
+        </a>
+    </nav>
+</div>
+    <div class="calendar-container">
+        <div id="calendar"></div>
+        <div id="event-info" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"></h5>
+                    </div>
+                    <div class="modal-body">
+                        <p>Fecha: <span id="event-date"></span></p>
+                        <p>Descripción: <span id="event-description"></span></p>
+                        <p>Objetivo: <span id="event-objective"></span></p>
+                        <p>Aliados: <span id="event-allies"></span></p>
+                        <p>Tipo: <span id="event-type"></span></p>
+                    </div>            
                 </div>
-                <div class="modal-body">
-                    <p>Fecha: <span id="event-date"></span></p>
-                    <p>Descripción: <span id="event-description"></span></p>
-                    <p>Objetivo: <span id="event-objective"></span></p>
-                    <p>Aliados: <span id="event-allies"></span></p>
-                    <p>Tipo: <span id="event-type"></span></p>
-                </div>            
             </div>
         </div>
     </div>
@@ -67,5 +82,11 @@
     
         calendar.render();
     });
+    
 </script>    
 {% endblock %}
+
+{% block pagina_actual_calendario %}
+<div class="current-page"></div>
+{% endblock %}
+
