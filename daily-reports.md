@@ -894,3 +894,13 @@ Hice la correccion de las redirecciones, sobre todo en la parte de donaciones.
 Investigaré acerca del mailto para enviar correos a los aliados sobre los eventos y reuniones.
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Hay mucha carga de trabajos en la universidad.
+
+## Octubre 25 2023
+#### Ana
+* ¿Que hice ayer?
+Ayer hice unos arreglos que nos sugirio domiciano
+* ¿Qué haré hoy?
+Hoy empezare con el diseño de los seguimientos de las reuniones
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+Aparte de la falta de tiempo, ningun obstaculo
+
