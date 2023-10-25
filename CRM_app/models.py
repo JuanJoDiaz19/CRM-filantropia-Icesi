@@ -88,6 +88,7 @@ class Investigation_Project(models.Model):
     id= models.AutoField(primary_key=True)
     name= models.CharField(max_length=20)
     description= models.CharField(max_length=200)
+    objetivos= models.CharField(max_length=200,null=True)
     active= models.TextField(max_length=1)
     start_date= models.DateField()
     finish_date= models.DateField(null=True)

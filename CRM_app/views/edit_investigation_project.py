@@ -42,6 +42,7 @@ class EditInvestigationProject(View):
                 #project_allies= request.POST['allies']
                 project.start_date= request.POST.get('fecha',False)
                 project.description= request.POST.get('descripcion',False)
+                project.objetivos= request.POST.get('objetivos',False)
                         
                 project.save()
                 

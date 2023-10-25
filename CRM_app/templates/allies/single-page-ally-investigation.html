@@ -29,14 +29,25 @@
     </form>   
 
     <div class="allies-container">
-    {% for investigation_project in investigation_projects %}
-        <a class="allies-card" href="/investigation/{{investigation_project.id}}">
-            <div class="allies-info">
-                <p class="allie-name">{{ investigation_project.name }}</p>
-                <p class="allie-area">{{ investigation_project.description }}</p>
-            </div>
-        </a>
-    {% endfor %}
+        {% for investigation_project in investigation_projects %}
+            <a class="" href="/investigation/{{investigation_project.id}}">
+                <div class="allies_in_investigarion_project">
+                    <div class="column column-left-bottom">
+                    <p class="allie-name">{{ investigation_project.name }}</p>
+                    <p class="allie-area">{{ investigation_project.description }}</p>
+             
+                    {% for allie_project in investigation_project.allieproject_set.all %}
+                    <img class="" src="data:image/jpeg;base64,{{allie_project.allie.image_link}}">
+                    {% endfor %}
+                        
+                    
+                    </div>
+                    <a href="/edit_investigation_project/{{investigation_project.id}}">
+                        <img src="{% static 'img/icons/edit-icon.png' %}" alt="arrow" style="opacity: 0.7; margin-top:22px;height: 30px; width:30px; border-radius:0;">
+                    </a>
+                </div>
+            </a>
+        {% endfor %}
     
     </div>
 </section>
