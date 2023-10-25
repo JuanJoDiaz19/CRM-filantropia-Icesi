@@ -733,7 +733,15 @@ Termine de hacer el html y css de la pagina para agregar un proyecto de investig
 * ¿Qué haré hoy?.
 Arreglare unos estilos de los inputs de los menus para agregar eventos
 * ¿Hay algún obstáculo que me impide avanzar en mi trabajo?
-Me hace falta tiempo 
+Me hace falta tiempo
+
+#### Ana
+* ¿Que hice ayer?
+Ayer termine todas las funcionalidades de edicion
+* ¿Qué haré hoy?
+Hoy terminaremos el primer sprint
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+Carga academica
 
 
 ### Octubre 18 2023
@@ -791,6 +799,14 @@ Empezare pruebas de los objetivos ya cumplidos de esta semana en el spring.
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Solo el tiempo me detiene.
 
+#### Ana
+* ¿Que hice ayer?
+Ayer no avance en el proyecto
+* ¿Qué haré hoy?
+Hare unos ajustes sobre el diseño del proyecto para los seguimientos de eventos
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+Falta de tiempo
+
 ### Octubre 21 2023
 
 #### Mateo Silva 
@@ -801,6 +817,14 @@ Este dia no podre hacer nada debido a ciertas obligaciones.
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 El tiempo sin duda alguna es algo que nos detiene.
 
+#### Ana
+* ¿Que hice ayer?
+Ayer hice unos ajustes sobre la edicion de interno
+* ¿Qué haré hoy?
+Hoy hare la funcion front y back de agregar publicaciones a un proyecto de investigacion
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+Ayuda tengo sueño
+
 ### Octubre 22 2023
 
 #### Mateo Silva
@@ -810,6 +834,14 @@ Ayer no avance en el proyecto
 Voy a hacer hacer unas correcciones necesarias en el registro de proyectos de investigación.
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 De momento no hay alguna dificultad tecnica que me impida avanzar.
+
+#### Ana
+* ¿Que hice ayer?
+Ayer empece la funcion front y back de agregar publicaciones a un proyecto de investigacion
+* ¿Qué haré hoy?
+Hoy terminare la funcion front y back de agregar publicaciones a un proyecto de investigacion
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+Ayuda sigo teniendo sueño
 
 ### Octubre 23 2023
 
@@ -838,3 +870,11 @@ Trate de avanzar en un overlay de confirmacion, pero el dia estuvo pesado
 Avanzar en el overlay
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Hay muchas obligaciones acumuladas y el tiempo para avanzar cada vez se hace mas corto.
+
+#### Ana
+* ¿Que hice ayer?
+Ayer hicimos el sprint review
+* ¿Qué haré hoy?
+Hoy hare unos arreglos que nos sugirio domiciano en la parte de proyectos de investigacion
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+Se esta poniendo dificil el semestre y cada vez duermo menos
