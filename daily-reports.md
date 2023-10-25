@@ -828,3 +828,13 @@ No hice ningun avance relevante, solo pequeñas correcciones
 Revisar que se puede mejorar despues de presentar el proyecto despues del primer sprint.
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Hay muchas obligaciones acumuladas.
+
+### Octubre 24 2023
+
+#### Espinosa
+* ¿Qué hice ayer?
+Trate de avanzar en un overlay de confirmacion, pero el dia estuvo pesado
+* ¿Qué hare hoy?
+Avanzar en el overlay
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Hay muchas obligaciones acumuladas y el tiempo para avanzar cada vez se hace mas corto.
