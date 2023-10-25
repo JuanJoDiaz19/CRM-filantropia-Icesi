@@ -92,6 +92,20 @@ class Reports(View):
         investigation_projects_finished_data.append(count_proyectos_sin_fecha)
 
 
+        # Investigation projects through the year:
+
+         # Create a queryset that groups donations by month and counts the occurrences
+        investigation_projects_by_month = Investigation_Project.objects.annotate(month=TruncMonth('start_date')).values('month').annotate(count=Count('month')).order_by('month')
+        final_count_motnth = [0,0,0,0,0,0,0,0,0,0,0,0]
+
+        for count_month in investigation_projects_by_month: 
+            final_count_motnth[months_dict[count_month['month'].strftime('%B')]] =  count_month['count']
+
+        
+        print(final_count_motnth)
+
+
+
         return render(request, 'reports.html', {
             'data': count, 
             'top_donators_labels': top_donators_labels,

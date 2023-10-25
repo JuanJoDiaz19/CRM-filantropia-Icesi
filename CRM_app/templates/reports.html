@@ -11,7 +11,11 @@
 {% block main_content %}
 
 <div class="main-content-reports">
+  
   <h1>Reporte general</h1>
+  <div class="span-allie-form-container">
+    <span class="label-allie-reports-form">¿Quieres hacer un reporte de un aliado? </span>
+  </div>
   <form method="get" action="{% url 'allies' %}" class="button-container flex-space-around">
     <input class="search-field search-text-field" type="text" name="q" placeholder="Buscar por nombre" value="{{ request.GET.q }}">                   
     <button class="buton-search-field margin-left-button" type="submit"><b>Buscar</b></button>
@@ -74,7 +78,7 @@
           const data_top_donators = {
             labels: labels_top_donors,
             datasets: [{
-              label: 'My First Dataset',
+              label: 'Cantidad de donaciones',
               data: {{top_donators}},
               backgroundColor: [
                 'rgb(0, 169, 255)',
@@ -108,7 +112,7 @@
           const data_area_donators = {
             labels: labels_area_donators,
             datasets: [{
-              label: 'My First Dataset',
+              label: 'Cantidad de donantes',
               data: {{area_donators_data}},
               backgroundColor: [
                 'rgb(0, 169, 255)',
@@ -135,7 +139,7 @@
           const data_investigation_projects_finished = {
             labels: ["Terminados", "Activos"],
             datasets: [{
-              label: 'My First Dataset',
+              label: 'Cantidad de proyectos',
               data: {{investigation_projects_finished}},
               backgroundColor: [
                 'rgb(0, 169, 255)',
@@ -158,8 +162,8 @@
       </div>
     </div>
     <div class="third-row-container">
-      <div class="report-card">
-        <h3  class="report-card__tittle" >Proyectos de investigacion en el año</h3>
+      <div class="report-card seventy-percent-width">
+        <h3  class="report-card__tittle" >Proyectos de investigacion por fecha de iniciacion</h3>
         <div>
           <canvas id="investigation_projects_chart_line"></canvas>
         </div>

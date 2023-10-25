@@ -65,3 +65,18 @@
 .margin-left-button {
     margin-right: 1rem;
 }
+
+.span-allie-form-container {
+    color: #707070;
+    font-weight: 600;
+    margin-bottom: 0.5rem !important;
+}
+
+.seventy-percent-width {
+    width: 70%;
+}
+
+.third-row-container {
+    width: 100%;
+    display: flex;
+}
