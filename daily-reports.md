@@ -861,6 +861,14 @@ Revisar que se puede mejorar despues de presentar el proyecto despues del primer
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Hay muchas obligaciones acumuladas.
 
+#### Santiago Barraza
+* ¿Qué hice ayer?
+No hice ningun avance relevante.
+* ¿Qué hare hoy?
+Haré unas correcciones del proyecto en cuanto a las redirecciones al terminar de usar algunas funcionalidades.
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Hay mucha carga de trabajos.
+
 ### Octubre 24 2023
 
 #### Espinosa
@@ -878,3 +886,11 @@ Ayer hicimos el sprint review
 Hoy hare unos arreglos que nos sugirio domiciano en la parte de proyectos de investigacion
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
 Se esta poniendo dificil el semestre y cada vez duermo menos
+
+#### Santiago Barraza
+* ¿Qué hice ayer?
+Hice la correccion de las redirecciones, sobre todo en la parte de donaciones.
+* ¿Qué hare hoy?
+Investigaré acerca del mailto para enviar correos a los aliados sobre los eventos y reuniones.
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Hay mucha carga de trabajos en la universidad.
