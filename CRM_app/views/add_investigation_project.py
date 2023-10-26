@@ -18,6 +18,7 @@ class AddInvestigationProject(View):
         project_allies= request.POST.getlist('allies[]', False)
         project_date= request.POST.get('fecha',False)
         project_description= request.POST.get('descripcion',False)
+        project_objetivos= request.POST.get('objetivos',False)
         
         
         project = Investigation_Project.objects.create(
@@ -25,6 +26,7 @@ class AddInvestigationProject(View):
             description=project_description,
             active=True,
             start_date=project_date,
+            objetivos=project_objetivos
         )
         
         for prj in project_allies:
