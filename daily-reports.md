@@ -904,3 +904,11 @@ Hoy empezare con el diseño de los seguimientos de las reuniones
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
 Aparte de la falta de tiempo, ningun obstaculo
 
+#### Espinosa
+* ¿Qué hice ayer?
+Realice avances en el overlay de confirmacion pero creo necesitar a un compañero de backend para terminarlo.
+* ¿Qué hare hoy?
+Hablar con un compañero de backend para terminar el avance.
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Hay muchas obligaciones acumuladas y el tiempo para avanzar cada vez se hace mas corto.
+
