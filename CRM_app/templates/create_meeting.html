@@ -45,15 +45,11 @@
         <div class="form">
           <label class="content_text">Selecciona aliado</label>
           <div class="opciones-sexo">
-            <select name="ally" id="ally" multiple>
+            <select name="ally" id="ally">
               {% for ally in allies%}
               <option value="{{ally.id}}">{{ally.name}}</option>
               {% endfor %}
             </select>
-            <script>
-              new MultiSelectTag('ally')  // id
-            </script>
-            <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
           </div>
         </div>
 <br>

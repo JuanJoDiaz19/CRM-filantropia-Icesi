@@ -2,11 +2,18 @@
 {% load static %}
 
 {% block header_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/add_allie.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'css/allies/ally-donation.css' %}">
 {% endblock %}
 
 
 {% block main_content %}
+
+<div class="bread-crum">
+    <a href="/allies/{{allies.id}}"><h1><b>{{allies.name}} &nbsp;</b></h1></a>
+    <h1><b>> &nbsp;</b></h1>
+    <h1><b>Donaciones</b></h1>
+</div>
 
 <section class="main-ally-donation">
     <div class="main-header-donation">

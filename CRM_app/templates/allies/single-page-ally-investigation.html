@@ -3,6 +3,7 @@
 
 
 {% block header_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/add_allie.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'css/allies.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'css/investigation-projects/investigation_projects.css' %}">
 {% endblock %}
@@ -10,9 +11,17 @@
 
 {% block main_content %}
 
+
+<div class="bread-crum">
+    <a href="/allies/{{ally.id}}"><h1><b>{{ally.name}} &nbsp;</b></h1></a>
+    <h1><b>> &nbsp;</b></h1>
+    <h1><b>Proyectos de Investigacion</b></h1>
+</div>
+
 <div class="investigation-header">
+    
     <div class="investigation-header__container-title">
-        <a class="left-arrow-investigation" href="/interns/{{ally}}">
+        <a class="left-arrow-investigation" href="/interns/{{ally.id}}">
             <img class="arrow_image" src="{% static 'img/add_allie/arrow.png' %}" alt="arrow">
         </a>
         <h1>Proyectos de Investigacion</h1>
@@ -23,7 +32,7 @@
 </div>
 
 <section class="main-content-allies">    
-    <form method="get" action="{% url 'investigations' %}" class="button-container">
+    <form method="get" action="/allies/investigation/{{ally.id}}" class="button-container">
         <input class="search-field search-text-field" type="text" name="q" placeholder="Buscar por nombre" value="{{ request.GET.q }}">       
         <button class="buton-search-field" type="submit"><b>Buscar</b></button>
     </form>   

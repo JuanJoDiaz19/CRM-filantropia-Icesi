@@ -5,11 +5,20 @@
 {% block header_links %}
   <link rel="stylesheet" type="text/css" href="{% static 'css/calendar.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'fullcalendar/lib/main.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/add_allie.css' %}">
   <script src="{% static 'fullcalendar/core/index.global.js' %}"></script>
   <script src="{% static 'fullcalendar/daygrid/index.global.js' %}"></script>
 {% endblock %}
 
 {% block main_content %}
+
+{% if error_message %}
+    <div class="bread-crum">
+        <a href="/allies/{{ally.id}}"><h1><b>{{ally.name}} &nbsp;</b></h1></a>
+        <h1><b>> &nbsp;</b></h1>
+        <h1><b>Reuniones y/o eventos</b></h1>
+    </div>
+{% endif %}
 <div class="main_content_calendar">
 <div class="header_calendar_container">
     <h1 class="calendar-title" >Calendario de Eventos y Reuniones </h1>

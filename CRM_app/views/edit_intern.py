@@ -5,6 +5,7 @@ from django.contrib.auth import login,logout, authenticate
 from django.contrib.auth.models import User
 from django.db import IntegrityError
 from CRM_app.models import Allie,Allie_Type,ContactInfo, Practicing, Career
+from django.shortcuts import get_object_or_404
 import base64
 
 class EditIntern(View):
@@ -21,7 +22,12 @@ class EditIntern(View):
             careers = Career.objects.exclude(id=practicing.career_id.id)
             careers = [{'id': str(career.id), 'name': career.name} for career in careers]
             
-            return render(request, 'edit_intern.html', {'ally': allie_id,'practicing':practicing,'careers': careers})  
+            try: 
+                ally= Allie.objects.get(id=allie_id)
+            except Allie.DoesNotExist:
+                ally=[]
+            
+            return render(request, 'edit_intern.html', {'ally': ally,'practicing':practicing,'careers': careers})  
                
 
 
