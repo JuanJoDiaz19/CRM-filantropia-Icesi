@@ -57,3 +57,34 @@
 .allies-container {
     max-height: 55vh;
 }
+.project_allies {
+    color: #434343;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.allies_in_investigarion_project{
+    box-shadow: 1px 5px 3px #7070707f;
+    background-color: #f2f2f2;
+    width: 100%;
+    display: flex;
+    border: solid #F7F7F7 2px;
+    border-radius: 20px;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+}
+
+.allies_in_investigarion_project img{
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    border-radius: 20px;
+}
+
+.allies_in_investigarion_project p{
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}

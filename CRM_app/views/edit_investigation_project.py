@@ -44,6 +44,9 @@ class EditInvestigationProject(View):
                 project_new_allies= request.POST.getlist('allies[]', False)
                 project.start_date= request.POST.get('fecha',False)
                 project.description= request.POST.get('descripcion',False)
+                project.objetivos= request.POST.get('objetivos',False)
+                        
+
                 project.save()
                 
                 for new in project_new_allies:
