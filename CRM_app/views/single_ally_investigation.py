@@ -8,11 +8,10 @@ from django.db.models import Q
 
 class InvestigationsProjectsAlly(View):
     
-   
+    @method_decorator(login_required)
     def get(self, request, allie__id):
+        
         query = request.GET.get('q', '').strip()
-        if query != "":
-            investigation_projects = investigation_projects.filter(Q(name__istartswith=query))
         
         try:
             allies_project= Allie.objects.get(id=allie__id)
@@ -21,11 +20,14 @@ class InvestigationsProjectsAlly(View):
             
         try:
             projects= AllieProject.objects.filter(allie=allies_project)
-            investigation_projects=[]
-            for p in projects:
-                investigation_projects.append(p.investigation_project)
+            investigation_projects=Investigation_Project.objects.filter(allieproject__allie=allies_project)
+            
         except AllieProject.DoesNotExist:
             investigation_projects=[]
+         
+        
+        if query != "":
+            investigation_projects = investigation_projects.filter(Q(name__istartswith=query))
         
         
-        return render(request,'allies/single-page-ally-investigation.html',{'investigation_projects':investigation_projects})
+        return render(request,'allies/single-page-ally-investigation.html',{'investigation_projects':investigation_projects, 'ally': allies_project})

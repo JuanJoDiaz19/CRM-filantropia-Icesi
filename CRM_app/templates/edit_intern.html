@@ -13,6 +13,14 @@
   </div>
 {% endif %}
 
+<div class="bread-crum">
+  <a href="/allies/{{ally.id}}"><h1><b>{{ally.name}} &nbsp;</b></h1></a>
+  <h1><b>> &nbsp;</b></h1>
+  <a href="/interns/{{ally.id}}"><h1><b>Practicantes &nbsp;</b></h1></a>
+  <h1><b>> &nbsp;</b></h1>
+  <h1><b>editar internos </b></h1>
+</div>
+
 <div class="top_arrow_tittle" style="margin-top: 1.875rem; margin-left: 1.875rem;">
   <a href="/interns/{{ally}}">
     <img class="arrow_image" src="{% static 'img/add_allie/arrow.png' %}" alt="arrow">
@@ -20,7 +28,7 @@
   <p class="top_tittle">Editar informacion interno interno</p>
 </div>
 
-<form method="post" action="{% url 'edit_intern' allie_id=ally intern_id=practicing.id%}" enctype="multipart/form-data">
+<form method="post" enctype="multipart/form-data">
 
     {% csrf_token %}
 
