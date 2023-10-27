@@ -895,6 +895,14 @@ Investigaré acerca del mailto para enviar correos a los aliados sobre los event
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Hay mucha carga de trabajos en la universidad.
 
+#### Mateo Silva
+* ¿Qué hice ayer?
+Trabajé en las correcciones sobre el spring review.
+* ¿Qué haré hoy?
+Empezaré una correccion importante que nos hicieron sobre aplicar el patron miga de pan.
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Estamos a final de semestre, así que ahora las tareas me toman mas tiempo.
+
 ## Octubre 25 2023
 #### Ana
 * ¿Que hice ayer?
@@ -911,6 +919,14 @@ Realice avances en el overlay de confirmacion pero creo necesitar a un compañer
 Hablar con un compañero de backend para terminar el avance.
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Hay muchas obligaciones acumuladas y el tiempo para avanzar cada vez se hace mas corto.
+
+#### Mateo Silva
+* ¿Qué hice ayer?
+Trabajé aplicando el Patron miga de pan
+* ¿Qué haré hoy?
+Continuare aplicando esto para toda la aplicación.
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Estamos a final de semestre, así que ahora las tareas me toman mas tiempo.
 
 ## Octubre 26 2023
 
@@ -930,3 +946,11 @@ Ayer no hice no avancé
 Hoy seguire con el diseño de los seguimientos de las reuniones
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
 Aparte de la falta de tiempo, ningun obstaculo
+
+#### Mateo Silva
+* ¿Qué hice ayer?
+Ayer no pude trabajar en el proyecto
+* ¿Que haré hoy?
+Trabajaré en una nueva tarea la cual es los rangos de las donaciones.
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+El tiempo ahora es mucho mas corto que antes.
