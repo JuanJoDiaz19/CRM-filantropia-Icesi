@@ -912,3 +912,12 @@ Hablar con un compañero de backend para terminar el avance.
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Hay muchas obligaciones acumuladas y el tiempo para avanzar cada vez se hace mas corto.
 
+## Octubre 26 2023
+
+#### Espinosa
+* ¿Qué hice ayer?
+No pude hablar con mi compañero ya que no encontramos un momento para reunirnos y por internet fue dificil conectarnos
+* ¿Qué hare hoy?
+Avanzar en otras cosas mientras que puedo encontrar un momento para hablar con mi compañero
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Hay muchas obligaciones acumuladas y el tiempo para avanzar cada vez se hace mas corto.
