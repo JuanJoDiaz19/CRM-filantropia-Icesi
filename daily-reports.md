@@ -903,7 +903,7 @@ Empezaré una correccion importante que nos hicieron sobre aplicar el patron mig
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Estamos a final de semestre, así que ahora las tareas me toman mas tiempo.
 
-## Octubre 25 2023
+### Octubre 25 2023
 #### Ana
 * ¿Que hice ayer?
 Ayer hice unos arreglos que nos sugirio domiciano
@@ -928,7 +928,7 @@ Continuare aplicando esto para toda la aplicación.
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Estamos a final de semestre, así que ahora las tareas me toman mas tiempo.
 
-## Octubre 26 2023
+### Octubre 26 2023
 
 #### Espinosa
 * ¿Qué hice ayer?
@@ -954,3 +954,12 @@ Ayer no pude trabajar en el proyecto
 Trabajaré en una nueva tarea la cual es los rangos de las donaciones.
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 El tiempo ahora es mucho mas corto que antes.
+
+### Octubre 28 2023
+#### Mateo Silva
+* ¿Qué hice ayer?
+Trabajé arreglando los rangos de donaciones y planteando el cambio en el modelo.
+* ¿Qúe haré hoy?
+El dia de hoy no podre avanzar en el proyecto debido a ocupaciones.
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+Debido al tiempo no logró avanzar tanto como quiero.
