@@ -963,3 +963,11 @@ Trabajé arreglando los rangos de donaciones y planteando el cambio en el modelo
 El dia de hoy no podre avanzar en el proyecto debido a ocupaciones.
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 Debido al tiempo no logró avanzar tanto como quiero.
+
+#### Espinosa
+* ¿Qué hice ayer?
+Hable con mi compañero de backend para terminar de cuadrar unos asuntos que hacian falta.
+* ¿Qúe haré hoy?
+Hoy no podre trabajar en el proyecto debido a un asunto familiar.
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+poco tiempo y mucha responsabilidad.
