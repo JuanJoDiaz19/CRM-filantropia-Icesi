@@ -1,22 +1,259 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block header_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/reports.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/allies.css' %}">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{% endblock %}
+
+
 {% block main_content %}
-  <p> Calendario </p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
+
+<div class="main-content-reports">
+  
+  <h1>Reporte general</h1>
+  <div class="span-allie-form-container">
+    <span class="label-allie-reports-form">¿Quieres hacer un reporte de un aliado? </span>
+  </div>
+  <form method="get" action="{% url 'allies' %}" class="button-container flex-space-around">
+    <input class="search-field search-text-field" type="text" name="q" placeholder="Buscar por nombre" value="{{ request.GET.q }}">                   
+    <button class="buton-search-field margin-left-button" type="submit"><b>Buscar</b></button>
+  </form>   
+  <div class="reports-container">
+    <div class="left-column-container">
+      <div class="report-card">
+        <h3 class="report-card__tittle">Cantidad de donaciones en el año</h3>
+        <div>
+          <canvas id="donation_history_chart"></canvas>
+        </div>
+        <script src="{% static 'js/general_reports.js' %}"></script>
+        <script>
+          const ctx = document.getElementById('donation_history_chart');
+          const MONTHS = [
+              'Enero',
+              'Febrero',
+              'Marzo',
+              'Abril',
+              'Mayo',
+              'Junio',
+              'Julio',
+              'Augosto',
+              'Septiembre',
+              'Octubre',
+              'Noviembre',
+              'Diciembre  '
+            ];
+          const labels = MONTHS;
+          const data = {
+            labels: labels,
+            datasets: [{
+              label: 'Donaciones en el año',
+              data: {{data}},
+              fill: true,
+              borderColor: 'rgb(38, 135, 214)',
+              tension: 0.2
+            }]
+          };
+
+            new Chart(ctx, {    
+              type: 'line',
+              data: data
+            });
+        </script>
+      </div>
+    </div>
+    <div class="right-column-container">
+      <div class="report-card">
+        <h3 class="report-card__tittle">Mayores donantes</h3>
+        <div>
+          <canvas id="top_donators_pie_chart"></canvas>
+        </div>
+        <script src="{% static 'js/general_reports.js' %}"></script>
+        <script>
+          let labels_top_donors = []
+          {% for single_label in top_donators_labels %}
+          labels_top_donors.push("{{single_label}}")
+          {% endfor %}
+          const data_top_donators = {
+            labels: labels_top_donors,
+            datasets: [{
+              label: 'Cantidad de donaciones',
+              data: {{top_donators}},
+              backgroundColor: [
+                'rgb(0, 169, 255)',
+                'rgb(137, 207, 243)',
+                'rgb(205, 245, 253)', 
+                'rgb(229, 229, 229)'
+              ],
+              hoverOffset: 4
+            }]
+          };
+          const ctx_top_donators_pie = document.getElementById('top_donators_pie_chart');
+            new Chart(ctx_top_donators_pie, {    
+              type: 'doughnut',
+              data: data_top_donators
+            });
+        </script>   
+      </div>
+    </div>
+    <div class="second-row-container">
+      <div class="report-card">
+        <h3 class="report-card__tittle">Cantidad de donantes por area</h3>
+        <div>
+          <canvas id="area_donators_chart"></canvas>
+        </div>
+        <script src="{% static 'js/general_reports.js' %}"></script>
+        <script>
+          let labels_area_donators = []
+          {% for single_label in area_donators_labels %}
+          labels_area_donators.push("{{single_label}}")
+          {% endfor %}
+          const data_area_donators = {
+            labels: labels_area_donators,
+            datasets: [{
+              label: 'Cantidad de donantes',
+              data: {{area_donators_data}},
+              backgroundColor: [
+                'rgb(0, 169, 255)',
+                'rgb(137, 207, 243)',
+                'rgb(205, 245, 253)', 
+                'rgb(229, 229, 229)'
+              ],
+              hoverOffset: 4
+            }]
+          };
+          const ctx_area_donators_pie = document.getElementById('area_donators_chart');
+            new Chart(ctx_area_donators_pie, {    
+              type: 'pie',
+              data: data_area_donators
+            });
+        </script>    
+      </div>
+      <div class="report-card">
+        <h3 class="report-card__tittle">Tipos de aliados</h3>
+        <div>
+          <canvas id="allie_type_chart"></canvas>
+        </div>
+        <script>
+          const data_allie_type_chart = {
+            labels: ["Juridico", "Natural"],
+            datasets: [{
+              label: 'Cantidad de aliados',
+              data: {{data_allie_types}},
+              backgroundColor: [
+                'rgb(0, 169, 255)',
+                'rgb(137, 207, 243)',
+                'rgb(205, 245, 253)', 
+                'rgb(229, 229, 229)'
+              ],
+            }]
+          };
+          const ctx_allie_type_chart = document.getElementById('allie_type_chart');
+          ctx_allie_type_chart.height = 350;
+            new Chart(ctx_allie_type_chart, {    
+              type: 'bar',
+              data: data_allie_type_chart,
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }  
+              },
+            });
+        </script> 
+      </div>
+      <div class="report-card">
+        <h3 class="report-card__tittle">Proyectos de investigacion activo o terminado </h3>
+        <div>
+          <canvas id="investigation_projects_finished_pie"></canvas>
+        </div>
+        <script>
+          const data_investigation_projects_finished = {
+            labels: ["Terminados", "Activos"],
+            datasets: [{
+              label: 'Cantidad de proyectos',
+              data: {{investigation_projects_finished}},
+              backgroundColor: [
+                'rgb(0, 169, 255)',
+                'rgb(137, 207, 243)',
+                'rgb(205, 245, 253)', 
+                'rgb(229, 229, 229)'
+              ],
+              hoverOffset: 4
+            }]
+          };
+          const ctx_investigation_projects_finished = document.getElementById('investigation_projects_finished_pie');
+            new Chart(ctx_investigation_projects_finished, {    
+              type: 'doughnut',
+              data: data_investigation_projects_finished
+            });
+        </script> 
+      </div>
+    </div>
+    <div class="third-row-container">
+      
+      <div class="report-card thirty-percent-width">
+        <h3 class="report-card__tittle">Aliados con mas proyectos de investigacion </h3>
+        <div>
+          <canvas id="allies_with_investigation_projects"></canvas>
+        </div>
+        <script>
+          let labels_allie_project = []
+          {% for single_label in labels_top_allies_investigation %}
+            labels_allie_project.push("{{single_label}}")
+          {% endfor %}
+          const data_allie_investigation = {
+            labels: labels_allie_project,
+            datasets: [{
+              label: labels_allie_project,
+              data: {{data_allies_investigation}},
+              backgroundColor: [
+                'rgb(0, 169, 255)',
+                'rgb(137, 207, 243)',
+                'rgb(205, 245, 253)', 
+                'rgb(229, 229, 229)'
+              ],
+              hoverOffset: 4
+            }]
+          };
+          const ctx_allies_investigation_projects = document.getElementById('allies_with_investigation_projects');
+            new Chart(ctx_allies_investigation_projects, {    
+              type: 'doughnut',
+              data: data_allie_investigation
+            });
+        </script> 
+      </div>
+      <div class="report-card seventy-percent-width">
+        <h3  class="report-card__tittle" >Proyectos de investigacion por fecha de iniciacion</h3>
+        <div>
+          <canvas id="investigation_projects_chart_line"></canvas>
+        </div>
+        <script>
+          const ctx_investigation_projects_timeline = document.getElementById('investigation_projects_chart_line');
+          const labels_investigation_projects_timeline = MONTHS;
+          const data_investigation_projects_timeline = {
+            labels: labels,
+            datasets: [{
+              label: 'Proyectos de investigacion en el año',
+              data: {{data_donators_month}},
+              fill: true,
+              borderColor: 'rgb(0, 169, 255)',
+              tension: 0.2
+            }]
+          };
+
+            new Chart(ctx_investigation_projects_timeline, {    
+              type: 'line',
+              data: data_investigation_projects_timeline
+            });
+        </script>
+      </div>
+    </div>
+  </div>
+</div>
+
 {% endblock %}
 
 {% block pagina_actual_reportes %}
