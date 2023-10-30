@@ -80,3 +80,7 @@
     width: 100%;
     display: flex;
 }
+
+.thirty-percent-width {
+    width: 30%;
+}

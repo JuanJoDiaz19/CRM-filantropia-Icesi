@@ -4,7 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login,logout, authenticate
 from django.contrib.auth.models import User
 from django.db import IntegrityError
-from CRM_app.models import Donation, Allie, Investigation_Project
+from CRM_app.models import Donation, Allie, Investigation_Project, AllieProject, Allie_Type
 from django.db.models import Count
 from django.db.models.functions import TruncMonth
 from django.db.models import Sum, F
@@ -96,13 +96,64 @@ class Reports(View):
 
          # Create a queryset that groups donations by month and counts the occurrences
         investigation_projects_by_month = Investigation_Project.objects.annotate(month=TruncMonth('start_date')).values('month').annotate(count=Count('month')).order_by('month')
-        final_count_motnth = [0,0,0,0,0,0,0,0,0,0,0,0]
+        final_count_month = [0,0,0,0,0,0,0,0,0,0,0,0]
 
         for count_month in investigation_projects_by_month: 
-            final_count_motnth[months_dict[count_month['month'].strftime('%B')]] =  count_month['count']
+            final_count_month[months_dict[count_month['month'].strftime('%B')]] =  count_month['count']
 
         
-        print(final_count_motnth)
+        #print(final_count_month)
+
+
+        # Allies with more investigation projects:
+        total_number_investigation_projects = Investigation_Project.objects.count()
+        labels_investigation_projects = []
+
+        # Obtener una lista de aliados ordenados por la cantidad de proyectos de investigación
+        allies_with_proyects = AllieProject.objects.values('allie__name').annotate(num_proyectos=Count('investigation_project')).order_by('-num_proyectos')
+        data_top_allies_investigation = []
+
+        # Imprimir los aliados con más proyectos de investigación
+
+        count_total_investigation_projects = 0
+        number_top_investigation_projects = 0
+
+        for aliado in allies_with_proyects:
+            if count_total_investigation_projects < 4:
+                data_top_allies_investigation.append(aliado["num_proyectos"])
+                labels_investigation_projects.append(aliado["allie__name"])
+                number_top_investigation_projects += aliado["num_proyectos"]
+    
+            total_number_investigation_projects+= aliado["num_proyectos"]
+
+            #print(f'Aliado: {aliado["allie__name"]}, Proyectos de Investigación: {aliado["num_proyectos"]}')
+        
+        labels_investigation_projects.append("Otros")
+        data_top_allies_investigation.append(total_number_investigation_projects - number_top_investigation_projects)
+
+        #print(data_top_allies_investigation)
+        #print(labels_investigation_projects)
+
+        # Tipos de aliados en el sistema:
+
+        # Use the annotate function to count allies for each allie type
+        # Get all Allie_Type instances
+        allie_types = Allie_Type.objects.all()
+
+        data_allie_types = [0,0]
+
+        # For each Allie_Type, count the number of Allies
+        for allie_type in allie_types:
+            num_allies = Allie.objects.filter(allie_type_id=allie_type.id).count()
+            if allie_type.name == 'Juridico':
+                data_allie_types[0]+= num_allies
+               
+            if allie_type.name == 'Natural':
+                data_allie_types[1]+= num_allies
+                
+        print(data_allie_types)
+        
+        
 
 
 
@@ -112,5 +163,9 @@ class Reports(View):
             'top_donators': top_donators, 
             'area_donators_labels': area_donators_labels,
             'area_donators_data': area_donators_data, 
-            'investigation_projects_finished': investigation_projects_finished_data 
+            'investigation_projects_finished': investigation_projects_finished_data, 
+            'data_donators_month': final_count_month, 
+            'labels_top_allies_investigation': labels_investigation_projects, 
+            'data_allies_investigation': data_top_allies_investigation, 
+            'data_allie_types': data_allie_types, 
             })

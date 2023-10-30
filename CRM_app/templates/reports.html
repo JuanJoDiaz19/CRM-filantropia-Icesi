@@ -131,6 +131,40 @@
         </script>    
       </div>
       <div class="report-card">
+        <h3 class="report-card__tittle">Tipos de aliados</h3>
+        <div>
+          <canvas id="allie_type_chart"></canvas>
+        </div>
+        <script>
+          const data_allie_type_chart = {
+            labels: ["Juridico", "Natural"],
+            datasets: [{
+              label: 'Cantidad de aliados',
+              data: {{data_allie_types}},
+              backgroundColor: [
+                'rgb(0, 169, 255)',
+                'rgb(137, 207, 243)',
+                'rgb(205, 245, 253)', 
+                'rgb(229, 229, 229)'
+              ],
+            }]
+          };
+          const ctx_allie_type_chart = document.getElementById('allie_type_chart');
+          ctx_allie_type_chart.height = 350;
+            new Chart(ctx_allie_type_chart, {    
+              type: 'bar',
+              data: data_allie_type_chart,
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }  
+              },
+            });
+        </script> 
+      </div>
+      <div class="report-card">
         <h3 class="report-card__tittle">Proyectos de investigacion activo o terminado </h3>
         <div>
           <canvas id="investigation_projects_finished_pie"></canvas>
@@ -157,11 +191,40 @@
             });
         </script> 
       </div>
-      <div class="report-card">
-        <h3 class="report-card__tittle">Proyectos de investigacion activo o terminado </h3>
-      </div>
     </div>
     <div class="third-row-container">
+      
+      <div class="report-card thirty-percent-width">
+        <h3 class="report-card__tittle">Aliados con mas proyectos de investigacion </h3>
+        <div>
+          <canvas id="allies_with_investigation_projects"></canvas>
+        </div>
+        <script>
+          let labels_allie_project = []
+          {% for single_label in labels_top_allies_investigation %}
+            labels_allie_project.push("{{single_label}}")
+          {% endfor %}
+          const data_allie_investigation = {
+            labels: labels_allie_project,
+            datasets: [{
+              label: labels_allie_project,
+              data: {{data_allies_investigation}},
+              backgroundColor: [
+                'rgb(0, 169, 255)',
+                'rgb(137, 207, 243)',
+                'rgb(205, 245, 253)', 
+                'rgb(229, 229, 229)'
+              ],
+              hoverOffset: 4
+            }]
+          };
+          const ctx_allies_investigation_projects = document.getElementById('allies_with_investigation_projects');
+            new Chart(ctx_allies_investigation_projects, {    
+              type: 'doughnut',
+              data: data_allie_investigation
+            });
+        </script> 
+      </div>
       <div class="report-card seventy-percent-width">
         <h3  class="report-card__tittle" >Proyectos de investigacion por fecha de iniciacion</h3>
         <div>
@@ -174,9 +237,9 @@
             labels: labels,
             datasets: [{
               label: 'Proyectos de investigacion en el año',
-              data: {{data}},
+              data: {{data_donators_month}},
               fill: true,
-              borderColor: 'rgb(38, 135, 214)',
+              borderColor: 'rgb(0, 169, 255)',
               tension: 0.2
             }]
           };
