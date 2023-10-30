@@ -971,3 +971,13 @@ Hable con mi compañero de backend para terminar de cuadrar unos asuntos que hac
 Hoy no podre trabajar en el proyecto debido a un asunto familiar.
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 poco tiempo y mucha responsabilidad.
+
+### Octubre 29 2023
+
+#### Espinosa
+* ¿Qué hice ayer?
+Como dije, no pude hacer nada.
+* ¿Qúe haré hoy?
+Terminar el overlay
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+poco tiempo y mucha responsabilidad.
