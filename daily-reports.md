@@ -981,3 +981,11 @@ Como dije, no pude hacer nada.
 Terminar el overlay
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 poco tiempo y mucha responsabilidad.
+
+#### Santiago Barraza
+* ¿Qué hice ayer?
+No realice algún avance en el proyecto
+* ¿Qúe haré hoy?
+Terminé la funcionalidad de enviar recordatorios por correo electrónico a los aliados acerca de los eventos
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+Por ahora, el mismo de siempre, el tiempo.
