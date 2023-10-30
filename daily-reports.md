@@ -807,6 +807,16 @@ Hare unos ajustes sobre el diseño del proyecto para los seguimientos de eventos
 * ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
 Falta de tiempo
 
+#### Juan Jose Diaz
+
+* ¿Que hice ayer?
+Termine de hacer la correcciones en los estilos dentro del proyecto
+* ¿Qué haré hoy?
+No creo que avance mucho, pero empezare a mirar que otra HU puedo hacer
+* ¿Hay algún obstacúlo que me impide avanzar en mi trabajo?
+Falta de tiempo
+
+
 ### Octubre 21 2023
 
 #### Mateo Silva 
@@ -869,6 +879,15 @@ Haré unas correcciones del proyecto en cuanto a las redirecciones al terminar d
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Hay mucha carga de trabajos.
 
+#### Juan Jose Diaz
+* ¿Qué hice ayer?
+No avance mucho en el proyecto
+* ¿Qué hare hoy?
+Empezare a mirar de que forma puedo hacer las graficas en django, el profe me dijo que podia hacerlo con ChartJs
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Me hace falta conocimientos en Javascript, pero no hay nada que con tiempo no salga.
+
+
 ### Octubre 24 2023
 
 #### Espinosa
@@ -897,11 +916,19 @@ Hay mucha carga de trabajos en la universidad.
 
 #### Mateo Silva
 * ¿Qué hice ayer?
-Trabajé en las correcciones sobre el spring review.
+Trabajé en las correcciones sobre el sprint review.
 * ¿Qué haré hoy?
 Empezaré una correccion importante que nos hicieron sobre aplicar el patron miga de pan.
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Estamos a final de semestre, así que ahora las tareas me toman mas tiempo.
+
+#### Juan Jose Diaz
+* ¿Qué hice ayer?
+Termine de investigar sobre ChartJs
+* ¿Qué hare hoy?
+Empezare a intentar hacer las primeras graficas en la seccion de reportes del proyecto.
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Me hace falta tiempo y conocimiento en JavaScript
 
 ### Octubre 25 2023
 #### Ana
@@ -927,6 +954,15 @@ Trabajé aplicando el Patron miga de pan
 Continuare aplicando esto para toda la aplicación.
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Estamos a final de semestre, así que ahora las tareas me toman mas tiempo.
+
+#### Juan Jose Diaz
+* ¿Qué hice ayer?
+Termine de hacer mi primera grafica en ChartJS
+* ¿Qué hare hoy?
+Ahora que ya pude hacer la primera grafica, voy a intentar hacer otros tipos de graficas, 
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Me hace falta tiempo y conocimiento en JavaScript
+
 
 ### Octubre 26 2023
 
@@ -954,6 +990,16 @@ Ayer no pude trabajar en el proyecto
 Trabajaré en una nueva tarea la cual es los rangos de las donaciones.
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 El tiempo ahora es mucho mas corto que antes.
+
+
+#### Juan Jose Diaz
+* ¿Qué hice ayer?
+Termine de hacer otros tipos de graficas dentro de la seccion de reportes
+* ¿Qué hare hoy?
+No creo que pueda avanzar mucho porque tengo 2 citas medicas y tambien me toca perder clase
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Tengo un error al momento de pasar un arreglo de strings desde python a Javascript
+
 
 ### Octubre 28 2023
 #### Mateo Silva
@@ -989,3 +1035,14 @@ No realice algún avance en el proyecto
 Terminé la funcionalidad de enviar recordatorios por correo electrónico a los aliados acerca de los eventos
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 Por ahora, el mismo de siempre, el tiempo.
+
+### Octubre 30 2023
+
+
+#### Juan Jose Diaz
+* ¿Qué hice ayer?
+Logre solucionar el problema de paso de python a javascript
+* ¿Qué hare hoy?
+Terminare de hacer el resto de graficas en la seccion de reportes y buscare que otra tarea puedo hacer
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Me hace falta tiempo y encontrar un sentido de mi vida
