@@ -59,4 +59,4 @@ class create_event(View):
                 allie= all,
             )
         
-        return redirect('/allies')
+        return redirect('/calendar/all')

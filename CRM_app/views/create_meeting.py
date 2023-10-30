@@ -35,5 +35,5 @@ class create_meeting(View):
             objective= meeting_objetive,
         )
         
-        return redirect("/allies")
+        return redirect("/calendar/all")
         
