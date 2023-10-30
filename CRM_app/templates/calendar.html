@@ -4,7 +4,6 @@
 
 {% block header_links %}
   <link rel="stylesheet" type="text/css" href="{% static 'css/calendar.css' %}">
-  <link rel="stylesheet" type="text/css" href="{% static 'fullcalendar/lib/main.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'css/add_allie.css' %}">
   <script src="{% static 'fullcalendar/core/index.global.js' %}"></script>
   <script src="{% static 'fullcalendar/daygrid/index.global.js' %}"></script>
@@ -42,11 +41,12 @@
                         <h5 class="modal-title"></h5>
                     </div>
                     <div class="modal-body">
-                        <p>Fecha: <span id="event-date"></span></p>
-                        <p>Descripción: <span id="event-description"></span></p>
-                        <p>Objetivo: <span id="event-objective"></span></p>
-                        <p>Aliados: <span id="event-allies"></span></p>
-                        <p>Tipo: <span id="event-type"></span></p>
+                        <p>Fecha: <span id="event_date"></span></p>
+                        <p>Descripción: <span id="event_description"></span></p>
+                        <p>Objetivo: <span id="event_objective"></span></p>
+                        <p>Aliados: <span id="event_allies"></span></p>
+                        <p>Contactos: <span id="contact_emails"></span></p>
+                        <p><button id="send_reminder" class="btn btn-primary">Enviar Recordatorio</button></p>
                     </div>            
                 </div>
             </div>
@@ -55,47 +55,83 @@
 </div>
 
 <script>
+    var selected_event_info = null;
+
     document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-        var eventInfoEl = document.getElementById('event-info');
-    
-        var calendar = new FullCalendar.Calendar(calendarEl, {
+        var calendar_el = document.getElementById('calendar');
+        var event_info_el = document.getElementById('event-info');
+
+        var calendar = new FullCalendar.Calendar(calendar_el, {
             events: JSON.parse('{{events_data|escapejs }}'),
             locale: 'es',
-            eventRender: function(info) {
-                if (info.event.extendedProps.allies) {
-                    info.el.querySelector('.fc-title').innerHTML += "<br>" + info.event.extendedProps.allies;
-                }
-            },
             eventClick: function(info) {
-                var eventInfoEl = document.getElementById('event-info');
-                var modalTitle = eventInfoEl.querySelector('.modal-title');
-                var eventDate = eventInfoEl.querySelector('#event-date');
-                var eventAllies = eventInfoEl.querySelector('#event-allies');
-                var eventDescription = eventInfoEl.querySelector('#event-description');
-                var eventObjective = eventInfoEl.querySelector('#event-objective');
-                var eventType = eventInfoEl.querySelector('#event-type');
-    
-                modalTitle.textContent = info.event.title;
-                eventDate.textContent = info.event.start.toLocaleDateString();
-                eventAllies.textContent = info.event.extendedProps.allies;
-                eventDescription.textContent = info.event.extendedProps.description;
-                eventObjective.textContent = info.event.extendedProps.objective;
-                eventType.textContent = info.event.extendedProps.event_type;
-    
-                var eventInfoModal = new bootstrap.Modal(eventInfoEl);
-                eventInfoModal.show();
+                var event_info_el = document.getElementById('event-info');
+                var modal_title = event_info_el.querySelector('.modal-title');
+                var event_date = event_info_el.querySelector('#event_date');
+                var event_allies = event_info_el.querySelector('#event_allies');
+                var event_description = event_info_el.querySelector('#event_description');
+                var event_objective = event_info_el.querySelector('#event_objective');
+
+                modal_title.textContent = info.event.title;
+                event_date.textContent = info.event.start.toLocaleDateString();
+
+                var allies_list = info.event.extendedProps.allies;
+                var allies_html = "";
+                allies_list.forEach(function(ally) {
+                    allies_html += ally.name+", ";
+                });
+                event_allies.innerHTML = allies_html;
+
+                event_description.textContent = info.event.extendedProps.description;
+                event_objective.textContent = info.event.extendedProps.objective;
+
+                selected_event_info = info;
+                var event_info_modal = new bootstrap.Modal(event_info_el);
+                event_info_modal.show();
             },
-            eventColor: 'color'  // Asignar colores de acuerdo al campo 'color'
         });
-    
+
         calendar.render();
+
+        document.getElementById('send_reminder').addEventListener('click', function() {
+            if (selected_event_info) {
+                var allies_list = selected_event_info.event.extendedProps.allies;
+
+                var recipients = [];
+
+                allies_list.forEach(function(ally) {
+                    var contacts_list = ally.contacts;
+                    if (contacts_list) {
+                        contacts_list.forEach(function(contact) {
+                            recipients.push(contact.email);
+                        });
+
+                    } else {
+                        console.log(ally.name + " no tiene contactos.");
+                    }
+                });
+            } else {
+                console.log("No se ha seleccionado ningún evento.");
+            }
+
+            if(recipients.length > 0){
+                const subject = selected_event_info.event.title;
+            
+                const body = 'Cordial saludo.\n\nEste es un recordatorio de: '+subject+'. La fecha del encuentro es: '+selected_event_info.event.start.toLocaleDateString()+"\n\nAtentamente. Universidad ICESI.";
+
+                console.log(recipients);
+
+                const mailto_link = `mailto:${recipients}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                window.location.href = mailto_link;
+            }
+        });
     });
-    
-</script>    
+</script>
+
+
 {% endblock %}
 
 {% block pagina_actual_calendario %}
 <div class="current-page"></div>
 {% endblock %}
-
