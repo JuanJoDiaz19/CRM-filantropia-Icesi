@@ -1055,3 +1055,12 @@ Avanzare en otras cosas mientras puedo solucionar lo otro.
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 poco tiempo y mucha responsabilidad.
 
+### Octubre 31 2023
+
+#### Espinosa
+* ¿Qué hice ayer?
+  Revise que varias funcionalidades esten funcionando correctamente
+* ¿Qúe haré hoy?
+voy a investigar mas sobre como hacer un testing bueno y eficiente
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+poco tiempo y mucha responsabilidad.
