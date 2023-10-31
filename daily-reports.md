@@ -1046,3 +1046,12 @@ Logre solucionar el problema de paso de python a javascript
 Terminare de hacer el resto de graficas en la seccion de reportes y buscare que otra tarea puedo hacer
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Me hace falta tiempo y encontrar un sentido de mi vida
+
+#### Espinosa
+* ¿Qué hice ayer?
+  Realice un avance sobre el mensaje de confirmacion, pero tuve un problema y no pude avanzar
+* ¿Qúe haré hoy?
+Avanzare en otras cosas mientras puedo solucionar lo otro.
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+poco tiempo y mucha responsabilidad.
+
