@@ -18,7 +18,7 @@ class create_meeting(View):
     def post(self, request):
         meeting_name= request.POST.get('nombre',False)
         meeting_categoria= request.POST.get('categoria', False)
-        meeting_aliado= request.POST.get('aliado',False)
+        meeting_aliado= request.POST.get('ally',False)
         meeting_objetive= request.POST.get('objetivo',False)
         meeting_description= request.POST.get('description',False)
         meeting_date= request.POST.get('fecha', False)
