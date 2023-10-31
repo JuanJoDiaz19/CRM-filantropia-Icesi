@@ -5,6 +5,7 @@ from django.contrib.auth import login,logout, authenticate
 from django.contrib.auth.models import User
 from django.db import IntegrityError
 from CRM_app.models import Allie,Allie_Type,ContactInfo, Area
+from django.contrib import messages
 import base64
 
 class EditAlly(View):
@@ -60,5 +61,5 @@ class EditAlly(View):
 
 
             ally.save()
-
+            messages.success(request, "Editado con éxito")
             return redirect(f'/allies/{allie_id}/')

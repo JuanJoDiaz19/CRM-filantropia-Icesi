@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from django.db import IntegrityError
 from CRM_app.models import Allie,Allie_Type,ContactInfo, Practicing, Career
 from django.shortcuts import get_object_or_404
+from django.contrib import messages
 import base64
 
 class EditIntern(View):
@@ -51,6 +52,7 @@ class EditIntern(View):
             if 'delete' in request.POST:
                 if practicing:
                     practicing.delete()
+                    messages.success(request, "Borrado con exito")
                 # Redirige a alguna página de éxito o a donde necesites
             
             elif 'edit' in request.POST:
@@ -72,10 +74,10 @@ class EditIntern(View):
                     practicing.position = request.POST.get('allie_description', '')
                     
                     practicing.save()
+                    messages.success(request, "Editado con éxito")
                 # Redirige a alguna página de éxito o a donde necesites
                    
         
         return redirect(f'/interns/{allie_id}')
-   
 
             

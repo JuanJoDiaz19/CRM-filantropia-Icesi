@@ -106,5 +106,19 @@
     sidebar.classList.toggle("sidebar-open");
   }
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+{%  if messages %}
+              {% for m in messages %}
+                <script>
+                    Swal.fire({
+                        "title": "Hecho",
+                        "text" : "{{m}}",
+                        "icon" : "success"
+                    })
+                </script>
+              {% endfor %}
+            {% endif %}
 </body>
 </html>

@@ -139,6 +139,22 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 </script>
 
+<script>
+  function delete_intern(id){
+      Swal.fire({
+        "title": "¿Estas Seguro?",
+        "text": "Esta acción no se podrá deshacer",
+        "icon": "question",
+        "showCancelButton": true
+      })
+      .then(function(result){
+        if(result.isConfirmed) {
+          window.location.href = "/interns/"+id
+        }
+      })
+  }
+</script>
+
 
 {% endblock %}
 

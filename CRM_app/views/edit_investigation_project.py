@@ -36,6 +36,7 @@ class EditInvestigationProject(View):
             if 'delete' in request.POST:
                 if project:
                     project.delete()
+                    messages.success(request, "Borrado con éxito")
                 # Redirige a alguna página de éxito o a donde necesites
                 return redirect(f'/investigations/')
             elif 'edit' in request.POST:
@@ -62,5 +63,5 @@ class EditInvestigationProject(View):
                 #        investigation_project= project,
                 #        allie= ally
                 #    )
-                    
+                messages.success(request, "Editado con éxito")    
                 return redirect('/investigations')

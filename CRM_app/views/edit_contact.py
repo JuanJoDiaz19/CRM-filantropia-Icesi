@@ -5,6 +5,7 @@ from django.contrib.auth import login,logout, authenticate
 from django.contrib.auth.models import User
 from django.db import IntegrityError
 from CRM_app.models import Allie,Allie_Type,ContactInfo
+from django.contrib import messages
 import base64
 
 class EditContact(View):
@@ -42,6 +43,7 @@ class EditContact(View):
             if 'delete' in request.POST:
                 if contact_info:
                     contact_info.delete()
+                    messages.success(request, "Borrado con éxito")
                 # Redirige a alguna página de éxito o a donde necesites
                 return redirect(f'/allies/{allie_id}/')
             elif 'edit' in request.POST:
@@ -53,6 +55,7 @@ class EditContact(View):
                     contact_info.aux_email = request.POST.get('contact_aux_email', '')
                     
                     contact_info.save()
+                    messages.success(request, "Editado con éxito")
                 # Redirige a alguna página de éxito o a donde necesites
                 return redirect(f'/allies/{allie_id}/')
    
