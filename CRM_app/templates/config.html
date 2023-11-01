@@ -1,22 +1,68 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block header_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/allies/interns.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/config.css' %}">
+
+{% endblock %}
+
+
+
 {% block main_content %}
-  <p> Calendario </p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iste, reiciendis libero mollitia fugit amet maxime saepe sit adipisci nisi minus earum blanditiis dolorum eos eveniet, illo magnam. Esse, quae?</p>
+
+<section class="main-content-allies">
+    <div class="main-content__header">
+        <h1><b>Configuracion</b></h1>
+        <a href="/interns/add_intern/{{ally.id}}">
+        </a>
+    </div>
+
+    <div class="card-texture">
+      <h4 class="card__tittle">Ajustes del perfil de usuario</h4>
+      <div class="configuration-user">
+        <img class="configuration-user__image" src="{% static 'img/home/profile.png' %}" alt="">
+        <form class="configuration-user__inputs" action="">
+          <div class="configuration-user__labels">
+            <span>Usuario:</span>
+            <span>Contraseña:</span>
+            <span>Rol:</span>
+          </div>
+          <div class="configuration-user__label-input">
+            <input class="user-configuration-input" type="text" placeholder="Usuario">
+            <input class="user-configuration-input" type="text" placeholder="Contraseña">
+            <select class="user-configuration-input" name="" id="">
+              <option value="1">Hola</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <button class="button-style" >Guardar cambios</button>
+    </div>
+
+    <div class="card-texture">
+      <h4 class="card__tittle">Clasificacion de los donantes:</h4>
+      <div class="configuration-type">
+        <p class="card__type" >Tipo A:</p>
+        <input class="card__input" type="text" placeholder="Desde">
+        <input class="card__input" type="text" placeholder="Hasta">
+      </div>
+      <div class="configuration-type">
+        <p class="card__type" >Tipo B:</p>
+        <input class="card__input" type="text" placeholder="Desde">
+        <input class="card__input" type="text" placeholder="Hasta">
+      </div>
+      <div class="configuration-type">
+        <p class="card__type" >Tipo C:</p>
+        <input class="card__input" type="text" placeholder="Desde">
+        <input class="card__input" type="text" placeholder="Hasta">
+      </div>
+      <button class="button-style" >Guardar cambios</button>
+    </div>
+
+
+</section>
+
 {% endblock %}
 
 {% block pagina_actual_config %}
