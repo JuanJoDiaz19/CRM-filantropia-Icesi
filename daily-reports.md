@@ -1064,3 +1064,13 @@ poco tiempo y mucha responsabilidad.
 voy a investigar mas sobre como hacer un testing bueno y eficiente
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 poco tiempo y mucha responsabilidad.
+
+### Noviembre 1 2023
+
+#### Espinosa
+* ¿Qué hice ayer?
+  Investigue sobre testing y automatización en python para hacer al proyecto
+* ¿Qúe haré hoy?
+Hoy no voy a poder realizar avances
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+poco tiempo y mucha responsabilidad
