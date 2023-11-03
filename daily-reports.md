@@ -1074,3 +1074,13 @@ poco tiempo y mucha responsabilidad.
 Hoy no voy a poder realizar avances
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 poco tiempo y mucha responsabilidad
+
+### Noviembre 2 2023
+
+#### Espinosa
+* ¿Qué hice ayer?
+  Como dije, no pude realizar avances.
+* ¿Qúe haré hoy?
+investigar como usar selenium en python.
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+estoy estallado ayuda
