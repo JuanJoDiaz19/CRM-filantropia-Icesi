@@ -1065,6 +1065,14 @@ voy a investigar mas sobre como hacer un testing bueno y eficiente
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 poco tiempo y mucha responsabilidad.
 
+#### Juan Jose Diaz
+* ¿Qué hice ayer?
+Termine de hacer completamente las graficas de los aliados de forma general
+* ¿Qué hare hoy?
+Empezare a hacer los diseños de figma para la pagina de configuracion
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Me hace falta tiempo y amor propio
+
 ### Noviembre 1 2023
 
 #### Espinosa
@@ -1075,6 +1083,16 @@ Hoy no voy a poder realizar avances
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 poco tiempo y mucha responsabilidad
 
+
+#### Juan Jose Diaz
+* ¿Qué hice ayer?
+Termine de hacer los diseños en figma de la pagina de configuracion
+* ¿Qué hare hoy?
+Empezare a hacer el html y css de dicha pagina
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Me hace falta tiempo
+
+
 ### Noviembre 2 2023
 
 #### Espinosa
@@ -1084,3 +1102,23 @@ poco tiempo y mucha responsabilidad
 investigar como usar selenium en python.
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 estoy estallado ayuda
+
+
+#### Juan Jose Diaz
+* ¿Qué hice ayer?
+Termine de hacer las vistas html y css de la pagina de configuracion
+* ¿Qué hare hoy?
+No creo que pueda avanzar mucho en el projecto porque necesito avanzar en otras materias
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Me hace falta tiempo
+
+### Noviembre 3 2023
+
+#### Juan Jose Diaz
+* ¿Qué hice ayer?
+No avance en el proyecto porque el dia fue muy ocupado 
+* ¿Qué hare hoy?
+Estoy esperando a que mis compañeros terminar de agregarle funcionalidad a las vistas que hice para seguir avanzando
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Que mis compañeros avancen
+
