@@ -1055,6 +1055,14 @@ Avanzare en otras cosas mientras puedo solucionar lo otro.
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 poco tiempo y mucha responsabilidad.
 
+#### Mateo Silva
+* ¿Qué hice ayer?
+Ayer no avanze en el proyecto
+* ¿Qué haré hoy?
+Empezaremos a planear lo necesario de filantropia
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+En este momento estamos a final de semestre, por lo tanto, no hay mucho tiempo.
+
 ### Octubre 31 2023
 
 #### Espinosa
@@ -1072,6 +1080,14 @@ Termine de hacer completamente las graficas de los aliados de forma general
 Empezare a hacer los diseños de figma para la pagina de configuracion
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Me hace falta tiempo y amor propio
+
+#### Mateo Silva
+* ¿Qué hice ayer?
+Me reuni con mi compañero de back a plantear los cambios necesarios del modelo.
+* ¿Qué haré hoy?
+Hoy tengo trabajos que entregar, por lo tanto, no avanzare en este hoy.
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+En este momento estamos a final de semestre, por lo tanto, no hay mucho tiempo.
 
 ### Noviembre 1 2023
 
@@ -1092,6 +1108,13 @@ Empezare a hacer el html y css de dicha pagina
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Me hace falta tiempo
 
+#### Mateo Silva
+* ¿Qué hice ayer?
+Ayer no avanze en el proyecto
+* ¿Qué haré hoy?
+Voy a hacer las configuraciones de rango en el apartado de configuraciones.
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+Solo el tiempo, el cual es muy limitado.
 
 ### Noviembre 2 2023
 
@@ -1112,6 +1135,14 @@ No creo que pueda avanzar mucho en el projecto porque necesito avanzar en otras 
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Me hace falta tiempo
 
+#### Mateo Silva
+* ¿Qué hice ayer?
+Avance un poco en las configuraciones de rangos.
+* ¿Qué haré hoy?
+Seguire trabajando en la configuraciones.
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+Unicamente el tiempo.
+
 ### Noviembre 3 2023
 
 #### Juan Jose Diaz
@@ -1121,4 +1152,14 @@ No avance en el proyecto porque el dia fue muy ocupado
 Estoy esperando a que mis compañeros terminar de agregarle funcionalidad a las vistas que hice para seguir avanzando
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Que mis compañeros avancen
+
+### Noviembre 5 2023
+
+#### Mateo Silva Lasso
+* ¿Qué hice ayer?
+No avance en el proyecto debido a ocupaciones.
+* ¿Qué hare hoy?
+Voy a terminar las partes de configuraciones.
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Debido al tiempo no he podido hacerlo.
 
