@@ -6,4 +6,4 @@ class CustomUserCreationForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ['name', 'password']
+        fields = ['name', 'password', 'user_type_id']
