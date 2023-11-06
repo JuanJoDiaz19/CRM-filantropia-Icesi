@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.views import View
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login,logout, authenticate
-from django.contrib.auth.models import User
+from CRM_app.models import User
 from django.db import IntegrityError
 from django.contrib import messages
 
@@ -20,5 +20,7 @@ class LogIn(View):
             })
         else:
             login(request, user)
+            if user.is_superuser:
+                return redirect('register')
             return redirect('home')
     
