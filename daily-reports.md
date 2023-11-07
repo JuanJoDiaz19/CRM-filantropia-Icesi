@@ -1226,3 +1226,25 @@ Voy a seguir cacharreandole a la vaina del calendario que la verdad no entiendo
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 Perdon gente, se me acomularon las cosas y abandone integrador
 
+### Noviembre 7 2023
+
+#### Juan Jose Diaz
+* ¿Qué hice ayer?
+No avance en el proyecto porque tengo otras obligaciones en la universidad
+* ¿Qué hare hoy?
+Empezare a investigar como hacer un pdf con los graficos que hay en la pagina
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Me hacen falta conociemientos de como hacer que la impresion de una vista no se altere por el ancho de la hoja en la que se espera que quede el pdf.
+
+### Noviembre 8 2023
+
+#### Juan Jose Diaz
+* ¿Qué hice ayer?
+Investigue acerca de como hacer un pdf con la informacion que aparece en una pagina
+* ¿Qué hare hoy?
+No creo que pueda avanzar mucho por las obligaciones que tengo en la universidad
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Me hace falta tiempo y motivacion para seguir. (┬┬﹏┬┬)
+
+
+
