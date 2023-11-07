@@ -1010,6 +1010,14 @@ El dia de hoy no podre avanzar en el proyecto debido a ocupaciones.
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 Debido al tiempo no logró avanzar tanto como quiero.
 
+#### Ana
+* ¿Qué hice ayer?
+No pude avanzar en el proyecto
+* ¿Qúe haré hoy?
+Hoy trabajaré en el diseño de los seguimientos de las reuniones 
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+Tengo muy poco tiempo
+
 #### Espinosa
 * ¿Qué hice ayer?
 Hable con mi compañero de backend para terminar de cuadrar unos asuntos que hacian falta.
@@ -1063,6 +1071,14 @@ Empezaremos a planear lo necesario de filantropia
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 En este momento estamos a final de semestre, por lo tanto, no hay mucho tiempo.
 
+#### Ana
+* ¿Qué hice ayer?
+No pude avanzar en el proyecto
+* ¿Qúe haré hoy?
+Hoy seguiré trabajando en el diseño de los seguimientos de las reuniones 
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+Tengo muy poco tiempo
+
 ### Octubre 31 2023
 
 #### Espinosa
@@ -1080,6 +1096,14 @@ Termine de hacer completamente las graficas de los aliados de forma general
 Empezare a hacer los diseños de figma para la pagina de configuracion
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Me hace falta tiempo y amor propio
+
+#### Ana
+* ¿Qué hice ayer?
+No pude avanzar en el proyecto
+* ¿Qúe haré hoy?
+Hoy arreglare unos diseños que tiene el calendario
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+Tengo muy poco tiempo
 
 #### Mateo Silva
 * ¿Qué hice ayer?
@@ -1126,6 +1150,13 @@ investigar como usar selenium en python.
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 estoy estallado ayuda
 
+#### Ana
+* ¿Qué hice ayer?
+No pude avanzar en el proyecto
+* ¿Qúe haré hoy?
+Seguire intentando encontrar los diseños del calendario que ese codigo esta muy raro
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+Tengo muy poco tiempo
 
 #### Juan Jose Diaz
 * ¿Qué hice ayer?
@@ -1153,6 +1184,14 @@ Estoy esperando a que mis compañeros terminar de agregarle funcionalidad a las 
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Que mis compañeros avancen
 
+#### Ana
+* ¿Qué hice ayer?
+No pude avanzar en el proyecto
+* ¿Qúe haré hoy?
+Vere el tema de filtrar los tipos de reportes
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+Tengo muy poco tiempo
+
 #### Espinosa
 * ¿Qué hice ayer?
   investigue sobre selenium en python
@@ -1178,4 +1217,12 @@ Debido al tiempo no he podido hacerlo.
 avanzare en los test
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 poco tiempo
+
+#### Ana
+* ¿Qué hice ayer?
+No pude avanzar en el proyecto
+* ¿Qúe haré hoy?
+Voy a seguir cacharreandole a la vaina del calendario que la verdad no entiendo
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+Perdon gente, se me acomularon las cosas y abandone integrador
 
