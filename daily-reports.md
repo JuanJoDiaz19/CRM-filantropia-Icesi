@@ -1153,6 +1153,14 @@ Estoy esperando a que mis compañeros terminar de agregarle funcionalidad a las 
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Que mis compañeros avancen
 
+#### Espinosa
+* ¿Qué hice ayer?
+  investigue sobre selenium en python
+* ¿Qúe haré hoy?
+empezare a implementar los test
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+poco tiempo
+
 ### Noviembre 5 2023
 
 #### Mateo Silva Lasso
@@ -1162,4 +1170,12 @@ No avance en el proyecto debido a ocupaciones.
 Voy a terminar las partes de configuraciones.
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Debido al tiempo no he podido hacerlo.
+
+#### Espinosa
+* ¿Qué hice ayer?
+  debido a una tarea que se me presento, no pude avanzar en los test
+* ¿Qúe haré hoy?
+avanzare en los test
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+poco tiempo
 
