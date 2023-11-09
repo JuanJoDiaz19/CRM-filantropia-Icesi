@@ -1124,6 +1124,14 @@ Hoy no voy a poder realizar avances
 poco tiempo y mucha responsabilidad
 
 
+#### Santiago Barraza
+* ¿Qué hice ayer?
+No realicé ningún avance
+* ¿Qué hare hoy?
+Dudo que pueda realizar algún avance
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+El tiempo es el mayor obstaculo
+
 #### Juan Jose Diaz
 * ¿Qué hice ayer?
 Termine de hacer los diseños en figma de la pagina de configuracion
@@ -1149,6 +1157,14 @@ Solo el tiempo, el cual es muy limitado.
 investigar como usar selenium en python.
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 estoy estallado ayuda
+
+#### Santiago Barraza
+* ¿Qué hice ayer?
+No realicé ningún avance
+* ¿Qué hare hoy?
+Veré como se puede manejar los permisos de lo que los diferentes tipos de usuarios pueden acceder dentro de la app
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+El tiempo es el mayor obstaculo
 
 #### Ana
 * ¿Qué hice ayer?
@@ -1200,6 +1216,16 @@ empezare a implementar los test
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 poco tiempo
 
+### Noviembre 4 2023
+
+#### Santiago Barraza
+* ¿Qué hice ayer?
+No realicé ningún avance
+* ¿Qué hare hoy?
+Arreglaré algunos detalles sobre la interfaz de calendario
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+El tiempo es el mayor obstaculo
+
 ### Noviembre 5 2023
 
 #### Mateo Silva Lasso
@@ -1209,6 +1235,14 @@ No avance en el proyecto debido a ocupaciones.
 Voy a terminar las partes de configuraciones.
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Debido al tiempo no he podido hacerlo.
+
+#### Santiago Barraza
+* ¿Qué hice ayer?
+Arreglé unos detalles sobre la interfaz de calendario
+* ¿Qué hare hoy?
+No realizaré algún avance como tal
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+El tiempo es el único obstaculo
 
 #### Espinosa
 * ¿Qué hice ayer?
@@ -1236,6 +1270,14 @@ Haré las configuraciones de seguridad de los usuarios.
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Estuve estancado haciendo la parte de configuraciones y por eso no pude avanzar.
 
+#### Santiago Barraza
+* ¿Qué hice ayer?
+No hice algún aporte al proyecto
+* ¿Qué hare hoy?
+Haré que los usuarios ahora se creen en la tabla CRM_app_user en lugar de auth_user, para tener versatilidad al momento de manejar los permisos
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+El tiempo es el único obstaculo
+
 ### Noviembre 7 2023
 
 #### Juan Jose Diaz
@@ -1253,6 +1295,14 @@ Ayer termine las configuraciones de seguridad para los usuarios.
 Terminare por fin las configuraciones de rangos de donadores en la base de datos.
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 De momento no hay algún obstaculo significativo que me impida avanzar mas que los limites de tiempo.
+
+#### Santiago Barraza
+* ¿Qué hice ayer?
+Hice que los usuarios ahora se creen en la tabla CRM_app_user en lugar de auth_user
+* ¿Qué hare hoy?
+Dudo que pueda realizar algo en específico
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+El tiempo es el único obstaculo
 
 ### Noviembre 8 2023
 
@@ -1272,5 +1322,11 @@ avanzare en los test
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 poco tiempo
 
-
+#### Santiago Barraza
+* ¿Qué hice ayer?
+No hice ningún avance sustancial en el proyecto
+* ¿Qué hare hoy?
+Dudo que pueda realizar algo en específico
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+El tiempo es el único obstaculo
 
