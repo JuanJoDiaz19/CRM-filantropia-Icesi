@@ -1264,5 +1264,13 @@ No creo que pueda avanzar mucho por las obligaciones que tengo en la universidad
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Me hace falta tiempo y motivacion para seguir. (┬┬﹏┬┬)
 
+#### Espinosa
+* ¿Qué hice ayer?
+  ayer no pude avanzar debido a que tuve una prueba de matematicas y estuve repasando todo el dia
+* ¿Qúe haré hoy?
+avanzare en los test
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+poco tiempo
+
 
 
