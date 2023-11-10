@@ -1330,3 +1330,12 @@ Dudo que pueda realizar algo en específico
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 El tiempo es el único obstaculo
 
+### Noviembre 9 2023
+
+#### Espinosa
+* ¿Qué hice ayer?
+  Avance con los test
+* ¿Qúe haré hoy?
+no podre avanzar debido a una sustentacion de matematicas que tengo
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+muy poco tiempo
