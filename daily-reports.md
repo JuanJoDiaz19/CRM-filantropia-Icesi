@@ -1339,3 +1339,13 @@ El tiempo es el único obstaculo
 no podre avanzar debido a una sustentacion de matematicas que tengo
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 muy poco tiempo
+
+### Noviembre 10 2023
+
+#### Espinosa
+* ¿Qué hice ayer?
+  Como dije ayer, no pude avanzar
+* ¿Qúe haré hoy?
+  avanzar con los test
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+muy poco tiempo
