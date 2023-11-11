@@ -1318,17 +1318,25 @@ Me hace falta tiempo y motivacion para seguir. (┬┬﹏┬┬)
 * ¿Qué hice ayer?
   ayer no pude avanzar debido a que tuve una prueba de matematicas y estuve repasando todo el dia
 * ¿Qúe haré hoy?
-avanzare en los test
+avanzare en los test.
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
-poco tiempo
+poco tiempo.
 
 #### Santiago Barraza
 * ¿Qué hice ayer?
-No hice ningún avance sustancial en el proyecto
+No hice ningún avance sustancial en el proyecto.
 * ¿Qué hare hoy?
-Dudo que pueda realizar algo en específico
+Dudo que pueda realizar algo en específico.
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
-El tiempo es el único obstaculo
+El tiempo es el único obstaculo.
+
+#### Mateo Silva
+* ¿Qué hice ayer?
+Avanzé en las configuraciones de rangos de configuraciones de las donaciones.
+* ¿Qué hare hoy?
+Hoy tendré una reunion con algunos compañeros para ver como procederemos en el final del sprint.
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+El obstaculo mas grande que me surge es la falta de tiempo que hay para el proyecto.
 
 ### Noviembre 9 2023
 
@@ -1339,6 +1347,14 @@ El tiempo es el único obstaculo
 no podre avanzar debido a una sustentacion de matematicas que tengo
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 muy poco tiempo
+
+#### Mateo Silva
+* ¿Qué hice ayer?
+Tuve una pequeña reunion con el equipo.
+* ¿Qué hare hoy?
+Hoy no avanzaré en el proyecto.
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+El obstaculo mas grande que me surge es la falta de tiempo que hay para el proyecto.
 
 ### Noviembre 10 2023
 
