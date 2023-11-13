@@ -1365,3 +1365,14 @@ El obstaculo mas grande que me surge es la falta de tiempo que hay para el proye
   avanzar con los test
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 muy poco tiempo
+
+### Noviembre 12 2023
+
+#### Espinosa
+* ¿Qué hice ayer?
+  ayer avance con los tesst
+* ¿Qúe haré hoy?
+  avanzar con los test
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+muy poco tiempo
+
