@@ -1376,3 +1376,14 @@ muy poco tiempo
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 muy poco tiempo
 
+### Noviembre 13 2023
+
+#### Espinosa
+* ¿Qué hice ayer?
+  ayer avance con los test
+* ¿Qúe haré hoy?
+  no podre avanzar hoy debido a otro trabajo pendiente
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+muchos proyectos, poco tiempo 
+
+
