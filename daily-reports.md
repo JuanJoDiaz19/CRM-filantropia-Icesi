@@ -1278,6 +1278,14 @@ Haré que los usuarios ahora se creen en la tabla CRM_app_user en lugar de auth_
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 El tiempo es el único obstaculo
 
+#### Juan Jose Diaz
+* ¿Qué hice ayer?
+No avance en el proyecto porque tengo otras obligaciones en la universidad
+* ¿Qué hare hoy?
+Buscare que historias de usuario estan pendientes por hacer
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Me hace falta tiempo
+
 ### Noviembre 7 2023
 
 #### Juan Jose Diaz
@@ -1356,6 +1364,15 @@ Hoy no avanzaré en el proyecto.
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 El obstaculo mas grande que me surge es la falta de tiempo que hay para el proyecto.
 
+#### Juan Jose Diaz
+* ¿Qué hice ayer?
+Elegi hacer la historia de usuario de los usuarios de CEDEP Mercadeo
+* ¿Qué hare hoy?
+Empezare a mirar como implementar los diseños de las paginas de CEDEP y mercadeo
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Me hace falta tiempo y motivacion
+
+
 ### Noviembre 10 2023
 
 #### Espinosa
@@ -1365,6 +1382,15 @@ El obstaculo mas grande que me surge es la falta de tiempo que hay para el proye
   avanzar con los test
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 muy poco tiempo
+
+#### Juan Jose Diaz
+* ¿Qué hice ayer?
+Termine de hacer los diseños de la pagina de CEDEP Mercadeo con base al protopio en Figma
+* ¿Qué hare hoy?
+Empezare a hacer el codigo html y css de las paginas
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Me hace falta conocimiento acerca de como mis compañeros implementaron los usuarios dentro del sistema
+
 
 ### Noviembre 12 2023
 
@@ -1384,7 +1410,16 @@ muy poco tiempo
 * ¿Qúe haré hoy?
   no podre avanzar hoy debido a otro trabajo pendiente
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
-muchos proyectos, poco tiempo 
+muchos proyectos, poco tiempo
+
+
+#### Juan Jose Diaz
+* ¿Qué hice ayer?
+Termine de hacer el codigo html y css de los diseños planeado para las paginas
+* ¿Qué hare hoy?
+Hablare con mis compañeros de como se estan usando los usuarios dentro del sistema
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Tengo demasiado sueño
 
 ### Noviembre 15 2023
 
@@ -1396,3 +1431,11 @@ muchos proyectos, poco tiempo
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
   estoy cansado jefe
 
+
+#### Juan Jose Diaz
+* ¿Qué hice ayer?
+No pude avanzar porque tenia la jornada de resolucion de problemas de Matematicas Aplicadas III
+* ¿Qué hare hoy?
+Intentaré hacer la separacion de las paginas dependiendo del tipo de usuario que hay en el sistema
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+He dormido 4 horas
