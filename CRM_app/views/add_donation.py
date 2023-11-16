@@ -19,6 +19,7 @@ class AddDonation(View):
         donation_date= request.POST.get('fecha',False)
         donation_amount= request.POST.get('nombre', False)
         donation_description= request.POST.get('descripcion', False)
+        donations_types= Donation_Type.objects.all()
         
         if donation_date and donation_amount:
             try:
@@ -32,14 +33,14 @@ class AddDonation(View):
             
             allie_instance= get_object_or_404(Allie, id= allie__id)
             
-            if(amount_number<1000):
-                return render(request, 'allies/add-donation.html', {'error_message': "No puede poner un monto tan pequeño"})
-            elif(amount_number>=1000 and amount_number<3000000):
-                donation_type_instance= get_object_or_404(Donation_Type, id=1)
-            elif(amount_number>=3000000 and amount_number<20000000):
-                donation_type_instance= get_object_or_404(Donation_Type, id=2)
-            elif(amount_number>=20000000):
-                donation_type_instance= get_object_or_404(Donation_Type, id=3)
+            for types in donations_types:
+                if(amount_number<10000):
+                    return render(request, 'allies/add-donation.html', {'error_message': "No puede poner un monto tan pequeño"})
+                elif(amount_number>=types.min_value and amount_number<types.max_value):
+                    donation_type_instance= get_object_or_404(Donation_Type, id=types.id)
+                    break
+                else:
+                    donation_type_instance= get_object_or_404(Donation_Type,id=types.id)
                 
             Donation.objects.create(
                 date=donation_date,
