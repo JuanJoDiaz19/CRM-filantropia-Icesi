@@ -35,14 +35,14 @@
                     {% csrf_token%}
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label"><b>Usuario</b></label>
-                        <input type="text" class="form-control" name="username" aria-describedby="emailHelp" placeholder="Escribe tu usuario">
+                        <input type="text" id="username" class="form-control" name="username" aria-describedby="emailHelp" placeholder="Escribe tu usuario">
                         <div id="emailHelp" class="form-text"><a href="#">Olvidaste tu contraseña?</a></div>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label"><b>Contraseña</b></label>
-                        <input type="password" class="form-control password-login" name="password" placeholder="Escribe tu contraseña">
+                        <input type="password" id="password" class="form-control password-login" name="password" placeholder="Escribe tu contraseña">
                     </div>
-                    <button type="submit" class="btn btn-primary"><b>Ingresar</b></button>
+                    <button type="submit" class="btn btn-primary" id="submit"><b>Ingresar</b></button>
                     {% if message %}
                     <div class="alert">
                         <p>{{message}}</p>

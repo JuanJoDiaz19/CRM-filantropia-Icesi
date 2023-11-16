@@ -20,8 +20,8 @@
             <img  src="data:image/jpeg;base64,{{ allies.image_link }}" alt="{{ allies.name }}">
         </div>
         <div class="main-info-ally-container">
-            <h1 class="main-name-ally">{{allies.name}}</h1>
-            <h4 class="main-ally-description">{{allies.area_id}}</h4>
+            <h1 class="main-name-ally" id="name">{{allies.name}}</h1>
+            <h4 class="main-ally-description" id="area">{{allies.area_id}}</h4>
 
             {% if allies.active == 1 %}
             <p class="main-ally-description active-user">Alliado activo</p>
@@ -29,8 +29,7 @@
             <p class="main-ally-description inactive-user">Aliado inactivo</p>
             {% endif %} 
         </div>
-
-        <div class="main-section-icons-container">   
+        <div class="main-section-icons-container" id="edit">     
           {% if user.user_type_id.name == "Filantropia" %}  
             <a href="/edit_ally/{{allies.id}}/">
                 <img class="edit-image-opacity" src="{% static 'img/icons/edit-icon.png' %}" alt="">
@@ -38,46 +37,46 @@
           {% endif %}
         </div>
     </div>
-    <div class="ally-description">
+    <div class="ally-description" id="description">
         <p>{{allies.description}}</p>
     </div>
     <nav class="nav-section-ally">
-        <a class="nav-option-ally" href="/interns/{{allies.id}}">
+        <a class="nav-option-ally" href="/interns/{{allies.id}}" id="interns">
             <h3>Practicantes</h3>
             <img  src="{% static 'img/icons/interns.png' %}" alt="">
             <div class="nav-option-ally__see-more">
                 Ver mas
             </div>
         </a>
-        <a class="nav-option-ally" href="/allies/investigation/{{allies.id}}">
+        <a class="nav-option-ally" href="/allies/investigation/{{allies.id}}" id="projects">
             <h3>Proyectos de investigacion</h3>
             <img src="{% static 'img/icons/investigation-projects.png' %}" alt="">
             <div class="nav-option-ally__see-more">
                 Ver mas
             </div>
         </a>
-        <a class="nav-option-ally" href="/calendar/{{allies.id}}">
+        <a class="nav-option-ally" href="/calendar/{{allies.id}}" id="meetings">
             <h3>Reuniones</h3>
             <img src="{% static 'img/icons/meetings.png' %}" alt="">
             <div class="nav-option-ally__see-more">
                 Ver mas
             </div>
         </a>
-        <a class="nav-option-ally" href="/donations/{{allies.id}}">
+        <a class="nav-option-ally" href="/donations/{{allies.id}}" id="donations">
             <h3>Donaciones</h3>
             <img class="image-opacity" src="{% static 'img/icons/donations.png' %}" alt="">
             <div class="nav-option-ally__see-more">
                 Ver mas
             </div>
         </a>
-        <a class="nav-option-ally" href="/calendar/{{allies.id}}">
+        <a class="nav-option-ally" href="/calendar/{{allies.id}}" id="events">
             <h3>Eventos</h3>
             <img src="{% static 'img/icons/events.png' %}" alt="">
             <div class="nav-option-ally__see-more">
                 Ver mas
             </div>
         </a>
-        <a class="nav-option-ally" href="/reports/{{allies.id}}">
+        <a class="nav-option-ally" href="#" id="reports">
             <h3>Reportes</h3>
             <img class="image-opacity" src="{% static 'img/icons/report.png' %}" alt="">
             <div class="nav-option-ally__see-more">
