@@ -44,7 +44,7 @@
                 
                 <select name="allies[]" class="form_text" id="allies" multiple>
                   {% for ally in allies %}
-                    <option value="{{ally.id}}">{{ally.name}}</option>
+                    <option value="{{ally.id}}" id="{ally.id}">{{ally.name}}</option>
                   {%endfor%}
                 </select>
                 
@@ -80,7 +80,7 @@
     </div>
   </div>
   <div class="container">
-    <button class="button-style">Agregar</button>
+    <button class="button-style" id="submit">Agregar</button>
   </div>
 </form>
 {% endblock %}

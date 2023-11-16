@@ -27,7 +27,7 @@ def login(self):
 
     return selenium
 
-class CreateInternTest(LiveServerTestCase):
+class CreateInvestigationProject(LiveServerTestCase):
 
     def test(self):
 
@@ -35,48 +35,48 @@ class CreateInternTest(LiveServerTestCase):
 
         allies = selenium.find_element("id", "allies")
         allies.click()
-
+        
         ally = selenium.find_element("id", "123456")
         ally.click()
 
-        intern = selenium.find_element("id", "interns")
-        intern.click()
-
-        time.sleep(1)
-
-        add = selenium.find_element("id", "add")
-        add.click()
-
-        name = selenium.find_element("name", "nombre")
-        sex = selenium.find_element("id", "m")
-        id = selenium.find_element("name", "allie_document_id")
-        area = selenium.find_element("name", "allie_area")
-        imgpath = os.path.abspath(os.path.join(os.path.dirname(__file__), 'img', 'test.png'))
-        img = selenium.find_element("id", "customFileInput")
-        description = selenium.find_element("id", "expanding-input")
-
-        name.send_keys("test")
-        sex.click()
-        id.send_keys("123")
-        select = Select(area)
-        select.select_by_visible_text("Quimica Farmaceutica")
-        img.send_keys(imgpath)
-        description.send_keys("testing")
-        
-        submit = WebDriverWait(selenium, 10).until(
-            EC.element_to_be_clickable((By.ID, "submit"))
-        )
+        projects = selenium.find_element("id", "projects")
+        projects.click()
 
         time.sleep(2)
+
+        add = WebDriverWait(selenium, 10).until(
+            EC.element_to_be_clickable((By.XPATH, "//div[2]/a/img"))
+        )
+
+        selenium.execute_script("arguments[0].scrollIntoView(true);", add)
+        selenium.execute_script("arguments[0].click();", add)
+
+        title = selenium.find_element("name", "titulo")
+        date = selenium.find_element("name", "fecha")
+
+        time.sleep(2)
+
+        description = selenium.find_element("name", "descripcion")
+        objectives = selenium.find_element("name", "objetivos")
+
+        title.send_keys("TEST")
+        date.send_keys("2023-11-17")
+        description.send_keys("TEST")
+        objectives.send_keys("TEST")
+
+        time.sleep(2)
+
+        submit = WebDriverWait(selenium, 10).until(
+            EC.element_to_be_clickable((By.NAME, "submit"))
+        )
 
         selenium.execute_script("arguments[0].scrollIntoView(true);", submit)
         selenium.execute_script("arguments[0].click();", submit)
 
-        checkintern = selenium.find_element("id", "123")
+        time.sleep(2)
 
-        assert checkintern != None
 
-        time.sleep(3)
+
 
         selenium.quit
 
