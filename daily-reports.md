@@ -1386,4 +1386,13 @@ muy poco tiempo
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 muchos proyectos, poco tiempo 
 
+### Noviembre 15 2023
+
+#### Espinosa
+* ¿Qué hice ayer?
+  Avance con los test
+* ¿Qúe haré hoy?
+  seguire avanzando con los test, hare push a la rama de test selenium para ya tener algo subido
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+  estoy cansado jefe
 
