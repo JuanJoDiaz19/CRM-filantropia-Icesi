@@ -4,7 +4,6 @@
 
 {% block header_links %}
   <link rel="stylesheet" type="text/css" href="{% static 'css/calendar.css' %}">
-  <link rel="stylesheet" type="text/css" href="{% static 'fullcalendar/lib/main.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'css/add_allie.css' %}">
   <script src="{% static 'fullcalendar/core/index.global.js' %}"></script>
   <script src="{% static 'fullcalendar/daygrid/index.global.js' %}"></script>
@@ -102,11 +101,6 @@
         var calendar = new FullCalendar.Calendar(calendarEl, {
             events: JSON.parse('{{events_data|escapejs }}'),
             locale: 'es',
-            eventRender: function(info) {
-                if (info.event.extendedProps.allies) {
-                    info.el.querySelector('.fc-title').innerHTML += "<br>" + info.event.extendedProps.allies;
-                }
-            },
             eventClick: function(info) {
                 var eventInfoEl = document.getElementById('event-info');
                 var modalTitle = eventInfoEl.querySelector('.modal-title');
@@ -159,9 +153,8 @@
                 var eventInfoModal = new bootstrap.Modal(eventInfoEl);
                 eventInfoModal.show();
             },
-            eventColor: 'color'  // Asignar colores de acuerdo al campo 'color'
         });
-    
+
         calendar.render();
         
     });
@@ -261,11 +254,11 @@
     window.addEventListener('load', function () {
         autoExpand(document.getElementById('expanding-input'));
     });
-    
-</script>    
+</script>
+
+
 {% endblock %}
 
 {% block pagina_actual_calendario %}
 <div class="current-page"></div>
 {% endblock %}
-

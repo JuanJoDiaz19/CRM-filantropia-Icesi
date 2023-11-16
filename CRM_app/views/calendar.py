@@ -10,7 +10,6 @@ from django.views.decorators.csrf import csrf_exempt
 class Calendar(View):
     def get(self, request, allie_id):
         events_data = []
-
         # Obtiene el aliado si allie_id no es 'all', de lo contrario establece a None
         ally = get_object_or_404(Allie, id=allie_id) if allie_id != "all" else None
         events = Event.objects.filter(eventallie__allie_id=int(allie_id)) if ally else Event.objects.all()

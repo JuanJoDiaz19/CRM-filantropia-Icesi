@@ -1,6 +1,52 @@
 from django.db import models
 from django.contrib.auth.base_user import AbstractBaseUser
 from django.core.exceptions import ValidationError
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
+
+class CustomUserManager(BaseUserManager):
+    def create_user(self, name, password=None, user_type=None, **extra_fields):
+        if not name:
+            raise ValueError('El campo de nombre es obligatorio')
+        user = self.model(
+            name=name,
+            **extra_fields
+        )
+        user.set_password(password)
+        #user.set_user_type(user_type)
+        user.save(using=self._db)
+        return user
+
+    def create_superuser(self, name, password=None, **extra_fields):
+        extra_fields.setdefault('is_staff', True)
+        extra_fields.setdefault('is_superuser', True)
+
+        if extra_fields.get('is_staff') is not True:
+            raise ValueError('Superuser debe tener is_staff=True.')
+        if extra_fields.get('is_superuser') is not True:
+            raise ValueError('Superuser debe tener is_superuser=True.')
+
+        return self.create_user(name, password, **extra_fields)
+    
+class User_Type(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=200)
+    
+    def __str__(self):
+        return self.name
+
+class User(AbstractBaseUser, PermissionsMixin):
+    name = models.CharField(max_length=50, unique=True)
+    is_active = models.BooleanField(default=True)
+    is_staff = models.BooleanField(default=False)  # Agregado
+    is_superuser = models.BooleanField(default=False)  # Agregado
+    user_type_id= models.ForeignKey(User_Type, on_delete=models.CASCADE, default=1)
+
+    objects = CustomUserManager()
+
+    USERNAME_FIELD = 'name'
+
+    def __str__(self):
+        return self.name
 
 class New(models.Model):
     title = models.CharField(max_length=50)
@@ -37,12 +83,6 @@ class Allie(models.Model):
     def __str__(self):
         return self.name
     
-
-class User(AbstractBaseUser):
-    naame= models.CharField(max_length=50)
-         
-    def __str__(self):
-        return self.name
 
 class ContactInfo(models.Model):
     id = models.CharField(max_length=20, primary_key=True)
