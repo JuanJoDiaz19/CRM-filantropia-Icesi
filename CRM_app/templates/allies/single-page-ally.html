@@ -20,8 +20,8 @@
             <img  src="data:image/jpeg;base64,{{ allies.image_link }}" alt="{{ allies.name }}">
         </div>
         <div class="main-info-ally-container">
-            <h1 class="main-name-ally">{{allies.name}}</h1>
-            <h4 class="main-ally-description">{{allies.area_id}}</h4>
+            <h1 class="main-name-ally" id="name">{{allies.name}}</h1>
+            <h4 class="main-ally-description" id="area">{{allies.area_id}}</h4>
 
             {% if allies.active == 1 %}
             <p class="main-ally-description active-user">Alliado activo</p>
@@ -30,17 +30,17 @@
             {% endif %} 
         </div>
 
-        <div class="main-section-icons-container">    
+        <div class="main-section-icons-container" id="edit">    
             <a href="/edit_ally/{{allies.id}}/">
                 <img class="edit-image-opacity" src="{% static 'img/icons/edit-icon.png' %}" alt="">
             </a>
         </div>
     </div>
-    <div class="ally-description">
+    <div class="ally-description" id="description">
         <p>{{allies.description}}</p>
     </div>
     <nav class="nav-section-ally">
-        <a class="nav-option-ally" href="/interns/{{allies.id}}">
+        <a class="nav-option-ally" href="/interns/{{allies.id}}" id="interns">
             <h3>Practicantes</h3>
             <img  src="{% static 'img/icons/interns.png' %}" alt="">
             <div class="nav-option-ally__see-more">

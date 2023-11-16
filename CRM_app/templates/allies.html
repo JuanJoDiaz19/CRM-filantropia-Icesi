@@ -12,7 +12,7 @@
     <div class="main-content__header">
         <h1><b>Aliados ICESI</b></h1>
 
-        <a href="add_ally/">
+        <a href="add_ally/" id="add">
             <img src="{% static 'img/icons/add-icon.png' %}" alt="">
         </a>
     </div>
@@ -31,17 +31,17 @@
                 </option>
             {% endfor %}
         </select>                    
-        <button class="buton-search-field" type="submit"><b>Buscar</b></button>
+        <button class="buton-search-field" type="submit" id="search"><b>Buscar</b></button>
     </form>   
 
-    <div class="allies-container">
+    <div class="allies-container" id="allyContainer">
     {% for allie in allies %}
         <a class="allies-card" href="{{allie.id}}/">
             <div class="allies-main-information-container">
                 <div class="allies-card-image-container">
                     <img  src="data:image/jpeg;base64,{{ allie.image_link }}" alt="{{ allie.name }}">
                 </div>
-                <div class="allies-info">
+                <div class="allies-info" id="{{allie.id}}" >
                     <p class="allie-name">{{ allie.name }}</p>
                     <p class="allie-area">{{ allie.area_id }}</p>
                 </div>

@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 
 class CustomUserManager(BaseUserManager):
-    def create_user(self, name, password=None, user_type=None, **extra_fields):
+    def create_user(self, name, password=None, **extra_fields):
         if not name:
             raise ValueError('El campo de nombre es obligatorio')
         user = self.model(
@@ -10,7 +10,6 @@ class CustomUserManager(BaseUserManager):
             **extra_fields
         )
         user.set_password(password)
-        user.set_user_type(user_type)
         user.save(using=self._db)
         return user
 
