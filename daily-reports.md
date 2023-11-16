@@ -1312,6 +1312,14 @@ Dudo que pueda realizar algo en específico
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 El tiempo es el único obstaculo
 
+#### Ana
+* ¿Qué hice ayer?
+No pude avanzar en el proyecto
+* ¿Qúe haré hoy?
+Hoy tampoco
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+Falta tiempo
+
 ### Noviembre 8 2023
 
 #### Juan Jose Diaz
@@ -1337,6 +1345,14 @@ No hice ningún avance sustancial en el proyecto.
 Dudo que pueda realizar algo en específico.
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 El tiempo es el único obstaculo.
+
+#### Ana
+* ¿Qué hice ayer?
+no mucho
+* ¿Qúe haré hoy?
+Entendi como funciona la pantalla popup del calentario
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+Falta tiempo
 
 #### Mateo Silva
 * ¿Qué hice ayer?
@@ -1372,6 +1388,14 @@ Empezare a mirar como implementar los diseños de las paginas de CEDEP y mercade
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Me hace falta tiempo y motivacion
 
+#### Ana
+* ¿Qué hice ayer?
+Entender como funciona el calentario
+* ¿Qúe haré hoy?
+Añadi los comentarios que se despliegan en las reuniones y seguimientos
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+Falta tiempo
+
 
 ### Noviembre 10 2023
 
@@ -1391,6 +1415,14 @@ Empezare a hacer el codigo html y css de las paginas
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Me hace falta conocimiento acerca de como mis compañeros implementaron los usuarios dentro del sistema
 
+#### Ana
+* ¿Qué hice ayer?
+Añadi los comentarios que se despliegan en las reuniones y seguimientos
+* ¿Qúe haré hoy?
+Voy a agregarle la funcionalidad al back
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+Falta tiempo
+
 
 ### Noviembre 12 2023
 
@@ -1401,6 +1433,14 @@ Me hace falta conocimiento acerca de como mis compañeros implementaron los usua
   avanzar con los test
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 muy poco tiempo
+
+#### Ana
+* ¿Qué hice ayer?
+No hice mucho
+* ¿Qúe haré hoy?
+Voy a empezar los reportes por aliado
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+Falta tiempo
 
 ### Noviembre 13 2023
 
@@ -1421,6 +1461,24 @@ Hablare con mis compañeros de como se estan usando los usuarios dentro del sist
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Tengo demasiado sueño
 
+#### Ana
+* ¿Qué hice ayer?
+Empece con los reportes por aliado
+* ¿Qúe haré hoy?
+Voy a seguir con lo mismo
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+Falta tiempo
+
+### Noviembre 14 2023
+
+#### Ana
+* ¿Qué hice ayer?
+Segui con los reportes por aliado
+* ¿Qúe haré hoy?
+Voy a seguir con lo mismo
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+Falta tiempo
+
 ### Noviembre 15 2023
 
 #### Espinosa
@@ -1439,3 +1497,11 @@ No pude avanzar porque tenia la jornada de resolucion de problemas de Matematica
 Intentaré hacer la separacion de las paginas dependiendo del tipo de usuario que hay en el sistema
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 He dormido 4 horas
+
+#### Ana
+* ¿Qué hice ayer?
+Hice lo de los reportes por aliados
+* ¿Qúe haré hoy?
+Nose
+* ¿Hay algún obstaculo que me impide avanzar en el proyecto?
+Falta tiempo
