@@ -21,25 +21,48 @@
 {% endif %}
 <div class="main_content_calendar">
 <div class="header_calendar_container">
-    <h1 class="calendar-title" >Calendario de Eventos y Reuniones </h1>
+    <div style="display:flex;">
+    <h1 class="calendar-title" >Calendario</h1>
+    
+    <label class="switch" id="switch">
+        <input type="checkbox" id="toggleSwitch">
+        
+        <span class="slider">
+            <span class="circle">
+                
+            </span>
+        </span>
+        <label class="switch-label-evento" for="toggleSwitch">Evento</label>
+        <label class="switch-label-reunion" for="toggleSwitch" >Reunión</label>  
+    </label>
+    <!--
+    <input type="checkbox" id="realCheckbox"  style="padding-top:100px;"/>
+    <img id="checkboxImage" src="{% static 'img/calendar/no.png' %}" alt="Click para cambiar estado" style="cursor:pointer; opacity:0.5; width:23px; height:20px;" />
+        -->
+</div>     
     <nav class="navigation-buttons-calendar">
+        
         <a class="add_occurence_calendar add-event" href="create_event/">
-            <img src="{% static 'img/icons/add-icon-white.png' %}" alt="">
             <p>Crear evento</p>
         </a>
         <a class="add_occurence_calendar" href="create_meeting/">
-            <img src="{% static 'img/icons/add-icon-white.png' %}" alt="">
             <p>Crear reunion</p>
         </a>
     </nav>
 </div>
+
     <div class="calendar-container">
         <div id="calendar"></div>
         <div id="event-info" class="modal fade" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
+                
                 <div class="modal-content">
-                    <div class="modal-header">
+                    <p class="modal-type" style="margin:0; padding-top:15px; padding-bottom:15px; padding-left:15px; font-size:15px;"></p>
+                    <div class="modal-header" style="margin:0; padding-top:0;">
                         <h5 class="modal-title"></h5>
+                        <a href="#" class="follow_up add_occurence_calendar add-event" style="margin:0;">
+                            <p>+ Seguimiento</p>
+                        </a>
                     </div>
                     <div class="modal-body">
                         <p>Fecha: <span id="event-date"></span></p>
@@ -47,17 +70,34 @@
                         <p>Objetivo: <span id="event-objective"></span></p>
                         <p>Aliados: <span id="event-allies"></span></p>
                         <p>Tipo: <span id="event-type"></span></p>
-                    </div>            
-                </div>
+                    </div> 
             </div>
+            <div class="comments-container"></div> 
         </div>
     </div>
 </div>
 
 <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        // Esta función ahora está en el alcance local dentro de la función de evento 'DOMContentLoaded'.
+        function toggleCheckbox() {
+          var checkbox = document.getElementById('realCheckbox');
+          checkbox.checked = !checkbox.checked;
+          var image = document.getElementById('checkboxImage');
+          if (checkbox.checked) {
+            image.src = '{% static "img/calendar/Si.png" %}';
+          } else {
+            image.src = '{% static "img/calendar/No.png" %}';
+          }
+        }
+      
+        // Asignar el manejador del evento 'click' directamente al elemento de la imagen.
+        document.getElementById('checkboxImage').addEventListener('click', toggleCheckbox);
+      });
     document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
         var eventInfoEl = document.getElementById('event-info');
+        
     
         var calendar = new FullCalendar.Calendar(calendarEl, {
             events: JSON.parse('{{events_data|escapejs }}'),
@@ -70,18 +110,51 @@
             eventClick: function(info) {
                 var eventInfoEl = document.getElementById('event-info');
                 var modalTitle = eventInfoEl.querySelector('.modal-title');
+                var modalType = eventInfoEl.querySelector('.modal-type');
                 var eventDate = eventInfoEl.querySelector('#event-date');
                 var eventAllies = eventInfoEl.querySelector('#event-allies');
                 var eventDescription = eventInfoEl.querySelector('#event-description');
                 var eventObjective = eventInfoEl.querySelector('#event-objective');
                 var eventType = eventInfoEl.querySelector('#event-type');
-    
+                var commentsContainer = eventInfoEl.querySelector('.comments-container'); // Asegúrate de que este selector coincida con tu HTML
+                var followUpLink = document.querySelector('.follow_up');
+
+                // Actualiza el href según si es evento o reunión
+                if (info.event.extendedProps.type === 'Reunion') {
+                    followUpLink.href = "/follow_up_meeting/" + info.event.id + "/";
+                } else if (info.event.extendedProps.type === 'Evento') {
+                    followUpLink.href = "/follow_up_event/" + info.event.id + "/";
+                }
+                modalType.textContent = info.event.extendedProps.type
                 modalTitle.textContent = info.event.title;
                 eventDate.textContent = info.event.start.toLocaleDateString();
                 eventAllies.textContent = info.event.extendedProps.allies;
                 eventDescription.textContent = info.event.extendedProps.description;
                 eventObjective.textContent = info.event.extendedProps.objective;
                 eventType.textContent = info.event.extendedProps.event_type;
+                
+           
+
+    
+                // Limpiar los comentarios anteriores
+                commentsContainer.innerHTML = '';
+    
+                // Agregar los comentarios al contenedor
+                  if (info.event.extendedProps.comments) {
+                    info.event.extendedProps.comments.forEach(function(comment) {
+                        var commentCard = document.createElement('div');
+                        commentCard.className = 'card';
+                        commentCard.style.marginTop = '10px'; 
+                        commentCard.innerHTML = `
+                            <div class="modal-body">
+                                <h6 class="card-subtitle mb-2 text-muted">Autor: ${comment.autor}</h6>
+                                <h6 class="card-subtitle mb-2 text-muted">Fecha Seguimiento: ${comment.fecha}</h6>
+                                <p class="card-text">${comment.contenido}</p>
+                            </div>
+                        `;
+            commentsContainer.appendChild(commentCard);
+        });
+    }
     
                 var eventInfoModal = new bootstrap.Modal(eventInfoEl);
                 eventInfoModal.show();
@@ -90,6 +163,103 @@
         });
     
         calendar.render();
+        
+    });
+    const switchElement = document.getElementById("switch");
+    const toggleSwitch = document.getElementById("toggleSwitch");
+    const createEventButton = document.querySelector(".add-event");
+    const createMeetingButton = document.querySelector(".add_occurence_calendar:not(.add-event)");
+
+    toggleSwitch.addEventListener("change", function() {
+        if (toggleSwitch.checked) {
+            switchElement.querySelector(".slider").classList.add("on");
+            switchElement.querySelector(".switch-label-evento").classList.add("on");
+            switchElement.querySelector(".switch-label-reunion").style.color = "white";
+            switchElement.querySelector(".circle").classList.add("on");
+            createEventButton.style.display = "none";
+            createMeetingButton.style.display = "block";
+            fetchEventsOrMeetings('Reunión');
+        } else {
+            switchElement.querySelector(".slider").classList.remove("on");
+            switchElement.querySelector(".switch-label-evento").classList.remove("on");
+            switchElement.querySelector(".switch-label-reunion").style.color = "rgb(132, 132, 132)";
+            switchElement.querySelector(".circle").classList.remove("on");
+            createEventButton.style.display = "block";
+            createMeetingButton.style.display = "none";
+            fetchEventsOrMeetings('Evento');
+
+        }
+    });
+    
+    function fetchEventsOrMeetings(type) {
+        fetch('/get-events-meetings/', { // Asegúrate de que esta URL es la correcta para tu backend
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': getCookie('csrftoken') // Asegúrate de tener esta función definida para obtener el token CSRF
+            },
+            body: JSON.stringify({ type: type })
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Suponiendo que tienes una instancia de calendario llamada 'calendar'
+            // Primero, limpiamos todas las fuentes de eventos
+            calendar.getEventSources().forEach(function(source) {
+                source.remove();
+              });
+    
+            // Luego agregamos los nuevos datos como una nueva fuente de eventos
+            calendar.addEventSource(data);
+    
+            // Finalmente, refrescamos el calendario para que muestre los nuevos eventos
+            calendar.refetchEvents();
+        })
+        .catch(error => {
+            console.error('Error al filtrar eventos o reuniones:', error);
+        });
+    }
+    
+    // Esta función sería para obtener el token CSRF de las cookies
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+
+    
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const createMeetingButton = document.querySelector(".add_occurence_calendar:not(.add-event)");
+        const switchElement = document.getElementById("switch");
+        // Variable para rastrear si es la primera vez que se carga la página
+        let isFirstLoad = true;
+
+        if (isFirstLoad) {
+            switchElement.querySelector(".switch-label-reunion").style.color = "rgb(132, 132, 132)";
+            createMeetingButton.style.display = "none";
+            isFirstLoad = false;
+        }
+    });
+    function autoExpand(input) {
+        input.style.height = 'auto';
+        input.style.height = (input.scrollHeight) + 'px';
+    }
+    window.addEventListener('load', function () {
+        autoExpand(document.getElementById('expanding-input'));
     });
     
 </script>    

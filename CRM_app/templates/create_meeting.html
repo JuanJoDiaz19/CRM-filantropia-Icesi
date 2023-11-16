@@ -45,7 +45,7 @@
         <div class="form">
           <label class="content_text">Selecciona aliado</label>
           <div class="opciones-sexo">
-            <select name="ally" id="ally">
+            <select class="form_text" name="ally" id="ally">
               {% for ally in allies%}
               <option value="{{ally.id}}">{{ally.name}}</option>
               {% endfor %}
