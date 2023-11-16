@@ -11,14 +11,23 @@
 
 {% block main_content %}
 
+{% if messages %}
+{% for message in messages %}
+  <div class="alert  alert-danger alert-{{ message.tags }}">
+    {{ message }}
+  </div>
+{% endfor %}
+{% endif %}
+
 <div class="main-content-reports">
   
   <h1>Reporte general</h1>
   <div class="span-allie-form-container">
     <span class="label-allie-reports-form">¿Quieres hacer un reporte de un aliado? </span>
   </div>
-  <form method="get" action="{% url 'allies' %}" class="button-container flex-space-around">
-    <input class="search-field search-text-field" type="text" name="q" placeholder="Buscar por nombre" value="{{ request.GET.q }}">                   
+  <form method="post" action="{% url 'search_ally' %}" class="button-container flex-space-around">
+    {% csrf_token %}
+    <input class="search-field search-text-field" type="text" name="q" placeholder="Buscar por nombre">                   
     <button class="buton-search-field margin-left-button" type="submit"><b>Buscar</b></button>
   </form>   
   <div class="reports-container" id="reports-container">

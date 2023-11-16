@@ -151,7 +151,7 @@ class Reports(View):
             if allie_type.name == 'Natural':
                 data_allie_types[1]+= num_allies
                 
-        print(data_allie_types)
+        print(top_donators)
         
         
 
@@ -169,3 +169,18 @@ class Reports(View):
             'data_allies_investigation': data_top_allies_investigation, 
             'data_allie_types': data_allie_types, 
             })
+
+    def search_ally(self,request):
+        if request.method == "GET" and 'q' in request.GET:
+            query = request.GET.get('q')
+            # Busca el aliado por nombre
+            try:
+                ally = Allie.objects.get(name__iexact=query)
+                # Si lo encuentra, redirige a la página del aliado
+                return redirect(f'/reports/{ally.id}')
+            except Allie.DoesNotExist:
+                # Si no lo encuentra, puedes redirigir a una página de error o mostrar un mensaje
+                return render(request, 'reports.html')
+            
+            
+        

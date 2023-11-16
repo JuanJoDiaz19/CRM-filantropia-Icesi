@@ -26,9 +26,12 @@
         </a>
         <h1>Proyectos de Investigacion</h1>
     </div>
+
+    {% if user.user_type_id.name == "Filantropia" %}
     <a class="investigation-header__add-icon" href="/add_investigation_project">
         <img src="{% static 'img/icons/add-icon.png' %}" alt="">
     </a>
+    {% endif %}
 </div>
 
 <section class="main-content-allies">    
@@ -39,21 +42,24 @@
 
     <div class="allies-container">
         {% for investigation_project in investigation_projects %}
-            <a class="" href="/investigation/{{investigation_project.id}}">
-                <div class="allies_in_investigarion_project">
-                    <div class="column column-left-bottom">
+            <a class="" href="/investigation/{{investigation_project.id}}" style="width: 100%;">
+                <div class="allies_in_investigarion_project" style="width: 100%;">
+                    <div class="column column-left-bottom" style="width: 100%;">
                     <p class="allie-name">{{ investigation_project.name }}</p>
                     <p class="allie-area">{{ investigation_project.description }}</p>
              
                     {% for allie_project in investigation_project.allieproject_set.all %}
-                    <img class="" src="data:image/jpeg;base64,{{allie_project.allie.image_link}}">
+                        <img class="" src="data:image/jpeg;base64,{{allie_project.allie.image_link}}">
                     {% endfor %}
                         
                     
                     </div>
+                    {% if user.user_type_id.name == "Filantropia" %}
                     <a href="/edit_investigation_project/{{investigation_project.id}}">
                         <img src="{% static 'img/icons/edit-icon.png' %}" alt="arrow" style="opacity: 0.7; margin-top:22px;height: 30px; width:30px; border-radius:0;">
                     </a>
+                    {% endif %}
+                   
                 </div>
             </a>
         {% endfor %}
@@ -64,6 +70,6 @@
 {% endblock %}
 
 
-{% block pagina_actual_investigacion %}
+{% block pagina_actual_aliados %}
 <div class="current-page"></div>
 {% endblock %}
