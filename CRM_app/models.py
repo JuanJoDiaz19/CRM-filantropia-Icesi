@@ -10,7 +10,7 @@ class CustomUserManager(BaseUserManager):
             **extra_fields
         )
         user.set_password(password)
-        user.set_user_type(user_type)
+        #user.set_user_type(user_type)
         user.save(using=self._db)
         return user
 
