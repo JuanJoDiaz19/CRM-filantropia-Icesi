@@ -19,20 +19,18 @@
         <h1><b> Practicantes</b></h1>
         {% if user.user_type_id.name == "Filantropia" %} 
         <a href="/interns/add_intern/{{ally.id}}">
-            <img style="opacity: 0.75" src="{% static 'img/icons/add-icon.png' %}" alt="">
+            <img style="opacity: 0.75" src="{% static 'img/icons/add-icon.png' %}" alt="" id="add">
         </a>
         {% endif %}
     </div>
     <form method="get" class="button-container">
-        <input class="search-field search-text-field" type="text" name="q" placeholder="Buscar por nombre" value="{{ request.GET.q }}">                   
-        <button class="buton-search-field" type="submit"><b>Buscar</b></button>
+        <input class="search-field search-text-field" type="text" name="q" id="searchText" placeholder="Buscar por nombre" value="{{ request.GET.q }}">                   
+        <button class="buton-search-field" type="submit" id="find"><b>Buscar</b></button>
     </form>   
 
     <div class="allies-container">
     {% for p in practice %}
-        {% if user.user_type_id.name == "Filantropia" %}
-            <a class="allies-card" href="/edit_intern/{{ally.id}}/{{p.id}}/">
-            
+        <a class="allies-card" href="/edit_intern/{{ally.id}}/{{p.id}}/" id="{{p.id}}">
             <div>
                 <div class="column allies-card-image-container">
                     <img  src="data:image/jpeg;base64,{{ p.image_link }}" alt="{{ p.name }}">
