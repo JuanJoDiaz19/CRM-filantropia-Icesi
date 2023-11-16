@@ -84,3 +84,75 @@
 .thirty-percent-width {
     width: 30%;
 }
+.main-section-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.8rem;
+}
+.image-container-ally img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 80px;
+}
+
+.main-info-ally-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.main-name-ally {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #434343;
+}
+
+.main-ally-description {
+    margin-bottom: 0rem;
+    margin-left: 1rem;
+}
+.active-user {
+    color: #13a744;
+    font-weight: 600;
+  }
+  
+  .inactive-user {
+    color: #ff3737;
+    font-weight: 600;
+  }
+  .main-section-icons-container {
+    display: flex;
+}
+.buton-search-field-report {
+    background: none;
+    border: none;
+    background-color: var(--backgroud-color);
+    color: #ffffff;
+    padding: 5px;
+    margin-top:30px;
+    border-radius: 25px;
+    width: 7rem;
+    height: 2rem;
+
+}
+
+@media print {
+    /* Ocultar todo */
+    body * {
+      visibility: hidden;
+    }
+    
+    /* Solo mostrar el contenido específico para imprimir */
+    .print-section, .print-section * {
+      visibility: visible;
+    }
+    
+    /* Asegurarse de que el contenido específico para imprimir esté en la página */
+    .print-section {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }

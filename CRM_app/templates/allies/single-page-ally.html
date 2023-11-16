@@ -29,11 +29,12 @@
             <p class="main-ally-description inactive-user">Aliado inactivo</p>
             {% endif %} 
         </div>
-
-        <div class="main-section-icons-container" id="edit">    
+        <div class="main-section-icons-container" id="edit">     
+          {% if user.user_type_id.name == "Filantropia" %}  
             <a href="/edit_ally/{{allies.id}}/">
                 <img class="edit-image-opacity" src="{% static 'img/icons/edit-icon.png' %}" alt="">
             </a>
+          {% endif %}
         </div>
     </div>
     <div class="ally-description" id="description">
@@ -90,9 +91,11 @@
       
         <div class="row-bottom">
         <p class="content_tittle inner-title">Contacto</p>
+        {% if user.user_type_id.name == "Filantropia" %} 
         <a href="/edit_contact/{{allies.id}}/{{contact.id}}">
           <img  src="{% static 'img/icons/edit-icon.png' %}" alt="arrow"style="padding-left: 35px; padding-right: 10px; padding-bottom: 15px; opacity: 0.7; width:75px;">
         </a>
+        {% endif %}
         </div>
       
         <div class="personal_info column  column-left-bottom">

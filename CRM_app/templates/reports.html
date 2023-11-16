@@ -5,10 +5,19 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/reports.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'css/allies.css' %}">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 {% endblock %}
 
-
 {% block main_content %}
+
+{% if messages %}
+{% for message in messages %}
+  <div class="alert  alert-danger alert-{{ message.tags }}">
+    {{ message }}
+  </div>
+{% endfor %}
+{% endif %}
 
 <div class="main-content-reports">
   
@@ -16,11 +25,12 @@
   <div class="span-allie-form-container">
     <span class="label-allie-reports-form">¿Quieres hacer un reporte de un aliado? </span>
   </div>
-  <form method="get" action="{% url 'allies' %}" class="button-container flex-space-around">
-    <input class="search-field search-text-field" type="text" name="q" placeholder="Buscar por nombre" value="{{ request.GET.q }}">                   
+  <form method="post" action="{% url 'search_ally' %}" class="button-container flex-space-around">
+    {% csrf_token %}
+    <input class="search-field search-text-field" type="text" name="q" placeholder="Buscar por nombre">                   
     <button class="buton-search-field margin-left-button" type="submit"><b>Buscar</b></button>
   </form>   
-  <div class="reports-container">
+  <div class="reports-container" id="reports-container">
     <div class="left-column-container">
       <div class="report-card">
         <h3 class="report-card__tittle">Cantidad de donaciones en el año</h3>
@@ -253,6 +263,36 @@
     </div>
   </div>
 </div>
+
+<div class="print-button-container">
+  <button class="buton-search-field margin-left-button" id="print-button">Imprimir PDF</button>
+</div>
+
+<script>
+  const { jsPDF } = window.jspdf;
+  document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('print-button').addEventListener('click', function() {
+
+          const width = document.getElementById('reports-container').offsetWidth;
+          const height = document.getElementById('reports-container').offsetHeight;
+
+          const pdf = new jsPDF({
+            unit: 'px',
+            format: [width+20,height+20],
+          });
+
+          
+          
+          html2canvas(document.getElementById('reports-container'), {scale: 3}).then(canvas => {
+            const imgData = canvas.toDataURL('image/png');
+
+            pdf.addImage(imgData, 'PNG', 10, 10, width, height);
+
+            pdf.save("reporte.pdf");
+          });
+      });
+  });
+</script>
 
 {% endblock %}
 

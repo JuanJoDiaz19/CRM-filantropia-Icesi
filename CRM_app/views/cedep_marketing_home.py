@@ -4,10 +4,9 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login,logout, authenticate
 from django.contrib.auth.models import User
 from django.db import IntegrityError
-from CRM_app.models import New, User
+from CRM_app.models import New
 
-class News(View):
+class Cedep_marketing_home(View):
     def get(self, request):
-        news = New.objects.all()  # Obtener todas las instancias de New
-        #print(User.user_type_id)
-        return render(request, 'news.html', {'news': news})
+        news = New.objects.all()
+        return render(request, 'CEDEP_Marketing/CEDEP_marketing_home.html', {'news': news})
