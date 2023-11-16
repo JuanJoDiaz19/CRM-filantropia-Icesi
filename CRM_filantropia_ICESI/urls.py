@@ -48,6 +48,9 @@ from CRM_app.views.edit_contact import EditContact
 from CRM_app.views.edit_intern import EditIntern
 from CRM_app.views.edit_investigation_project import EditInvestigationProject
 from CRM_app.views.add_publication import AddPublication
+from CRM_app.views.follow_up_event import FollowUpEvent
+from CRM_app.views.follow_up_meeting import FollowUpMeeting
+from CRM_app.views.get_events_or_meetings import getEventsOrMeetings
 from CRM_app.views.single_ally_report import AllyReport
 from CRM_app.views.search_ally import SearchAlly
 from CRM_app.views.register_user import RegisterUser
@@ -88,6 +91,9 @@ urlpatterns = [
     path('edit_intern/<int:allie_id>/<int:intern_id>/', EditIntern.as_view(), name='edit_intern'),
     path('edit_investigation_project/<int:project__id>/', EditInvestigationProject.as_view(), name='edit_investigation_project'),
     path("add_publication/<int:project__id>/", AddPublication.as_view(), name="add_publication"),
+    path('follow_up_event/<int:follow_up_id>/', FollowUpEvent.as_view(), name="follow_up_event"),
+    path('follow_up_meeting/<int:follow_up_id>/', FollowUpMeeting.as_view(), name="follow_up_meeting"),
+    path('get-events-meetings/', getEventsOrMeetings, name='get-events-meetings'),
     path("reports/<int:allie_id>/", AllyReport.as_view(), name="reports"),
     path('search_ally/', SearchAlly.as_view(), name='search_ally'),
     path("register/", RegisterUser.as_view(), name='register'),

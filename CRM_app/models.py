@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth.base_user import AbstractBaseUser
+from django.core.exceptions import ValidationError
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 
 class CustomUserManager(BaseUserManager):
@@ -44,8 +46,6 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.name
-    
-
 
 class New(models.Model):
     title = models.CharField(max_length=50)
@@ -108,7 +108,6 @@ class Event(models.Model):
     name= models.CharField(max_length=20)
     objective= models.CharField(max_length=200)
     description= models.CharField(max_length=200)
-    image_link= models.CharField(max_length=200, null=True)
     
     def __str__(self):
         return self.name
@@ -196,6 +195,25 @@ class Meeting(models.Model):
     objective= models.CharField(max_length=200, null=True)
     def __str__(self):
         return self.name
+
+class Comment(models.Model):
+    event = models.ForeignKey(Event, on_delete=models.CASCADE, null=True, blank=True)
+    meeting = models.ForeignKey(Meeting, on_delete=models.CASCADE, null=True, blank=True)
+    autor = models.CharField(max_length=50)
+    contenido = models.TextField()
+    fecha = models.DateTimeField(auto_now_add=True)
+
+    def clean(self):
+        # Valida que solo uno de los dos campos (event o meeting) esté establecido
+        if (self.event is None and self.meeting is None) or (self.event and self.meeting):
+            raise ValidationError('Un comentario debe estar asociado a un evento o una reunión, pero no a ambos.')
+
+    def save(self, *args, **kwargs):
+        self.clean()
+        super(Comment, self).save(*args, **kwargs)
+
+    def __str__(self):
+        return self.contenido   
     
 class Gender(models.Model):
     id= models.AutoField(primary_key=True)

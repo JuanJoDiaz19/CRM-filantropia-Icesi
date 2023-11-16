@@ -29,7 +29,7 @@
   <p class="content_tittle"></p>
   <div class="card-informacion">
     <div class="container">
-      <div class="column column-left-top">
+      <div class="column">
 
         <div>
           <label class="content_text">Nombre</label>
@@ -70,26 +70,13 @@
             <input type="text" class="form_text" name="allie_area" placeholder="Objetivo del evento">
             <br>
           </div>
+
+          <div class="event_date">
+            <label class="content_text">Fecha del evento</label>
+            <input type="date" name="fecha" class="form_text form_date">
+          </div>
+
         </div>
-
-  <div class="column column-right-top" style="flex-direction: column;">
-
-
-      <div class="imageContainer">
-        <div>
-          <input type="file" id="image" accept="image/*" name="image" style="display:none;">
-          <img class="add_image" src="{% static 'img/add_allie/add_image.png' %}" alt="add_image">
-          <label for="image" class="content_text" style="cursor: pointer;">Agregar imagen del evento</label>
-        </div>
-      </div>
-
-      <div class="event_date">
-        <label class="content_text">Fecha del evento</label>
-        <input type="date" name="fecha" class="form_text form_date">
-      </div>
-
-
-  </div>
 
     <div class="row">
         <label class="content_text">Descripcion</label>
@@ -100,7 +87,7 @@
     </div>
   </div>
   <div class="container">
-    <a href="/calendar" class="container2" style="text-decoration: none;">
+    <a href="/calendar/all" class="container2" style="text-decoration: none;">
       <button class="button-style">Crear evento</button>
       </a>
   </div>
