@@ -21,11 +21,13 @@
             <img  src="data:image/jpeg;base64,{{ allies.image_link }}" alt="{{ allies.name }}">
             <h2>{{allies.name}}</h2>
         </div>
+        {% if user.user_type_id.name == "Filantropia" %}
         <a href="/allies/{{allies.id}}/add-donation/">
             <div class="main-header-donation__add-donation">              
                 <img src="{% static 'img/icons/add-icon.png' %}" alt="">
             </div>
         </a>
+        {% endif %}
     </div>
     <div class="main-donation-summary">
         <div class="main-donation-summary__total-money">
@@ -42,7 +44,7 @@
             <div class="main-donation-sumary__total-money__text">Dinero total donado</div>
         </div>
         <div class="main-donation-summary__type-donant">
-            <h3 class="main-donation-summary__type-donant__letter">A</h3>
+            <h3 class="main-donation-summary__type-donant__letter">{{type}}</h3>
             <div class="main-donation-summary__type-donant__text">Donante tipo</div>
         </div>
     </div>

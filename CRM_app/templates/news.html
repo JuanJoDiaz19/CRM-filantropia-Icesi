@@ -8,8 +8,12 @@
 {% block main_content %}
 
 <div class="main-content-home-page">    
-  <h1 class="welcome-text">Bienvenido, Usuario Filantropía</h1>
+  <h1 class="welcome-text">Bienvenido, Usuario {{user.user_type_id.name }}</h1>
+  {% if user.user_type_id.name == "Filantropia" %} 
   <div class="welcome-container" style="background-image: url({% static 'img/news/welcome.png' %});">
+  {% else %}
+  <div class="welcome-container" style="background-image: url(https://www.icesi.edu.co/donaciones/images/banner-categorias.jpg);">
+  {% endif %}
     <p class="palante-text">Vamos pa' lante</p>   
   </div> 
   <h2 class="news-text">Noticias del sistema</h2>

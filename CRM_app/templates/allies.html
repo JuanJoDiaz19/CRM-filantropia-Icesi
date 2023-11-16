@@ -11,10 +11,11 @@
 <section class="main-content-allies">
     <div class="main-content__header">
         <h1><b>Aliados ICESI</b></h1>
-
+        {% if user.user_type_id.name == "Filantropia" %} 
         <a href="add_ally/">
             <img src="{% static 'img/icons/add-icon.png' %}" alt="">
         </a>
+        {% endif %} 
     </div>
     <form method="get" action="{% url 'allies' %}" class="button-container">
         <input class="search-field search-text-field" type="text" name="q" placeholder="Buscar por nombre" value="{{ request.GET.q }}">

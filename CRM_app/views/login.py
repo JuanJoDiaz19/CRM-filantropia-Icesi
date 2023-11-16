@@ -10,7 +10,7 @@ from django.contrib import messages
 class LogIn(View):
     def get(self, request):
         return render(request, 'login.html')
-    
+        
     def post(self, request):
         print(request.POST)
         user = authenticate(request, username=request.POST['username'], password=request.POST['password'])
@@ -20,5 +20,8 @@ class LogIn(View):
             })
         else:
             login(request, user)
+            if user.is_superuser:
+                return redirect('register')
             return redirect('home')
+    
     

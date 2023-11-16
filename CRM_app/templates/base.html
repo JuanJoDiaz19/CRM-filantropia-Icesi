@@ -31,7 +31,7 @@
     <div class="user-info">
       <div class="centered-content d-flex flex-column align-items-center">
         <img src="{% static 'img/home/profile.png' %}" alt="Profile Image">
-        <p class="user-name">{{user.username}}</p>
+        <p class="user-name">{{user.name}}</p>
       </div>
     </div>
 
@@ -63,29 +63,31 @@
         {% block pagina_actual_calendario %}{% endblock %}
       </li>
 
-      <li class="nav-item">
-        <a href="/reports" class="nav-link link-dark">
-          <img class="sidebar-image" src="{% static 'img/home/reports.png' %}" alt="reportes" width="16" height="16">
-          Reportes
-        </a>
-        {% block pagina_actual_reportes %}{% endblock %}
-      </li>
+      {% if user.user_type_id.name == "Filantropia" %}      
+        <li class="nav-item">
+          <a href="/reports" class="nav-link link-dark">
+            <img class="sidebar-image" src="{% static 'img/home/reports.png' %}" alt="reportes" width="16" height="16">
+            Reportes
+          </a>
+          {% block pagina_actual_reportes %}{% endblock %}
+        </li>
 
-      <li class="nav-item">
-        <a href="/investigations" class="nav-link link-dark">
-          <img class="sidebar-image" src="{% static 'img/home/brain.png' %}" alt="investigaciones" width="16" height="16">
-          Investigación
-        </a>
-        {% block pagina_actual_investigacion %}{% endblock %}
-      </li>
+        <li class="nav-item">
+          <a href="/investigations" class="nav-link link-dark">
+            <img class="sidebar-image" src="{% static 'img/home/brain.png' %}" alt="investigaciones" width="16" height="16">
+            Investigación
+          </a>
+          {% block pagina_actual_investigacion %}{% endblock %}
+        </li>
 
-      <li class="nav-item">
-        <a href="/config" class="nav-link link-dark">
-          <img class="sidebar-image" src="{% static 'img/home/settings.png' %}" alt="configuracion" width="16" height="16">
-          Configuración
-        </a>
-        {% block pagina_actual_config %}{% endblock %}
-      </li>
+        <li class="nav-item">
+          <a href="/config" class="nav-link link-dark">
+            <img class="sidebar-image" src="{% static 'img/home/settings.png' %}" alt="configuracion" width="16" height="16">
+            Configuración
+          </a>
+          {% block pagina_actual_config %}{% endblock %}
+        </li>
+      {% endif %}
     </ul>
 
     <hr>

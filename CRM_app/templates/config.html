@@ -11,6 +11,10 @@
 
 {% block main_content %}
 
+<form method="POST" enctype="multipart/form-data">
+
+  {% csrf_token %}
+
 <section class="main-content-allies">
     <div class="main-content__header">
         <h1><b>Configuracion</b></h1>
@@ -44,25 +48,25 @@
       <h4 class="card__tittle">Clasificacion de los donantes:</h4>
       <div class="configuration-type">
         <p class="card__type" >Tipo A:</p>
-        <input class="card__input" type="text" placeholder="Desde">
-        <input class="card__input" type="text" placeholder="Hasta">
+        <input class="card__input" type="text" placeholder="Desde" name="source1">
+        <input class="card__input" type="text" placeholder="Hasta" name="destination1">
       </div>
       <div class="configuration-type">
         <p class="card__type" >Tipo B:</p>
-        <input class="card__input" type="text" placeholder="Desde">
-        <input class="card__input" type="text" placeholder="Hasta">
+        <input class="card__input" type="text" placeholder="Desde" name="source2">
+        <input class="card__input" type="text" placeholder="Hasta" name="destination2">
       </div>
       <div class="configuration-type">
         <p class="card__type" >Tipo C:</p>
-        <input class="card__input" type="text" placeholder="Desde">
-        <input class="card__input" type="text" placeholder="Hasta">
+        <input class="card__input" type="text" placeholder="Desde" name="source3">
+        <input class="card__input" type="text" placeholder="Hasta" name="destination3">
       </div>
       <button class="button-style" >Guardar cambios</button>
     </div>
 
 
 </section>
-
+</form>
 {% endblock %}
 
 {% block pagina_actual_config %}
