@@ -1555,9 +1555,9 @@ Falta tiempo
 ### Noviembre 16 2023
 
 #### Santiago Barraza
-* ¿Qué hice ayer?**
+* ¿Qué hice ayer?
 Finalicé lo del boton para imprimir el pdf del reporte general 
-* ¿Qué haré hoy?**
+* ¿Qué haré hoy?
 Empezaré a investigar como hacer deployment de un proyecto de django
 * ¿Hay algún obstáculo que me impide avanzar en el proyect?
 Hace falta tiempo para trabajar en el proyecto
