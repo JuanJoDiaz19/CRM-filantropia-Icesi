@@ -1388,6 +1388,14 @@ Empezare a mirar como implementar los diseños de las paginas de CEDEP y mercade
 * ¿Hay algún obstáculo que me impide avanzar en el proyecto?
 Me hace falta tiempo y motivacion
 
+#### Santiago Barraza
+* ¿Qué hice ayer?
+No realicé mayor avance en el proyecto
+* ¿Qué haré hoy?
+Investigaré sobre el manejo de PDFs en JavaScript.
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Hace falta tiempo
+
 #### Ana
 * ¿Qué hice ayer?
 Entender como funciona el calentario
@@ -1406,6 +1414,14 @@ Falta tiempo
   avanzar con los test
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 muy poco tiempo
+
+#### Santiago Barraza
+* ¿Qué hice ayer?
+Investigué sobre el manejo de PDFs en JavaScript.
+* ¿Qué haré hoy?
+Empezaré con la implementación del botón para imprimir el PDF en la página de reportes utilizando jsPDF.
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Hace falta tiempoo para trabajar en el proyecto
 
 #### Juan Jose Diaz
 * ¿Qué hice ayer?
@@ -1434,6 +1450,14 @@ Falta tiempo
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 muy poco tiempo
 
+#### Santiago Barraza
+* ¿Qué hice ayer?
+Empecé con la implementación del botón para imprimir el PDF en la página de reportes utilizando jsPDF.
+* ¿Qué haré hoy?
+Continuaré con la implementación del botón para imprimir el PDF en la página de reportes utilizando jsPDF.
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Hace falta tiempoo para trabajar en el proyecto
+
 #### Ana
 * ¿Qué hice ayer?
 No hice mucho
@@ -1452,6 +1476,13 @@ Falta tiempo
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 muchos proyectos, poco tiempo
 
+#### Santiago Barraza
+* ¿Qué hice ayer?
+Continué con la implementación del botón para imprimir el PDF en la página de reportes utilizando jsPDF.
+* ¿Qué haré hoy?
+Dudo que pueda realizar algún avance
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Hace falta tiempoo para trabajar en el proyecto
 
 #### Juan Jose Diaz
 * ¿Qué hice ayer?
@@ -1479,6 +1510,14 @@ Voy a seguir con lo mismo
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 Falta tiempo
 
+#### Santiago Barraza
+* ¿Qué hice ayer?
+No realicé avances
+* ¿Qué haré hoy?
+Dudo que pueda realizar algún avance
+* ¿Hay algún obstáculo que me impide avanzar en el proyecto?
+Hace falta tiempo para trabajar en el proyecto
+
 ### Noviembre 15 2023
 
 #### Espinosa
@@ -1489,6 +1528,13 @@ Falta tiempo
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
   estoy cansado jefe
 
+#### Santiago Barraza
+* ¿Qué hice ayer?
+No realicé avances
+* ¿Qué haré hoy?
+Finalizaré lo del boton para imprimir el pdf del reporte general 
+* ¿Hay algún obstáculo que me impide avanzar en el proyect?
+Hace falta tiempo para trabajar en el proyecto
 
 #### Juan Jose Diaz
 * ¿Qué hice ayer?
@@ -1505,3 +1551,13 @@ Hice lo de los reportes por aliados
 Nose
 * ¿Hay algún obstaculo que me impide avanzar en el proyecto?
 Falta tiempo
+
+### Noviembre 16 2023
+
+#### Santiago Barraza
+* ¿Qué hice ayer?**
+Finalicé lo del boton para imprimir el pdf del reporte general 
+* ¿Qué haré hoy?**
+Empezaré a investigar como hacer deployment de un proyecto de django
+* ¿Hay algún obstáculo que me impide avanzar en el proyect?
+Hace falta tiempo para trabajar en el proyecto
