@@ -32,7 +32,7 @@
       <div class="centered-content d-flex flex-column align-items-center">
 
         <div class="imageContainer1" style="margin-bottom:20px; ">
-          <img src="data:image/jpeg;base64,{{ user.image_link }}" alt="Imagen del usuario">
+          <img src="data:image/jpeg;base64,{{ user.image_link }}" alt="Imagen del usuario" onerror="this.onerror=null;this.src='{% static 'img/home/profile.png' %}'">
        </div>
 
         <p class="user-name">{{user.name}}</p>
