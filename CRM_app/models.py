@@ -38,6 +38,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)  # Agregado
     is_superuser = models.BooleanField(default=False)  # Agregado
+    image_link = models.CharField(max_length=200)
     user_type_id= models.ForeignKey(User_Type, on_delete=models.CASCADE, default=1)
 
     objects = CustomUserManager()

@@ -19,7 +19,7 @@ class Calendar(View):
         for event in events:
             allies = list(Allie.objects.filter(eventallie__event=event).values('name'))
             allies_names = ", ".join([ally['name'] for ally in allies])
-            comments = Comment.objects.filter(event=event).order_by('fecha')
+            comments = Comment.objects.filter(event=event).order_by('-fecha')
             comments_formatted = [
                 {
                     'autor': comment.autor,
@@ -43,7 +43,7 @@ class Calendar(View):
 
         # Procesa las reuniones y sus comentarios
         for meeting in meetings:
-            comments = Comment.objects.filter(meeting=meeting).order_by('fecha')
+            comments = Comment.objects.filter(meeting=meeting).order_by('-fecha')
             comments_formatted = [
                 {
                     'autor': comment.autor,

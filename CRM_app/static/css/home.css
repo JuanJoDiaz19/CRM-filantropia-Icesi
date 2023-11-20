@@ -69,6 +69,7 @@ p {
   font-size: 1.25rem;
   opacity: 0.85;
   font-weight: 700;
+  margin: 0;
 }
 
 li.nav-item {
@@ -166,4 +167,19 @@ li.nav-item:hover {
   .topbar-menu-container {
     display: none;
   }
+}
+.imageContainer1 {
+  width: 120px; /* Ancho del contenedor */
+  height: 120px; /* Altura del contenedor, debe ser igual al ancho para una forma circular */
+  border-radius: 50%; /* Esto hará que el contenedor sea circular */
+  overflow: hidden; /* Esto evitará que cualquier contenido (incluida la imagen) se desborde del área circular */
+  display: flex; /* Centra el contenido usando Flexbox */
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Centrado vertical */
+}
+
+.imageContainer1 img {
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+  max-height: 100%; /* Asegura que la imagen no exceda la altura del contenedor */
+  object-fit: cover; /* La imagen cubrirá el área sin distorsionarse */
 }
