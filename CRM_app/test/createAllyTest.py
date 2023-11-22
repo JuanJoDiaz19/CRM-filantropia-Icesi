@@ -20,8 +20,8 @@ def login(self):
     password = selenium.find_element("id",'password')
     submit = selenium.find_element("id",'submit')
 
-    username.send_keys('1234')
-    password.send_keys('1234')
+    username.send_keys('12345')
+    password.send_keys('12345')
     submit.click()
 
     return selenium
