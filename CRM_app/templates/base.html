@@ -30,7 +30,11 @@
     <!-- Información de usuario -->
     <div class="user-info">
       <div class="centered-content d-flex flex-column align-items-center">
-        <img src="{% static 'img/home/profile.png' %}" alt="Profile Image">
+
+        <div class="imageContainer1" style="margin-bottom:20px; ">
+          <img src="data:image/jpeg;base64,{{ user.image_link }}" alt="Imagen del usuario" onerror="this.onerror=null;this.src='{% static 'img/home/profile.png' %}'">
+       </div>
+
         <p class="user-name">{{user.name}}</p>
       </div>
     </div>

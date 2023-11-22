@@ -16,20 +16,23 @@
   
   <div class="main-section-header">
     <div style="display:flex; align-items: center;  justify-content: space-between;">
-    <div class="image-container-ally">
-        <img  src="data:image/jpeg;base64,{{ ally.image_link }}" alt="{{ ally.name }}">
-    </div>
+      <div class="image-container-ally">
+          <img  src="data:image/jpeg;base64,{{ ally.image_link }}" alt="{{ ally.name }}">
+      </div>
+      <div class="main-info-ally-container">
+          <h3 class="main-name-ally">Reporte de {{ally.name}}</h3>
+          {% if ally.active == 1 %}
+          <p class="main-ally-description active-user">Alliado activo</p>
+          {% else %}
+          <p class="main-ally-description inactive-user">Aliado inactivo</p>
+          {% endif %} 
+      </div>
+   </div>  
+  <div class="print-button-container">
+    <button class="buton-search-field margin-left-button font-weight:700; maring-top:20px;" id="print-button"><b>Imprimir PDF</b></button>
+  </div> 
+</div>  
 
-    <div class="main-info-ally-container">
-        <h3 class="main-name-ally">Reporte de {{ally.name}}</h3>
-        {% if ally.active == 1 %}
-        <p class="main-ally-description active-user">Alliado activo</p>
-        {% else %}
-        <p class="main-ally-description inactive-user">Aliado inactivo</p>
-        {% endif %} 
-    </div>
-  </div>
-  </div>  
   <div class="reports-container">
     <div class="left-column-container">
       <div class="report-card">
