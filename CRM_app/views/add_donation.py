@@ -34,7 +34,7 @@ class AddDonation(View):
             allie_instance= get_object_or_404(Allie, id= allie__id)
             
             for types in donations_types:
-                if(amount_number<10000):
+                if(amount_number<0):
                     return render(request, 'allies/add-donation.html', {'error_message': "No puede poner un monto tan pequeño"})
                 elif(amount_number>=types.min_value and amount_number<types.max_value):
                     donation_type_instance= get_object_or_404(Donation_Type, id=types.id)
