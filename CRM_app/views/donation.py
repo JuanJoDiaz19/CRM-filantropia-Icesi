@@ -28,9 +28,10 @@ class donation_(View):
             total+=i.amount
         
         for d_type in types:
+            if(total>d_type.max_value):
+                type=d_type.name
             if(total>=d_type.min_value and total<=d_type.max_value):
                 type=d_type.name
-            else:
-                type= d_type.name
+            
             
         return render(request, 'allies/donation.html',{'donation':donation, 'allies': ally, 'total':total, 'type': type})

@@ -171,3 +171,12 @@
     left: 90%; 
     transform: translate(-60%, -60%); 
   }
+
+  .alert {
+    display: flex;
+    margin: 2rem 0 2rem 0 ;
+    height: 5rem;
+    background-color: #13247B;
+    align-items: center;
+    justify-content: center;
+}
