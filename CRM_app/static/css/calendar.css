@@ -1,0 +1,175 @@
+.main_content_calendar {
+    width: 70%;
+    margin: auto;
+}
+
+.navigation-buttons-calendar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.add_occurence_calendar {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: #0FAE65;
+    transition: 0.4s;
+    color: white;
+    padding: 0.2rem 0.7rem 0.2rem 0.7rem;
+    margin-top: 2rem;;
+    border-radius: 20px;
+    height: auto;
+    width: auto;
+    font-size: 3rem;
+    justify-content: center;
+    
+}
+
+.add_occurence_calendar p {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    color: #434343;
+    font-weight: 700;
+    padding-top: 2rem;
+    font-size: 2rem;
+}
+
+.fc-dayGridMonth-view  a {
+    color: #707070 !important;
+    text-decoration: none;
+}
+
+.fc-toolbar-title  { 
+    color: #434343;
+    font-weight: 600;
+}
+
+.fc-toolbar-title:first-letter  { 
+    text-transform: capitalize;
+}
+
+.calendar-container {
+    width: 100%;
+    height: 50%;
+    margin:auto
+}
+
+.header_calendar_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    padding-top: 1rem;
+}
+
+.header_calendar_container img {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 1rem;
+}
+
+.add-event {
+    justify-content: center;
+    background-color: #0159A1;
+    
+}
+
+.modal-content {
+    color: #707070;
+}
+
+.modal-header {
+    color: #0159A1;
+    
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 145px; 
+    height: 60px; 
+    top:32px;
+    border-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: -7px;
+    right: 0;
+    bottom: 20px;
+    background-color: #f9f9f9;
+    transition: 0.4s;
+    border-radius: 34px;
+    box-shadow: 0px 3px 3px #a8a8a87f;
+    
+}
+
+
+.circle {
+    position: absolute;
+    height: 30px;
+    width: 66px;
+    left: 8px;
+    bottom: 5px;
+    background-color: #0159A1; 
+    transition: 0.4s;
+    border-radius: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.slider.on .circle {
+    width: 74px; 
+    border-radius: 50px;
+    transform: translateX(calc(100% - 8px)); 
+}
+
+.switch-label-reunion {
+    position: absolute;
+    top: 7px;
+    left: 65px; 
+    right: 0;
+    text-align: center;
+    font-size: 15px;
+    color:white;
+}
+
+.switch-label-evento {
+    position: absolute;
+    top: 7px; 
+    left: 0;
+    right: 73px; 
+    text-align: center;
+    font-size: 15px;
+    color:white;
+}
+.switch-label-evento.on {
+   
+    color:rgb(132, 132, 132);
+}
+.switch-label-reunion.on {
+   
+    color:rgb(132, 132, 132);
+  }
+  .circle.on{
+    background-color: #0FAE65; 
+  }
+  #checkboxImage {
+    cursor: pointer;
+    margin-top:45px;
+    width: 100px; /* o el ancho que desees */
+    height: auto; /* para mantener la proporción */
+  }
+  #realCheckbox {
+    display: none;
+  }

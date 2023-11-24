@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/create_event.css'%}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
+<script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+{% endblock %}
+
+{% block main_content %}
+
+{% if error_message %}
+  <div class="alert alert-danger">
+    {{ error_message }}
+  </div>
+{% endif %}
+
+<div class="top_arrow_tittle" style="margin-top: 1.875rem; margin-left: 1.875rem;">
+  <a href="/calendar/all">
+    <img class="arrow_image" src="{% static 'img/create_event/arrow.png' %}" alt="arrow">
+  </a>
+  <p class="top_tittle">Agregar Evento</p>
+</div>
+
+<form method="POST" enctype="multipart/form-data">
+
+    {% csrf_token %}
+
+  <p class="content_tittle"></p>
+  <div class="card-informacion">
+    <div class="container">
+      <div class="column">
+
+        <div>
+          <label class="content_text">Nombre</label>
+          <br>
+          <input type="text" class="form_text" name="nombre" placeholder="Nombre">
+          <br>
+        </div>
+
+        <div class="form">
+          <label class="content_text">Aliados involucrados</label>
+          <div class="opciones-sexo">
+            <select name="countries[]" id="countries" multiple>
+              {% for ally in allies%}
+              <option value="{{ally.id}}">{{ally.name}}</option>
+              {% endfor %}
+            </select>
+            <script>
+              new MultiSelectTag('countries')  // id
+            </script>
+            <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+          </div>
+        </div>
+
+          <div class="form ">
+            <label class="content_text">Categoria</label>
+            <br>
+            <select class="form_text" name="categoria">
+              {% for types in event_type%}
+              <option value="{{types.id}}">{{types.name}}</option>
+              {% endfor %}
+            </select>
+            <br>
+          </div>
+
+          <div class="form">
+            <label class="content_text">Objetivo</label>
+            <br>
+            <input type="text" class="form_text" name="allie_area" placeholder="Objetivo del evento">
+            <br>
+          </div>
+
+          <div class="event_date">
+            <label class="content_text">Fecha del evento</label>
+            <input type="date" name="fecha" class="form_text form_date">
+          </div>
+
+        </div>
+
+    <div class="row">
+        <label class="content_text">Descripcion</label>
+        <br>
+        <textarea class="form_text"  cols="10" rows="4"  name="allie_description" placeholder="Descripción"></textarea>
+        <br>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <a href="/calendar/all" class="container2" style="text-decoration: none;">
+      <button class="button-style">Crear evento</button>
+      </a>
+  </div>
+
+</form>
+
+<script>
+  <!-- Lector de imagenes -->
+  const imageContainer = document.querySelector(".imageContainer");
+  const imageInput = document.getElementById("customFileInput");
+  const customFileButton = document.getElementById("customFileButton");
+  const loading_text = document.getElementById("loading-text");
+  const add_image = document.getElementById("add-image");
+  const add_image_text = document.getElementById("add-image-text");
+
+  imageInput.addEventListener("change", function () {
+      const file = this.files[0];
+      if (file) {
+          add_image.style.display = "none"; 
+          add_image_text.style.display = "none"; 
+          loading_text.style.display = "inline"; 
+          const reader = new FileReader();
+
+          reader.onload = function (e) {
+              const imageUrl = e.target.result;
+              imageContainer.style.backgroundImage = url(${imageUrl});
+              loading_text.style.display = "none"; 
+              add_image.style.display = "none"; 
+              add_image_text.style.display = "none"; 
+          };
+
+          reader.readAsDataURL(file);
+      } else {
+          
+          imageContainer.style.backgroundImage = "";
+          loading_text.style.display = "none"; 
+      }
+  });
+  customFileButton.addEventListener("click", function () {
+      imageInput.click();
+  });
+  
+  <!-- Input expandible -->
+  function autoExpand(input) {
+    input.style.height = 'auto';
+    input.style.height = (input.scrollHeight) + 'px';
+}
+  window.addEventListener('load', function () {
+    autoExpand(document.getElementById('expanding-input'));
+  });
+</script>
+{% endblock %}
+
+{% block pagina_actual_aliados %}
+<div class="current-page"></div>
+{% endblock %}

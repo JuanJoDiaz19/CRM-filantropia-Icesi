@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/allies/interns.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/config.css' %}">
+
+{% endblock %}
+
+
+
+{% block main_content %}
+
+{% if message %}
+<div class="alert">
+    <p>{{message}}</p>
+</div>
+{% endif%}
+
+<section class="main-content-allies">
+    <div class="main-content__header">
+        <h1><b>Configuración</b></h1>
+        <a href="/interns/add_intern/{{ally.id}}">
+        </a>
+    </div>
+
+    
+    <form method="post" action="{% url 'config'  %}" enctype="multipart/form-data">
+      {% csrf_token %}
+    <div class="card-texture">
+      <div class="configuration-user">
+        <div class="imageContainer" style="margin-top:7px; margin-left:7px; margin-right:30px;">
+          <div class="button-style add-btn">
+            <img class="edit-btn" src="{% static 'img/config/editar.png' %}" alt="add_image">
+           </div>
+           <input type="file" id="customFileInput" accept="image/*" name="image" onchange="loadImage(this)" >
+          <label for="customFileInput" id="customFileButton">Seleccionar archivo</label>
+       </div>
+      </form>
+  
+          <div>
+          <h4 class="card__tittle">Información del usuario</h4>
+          <div style="display:flex; ">
+          <div class="configuration-user__labels">
+            <span>Usuario:</span>
+            <span>Rol:</span>
+          </div>
+          <div class="configuration-user__label-input" style="padding-left:30px">
+            <p>{{user.name}}</p>
+            <p>{{user.user_type_id.name}}</p>
+          </div>
+        </div>
+      </div>
+      </div>
+      <button type="submit" class="button-style" >Guardar cambios</button>
+    </div>
+
+
+  <form method="post" action="{% url 'config' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="card-texture">
+      <h4 class="card__tittle">Clasificacion de los donantes:</h4>
+      {% for donation_type in donation_types %}
+      <div class="configuration-type">
+        <p class="card__type" >Tipo {{ donation_type.name }}:</p>
+        <input class="card__input" type="number" placeholder="Desde" name="min_value_{{ donation_type.id }}" name="min_value_{{ donation_type.id }}" value="{{ donation_type.min_value }}">
+        <input class="card__input" type="number" placeholder="Hasta" name="max_value_{{ donation_type.id }}" name="max_value_{{ donation_type.id }}" value="{{ donation_type.max_value }}">
+      </div>
+      {% endfor %}
+      <div class="configuration-type">
+        <p class="card__type" name="name_donation" >Tipo {{ letra }}:</p>
+        <input type="hidden" name="name_donation" value="{{ letra }}">
+        <input class="card__input" type="number" placeholder="Desde" name="source">
+        <input class="card__input" type="number" placeholder="Hasta" name="destination">
+      </div>
+      <button type="submit"  class="button-style" >Guardar cambios</button>
+  </form>
+</section>
+
+<script>
+  const imageContainer = document.querySelector(".imageContainer");
+  const imageInput = document.getElementById("customFileInput");
+  const customFileButton = document.getElementById("customFileButton");
+  const imageUrl = "data:image/jpeg;base64,{{ user.image_link }}";
+  imageContainer.style.backgroundImage = 'url(' + imageUrl + ')';
+  
+  imageInput.addEventListener("change", function () {
+      const file = this.files[0];
+      if (file) {
+          
+          const reader = new FileReader();
+  
+          reader.onload = function (e) {
+              const imageUrl = e.target.result;
+              imageContainer.style.backgroundImage = 'url(' + imageUrl + ')';
+          
+          };
+  
+          reader.readAsDataURL(file);
+      }
+  });
+  
+  customFileButton.addEventListener("click", function () {
+      imageInput.click();
+  });
+  
+  function autoExpand(input) {
+      input.style.height = 'auto';
+      input.style.height = (input.scrollHeight) + 'px';
+  }
+  window.addEventListener('load', function () {
+      autoExpand(document.getElementById('expanding-input'));
+  });
+  
+  function loadImage(input) {
+    // Obtener el elemento de la imagen
+    const previewImage = document.getElementById('previewImage');
+    const imagePreviewDiv = document.getElementById('imagePreviewDiv');
+  
+    // Establecer el atributo src de la imagen y el atributo alt
+    previewImage.setAttribute('src', imageLink);
+    previewImage.setAttribute('alt', 'Image Preview');
+  
+    // Mostrar el div de vista previa de la imagen
+    imagePreviewDiv.style.display = 'block';
+  }
+  
+  window.addEventListener('DOMContentLoaded', (event) => {
+    // URL de la imagen (reemplaza con tu valor real)
+    const imageUrl = "data:image/jpeg;base64,{{ user.image_link }}";
+  
+    // Llamar a la función loadImage con la URL de la imagen
+    loadImage(null, imageUrl);
+  });
+  
+  
+  </script>
+{% endblock %}
+
+{% block pagina_actual_config %}
+<div class="current-page"></div>
+{% endblock %}

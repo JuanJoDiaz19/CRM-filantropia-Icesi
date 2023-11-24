@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/add_allie.css' %}">
+{% endblock %}
+
+{% block main_content %}
+
+{% if error_message %}
+  <div class="alert alert-danger">
+    {{ error_message }}
+  </div>
+{% endif %}
+
+
+<div class="top_arrow_tittle" style="margin-top: 1.875rem; margin-left: 1.875rem; margin-bottom: 2rem;">
+  <a href="/allies/{{ allies.id }}/">
+    <img class="arrow_image" src="{% static 'img/add_allie/arrow.png' %}" alt="arrow">
+  </a>
+  <p class="top_tittle">Editar información de contacto aliado</p>
+</div>
+
+<form method="post" action="{% url 'edit_contact' allie_id=allies.id  contact_info_id=contact_info.id %}" enctype="multipart/form-data">
+
+  {% csrf_token %}
+
+<div id="cards-container">
+  <div class="card-contacto">
+    <div class="container">
+
+      <div class="row-bottom">
+        <p class="content_tittle inner-title">Contacto</p>
+      </div>
+
+      <div class="column column-right-bottom">
+
+        <div>
+          <label class="content_text">Nombre</label>
+          <br>
+          <input type="text" name="contact_name" class="form_text" id="documentos" value="{{contact_info.name}}">
+          <br>
+        </div>
+
+
+        <div class="form">
+          <label class="content_text">Teléfono celular</label>
+          <br>
+          <input type="number" name="contact_phone" class="form_text" id="documentos" value="{{contact_info.phone_number}}">
+          <br>
+        </div>
+      </div>
+      <div class="row-temp">
+          
+      </div>
+      <div class="column column-left-bottom">
+
+        <div>
+          <label class="content_text">Correo electrónico</label>
+          <br>
+          <input type="email" name="contact_email" class="form_text" id="documentos" value="{{contact_info.email}}">
+          <br>
+        </div>
+
+        <div class="form">
+          <label class="content_text">Correo electrónico Auxiliar</label>
+          <br>
+          <input type="email" name="contact_aux_email" class="form_text" id="documentos" value="{{contact_info.aux_email}}">
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row-bottom">
+    <button type="submit" class="button-style-delete" style="margin-right:10px" name="delete" value="delete">Borrar</button>
+    <button type="submit" class="button-style" style="margin-left:10px;  width: 50%;" name="edit" value="edit">Editar aliado</button>
+  </div>
+
+
+</form>
+<script>
+const imageContainer = document.querySelector(".imageContainer");
+const imageInput = document.getElementById("customFileInput");
+const customFileButton = document.getElementById("customFileButton");
+const imageUrl = "data:image/jpeg;base64,{{ allies.image_link }}";
+imageContainer.style.backgroundImage = 'url(' + imageUrl + ')';
+
+imageInput.addEventListener("change", function () {
+    const file = this.files[0];
+    if (file) {
+        
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            const imageUrl = e.target.result;
+            imageContainer.style.backgroundImage = 'url(' + imageUrl + ')';
+        
+        };
+
+        reader.readAsDataURL(file);
+    }
+});
+
+customFileButton.addEventListener("click", function () {
+    imageInput.click();
+});
+
+function autoExpand(input) {
+    input.style.height = 'auto';
+    input.style.height = (input.scrollHeight) + 'px';
+}
+window.addEventListener('load', function () {
+    autoExpand(document.getElementById('expanding-input'));
+});
+
+function loadImage(input) {
+  // Obtener el elemento de la imagen
+  const previewImage = document.getElementById('previewImage');
+  const imagePreviewDiv = document.getElementById('imagePreviewDiv');
+
+  // Establecer el atributo src de la imagen y el atributo alt
+  previewImage.setAttribute('src', imageLink);
+  previewImage.setAttribute('alt', 'Image Preview');
+
+  // Mostrar el div de vista previa de la imagen
+  imagePreviewDiv.style.display = 'block';
+}
+
+window.addEventListener('DOMContentLoaded', (event) => {
+  // URL de la imagen (reemplaza con tu valor real)
+  const imageUrl = "data:image/jpeg;base64,{{ allies.image_link }}";
+
+  // Llamar a la función loadImage con la URL de la imagen
+  loadImage(null, imageUrl);
+});
+
+
+</script>
+
+
+{% endblock %}
+
+{% block pagina_actual_aliados %}
+<div class="current-page"></div>
+{% endblock %}

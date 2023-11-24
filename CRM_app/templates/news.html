@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/news.css' %}">
+{% endblock %}
+
+{% block main_content %}
+
+<div class="main-content-home-page">    
+  <h1 class="welcome-text">Bienvenido, Usuario {{user.user_type_id.name }}</h1>
+  {% if user.user_type_id.name == "Filantropia" %} 
+  <div class="welcome-container" style="background-image: url({% static 'img/news/welcome.png' %});">
+  {% else %}
+  <div class="welcome-container" style="background-image: url(https://www.icesi.edu.co/donaciones/images/banner-categorias.jpg);">
+  {% endif %}
+    <p class="palante-text">Vamos pa' lante</p>   
+  </div> 
+  <h2 class="news-text">Noticias del sistema</h2>
+  <div class="contenedor">
+      {%for new in news%}
+          <div class="rectangulo">
+            <div class="rectangulo__imagen_contenedor">
+              <img src="{% static 'img/news/bell.png' %}" alt="bell" class="left-image">
+              <p class="date-text">{{new.date}}</p>
+            </div>
+            <div class="rectangulo__imagen_contenedor-texto">
+              <h5 class="container-text">{{new.title}}</h5>
+              <p class="news-description">{{new.description}}</p>
+            </div>
+          </div>
+      {%endfor%}
+  </div>
+</div>
+{% endblock %}
+
+{% block pagina_actual_inicio %}
+<div class="current-page"></div>
+{% endblock %}
+

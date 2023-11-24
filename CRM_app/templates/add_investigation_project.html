@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/add_allie.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/investigation-projects/add_investigation_project.css' %}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
+{% endblock %}
+
+{% block main_content %}
+
+{% if error_message %}
+  <div class="alert alert-danger">
+    {{ error_message }}
+  </div>
+{% endif %}
+
+
+
+<div class="top_arrow_tittle" style="margin-top: 1.875rem; margin-left: 1.875rem;">
+  <a href="/investigations">
+    <img class="arrow_image" src="{% static 'img/add_allie/arrow.png' %}" alt="arrow">
+  </a>
+  <h2 class="top_tittle">Agregar Proyecto de Investigacion</h2>
+</div>
+
+<form class="main-content-form" method="POST" enctype="multipart/form-data">
+
+    {% csrf_token %}
+  <div class="card-informacion">
+    <div class="container">
+      <div class="column column-left-top">
+
+        <div>
+          <label class="content_text">Titulo del proyecto</label>
+          <br>
+          <input type="text" class="form_text" name="titulo" placeholder="Titulo">
+          <br>
+        </div>
+            
+            <div class="form">
+                <label class="content_text">Aliados involucrados</label>
+                <br>
+                
+                <select name="allies[]" class="form_text" id="allies" multiple>
+                  {% for ally in allies %}
+                    <option value="{{ally.id}}" id="{ally.id}">{{ally.name}}</option>
+                  {%endfor%}
+                </select>
+                
+                <br>
+            </div>
+            <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+            <script>
+                new MultiSelectTag('allies')  // id
+            </script>
+        </div>
+
+  <div class="column column-right-top right-colum-initial-date">
+    <label class="content_text">Fecha de Inicio</label>
+    <br>
+    <input type="date" name="fecha" class="form_text form_date">
+    <br>
+  </div>
+
+    <div class="row">
+        <label class="content_text">Descripcion del proyecto</label>
+        <br>
+        <textarea  class="form_text" name="descripcion" cols="30" rows="5" placeholder="Descripcion"></textarea>
+        <br>
+    </div>
+
+    <div class="row">
+      <label class="content_text">Objetivos del proyecto</label>
+      <br>
+      <textarea  class="form_text" name="objetivos" cols="30" rows="3" placeholder="Objetivos"></textarea>
+      <br>
+  </div>
+
+    </div>
+  </div>
+  <div class="container">
+    <button class="button-style" id="submit">Agregar</button>
+  </div>
+</form>
+{% endblock %}
+
+{% block pagina_actual_aliados %}
+<div class="current-page"></div>
+{% endblock %}

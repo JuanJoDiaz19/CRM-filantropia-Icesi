@@ -1,0 +1,185 @@
+:root {
+  --primary-color: #3969FC;
+  --secondary-color: #13247B;
+  --background-color: #0159A1;
+  --tertiary-color: #D4D4D4;
+  --font-color: #707070;
+  --font: 1rem;
+  --titles: 3rem;
+}
+
+* {
+  font-family: 'Mulish', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+p {
+  font-size: 1rem;
+}
+
+* {
+  font-family: 'Mulish', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar {
+  position: fixed;
+  padding-top: 6.875rem;
+  background-color: #F6F6F6;
+  width: 14.375rem;
+  height: calc(100% - 0.00625rem);
+  overflow-y: auto;
+  align-items: start;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.custom-topbar {
+  position: fixed;
+  background-color: #0159A1;
+  color: white;
+  margin-left: auto;
+  margin-right: 0.625rem;
+  width: 100%;
+  z-index: 1001;
+  padding: 0.625rem;
+  height: 5.5rem;
+  padding-top: 1rem;
+}
+
+.centered-content img {
+  width: 6.5625rem;
+  height: 6.5625rem;
+  border-radius: 50%;
+  margin-bottom: 0.625rem;
+  margin-top: 1.875rem;
+}
+
+.user-name {
+  text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
+  font-size: 1.25rem;
+  opacity: 0.85;
+  font-weight: 700;
+  margin: 0;
+}
+
+li.nav-item {
+  position: relative;
+  box-shadow: 0px 0.125rem 0.3125rem rgba(0, 0, 0, 0.2);
+  margin-bottom: 0.9375rem;
+  font-size: 1rem;
+  opacity: 0.85;
+  font-weight: 620;
+}
+
+li.nav-item a.nav-link {
+  position: relative;
+  padding-right: 1.875rem;
+}
+
+li.nav-item:hover {
+  background-color: #e8e8e8;
+}
+
+.current-page {
+  width: 0.9375rem;
+  height: 100%;
+  background-color: #0159A1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0.3125rem 0px 0px 0.3125rem;
+}
+
+.sidebar-image {
+  opacity: 0.85;
+  transform: translateY(-0.1rem);
+  margin-right: 0.9375rem;
+  margin-left: 0.9375rem;
+}
+
+.topbar-image {
+  margin-left: 1.25rem;
+}
+
+.main_content {
+  padding-top: 7.5rem;
+  padding-left: 16.5625rem;
+  padding-right: 2.1875rem;
+  color: #0159A1;
+  margin-left: 1.2rem;
+}
+
+.sidebar-open {
+  transform: translateX(0%);
+}
+.sidebar-hidden {
+  transform: translateX(-100%);
+}
+
+@media (max-width: 50rem) {
+  .custom-topbar {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    height: 6.5625rem;
+  }
+  .main_content {
+    padding-left: 2.1875rem;
+    transition: padding-left 0.4s ease;
+    padding-right: 2.1875rem;
+  }
+  .topbar-image {
+    width: 4.375rem;
+    height: 4.375rem;
+    padding: 0.625rem;
+    margin-left: 0.3125rem;
+    margin-bottom: 0.3125rem;
+    margin-right: auto;
+  }
+  .topbar-menu-container {
+    background-color: transparent;
+    border-color: transparent;
+  }
+  .topbar-menu {
+    margin-left: 1.25rem;
+  }
+}
+
+@media (min-width: 50.0625rem) {
+  .custom-sidebar {
+    transform: translateX(0%);
+    transition: transform 0.3s ease;
+  }
+  .main_content {
+    padding-left: 16.5625rem;
+    transition: padding-left 0.27s ease;
+  }
+  .topbar-menu-container {
+    display: none;
+  }
+}
+.imageContainer1 {
+  width: 120px; /* Ancho del contenedor */
+  height: 120px; /* Altura del contenedor, debe ser igual al ancho para una forma circular */
+  border-radius: 50%; /* Esto hará que el contenedor sea circular */
+  overflow: hidden; /* Esto evitará que cualquier contenido (incluida la imagen) se desborde del área circular */
+  display: flex; /* Centra el contenido usando Flexbox */
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Centrado vertical */
+}
+
+.imageContainer1 img {
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+  max-height: 100%; /* Asegura que la imagen no exceda la altura del contenedor */
+  object-fit: cover; /* La imagen cubrirá el área sin distorsionarse */
+}

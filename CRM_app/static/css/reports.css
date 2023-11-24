@@ -1,0 +1,158 @@
+.main-content-reports {
+    padding-top: 2.5rem;
+    width: 80%;
+    margin: auto;
+}
+
+.main-content-reports h1 {
+    color: #434343;
+    font-weight: 700;
+    margin-bottom: 2rem;   
+}
+
+.reports-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.left-column-container {
+    width: 65%;    
+}
+
+
+.right-column-container {
+    width: 35%;
+}
+
+.report-card {
+    color: #707070;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    margin-bottom: 2rem;
+    border-radius: 1.5rem;
+    padding: 1.7rem;
+    border: #d2d2d2 solid 1px;
+    box-shadow: 0 0.25rem 0.5rem -0.125rem rgba(0, 0, 0, 0.2);
+}
+
+.report-card__tittle {
+    color: #434343;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.second-row-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.second-row-container .report-card {
+    width: 30%;
+}
+
+.flex-space-around {
+    justify-content: space-between !important;
+    margin-bottom: 2rem;
+}
+
+.margin-left-button {
+    margin-right: 1rem;
+}
+
+.span-allie-form-container {
+    color: #707070;
+    font-weight: 600;
+    margin-bottom: 0.5rem !important;
+}
+
+.seventy-percent-width {
+    width: 70%;
+}
+
+.third-row-container {
+    width: 100%;
+    display: flex;
+}
+
+.thirty-percent-width {
+    width: 30%;
+}
+.main-section-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.8rem;
+}
+.image-container-ally img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 80px;
+}
+
+.main-info-ally-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.main-name-ally {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #434343;
+}
+
+.main-ally-description {
+    margin-bottom: 0rem;
+    margin-left: 1rem;
+}
+.active-user {
+    color: #13a744;
+    font-weight: 600;
+  }
+  
+  .inactive-user {
+    color: #ff3737;
+    font-weight: 600;
+  }
+  .main-section-icons-container {
+    display: flex;
+}
+.buton-search-field-report {
+    background: none;
+    border: none;
+    background-color: var(--backgroud-color);
+    color: #ffffff;
+    padding: 5px;
+    margin-top:30px;
+    border-radius: 25px;
+    width: 7rem;
+    height: 2rem;
+
+}
+
+@media print {
+    /* Ocultar todo */
+    body * {
+      visibility: hidden;
+    }
+    
+    /* Solo mostrar el contenido específico para imprimir */
+    .print-section, .print-section * {
+      visibility: visible;
+    }
+    
+    /* Asegurarse de que el contenido específico para imprimir esté en la página */
+    .print-section {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }

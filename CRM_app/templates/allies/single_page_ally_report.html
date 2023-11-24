@@ -1,0 +1,305 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/reports.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/allies.css' %}">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{% endblock %}
+
+
+{% block main_content %}
+<div class="print-section">
+<div id="report-to-print" class="main-content-reports">
+  
+  <div class="main-section-header">
+    <div style="display:flex; align-items: center;  justify-content: space-between;">
+      <div class="image-container-ally">
+          <img  src="data:image/jpeg;base64,{{ ally.image_link }}" alt="{{ ally.name }}">
+      </div>
+      <div class="main-info-ally-container">
+          <h3 class="main-name-ally">Reporte de {{ally.name}}</h3>
+          {% if ally.active == 1 %}
+          <p class="main-ally-description active-user">Alliado activo</p>
+          {% else %}
+          <p class="main-ally-description inactive-user">Aliado inactivo</p>
+          {% endif %} 
+      </div>
+   </div>  
+  <div class="print-button-container">
+    <button class="buton-search-field margin-left-button font-weight:700; maring-top:20px;" id="print-button"><b>Imprimir PDF</b></button>
+  </div> 
+</div>  
+
+  <div class="reports-container">
+    <div class="left-column-container">
+      <div class="report-card">
+        <h3 class="report-card__tittle">Cantidad de donaciones en el año</h3>
+        <div>
+          <canvas id="donation_history_chart"></canvas>
+        </div>
+        <script src="{% static 'js/general_reports.js' %}"></script>
+        <script>
+          const ctx = document.getElementById('donation_history_chart');
+          const MONTHS = [
+              'Enero',
+              'Febrero',
+              'Marzo',
+              'Abril',
+              'Mayo',
+              'Junio',
+              'Julio',
+              'Augosto',
+              'Septiembre',
+              'Octubre',
+              'Noviembre',
+              'Diciembre  '
+            ];
+          const labels = MONTHS;
+          const data = {
+            labels: labels,
+            datasets: [{
+              label: 'Donaciones en el año',
+              data: {{data}},
+              fill: true,
+              borderColor: 'rgb(38, 135, 214)',
+              tension: 0.2
+            }]
+          };
+
+            new Chart(ctx, {    
+              type: 'line',
+              data: data
+            });
+        </script>
+      </div>
+    </div>
+    <div class="right-column-container">
+      <div class="report-card">
+        <h3 class="report-card__tittle">Donaciones por los años</h3>
+        <div>
+          <canvas id="donations_in_year_pie_chart"></canvas>
+        </div>
+        <script src="{% static 'js/general_reports.js' %}"></script>
+        <script>
+          let labels_top_donors = []
+          {% for single_label in top_donators_labels %}
+          labels_top_donors.push("{{single_label}}")
+          {% endfor %}
+          const data_top_donators = {
+            labels: labels_top_donors,
+            datasets: [{
+              label: 'Cantidad de donaciones',
+              data: {{total_donations_for_ally_last_5_years}},
+              backgroundColor: [
+              'rgb(206, 223, 229)',
+              'rgb(205, 245, 253)', 
+              'rgb(167, 219, 229)',
+                'rgb(157, 217, 243)',
+                'rgb(0, 169, 255)',
+              ],
+              hoverOffset: 4
+            }]
+          };
+          const ctx_top_donators_pie = document.getElementById('donations_in_year_pie_chart');
+            new Chart(ctx_top_donators_pie, {    
+              type: 'doughnut',
+              data: data_top_donators
+            });
+        </script>   
+      </div>
+    </div>
+    <div class="third-row-container">
+      <div class="report-card">
+        <h3 class="report-card__tittle">Encuentros</h3>
+        <div>
+          <canvas id="allie_type_chart"></canvas>
+        </div>
+        <script>
+          const data_allie_type_chart = {
+            labels: ["Reunion", "Evento"],
+            datasets: [{
+              label: 'Cantidad de encuentros',
+              data: {{data_allie_types}},
+              backgroundColor: [
+                'rgb(0, 169, 255)',
+                'rgb(137, 207, 243)',
+                'rgb(205, 245, 253)', 
+                'rgb(229, 229, 229)'
+              ],
+            }]
+          };
+          const ctx_allie_type_chart = document.getElementById('allie_type_chart');
+          ctx_allie_type_chart.height = 350;
+            new Chart(ctx_allie_type_chart, {    
+              type: 'bar',
+              data: data_allie_type_chart,
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }  
+              },
+            });
+        </script> 
+      </div>
+      <div class="report-card seventy-percent-width">
+        <h3  class="report-card__tittle" >Publicaciones en el año</h3>
+        <div>
+          <canvas id="publicacions_chart_line"></canvas>
+        </div>
+        <script>
+          const ctx_publicacions_timeline = document.getElementById('publicacions_chart_line');
+          const labels_publicacions_timeline = MONTHS;
+          const data_publicacions_timeline = {
+            labels: labels,
+            datasets: [{
+              label: 'Cantidad de publicaciones en el año',
+              data: {{publications_by_month}},
+              fill: true,
+              borderColor: 'rgb(0, 169, 255)',
+              tension: 0.2
+            }]
+          };
+
+            new Chart(ctx_publicacions_timeline, {    
+              type: 'line',
+              data: data_publicacions_timeline
+            });
+        </script>
+      </div>
+
+    </div>
+
+    <div class="third-row-container">
+      
+      
+      <div class="report-card seventy-percent-width">
+        <h3  class="report-card__tittle" >Proyectos de investigacion por fecha de iniciacion</h3>
+        <div>
+          <canvas id="investigation_projects_chart_line"></canvas>
+        </div>
+        <script>
+          const ctx_investigation_projects_timeline = document.getElementById('investigation_projects_chart_line');
+          const labels_investigation_projects_timeline = MONTHS;
+          const data_investigation_projects_timeline = {
+            labels: labels,
+            datasets: [{
+              label: 'Proyectos de investigacion en el año',
+              data: {{data_donators_month}},
+              fill: true,
+              borderColor: 'rgb(0, 169, 255)',
+              tension: 0.2
+            }]
+          };
+
+            new Chart(ctx_investigation_projects_timeline, {    
+              type: 'line',
+              data: data_investigation_projects_timeline
+            });
+        </script>
+      </div>
+      <div class="report-card thirty-percent-width">
+        <h3 class="report-card__tittle">Proyectos de investigacion activo o terminado </h3>
+        <div>
+          <canvas id="investigation_projects_finished_pie"></canvas>
+        </div>
+        <script>
+          const data_investigation_projects_finished = {
+            labels: ["Terminados", "Activos"],
+            datasets: [{
+              label: 'Cantidad de proyectos',
+              data: {{investigation_projects_finished}},
+              backgroundColor: [
+                'rgb(0, 169, 255)',
+                'rgb(137, 207, 243)',
+                'rgb(205, 245, 253)', 
+                'rgb(229, 229, 229)'
+              ],
+              hoverOffset: 4
+            }]
+          };
+          const ctx_investigation_projects_finished = document.getElementById('investigation_projects_finished_pie');
+            new Chart(ctx_investigation_projects_finished, {    
+              type: 'doughnut',
+              data: data_investigation_projects_finished
+            });
+        </script> 
+      </div>
+    </div>
+    <div class="third-row-container">
+      <div class="report-card">
+        <h3 class="report-card__tittle">Mayores publicadores</h3>
+        <div>
+          <canvas id="top_donators_pie_chart"></canvas>
+        </div>
+        <script src="{% static 'js/general_reports.js' %}"></script>
+        <script>
+          let labels_top_publications_donors = []
+          {% for single_label in top_donators_labels %}
+          labels_top_publications_donors.push("{{single_label}}")
+          {% endfor %}
+          const data_top_publications_donators = {
+            labels: labels_top_publications_donors,
+            datasets: [{
+              label: 'Cantidad de donaciones',
+              data: {{top_donators}},
+              backgroundColor: [
+                'rgb(0, 169, 255)',
+                'rgb(137, 207, 243)',
+                'rgb(205, 245, 253)', 
+                'rgb(229, 229, 229)'
+              ],
+              hoverOffset: 4
+            }]
+          };
+          const ctx_top_publications_pie = document.getElementById('top_donators_pie_chart');
+            new Chart(ctx_top_publications_pie, {    
+              type: 'doughnut',
+              data: data_top_publications_donators
+            });
+        </script>   
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="print-button-container">
+  <button class="buton-search-field margin-left-button" id="print-button">Imprimir PDF</button>
+</div>
+
+<script>
+  const { jsPDF } = window.jspdf;
+  document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('print-button').addEventListener('click', function() {
+
+          const width = document.getElementById('report-to-print').offsetWidth;
+          const height = document.getElementById('report-to-print').offsetHeight;
+
+          const pdf = new jsPDF({
+            unit: 'px',
+            format: [width+20,height+20],
+          });
+
+          
+          
+          html2canvas(document.getElementById('report-to-print'), {scale: 3}).then(canvas => {
+            const imgData = canvas.toDataURL('image/png');
+
+            pdf.addImage(imgData, 'PNG', 10, 10, width, height);
+
+            pdf.save("reporte-aliado.pdf");
+          });
+      });
+  });
+</script>
+
+{% endblock %}
+
+{% block pagina_actual_reportes %}
+<div class="current-page"></div>
+{% endblock %}

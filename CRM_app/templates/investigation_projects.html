@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block header_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/allies.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/investigation-projects/investigation_projects.css' %}">
+{% endblock %}
+
+
+{% block main_content %}
+
+
+<div class="investigation-header">
+    <div class="investigation-header__container-title">
+        <a class="left-arrow-investigation" href="/home/">
+            <img class="arrow_image" src="{% static 'img/add_allie/arrow.png' %}" alt="arrow">
+        </a>
+        <h1>Proyectos de Investigacion</h1>
+    </div>
+    <a class="investigation-header__add-icon" href="/add_investigation_project" id="add" name="add">
+        <img src="{% static 'img/icons/add-icon.png' %}" alt="">
+    </a>
+</div>
+
+<section class="main-content-allies">    
+    <form method="get" action="{% url 'investigations' %}" class="button-container">
+        <input class="search-field search-text-field" type="text" name="q" placeholder="Buscar por nombre" value="{{ request.GET.q }}">  
+        <select class="search-field search-option-field" name="tipo">
+            <option value="" {% if not request.GET.tipo %}selected{% endif %}>Todos</option>
+            {% for ally in allies %}
+                <option value="{{ ally.id }}" {% if request.GET.tipo == ally.id %}selected{% endif %}>
+                    {{ ally.name }}
+                </option>
+            {% endfor %}
+        </select>            
+        <button class="buton-search-field" type="submit"><b>Buscar</b></button>
+    </form>   
+
+    <div class="allies-container">
+    {% for investigation_project in investigation_projects %}
+        <a class="" href="/investigation/{{investigation_project.id}}">
+            <div class="allies_in_investigarion_project" id="{{investigation_project.id}}">
+                <div class="column column-left-bottom">
+                <p class="allie-name">{{ investigation_project.name }}</p>
+                <p class="allie-area">{{ investigation_project.description }}</p>
+         
+                {% for allie_project in investigation_project.allieproject_set.all %}
+                <img class="" src="data:image/jpeg;base64,{{allie_project.allie.image_link}}">
+                {% endfor %}
+                    
+                
+                </div>
+                <a href="/edit_investigation_project/{{investigation_project.id}}">
+                    <img src="{% static 'img/icons/edit-icon.png' %}" alt="arrow" style="opacity: 0.7; margin-top:22px;height: 30px; width:30px; border-radius:0;">
+                </a>
+            </div>
+        </a>
+    {% endfor %}
+    
+    </div>
+</section>
+
+{% endblock %}
+
+
+{% block pagina_actual_investigacion %}
+<div class="current-page"></div>
+{% endblock %}

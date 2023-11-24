@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/add_allie.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/allies/ally-donation.css' %}">
+{% endblock %}
+
+
+{% block main_content %}
+
+<div class="bread-crum">
+    <a href="/allies/{{allies.id}}"><h1><b>{{allies.name}} &nbsp;</b></h1></a>
+    <h1><b>> &nbsp;</b></h1>
+    <h1><b>Donaciones</b></h1>
+</div>
+
+<section class="main-ally-donation">
+    <div class="main-header-donation">
+        <div class="main-header-donation__ally-info">
+            <img  src="data:image/jpeg;base64,{{ allies.image_link }}" alt="{{ allies.name }}">
+            <h2>{{allies.name}}</h2>
+        </div>
+        {% if user.user_type_id.name == "Filantropia" %}
+        <a href="/allies/{{allies.id}}/add-donation/">
+            <div class="main-header-donation__add-donation">              
+                <img src="{% static 'img/icons/add-icon.png' %}" alt="">
+            </div>
+        </a>
+        {% endif %}
+    </div>
+    <div class="main-donation-summary">
+        <div class="main-donation-summary__total-money">
+            <h2 class="main-donation-summary__total-money__number" >$
+                <span id="numero-formateado"> </span>
+            </h2>
+            <script>
+                var total = {{ total|default:"0" }};
+                var numeroFormateado = total.toLocaleString(); 
+            
+                
+                document.getElementById("numero-formateado").textContent = numeroFormateado;
+            </script>
+            <div class="main-donation-sumary__total-money__text">Dinero total donado</div>
+        </div>
+        <div class="main-donation-summary__type-donant">
+            <h3 class="main-donation-summary__type-donant__letter">{{type}}</h3>
+            <div class="main-donation-summary__type-donant__text">Donante tipo</div>
+        </div>
+    </div>
+    
+    <div class="history-donations">
+        <h2>Historial de donaciones:</h2>
+        <div class="history-donations__element-container">
+            {% for don in donation %}
+            <div class="history-donations__element">
+                <div class="history-donations_element-summary">
+                    <h5>{{don.date}}</h5>
+                    <p>${{don.amount}}</p>
+                </div>
+                <div class="history-donations_element-description">
+                    <p>{{don.description}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block pagina_actual_aliados %}
+
+<div class="current-page"></div>
+
+{% endblock %}  

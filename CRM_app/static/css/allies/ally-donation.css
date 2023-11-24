@@ -1,0 +1,127 @@
+:root {
+    --primary-color: #3969FC; 
+	--secondary-color: #13247B; 
+    --backgroud-color: #0159A1;
+    --terciary-color: #D4D4D4;
+	--font-color: #707070; 
+	--font: 1.6rem; 
+	--titles: 3rem;
+}
+
+.main-ally-donation {
+    width: 80%;
+    margin: auto;
+}
+
+.main-header-donation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8rem;
+}
+
+.main-header-donation__ally-info {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.main-header-donation__ally-info img {
+    width: 5rem;
+    height: 5rem;
+    border: #D4D4D4 solid 3px;
+    border-radius: 500px;
+    margin-right: 1rem;
+}
+
+.main-header-donation h2 {
+    font-size: 2rem;
+    color: #434343;
+    font-weight: 700;
+}
+
+.main-header-donation__add-donation img {
+    width: 2.5rem;
+    margin-right: 1rem;
+}
+
+.main-donation-summary {
+    background-color: #0159A1;
+    color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.main-donation-summary__total-money {
+    font-size: 1rem;
+}
+
+.main-donation-summary__total-money h2 {
+    color: white;
+    font-size: 2rem;
+}
+
+.main-donation-summary__type-donant {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-donation-summary__type-donant__letter {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.history-donations h2 {
+    font-size: 2rem;
+    color: #434343;
+    font-weight: 600;
+}
+
+.history-donations__element-container {
+    /* background-color: #D4D4D4; */
+    border-radius: 1.5rem;
+    padding-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.history-donations__element {
+    /* background-color: #3969FC; */
+    width: 14rem;
+    height: 14rem;
+    color: var(--font-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    margin-bottom: 2rem;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    border: #d2d2d2 solid 1px;
+    box-shadow: 0 0.25rem 0.5rem -0.125rem rgba(0, 0, 0, 0.2);
+}
+
+.history-donations__element h5 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #434343;
+}
+
+.history-donations_element-summary p {
+    color: green;
+    font-weight: 700;
+}
+
+.history-donations__element p {
+    font-size: 0.9rem;
+}
+
+

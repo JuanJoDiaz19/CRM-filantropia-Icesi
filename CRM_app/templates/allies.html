@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/allies.css' %}">
+{% endblock %}
+
+
+{% block main_content %}
+
+<section class="main-content-allies">
+    <div class="main-content__header">
+        <h1><b>Aliados ICESI</b></h1>
+        {% if user.user_type_id.name == "Filantropia" %} 
+        <a href="add_ally/" id="add">
+            <img src="{% static 'img/icons/add-icon.png' %}" alt="">
+        </a>
+        {% endif %} 
+    </div>
+    <form method="get" action="{% url 'allies' %}" class="button-container">
+        <input class="search-field search-text-field" type="text" name="q" placeholder="Buscar por nombre" value="{{ request.GET.q }}">
+        <select class="search-field search-option-field" name="estado">
+            <option value="" {% if not request.GET.estado %}selected{% endif %}>Todos</option>
+            <option value="activo" {% if request.GET.estado == 'activo' %}selected{% endif %}>Activo</option>
+            <option value="inactivo" {% if request.GET.estado == 'inactivo' %}selected{% endif %}>Inactivo</option>
+        </select>
+        <select class="search-field search-option-field" name="tipo">
+            <option value="" {% if not request.GET.tipo %}selected{% endif %}>Todos</option>
+            {% for allie_type in allie_types %}
+                <option value="{{ allie_type.id }}" {% if request.GET.tipo == allie_type.id %}selected{% endif %}>
+                    {{ allie_type.name }}
+                </option>
+            {% endfor %}
+        </select>                    
+        <button class="buton-search-field" type="submit" id="search"><b>Buscar</b></button>
+    </form>   
+
+    <div class="allies-container" id="allyContainer">
+    {% for allie in allies %}
+        <a class="allies-card" href="{{allie.id}}/">
+            <div class="allies-main-information-container">
+                <div class="allies-card-image-container">
+                    <img  src="data:image/jpeg;base64,{{ allie.image_link }}" alt="{{ allie.name }}">
+                </div>
+                <div class="allies-info" id="{{allie.id}}" >
+                    <p class="allie-name">{{ allie.name }}</p>
+                    <p class="allie-area">{{ allie.area_id }}</p>
+                </div>
+            </div>
+            <div class="allie-state">
+                {% if allie.active == 1 %}
+                <p class="allie-active">Activo</p>
+                {% else %}
+                <p class="allie-inactive">Inactivo</p>
+                {% endif %} 
+            </div>
+        </a>
+    {% endfor %}
+    
+    </div>
+</section>
+
+{% endblock %}
+
+{% block pagina_actual_aliados %}
+<div class="current-page"></div>
+{% endblock %}  
