@@ -11,7 +11,11 @@
 
 {% block main_content %}
 
-  
+{% if message %}
+<div class="alert">
+    <p>{{message}}</p>
+</div>
+{% endif%}
 
 <section class="main-content-allies">
     <div class="main-content__header">
