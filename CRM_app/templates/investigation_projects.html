@@ -18,7 +18,7 @@
         </a>
         <h1>Proyectos de Investigacion</h1>
     </div>
-    <a class="investigation-header__add-icon" href="/add_investigation_project" id="add" name="add">
+    <a class="investigation-header__add-icon" href="/add_investigation_project/" id="add" name="add">
         <img src="{% static 'img/icons/add-icon.png' %}" alt="">
     </a>
 </div>
@@ -39,7 +39,7 @@
 
     <div class="allies-container">
     {% for investigation_project in investigation_projects %}
-        <a class="" href="/investigation/{{investigation_project.id}}">
+        <a class="" href="/investigation/{{investigation_project.id}}/">
             <div class="allies_in_investigarion_project" id="{{investigation_project.id}}">
                 <div class="column column-left-bottom">
                 <p class="allie-name">{{ investigation_project.name }}</p>
@@ -51,7 +51,7 @@
                     
                 
                 </div>
-                <a href="/edit_investigation_project/{{investigation_project.id}}">
+                <a href="/edit_investigation_project/{{investigation_project.id}}/">
                     <img src="{% static 'img/icons/edit-icon.png' %}" alt="arrow" style="opacity: 0.7; margin-top:22px;height: 30px; width:30px; border-radius:0;">
                 </a>
             </div>

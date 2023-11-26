@@ -76,7 +76,7 @@
                 Ver mas
             </div>
         </a>
-        <a class="nav-option-ally" href="#" id="reports">
+        <a class="nav-option-ally" href="/reports/{{allies.id}}/" id="reports">
             <h3>Reportes</h3>
             <img class="image-opacity" src="{% static 'img/icons/report.png' %}" alt="">
             <div class="nav-option-ally__see-more">
@@ -92,7 +92,7 @@
         <div class="row-bottom">
         <p class="content_tittle inner-title">Contacto</p>
         {% if user.user_type_id.name == "Filantropia" %} 
-        <a href="/edit_contact/{{allies.id}}/{{contact.id}}">
+        <a href="/edit_contact/{{allies.id}}/{{contact.id}}/">
           <img  src="{% static 'img/icons/edit-icon.png' %}" alt="arrow"style="padding-left: 35px; padding-right: 10px; padding-bottom: 15px; opacity: 0.7; width:75px;">
         </a>
         {% endif %}

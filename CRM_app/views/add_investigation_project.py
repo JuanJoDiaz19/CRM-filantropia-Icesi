@@ -20,6 +20,9 @@ class AddInvestigationProject(View):
         project_description= request.POST.get('descripcion',False)
         project_objetivos= request.POST.get('objetivos',False)
         
+        if not (project_title and project_allies and project_date and project_description and project_objetivos):
+             allies= Allie.objects.all()
+             return render(request, 'add_investigation_project.html', {'error_message': "Proporcione todos los datos",'allies': allies})
         
         project = Investigation_Project.objects.create(
             name=project_title,

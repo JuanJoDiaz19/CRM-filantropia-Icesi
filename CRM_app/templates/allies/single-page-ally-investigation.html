@@ -13,7 +13,7 @@
 
 
 <div class="bread-crum">
-    <a href="/allies/{{ally.id}}"><h1><b>{{ally.name}} &nbsp;</b></h1></a>
+    <a href="/allies/{{ally.id}}/"><h1><b>{{ally.name}} &nbsp;</b></h1></a>
     <h1><b>> &nbsp;</b></h1>
     <h1><b>Proyectos de Investigacion</b></h1>
 </div>
@@ -21,14 +21,14 @@
 <div class="investigation-header">
     
     <div class="investigation-header__container-title">
-        <a class="left-arrow-investigation" href="/interns/{{ally.id}}">
+        <a class="left-arrow-investigation" href="/allies/{{ally.id}}/">
             <img class="arrow_image" src="{% static 'img/add_allie/arrow.png' %}" alt="arrow">
         </a>
         <h1>Proyectos de Investigacion</h1>
     </div>
 
     {% if user.user_type_id.name == "Filantropia" %}
-    <a class="investigation-header__add-icon" href="/add_investigation_project">
+    <a class="investigation-header__add-icon" href="/add_investigation_project/">
         <img src="{% static 'img/icons/add-icon.png' %}" alt="">
     </a>
     {% endif %}
@@ -42,7 +42,7 @@
 
     <div class="allies-container">
         {% for investigation_project in investigation_projects %}
-            <a class="" href="/investigation/{{investigation_project.id}}" style="width: 100%;">
+            <a class="" href="/investigation/{{investigation_project.id}}/" style="width: 100%;">
                 <div class="allies_in_investigarion_project" style="width: 100%;">
                     <div class="column column-left-bottom" style="width: 100%;">
                     <p class="allie-name">{{ investigation_project.name }}</p>
@@ -55,7 +55,7 @@
                     
                     </div>
                     {% if user.user_type_id.name == "Filantropia" %}
-                    <a href="/edit_investigation_project/{{investigation_project.id}}">
+                    <a href="/edit_investigation_project/{{investigation_project.id}}/">
                         <img src="{% static 'img/icons/edit-icon.png' %}" alt="arrow" style="opacity: 0.7; margin-top:22px;height: 30px; width:30px; border-radius:0;">
                     </a>
                     {% endif %}

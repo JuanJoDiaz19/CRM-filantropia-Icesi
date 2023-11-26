@@ -41,7 +41,7 @@ class Add_intern(View):
             gender_instace= get_object_or_404(Gender,id=sex)
             
             if Practicing.objects.filter(id=intern_id).exists():
-                return render(request, 'add_intern.html', {'error_message': "Ya existe un practicante con este documento"})
+                return render(request, 'add_intern.html', {'error_message': "Ya existe un practicante con este documento",'ally': ally,'careers': careers})
 
             allie_image_link = base64.b64encode(image.read()).decode('utf-8')
 
@@ -58,6 +58,9 @@ class Add_intern(View):
             
             return redirect(f'/interns/{allie__id}')
         else:
-            return render(request,'add_intern.html',{'error_message': "Proporcione todos los datos"})
+            careers = Career.objects.all() 
+            careers = [{'id': str(career.id), 'name': career.name} for career in careers]
+            ally= Allie.objects.get(id=allie__id)
+            return render(request,'add_intern.html',{'error_message': "Proporcione todos los datos", 'ally': ally,'careers': careers})
     
         

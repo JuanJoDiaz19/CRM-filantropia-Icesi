@@ -15,6 +15,11 @@ class FollowUpEvent(View):
         autor = request.POST.get('autor')
         event = get_object_or_404(Event, id=follow_up_id)
 
+        if not (descripcion and autor):
+        # Si falta algún campo, renderizar la página con un mensaje de error
+            return render(request, 'follow_up_event.html', {'error_message': "Proporcione todos los datos"})
+
+
         # Crear el comentario
         comment = Comment(event=event, autor=autor, contenido=descripcion)
         comment.save()

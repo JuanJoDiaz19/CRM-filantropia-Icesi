@@ -30,6 +30,11 @@ class create_event(View):
         event_description= request.POST.get('allie_description', False)
         event_fecha= request.POST.get('fecha',False)
         
+        if not (event_name and event_allie and event_type and event_objective and event_description and event_fecha):
+            allies= Allie.objects.all()
+            event_type= Event_Type.objects.all()
+            return render(request, 'create_event.html', {'error_message': "Proporcione todos los datos",'allies': allies,'event_type': event_type})
+        
         #print(event_allie, '\n')
        
         #for i in event_allie:

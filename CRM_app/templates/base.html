@@ -17,7 +17,7 @@
     <button onclick="toggleSidebar()" class="topbar-menu-container">
         <img class="topbar-menu" src="{% static 'img/home/menu.png' %}" alt="Logo" width="45" height="45" class="d-inline-block align-text-top">
       </button>
-      <a class="navbar-brand" href="/home">
+      <a class="navbar-brand" href="/home/">
       <picture>
         <source media="(max-width: 800px)" srcset="{% static 'img/home/logo2.png' %}" width="60" height="60">
         <img class="topbar-image" src="{% static 'img/home/logo.png' %}" alt="Logo" height="60" class="d-inline-block align-text-top">
@@ -44,7 +44,7 @@
     <!-- Opciones -->
     <ul class="nav nav-pills flex-column ">
       <li class="nav-item" style="margin-top: 7px;">
-        <a href="/home" class="nav-link link-dark">
+        <a href="/home/" class="nav-link link-dark">
           <img class="sidebar-image" src="{% static 'img/home/home.png' %}" alt="inicio" width="16" height="16">
           Página Inicio
         </a>
@@ -52,7 +52,7 @@
       </li>
 
       <li class="nav-item">
-        <a href="/allies" class="nav-link link-dark">
+        <a href="/allies/" class="nav-link link-dark">
           <img class="sidebar-image" src="{% static 'img/home/users.png' %}" alt="aliados" width="16" height="16" id="allies">
           Aliados
         </a>
@@ -69,7 +69,7 @@
 
       {% if user.user_type_id.name == "Filantropia" %}      
         <li class="nav-item">
-          <a href="/reports" class="nav-link link-dark">
+          <a href="/reports/" class="nav-link link-dark">
             <img class="sidebar-image" src="{% static 'img/home/reports.png' %}" alt="reportes" width="16" height="16">
             Reportes
           </a>
@@ -77,7 +77,7 @@
         </li>
 
         <li class="nav-item">
-          <a href="/investigations" class="nav-link link-dark">
+          <a href="/investigations/" class="nav-link link-dark">
             <img class="sidebar-image" src="{% static 'img/home/brain.png' %}" alt="investigaciones" width="16" height="16">
             Investigación
           </a>
@@ -85,7 +85,7 @@
         </li>
 
         <li class="nav-item">
-          <a href="/config" class="nav-link link-dark">
+          <a href="/config/" class="nav-link link-dark">
             <img class="sidebar-image" src="{% static 'img/home/settings.png' %}" alt="configuracion" width="16" height="16">
             Configuración
           </a>
