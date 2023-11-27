@@ -4,7 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login,logout, authenticate
 from django.contrib.auth.models import User
 from django.db import IntegrityError
-from CRM_app.models import Allie, Event_Type, EventAllie,Event
+from CRM_app.models import Allie, Event_Type, EventAllie,Event,New
 from django.shortcuts import get_object_or_404
 
 import datetime
@@ -48,6 +48,12 @@ class create_event(View):
                 objective=event_objective,
                 description= event_description,
             )
+        
+        New.objects.create(
+                title = "el evento " + event_name + " se realizara el " + event_fecha ,
+                description="",
+                date= event_fecha
+        )
         
         ally=[]
         for i in event_allie: 
