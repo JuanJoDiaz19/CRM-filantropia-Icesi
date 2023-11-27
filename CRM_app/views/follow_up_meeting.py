@@ -16,6 +16,10 @@ class FollowUpMeeting(View):
         autor = request.POST.get('autor')
         meeting = get_object_or_404(Meeting, id=follow_up_id)
 
+        if not (descripcion and autor):
+            return render(request, 'follow_up_meeting.html', {'error_message': "Proporcione todos los datos"})
+
+
         # Crear el comentario
         comment = Comment(meeting=meeting, autor=autor, contenido=descripcion)
         comment.save()

@@ -173,3 +173,6 @@ h1 {
   #realCheckbox {
     display: none;
   }
+  .follow_up{
+    width: 35px;
+  }

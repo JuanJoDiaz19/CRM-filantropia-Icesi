@@ -23,6 +23,12 @@ class create_meeting(View):
         meeting_description= request.POST.get('description',False)
         meeting_date= request.POST.get('fecha', False)
         
+        if not (meeting_name and meeting_categoria and meeting_aliado and meeting_objetive and meeting_description and meeting_date):
+            allies= Allie.objects.all()
+            mt= Meeting_type.objects.all()
+            return render(request, 'create_meeting.html', {'error_message': "Proporcione todos los datos",'allies':allies,'mt':mt})
+
+        
         category_instance= get_object_or_404(Meeting_type, id= meeting_categoria)
         ally_instance= get_object_or_404(Allie,id=meeting_aliado)
         
