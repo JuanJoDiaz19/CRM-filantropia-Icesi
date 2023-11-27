@@ -13,7 +13,7 @@ class SearchAlly(View):
         if query:
             try:
                 ally = Allie.objects.get(name__iexact=query)
-                return redirect(f'/reports/{ally.id}')
+                return redirect(f'/reports/{ally.id}/')
             except Allie.DoesNotExist:
                 messages.error(request, "Este aliado no existe")
                 return redirect('/reports/')
