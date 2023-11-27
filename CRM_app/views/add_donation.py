@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views import View
-from CRM_app.models import Allie_Type, Allie, ContactInfo, Donation_Type, Donation
+from CRM_app.models import Allie_Type, Allie, ContactInfo, Donation_Type, Donation, New
 from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404
@@ -49,6 +49,14 @@ class AddDonation(View):
                 allie_id= allie_instance,
                 description= donation_description,
             )
+    
+            New.objects.create(
+                title = allie_instance.name + " acaba de hacer una donación de " + str(amount_number)
+,
+                description="",
+                date= donation_date
+            )
+            
             return redirect(f'/donations/{allie__id}')
         else:
             try:

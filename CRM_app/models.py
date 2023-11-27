@@ -49,7 +49,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         return self.name
 
 class New(models.Model):
-    title = models.CharField(max_length=50)
+    title = models.CharField(max_length=2000)
     description = models.CharField(max_length=200)
     date = models.DateField()
 
