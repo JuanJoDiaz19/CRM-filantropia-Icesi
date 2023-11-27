@@ -17,6 +17,8 @@ class Add_allie(View):
 
     @method_decorator(login_required) 
     def post(self, request):
+        areas = Area.objects.all() 
+        areas = [{'id': str(area.id), 'name': area.area_description} for area in areas]
         
         allie_name = request.POST.get('allie_name', False)
         allie_document_id = request.POST.get('allie_document_id', False)
@@ -47,21 +49,7 @@ class Add_allie(View):
             allie_image_link  = base64.b64encode(image_binary).decode('utf-8')
         
         
-        context = {
-            'allie_name': allie_name,
-            'allie_document_id': allie_document_id,
-            'allie_area': allie_area,
-            'allie_area_name': allie_area_name,
-            'allie_description': allie_description,
-            'allie_type_string': allie_type_string,
-            'allie_image': allie_image_link,
-            'contact_name': contact_name,
-            'contact_document_id': contact_document_id,
-            'contact_phone': contact_phone,
-            'contact_email': contact_email,
-            'contact_aux_email': contact_aux_email,
-            'areas':areas
-        }
+        context = {'areas': areas}
         
         
 
