@@ -5,6 +5,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/add_allie.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'css/investigation-projects/add_investigation_project.css' %}">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
+<script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
 {% endblock %}
 
 {% block main_content %}
@@ -38,22 +39,21 @@
           <br>
         </div>
             
-            <div class="form">
-                <label class="content_text">Aliados involucrados</label>
-                <br>
-                
-                <select name="allies[]" class="form_text" id="allies" multiple>
-                  {% for ally in allies %}
-                    <option value="{{ally.id}}" id="{ally.id}">{{ally.name}}</option>
-                  {%endfor%}
-                </select>
-                
-                <br>
-            </div>
-            <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+        <div class="form">
+          <label class="content_text">Aliados involucrados</label>
+          <div class="opciones-sexo">
+            <select name="allies[]" id="countries" multiple>
+              {% for ally in allies%}
+              <option value="{{ally.id}}">{{ally.name}}</option>
+              {% endfor %}
+            </select>
             <script>
-                new MultiSelectTag('allies')  // id
+              new MultiSelectTag('countries')  // id
             </script>
+            <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+          </div>
+        </div>
+            
         </div>
 
   <div class="column column-right-top right-colum-initial-date">

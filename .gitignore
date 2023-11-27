@@ -21,6 +21,7 @@ celerybeat-schedule
 *.sqlite3
 *.db
 *.sqlite3-journal
+settings.py
 
 # Ignorar archivos de entorno virtual (por ejemplo, si estás usando virtualenv o venv)
 venv/
