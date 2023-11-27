@@ -276,6 +276,8 @@
 
           const width = document.getElementById('report-to-print').offsetWidth;
           const height = document.getElementById('report-to-print').offsetHeight;
+          var button = document.getElementById('print-button');
+
 
           const pdf = new jsPDF({
             unit: 'px',
@@ -283,7 +285,7 @@
           });
 
           
-          
+          button.style.backgroundColor = 'white';
           html2canvas(document.getElementById('report-to-print'), {scale: 3}).then(canvas => {
             const imgData = canvas.toDataURL('image/png');
 
@@ -291,6 +293,7 @@
 
             pdf.save("reporte-aliado.pdf");
           });
+          button.style.backgroundColor = '#0159A1';
       });
   });
 </script>
